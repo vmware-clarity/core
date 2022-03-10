@@ -2,16 +2,12 @@
 
 exports[`CdsInternalOverlay snapshot 1`] = `
 <div>
-  <CdsInternalOverlay>
-    <CdsInternalOverlay
-      l={null}
-    >
-      <cds-internal-overlay
-        l={null}
-      >
-        Internal Overlay
-      </cds-internal-overlay>
-    </CdsInternalOverlay>
-  </CdsInternalOverlay>
+  <cds-internal-overlay
+    aria-modal="true"
+    cds-layer="0"
+    role="dialog"
+  >
+    Internal Overlay
+  </cds-internal-overlay>
 </div>
 `;

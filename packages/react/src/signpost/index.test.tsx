@@ -1,16 +1,14 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import { CdsSignpost } from './index';
 
 describe('CdsSignpost', () => {
-  it('renders', () => {
-    const wrapper = shallow(
-      <div>
-        <CdsSignpost></CdsSignpost>
-      </div>
+  it('renders', async () => {
+    render(
+      <CdsSignpost>Oh hai</CdsSignpost>
     );
-    const renderedComponent = wrapper.find(CdsSignpost);
-    expect(renderedComponent).toBeDefined();
+
+    expect(document.querySelector('cds-signpost')).toBeInTheDocument();
   });
 
   it('snapshot', () => {
@@ -18,14 +16,14 @@ describe('CdsSignpost', () => {
       height: '140px',
       marginTop: '24px',
     };
-    const wrapper = mount(
-      <div>
+    const { container } = render(
+      <>
         <CdsSignpost></CdsSignpost>
         <div style={vertDivStyle}>
           <CdsSignpost orientation="vertical">1</CdsSignpost>
         </div>
-      </div>
+      </>
     );
-    expect(wrapper).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

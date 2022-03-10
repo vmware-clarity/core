@@ -1,111 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CdsControl snapshot 1`] = `
-<div
-  cds-layout="vertical gap:lg"
->
-  <D
-    layout="compact"
+<div>
+  <div
+    cds-layout="vertical gap:lg"
   >
-    <D
-      l={null}
+    <cds-control
+      cds-control=""
       layout="compact"
     >
-      <cds-control
-        l={null}
-        layout="compact"
+      <label>
+        label
+      </label>
+      <input
+        placeholder="some custom control"
+      />
+      <cds-control-message
+        slot="message"
       >
-        <label>
-          label
-        </label>
-        <input
-          placeholder="some custom control"
-        />
-        <n>
-          <n
-            l={null}
-          >
-            <cds-control-message
-              l={null}
-            >
-              message text
-            </cds-control-message>
-          </n>
-        </n>
-      </cds-control>
-    </D>
-  </D>
-  <D
-    layout="compact"
-    status="error"
-  >
-    <D
-      l={null}
+        message text
+      </cds-control-message>
+    </cds-control>
+    <cds-control
+      cds-control=""
       layout="compact"
-      status="error"
     >
-      <cds-control
-        l={null}
-        layout="compact"
+      <label>
+        label
+      </label>
+      <input
+        placeholder="some custom control"
+      />
+      <cds-control-message
+        slot="message"
       >
-        <label>
-          label
-        </label>
-        <input
-          placeholder="some custom control"
-        />
-        <n
-          status="error"
-        >
-          <n
-            l={null}
-            status="error"
-          >
-            <cds-control-message
-              l={null}
-            >
-              error message
-            </cds-control-message>
-          </n>
-        </n>
-      </cds-control>
-    </D>
-  </D>
-  <D
-    layout="compact"
-    status="success"
-  >
-    <D
-      l={null}
+        error message
+      </cds-control-message>
+    </cds-control>
+    <cds-control
+      cds-control=""
       layout="compact"
-      status="success"
     >
-      <cds-control
-        l={null}
-        layout="compact"
+      <label>
+        label
+      </label>
+      <input
+        placeholder="some custom control"
+      />
+      <cds-control-message
+        slot="message"
       >
-        <label>
-          label
-        </label>
-        <input
-          placeholder="some custom control"
-        />
-        <n
-          status="success"
-        >
-          <n
-            l={null}
-            status="success"
-          >
-            <cds-control-message
-              l={null}
-            >
-              success message
-            </cds-control-message>
-          </n>
-        </n>
-      </cds-control>
-    </D>
-  </D>
+        success message
+      </cds-control-message>
+    </cds-control>
+  </div>
 </div>
 `;
