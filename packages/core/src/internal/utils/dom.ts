@@ -54,6 +54,11 @@ export function isFocusable(element: HTMLElement) {
 
 /* c8 ignore next */
 export function isScrollable(element: HTMLElement) {
+  // early return here in the event element looked up but not in the dom at present
+  if (!element) {
+    return false;
+  }
+
   // there's no great way to determine if something has scrollbars or not
   // this calculation is... okay at it. it is slightly naive but covers
   // our current need/use-case. if we need something more robust, we can

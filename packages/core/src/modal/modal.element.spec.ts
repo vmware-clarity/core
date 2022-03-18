@@ -28,7 +28,7 @@ describe('modal element', () => {
 
   beforeEach(async () => {
     testElement = await createTestElement(html`
-      <cds-modal id="normal-modal" hidden>
+      <cds-modal id="normal-modal" hidden cds-motion="off">
         <cds-modal-header>${placeholderHeader}</cds-modal-header>
         <cds-modal-content
           ><div><p>${placeholderContent}</p></div></cds-modal-content

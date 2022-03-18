@@ -141,11 +141,12 @@ export class CdsModal extends CdsInternalOverlay {
   }
 
   private async setScrollableProperties() {
-    if (this.hidden === false) {
+    const contentElement = this.content;
+    if (this.hidden === false && contentElement !== null) {
       await this.updateComplete; // wait until after render to measure if scrollable
-      this.isScrollable = isScrollable(this.content);
-      this.content.tabIndex = this.isScrollable ? 0 : -1;
-      this.content.ariaLabel = this.isScrollable ? this.i18n.contentBox : null;
+      this.isScrollable = isScrollable(contentElement);
+      contentElement.tabIndex = this.isScrollable ? 0 : -1;
+      contentElement.ariaLabel = this.isScrollable ? this.i18n.contentBox : null;
     }
   }
 }

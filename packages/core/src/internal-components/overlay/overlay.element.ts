@@ -38,6 +38,9 @@ import sharedStyles from './shared.element.scss';
 export class CdsInternalStaticOverlay extends LitElement {
   @property({ type: Boolean }) closable = false;
 
+  // eslint-disable-next-line rulesdir/reserved-property-names
+  @property({ type: Boolean }) hidden = true;
+
   @state({ type: Boolean, reflect: true }) protected demoMode = false;
 
   @i18n() i18n = I18nService.keys.overlay;

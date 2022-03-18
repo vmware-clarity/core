@@ -43,7 +43,7 @@ export function rowAction() {
           .anchor=${this.anchor}
           @closeChange=${() => (this.activeRow = null) as any}
         >
-          <div cds-layout="vertical align:stretch p:xs">
+          <div cds-layout="vertical align:stretch">
             ${this.grid.rowActions.map(
               action =>
                 html`<cds-button action="flat" size="sm" @click=${() => this.action(action.value, this.activeRow)}
