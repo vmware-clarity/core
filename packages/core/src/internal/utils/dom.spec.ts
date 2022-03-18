@@ -453,6 +453,11 @@ describe('Functional Helper: ', () => {
 
       expect(isScrollable(element)).toBe(false);
     });
+
+    it('should not panic if passed a non-element', () => {
+      expect(isScrollable(null)).toBe(false);
+      expect(isScrollable(void 0)).toBe(false);
+    });
   });
 
   describe('isFocusable() ', () => {
@@ -506,10 +511,10 @@ describe('Functional Helper: ', () => {
       });
       it('selects return true', async () => {
         testElement = await createTestElement(
-          html`<select id="${testId}"
-            ><option selected>ohai</option
-            ><option>kthxbye</option></select
-          >`
+          html`<select id="${testId}">
+            <option selected>ohai</option>
+            <option>kthxbye</option>
+          </select>`
         );
         expect(isFocusable(testElement.querySelector('#' + testId))).toBe(true);
       });

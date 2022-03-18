@@ -16,7 +16,9 @@ describe('Overlay element: ', () => {
   const placeholderText = 'Placeholder';
 
   beforeEach(async () => {
-    testElement = await createTestElement(html`<cds-internal-overlay>${placeholderText}</cds-internal-overlay>`);
+    testElement = await createTestElement(
+      html`<cds-internal-overlay cds-motion="off">${placeholderText}</cds-internal-overlay>`
+    );
     component = testElement.querySelector<CdsInternalOverlay>('cds-internal-overlay');
   });
 
@@ -26,14 +28,22 @@ describe('Overlay element: ', () => {
 
   describe('the basics - ', () => {
     it('should create the component', async () => {
+      component.hidden = false;
       await componentIsStable(component);
       expect(component.innerText.includes(placeholderText)).toBe(true);
     });
 
     it('inner panel should exist', async () => {
+      component.hidden = false;
       await componentIsStable(component);
       const innerPanel = component.shadowRoot.querySelector('.private-host');
       expect(innerPanel).toBeTruthy('inner panel should exist');
+    });
+
+    it('should default to the hidden property being true', async () => {
+      await componentIsStable(component);
+      expect(component.hidden).toBe(true);
+      expect(component.hasAttribute('hidden')).toBe(true);
     });
   });
 
@@ -53,7 +63,9 @@ describe('Overlay behaviors: ', () => {
   const placeholderText = 'Placeholder';
 
   beforeEach(async () => {
-    testElement = await createTestElement(html`<cds-internal-overlay>${placeholderText}</cds-internal-overlay>`);
+    testElement = await createTestElement(
+      html`<cds-internal-overlay cds-motion="off">${placeholderText}</cds-internal-overlay>`
+    );
     component = testElement.querySelector<CdsInternalOverlay>('cds-internal-overlay');
     await componentIsStable(component);
     component.closable = true;
@@ -112,7 +124,9 @@ class NestedOverlayTestComponent extends LitElement {
   }
 
   render() {
-    return html`<cds-internal-overlay id=${this.overlayId}><slot></slot></cds-internal-overlay>`;
+    return html`<cds-internal-overlay id=${this.overlayId} cds-motion="off" .hidden=${false}
+      ><slot></slot
+    ></cds-internal-overlay>`;
   }
 }
 
@@ -125,10 +139,14 @@ describe('Nested overlays: ', () => {
 
   beforeEach(async () => {
     testElement = await createTestElement(
-      html`<nested-overlay-test-component id="root" overlay-id="rootOverlay"
-        >${placeholderText}<nested-overlay-test-component id="second" overlay-id="secondOverlay"
+      html`<nested-overlay-test-component id="root" overlay-id="rootOverlay" cds-motion="off" .hidden=${false}
+        >${placeholderText}<nested-overlay-test-component
+          id="second"
+          overlay-id="secondOverlay"
+          cds-motion="off"
+          .hidden=${false}
           >Ohai</nested-overlay-test-component
-        ><nested-overlay-test-component id="third" overlay-id="thirdOverlay"
+        ><nested-overlay-test-component id="third" overlay-id="thirdOverlay" cds-motion="off" .hidden=${false}
           >Kthxbye</nested-overlay-test-component
         ></nested-overlay-test-component
       >`

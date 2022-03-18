@@ -69,7 +69,7 @@ class DemoDropdownBasic extends DemoDropdown {
         @closeChange=${() => (this.showOverlay = false)}
       >
         <cds-internal-pointer type="angle"></cds-internal-pointer>
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="basic-dropdown-title">Dropdown</h3>
           <p cds-text="body">Any content can be placed inside a generic dropdown.</p>
           <cds-button style="max-height: 36px" type="button" @click=${() => (this.showOverlay = false)}
@@ -103,7 +103,7 @@ class DemoDropdownScrollable extends DemoDropdown {
         id="demo-dropdown-scrollable-dd"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p-y:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" cds-layout="p-x:lg" id="scrolling-dropdown-title">
             Scrollable Dropdown
           </h3>
@@ -239,7 +239,7 @@ class DemoDropdownPointer extends DemoDropdown {
         anchor="demo-pointer-anchor"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="pointer-dropdown-title">Dropdown With Pointer</h3>
           <p cds-text="body">Any content can be placed inside a generic dropdown.</p>
           <cds-button style="max-height: 36px" type="button" @click=${() => (this.showOverlay = false)}
@@ -270,7 +270,7 @@ class DemoDropdownResponsive extends DemoDropdown {
         anchor="demo-responsive-anchor"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="responsive-dropdown-title">Responsive Dropdown</h3>
           <div cds-layout="vertical gap:lg">
             <p cds-text="body">
@@ -313,7 +313,7 @@ class DemoDropdownClosable extends DemoDropdown {
         id="demo-closable-dd"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="closable-dropdown-title">Closable Dropdown</h3>
           <div cds-layout="vertical gap:lg">
             <p cds-text="body">
@@ -360,7 +360,7 @@ class DemoDropdownAltAnchored extends DemoDropdown {
         id="demo-anchored-dd"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="anchored-dropdown-title">Anchored Dropdown</h3>
           <div cds-layout="vertical gap:lg">
             <p cds-text="body">A dropdown can be anchored to any element on the page.</p>
@@ -478,7 +478,7 @@ class DemoDropdownOrientation extends DemoDropdown {
         id="demo-orientations-dd"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="orientation-dropdown-title">Dropdown Orientation</h3>
           <p cds-text="body">
             The preference for where the dropdown should be placed can be changed to suit the requirements of your
@@ -515,7 +515,7 @@ class DemoDropdownDarkTheme extends DemoDropdown {
         id="demo-dark-dd"
         @closeChange=${() => (this.showOverlay = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="dark-theme-title">Dropdown</h3>
           <p cds-text="body">Any content can be placed inside a generic dropdown.</p>
           <cds-button style="max-height: 36px" type="button" @click=${() => (this.showOverlay = false)}
@@ -565,7 +565,7 @@ class DemoDropdownInModal extends DemoDropdown {
         anchor="ddown-anchor"
         @closeChange=${() => (this.showDropdown = false)}
       >
-        <div cds-layout="vertical gap:lg p:lg align:stretch">
+        <div cds-layout="vertical gap:lg align:stretch">
           <h3 cds-first-focus cds-text="section" id="ddown-modal-title">Dropdown</h3>
           <p cds-text="body">Any content can be placed inside a generic dropdown.</p>
           <cds-button style="max-height: 36px" type="button" @click=${() => (this.showDropdown = false)}
