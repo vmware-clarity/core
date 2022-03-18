@@ -74,7 +74,7 @@ Once imported, the component is automatically registered and ready to use in you
 </script>
 ```
 
-<a href="https://github.com/vmware/clarity/tree/next/apps" target="_blank" rel="noopener">
+<a href="https://github.com/vmware-clarity/starters" target="_blank" rel="noopener">
   <cds-button status="primary" size="md">Example Apps</cds-button>
 </a>
 
@@ -165,7 +165,7 @@ To listen to events use the Angular <code>(event)</code> binding syntax.
 </cds-alert>
 ```
 
-<a href="https://github.com/vmware/clarity/tree/next/apps/core-angular-cli" target="_blank" rel="noopener">
+<a href="https://github.com/vmware-clarity/starters/angular-cli" target="_blank" rel="noopener">
   <cds-button status="primary" size="md">Example Angular App</cds-button>
 </a>
 
@@ -193,7 +193,7 @@ Example of a alert web component in Vue
 <cds-alert status="info" :closable="true" @closeChange="log"> Hello World </cds-alert>`
 ```
 
-<a href="https://github.com/vmware/clarity/tree/next/apps/core-vue-cli" target="_blank" rel="noopener">
+<a href="https://github.com/vmware-clarity/starters/vue-cli" target="_blank" rel="noopener">
   <cds-button status="primary" size="md">Example Vue App</cds-button>
 </a>
 
@@ -264,7 +264,7 @@ export default class App extends React.Component<{}, {}> {
 }
 ```
 
-<a href="https://github.com/vmware/clarity/tree/next/apps/core-create-react-app" target="_blank" rel="noopener">
+<a href="https://github.com/vmware-clarity/starters/create-react-app" target="_blank" rel="noopener">
   <cds-button status="primary" size="md">Example React App</cds-button>
 </a>
 
@@ -341,7 +341,7 @@ To listen to custom events use the [`ng-on` directive](https://docs.angularjs.or
 </cds-alert>
 ```
 
-<a href="https://github.com/vmware/clarity/tree/next/apps/core-angular-js" target="_blank" rel="noopener">
+<a href="https://github.com/vmware-clarity/starters/angular-js" target="_blank" rel="noopener">
   <cds-button status="primary" size="md">Example AngularJS App</cds-button>
 </a>
 

@@ -110,7 +110,7 @@ git config user.name "John Doe"
 git config user.email johndoe@example.com
 
 ## Setup the upstream remote
-git remote add upstream https://github.com/vmware/clarity.git
+git remote add upstream https://github.com/vmware-clarity/core.git
 
 ## Check out the upstream a topic branch for your changes
 git fetch

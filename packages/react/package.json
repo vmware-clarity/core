@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vmware/clarity.git"
+    "url": "https://github.com/vmware-clarity/core.git"
   },
   "dependencies": {
     "@lit-labs/react": "^1.0.1"
@@ -82,6 +82,6 @@
   "author": "clarity",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vmware/clarity/issues"
+    "url": "https://github.com/vmware-clarity/core/issues"
   }
 }
