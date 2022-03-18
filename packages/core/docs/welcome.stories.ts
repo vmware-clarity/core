@@ -34,8 +34,7 @@ export const core = () => {
         <p cds-text="body left">
           Some of our components and utilities are currently offered as previews. This means that these components and
           utilities are in active development but ready to try out! We are hoping you will share your
-          <a href="https://github.com/vmware/clarity/issues/new/choose" cds-text="link">feedback</a> on these new
-          components.
+          <a href="https://github.com/vmware-clarity/starters" cds-text="link">feedback</a> on these new components.
         </p>
       </div>
       <div cds-layout="horizontal gap:xs align:horizontal-center">

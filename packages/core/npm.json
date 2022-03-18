@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vmware/clarity.git"
+    "url": "https://github.com/vmware-clarity/core.git"
   },
   "bugs": {
-    "url": "https://github.com/vmware/clarity/issues"
+    "url": "https://github.com/vmware-clarity/core/issues"
   },
   "main": "./index.js",
   "module": "./index.js",
