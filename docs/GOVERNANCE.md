@@ -16,4 +16,4 @@ Clarity is open to contributors from any background and company, so long as they
 - propose new features or designs
 - provide feedback
 
-Anyone can participate through our [GitHub Issues](https://github.com/vmware/clarity/issues), [Discussions](https://github.com/vmware/clarity/discussions), or by submitting contributions for [design](CONTRIBUTING_DESIGN.md), [development](CONTRIBUTING_DEVELOPMENT.md), or [documentation](./CONTRIBUTING_DOCUMENTATION.md).
+Anyone can participate through our [GitHub Issues](https://github.com/vmware-clarity/core/issues), [Discussions](https://github.com/vmware-clarity/core/discussions), or by submitting contributions for [design](CONTRIBUTING_DESIGN.md), [development](CONTRIBUTING_DEVELOPMENT.md), or [documentation](./CONTRIBUTING_DOCUMENTATION.md).

@@ -1,4 +1,7 @@
 contact_links:
   - name: Feature Request
-    url: https://github.com/vmware/clarity/discussions/new
+    url: https://github.com/vmware-clarity/core/discussions/new
     about: Submit new ideas in our GitHub Discussions forum.
+  - name: Accessibility Issues
+    url: https://github.com/vmware-clarity/core/wiki/Accessibility-Issues
+    about: Reports specific to accessibility issues or requests.
