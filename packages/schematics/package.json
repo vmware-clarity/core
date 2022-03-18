@@ -4,7 +4,7 @@
   "description": "Schematics for Clarity",
   "homepage": "https://clarity.design",
   "bugs": {
-    "url": "https://github.com/vmware/clarity/issues"
+    "url": "https://github.com/vmware-clarity/core/issues"
   },
   "repository": {
     "type": "git",
