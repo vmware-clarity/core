@@ -1,9 +1,13 @@
 ---
 name: Contribution proposal
 about: Proposal for a larger new feature or enhancement
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
-_Please review our [Contribution guide](https://github.com/vmware-clarity/core/blob/main/docs/CONTRIBUTING.md) for more details about how to contribute effectively._
+_Please review our [Contribution guide](https://github.com/vmware-clarity/ng-clarity/blob/main/docs/CONTRIBUTING.md) for more details about how to contribute effectively._
 
 ## Summary
 

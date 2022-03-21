@@ -1,6 +1,10 @@
 ---
 name: Bug report
 about: Create a report to help us fix or improve an issue
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Describe the bug
