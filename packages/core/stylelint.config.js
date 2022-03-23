@@ -1,14 +1,6 @@
 const postcssScss = require('postcss-scss');
 
 const rules = {
-  'sh-waqar/declaration-use-variable': [
-    [
-      'color',
-      {
-        ignoreValues: ['inherit', 'red', 'blue', 'transparent', '/^getSassButtonColor/'],
-      },
-    ],
-  ],
   'meowtec/no-px': [
     true,
     {
@@ -40,7 +32,7 @@ const config = {
   extends: 'stylelint-config-recommended',
   defaultSeverity: 'error',
   customSyntax: postcssScss,
-  plugins: ['stylelint-scss', 'stylelint-declaration-use-variable', 'stylelint-no-px'],
+  plugins: ['stylelint-scss', 'stylelint-no-px'], // removed stylelint-declaration-use-variable, todo: https://github.com/AndyOGo/stylelint-declaration-strict-value
   ignoreFiles: ['./src/styles/tokens/generated/*.scss', './src/styles/shim.clr-ui.scss', './dist/**/*.scss'],
   rules,
 };

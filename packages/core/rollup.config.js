@@ -48,6 +48,8 @@ const config = {
     exports: [
       './icon/shapes/*',
       './icon/icon.service.js',
+      './styles/module.tokens.css',
+      './styles/module.tokens.min.css',
       './tokens/tokens.js',
       './tokens/tokens.d.ts',
       './tokens/tokens.json',
@@ -72,7 +74,7 @@ export default [
       preserveModules: true,
       dir: config.outDir,
       format: 'esm',
-      sourcemap: prod,
+      sourcemap: true,
       // https://github.com/vmware/clarity/issues/6695
       sourcemapExcludeSources: false,
       minifyInternalExports: prod,

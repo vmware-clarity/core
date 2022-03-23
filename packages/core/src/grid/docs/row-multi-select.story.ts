@@ -29,12 +29,12 @@ export function rowMultiSelect() {
           </cds-grid-column>
           ${this.grid.columns.map(column => html`<cds-grid-column>${column.label}</cds-grid-column>`)}
           ${this.grid.rows.map(
-            row => html` <cds-grid-row .selected=${row.selected}>
+            row => html` <cds-grid-row .selected=${row.selected as boolean}>
               <cds-grid-cell>
                 <cds-checkbox>
                   <input
                     type="checkbox"
-                    .checked=${row.selected}
+                    .checked=${row.selected as boolean}
                     value=${row.id}
                     @change=${(e: any) => this.select(row, e.target.checked)}
                     aria-label="select ${row.id}"

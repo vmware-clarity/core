@@ -42,6 +42,7 @@ function cleanPackageFiles() {
       ['alias', 'browserslist', 'scripts', 'devDependencies'].forEach(p => delete packageFile[p]);
 
       const metaData = {
+        name: '@cds/react',
         main: './index.js',
         module: './index.js',
         typings: './index.d.ts',

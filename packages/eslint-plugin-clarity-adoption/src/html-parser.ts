@@ -459,10 +459,13 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
     value: code.substr(root.range[0], root.range[1] - root.range[0]),
   };
 
-  const scopeManager: ScopeManager = new ScopeManager({});
+  const _ScopeManager = ScopeManager as any;
+  const scopeManager: ScopeManager = new _ScopeManager({});
   // DO NOT REMOVE! This code has side-effects, even though the variable is unused.
+  
+  const _Scope = Scope as any;
   /* tslint:disable no-unused-expression */
-  new Scope(scopeManager, 'module', null, syntaxTree, false);
+  new _Scope(scopeManager, 'module', null, syntaxTree, false);
 
   const result: ESLintHtmlParseResult = {
     ast: syntaxTree,

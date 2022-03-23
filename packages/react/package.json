@@ -1,21 +1,18 @@
 {
-  "name": "@cds/react",
+  "name": "@cds/react-workspace",
   "version": "6.0.0-next.6",
   "scripts": {
-    "start": "npm-run-all core:build build -p build:ts:watch dev:start",
+    "start": "npm-run-all build -p build:ts:watch dev:start",
     "dev:start": "parcel index.html",
-    "build": "npm-run-all -s build:ts build:package build:update",
-    "build:preinstall": "mkdir -p ../../dist/react/ && cp ./package.json ../../dist/react/",
-    "build:update": "node ../../scripts/update-local-packages.js /packages/react/dist/react/package.json",
+    "build": "npm-run-all -s build:ts build:package",
     "build:package": "node ./package.js",
     "build:ts": "tsc --b ./tsconfig.project.json --force",
     "build:ts:watch": "tsc --b ./tsconfig.project.json -w",
-    "core:build": "yarn --cwd ../core run build",
     "lint": "eslint \"*/**/*.{ts,tsx}\" --ignore-pattern \"dist\" --resolve-plugins-relative-to ../../node_modules",
     "lint:fix": "eslint --fix \"*/**/*.{ts,tsx}\" --ignore-pattern \"dist\"",
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "test:snap:update": "yarn run build && jest --updateSnapshot",
+    "test:snap:update": "npm run build && jest --updateSnapshot",
     "clean": "del ./dist .parcel-cache"
   },
   "repository": {
@@ -26,14 +23,13 @@
     "@lit-labs/react": "^1.0.1"
   },
   "peerDependencies": {
-    "@cds/core": "./dist/core",
+    "@cds/core": "file:../core/dist/core",
     "react": ">= 16.13.1",
     "react-dom": ">= 16.13.1"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
     "@babel/preset-env": "7.10.2",
-    "@cds/core": "./dist/core",
     "@testing-library/dom": "^8.11.3",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",

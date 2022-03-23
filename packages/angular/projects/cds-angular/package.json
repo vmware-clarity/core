@@ -14,13 +14,12 @@
     "url": "https://github.com/vmware-clarity/core.git"
   },
   "peerDependencies": {
-    "@angular/common": ">9",
-    "@angular/core": ">9",
-    "@cds/core": "./dist/core"
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0",
+    "@cds/core": "file:../../../core/dist/core"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
-    "jsdom": "^16.5.3"
+    "tslib": "^2.3.0"
   },
   "author": "clarity",
   "license": "MIT",
