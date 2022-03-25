@@ -291,6 +291,7 @@ export { dashboardIcon, dashboardIconName } from './shapes/dashboard.js';
 export { dataClusterIcon, dataClusterIconName } from './shapes/data-cluster.js';
 export { deployIcon, deployIconName } from './shapes/deploy.js';
 export { devicesIcon, devicesIconName } from './shapes/devices.js';
+export { digitalSignatureIcon, digitalSignatureIconName } from './shapes/digital-signature.js';
 export { disconnectIcon, disconnectIconName } from './shapes/disconnect.js';
 export { displayIcon, displayIconName } from './shapes/display.js';
 export { downloadCloudIcon, downloadCloudIconName } from './shapes/download-cloud.js';
