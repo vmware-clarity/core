@@ -50,7 +50,7 @@ function createPopupContent() {
 @customElement('positioning-utils-test-popup')
 class PositioningUtilsTestPopup extends LitElement {
   render() {
-    return html` <cds-internal-popup .hidden=${false}>${createPopupContent()}</cds-internal-popup>`;
+    return html` <cds-internal-popup>${createPopupContent()}</cds-internal-popup>`;
   }
 }
 
@@ -58,7 +58,7 @@ class PositioningUtilsTestPopup extends LitElement {
 class PositioningUtilsTestPopupWithPointer extends LitElement {
   pointerType: 'default' | 'angle' = 'angle';
   render() {
-    return html` <cds-internal-popup .hidden=${false}>
+    return html` <cds-internal-popup>
       <cds-internal-pointer type=${this.pointerType}></cds-internal-pointer>
       ${createPopupContent()}
     </cds-internal-popup>`;
