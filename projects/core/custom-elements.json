@@ -6836,7 +6836,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -7081,7 +7081,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -37354,7 +37354,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden"
             },
             {
@@ -37440,7 +37440,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden"
             }
           ],
@@ -37511,7 +37511,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -37655,7 +37655,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -38187,7 +38187,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -38386,7 +38386,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -49701,7 +49701,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -49854,7 +49854,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -57689,7 +57689,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "attribute": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",
@@ -57928,7 +57928,7 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "true",
+              "default": "false",
               "fieldName": "hidden",
               "inheritedFrom": {
                 "name": "CdsInternalStaticOverlay",

@@ -41,10 +41,11 @@ describe('Overlay element: ', () => {
       expect(innerPanel).toBeTruthy('inner panel should exist');
     });
 
-    it('should default to the hidden property being true', async () => {
+    it('should default to the hidden property being false', async () => {
+      // The native hidden propery/attr is a boolean attribute defaulting to false https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#boolean_attributes
       await componentIsStable(component);
-      expect(component.hidden).toBe(true);
-      expect(component.hasAttribute('hidden')).toBe(true);
+      expect(component.hidden).toBe(false);
+      expect(component.hasAttribute('hidden')).toBe(false);
     });
   });
 
@@ -125,9 +126,7 @@ class NestedOverlayTestComponent extends LitElement {
   }
 
   render() {
-    return html`<cds-internal-overlay id=${this.overlayId} cds-motion="off" .hidden=${false}
-      ><slot></slot
-    ></cds-internal-overlay>`;
+    return html`<cds-internal-overlay id=${this.overlayId} cds-motion="off"><slot></slot></cds-internal-overlay>`;
   }
 }
 
@@ -140,14 +139,10 @@ describe('Nested overlays: ', () => {
 
   beforeEach(async () => {
     testElement = await createTestElement(
-      html`<nested-overlay-test-component id="root" overlay-id="rootOverlay" cds-motion="off" .hidden=${false}
-        >${placeholderText}<nested-overlay-test-component
-          id="second"
-          overlay-id="secondOverlay"
-          cds-motion="off"
-          .hidden=${false}
+      html`<nested-overlay-test-component id="root" overlay-id="rootOverlay" cds-motion="off"
+        >${placeholderText}<nested-overlay-test-component id="second" overlay-id="secondOverlay" cds-motion="off"
           >Ohai</nested-overlay-test-component
-        ><nested-overlay-test-component id="third" overlay-id="thirdOverlay" cds-motion="off" .hidden=${false}
+        ><nested-overlay-test-component id="third" overlay-id="thirdOverlay" cds-motion="off"
           >Kthxbye</nested-overlay-test-component
         ></nested-overlay-test-component
       >`

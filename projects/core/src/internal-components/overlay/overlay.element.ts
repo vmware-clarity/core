@@ -39,7 +39,7 @@ export class CdsInternalStaticOverlay extends LitElement {
   @property({ type: Boolean }) closable = false;
 
   // eslint-disable-next-line rulesdir/reserved-property-names
-  @property({ type: Boolean }) hidden = true;
+  @property({ type: Boolean }) hidden = false;
 
   @state({ type: Boolean, reflect: true }) protected demoMode = false;
 
