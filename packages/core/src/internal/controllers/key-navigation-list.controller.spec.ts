@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 import { html, LitElement } from 'lit';
 import { queryAll } from 'lit/decorators/query-all.js';
 import { customElement, keyNavigationList, KeyNavigationListController } from '@cds/core/internal';
