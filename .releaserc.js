@@ -39,7 +39,7 @@ module.exports = {
           },
           eslint: {
             npmPublish: true,
-            pkgRoot: './projects/eslint-plugin-clarity-adoption/dist/lib',
+            pkgRoot: './projects/adoption/dist/lib',
           },
           react: {
             npmPublish: true,
