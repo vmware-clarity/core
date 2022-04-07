@@ -4,8 +4,7 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "packages/*",
-      "apps/website"
+      "packages/*"
     ],
     "nohoist": [
       "@cds/core/tslib",
@@ -39,7 +38,6 @@
     "build": "npm-run-all build:ci build:storybook:core",
     "build:ci": "npm-run-all clean format lint build:libs test",
     "build:libs": "npm-run-all preinstall core:build -p react:build angular:build schematics:build eslint:build",
-    "build:website": "yarn --cwd apps/website run build",
     "build:storybook:core": "yarn --cwd packages/core run storybook:build",
     "test": "npm-run-all core:test -p angular:test react:test eslint-rule:test schematics:test",
     "test:a11y": "node scripts/axe",
@@ -75,8 +73,6 @@
     "core:test": "yarn --cwd packages/core run test",
     "core:test:watch": "yarn --cwd packages/core run test:watch",
     "core:lint": "yarn --cwd packages/core run lint",
-    "demo:react": "yarn --cwd apps/react run start",
-    "demo:react:build": "yarn --cwd apps/react run build",
     "react:start": "yarn --cwd packages/react run start",
     "react:build": "yarn --cwd packages/react run build",
     "react:lint": "yarn --cwd packages/react run lint",
