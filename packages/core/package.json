@@ -116,7 +116,6 @@
     "sass": "1.48.0",
     "stylelint": "14.2.0",
     "stylelint-config-recommended": "6.0.0",
-    "stylelint-declaration-use-variable": "1.7.3",
     "stylelint-no-px": "1.0.1",
     "stylelint-scss": "4.1.0",
     "terser": "5.10.0",
