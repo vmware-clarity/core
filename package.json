@@ -7,10 +7,10 @@
     "npm": ">=7.8.0"
   },
   "workspaces": [
-    "./packages/core",
-    "./packages/eslint-plugin-clarity-adoption",
-    "./packages/angular",
-    "./packages/react"
+    "./projects/core",
+    "./projects/eslint-plugin-clarity-adoption",
+    "./projects/angular",
+    "./projects/react"
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
