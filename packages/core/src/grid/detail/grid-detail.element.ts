@@ -120,7 +120,7 @@ export class CdsGridDetail extends LitElement {
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.observer.disconnect();
+    this.observer?.disconnect();
     this.triggerRow?.removeAttribute('_detail-row');
   }
 

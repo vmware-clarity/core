@@ -78,7 +78,7 @@ export class KeyNavigationGridController<T extends ReactiveElement & KeyNavigati
   }
 
   hostDisconnected() {
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   private clickCell(e: MouseEvent) {

@@ -137,7 +137,7 @@ export class CdsModal extends CdsInternalOverlay {
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   private async setScrollableProperties() {

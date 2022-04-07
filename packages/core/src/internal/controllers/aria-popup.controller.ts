@@ -40,7 +40,7 @@ export class AriaPopupController<T extends AriaPopup> implements ReactiveControl
 
   hostDisconnected() {
     this.updateTrigger(false);
-    this.observer.disconnect();
+    this.observer?.disconnect();
   }
 
   private updateTrigger(expanded: boolean) {

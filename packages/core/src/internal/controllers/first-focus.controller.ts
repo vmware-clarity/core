@@ -30,7 +30,7 @@ export class FirstFocusController<T extends ReactiveElement> implements Reactive
   }
 
   hostDisconnected() {
-    this.observer.disconnect();
+    this.observer?.disconnect();
   }
 
   private cdsFocusFirst() {
