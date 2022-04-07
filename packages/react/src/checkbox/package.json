@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/checkbox"
+  "name": "@cds/react/checkbox",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

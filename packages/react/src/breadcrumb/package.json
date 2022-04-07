@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/breadcrumb"
+  "name": "@cds/react/breadcrumb",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

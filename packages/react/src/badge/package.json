@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/badge"
+  "name": "@cds/react/badge",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

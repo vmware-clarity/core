@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/radio"
+  "name": "@cds/react/radio",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }
