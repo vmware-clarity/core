@@ -78,21 +78,21 @@ _Describe the intended API_
 ## Starting Up
 
 1. Clone the repository https://github.com/vmware-clarity/core
-2. Ensure you have yarn 1.x (classic) installed https://classic.yarnpkg.components
-3. In the root directory run `yarn`
-4. Start project `cd projects/core && yarn run start`. This starts storybook and the build watcher.
-5. Run Unit test watcher `cd projects/core && yarn run test:watch`
+2. Ensure you have npm 7.8.0 or greater
+3. In the root directory run `npm install`
+4. Start project `cd projects/core && npm run start`. This starts storybook and the build watcher.
+5. Run Unit test watcher `cd projects/core && npm run test:watch`
 
 To run a full repository build in the root directory run the following:
 
 ```bash
-yarn run build
+npm run build
 ```
 
 Or to run only the CI build locally
 
 ```bash
-yarn run build:ci
+npm run build:ci
 ```
 
 This is the same build task ran by the Github Actions CI check-in process.

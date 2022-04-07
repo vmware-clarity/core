@@ -1,27 +1,12 @@
-package-lock.json
-package.json
-*/**/npm.json
-dist/
-reports/
-golden/
-.vscode
-.ng_build
-**/node_modules/**
-**/web_modules/**
-.cache
-.netlify
-packages/angular/.angular/**
-packages/angular/projects/cds-angular/
-packages/core/**/*.css.ts
-packages/core/custom-elements.json
-packages/core/src/styles/tokens/generated/**
-packages/core/src/grid/docs/*.stories.ts
-packages/core/dist/
-packages/react/coverage/
-packages/react/dist/
-docs/core
-apps/core-angular-cli/
-.netlify
+**/node_modules
+**/dist
+**/.angular/cache
 
-# has errors and got past build
-packages/eslint-plugin-clarity-adoption
+# core
+packages/core/src/styles/tokens/generated
+
+# angular
+packages/angular/projects/cds-angular/*/**/*
+!packages/angular/projects/cds-angular/_stubs
+!packages/angular/angular/projects/cds-angular/src/all.spec.ts
+!packages/angular/angular/projects/cds-angular/src/test.ts

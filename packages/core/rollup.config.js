@@ -11,15 +11,15 @@
  * The build compiles and optimizes the library for production.
  */
 
-import * as fs from 'fs-extra';
 import typescript from '@rollup/plugin-typescript';
-import nodeResolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import styles from 'rollup-plugin-styles';
 import { terser } from 'rollup-plugin-terser';
+import { join } from 'path';
 import {
   packageCheck,
   webComponentAnalyer,
@@ -32,7 +32,7 @@ import {
 
 const config = {
   baseDir: './src',
-  outDir: './dist/core',
+  outDir: join('dist', 'core'), // rollup will fail on Windows if we don't normalize path deliminters
   assets: ['./README.md'],
   modules: {
     entryPoints: ['./src/**/index.ts', './src/**/register.ts'],
@@ -65,7 +65,6 @@ const config = {
 };
 
 const prod = !process.env.ROLLUP_WATCH;
-const version = fs.readJsonSync('./npm.json').version;
 
 export default [
   ...globalStyles(config),
@@ -93,7 +92,7 @@ export default [
         copyOnce: true,
         targets: [
           {
-            src: './npm.json',
+            src: './package.lib.json',
             rename: 'package.json',
             dest: config.outDir,
             transform: p => createPackageModuleMetadata(p, config),
@@ -110,7 +109,6 @@ export default [
         ? replace({
             preventAssignment: false,
             values: {
-              PACKAGE_VERSION: version,
               'super(...arguments),': 'super(...arguments);',
               'super(),': 'super();',
             }, // safari 15.1 bug with minification optimization
