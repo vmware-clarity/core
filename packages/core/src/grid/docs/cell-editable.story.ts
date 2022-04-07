@@ -29,7 +29,7 @@ export function cellEditable() {
                   <input
                     ?readonly=${!cell.selected}
                     value=${cell.value}
-                    aria-label=${cell.label}
+                    aria-label=${cell.label as string}
                     @change=${(e: any) => (cell.value = e.target.value)}
                     @blur=${(e: any) => this.toggleEdit(e, cell)}
                   />

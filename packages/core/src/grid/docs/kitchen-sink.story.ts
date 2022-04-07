@@ -169,7 +169,7 @@ export function kitchenSink() {
                   <cds-progress-circle
                     size="xxl"
                     status=${StatusDisplayType[this.currentDetail?.status]}
-                    value=${this.currentDetail?.cpu}
+                    value=${this.currentDetail?.cpu as number}
                   ></cds-progress-circle>
                   <p cds-text="subsection">CPU: ${this.currentDetail?.cpu}%</p>
                 </div>
@@ -177,7 +177,7 @@ export function kitchenSink() {
                   <cds-progress-circle
                     size="xxl"
                     status=${StatusDisplayType[this.currentDetail?.status]}
-                    value=${this.currentDetail?.memory}
+                    value=${this.currentDetail?.memory as number}
                   ></cds-progress-circle>
                   <p cds-text="subsection">Memory: ${this.currentDetail?.memory}%</p>
                 </div>

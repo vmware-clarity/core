@@ -26,7 +26,7 @@ export function rowMultiSort() {
               ${column.label}
               <cds-button-sort
                 aria-label="sort"
-                .sort=${column.sort}
+                .sort=${column.sort as any}
                 @sortChange=${(e: any) => this.sort(column, e.detail)}
               ></cds-button-sort>
             </cds-grid-column>`
