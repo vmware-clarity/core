@@ -22,6 +22,6 @@ if (typeof window !== 'undefined') {
   // jsdom implements getBoundingClientRect, but not DOMRect
   if (!window.DOMRect) {
     const domRectMock = () => jest.fn().mockReturnValue({});
-    window.DOMRect = (domRectMock() as unknown) as typeof window.DOMRect;
+    window.DOMRect = domRectMock() as unknown as typeof window.DOMRect;
   }
 }

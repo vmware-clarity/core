@@ -5,7 +5,7 @@
  */
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
-import { HTMLElement } from '../../types';
+import { HTMLElement } from 'eslint-html-parser';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 import { getDeprecatedClassFixes, getTagFixes } from '../html-fixer-helpers';
 
@@ -34,7 +34,7 @@ const deprecatedClassToAttributeMap = {
   'badge-danger': 'status="danger"',
 };
 
-function hasDisallowedClass(classes: Array<string>): boolean {
+function hasDisallowedClass(classes: string[]): boolean {
   return classes.includes('badge');
 }
 

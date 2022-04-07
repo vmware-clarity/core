@@ -250,28 +250,28 @@ describe('Positioning: ', () => {
           Object.assign({}, fullFalseConfig, { top: [false, { top: 100, left: 100 }, false] }) as PositionConfig,
           'mid'
         )
-      ).toEqual(({ top: 100, left: 100 } as unknown) as PositionObj, 'top works');
+      ).toEqual({ top: 100, left: 100 } as unknown as PositionObj, 'top works');
       expect(
         checkNextPosition(
           Positions.Bottom,
           Object.assign({}, fullFalseConfig, { bottom: [false, false, { top: 200, left: 200 }] }) as PositionConfig,
           'end'
         )
-      ).toEqual(({ top: 200, left: 200 } as unknown) as PositionObj, 'bottom works');
+      ).toEqual({ top: 200, left: 200 } as unknown as PositionObj, 'bottom works');
       expect(
         checkNextPosition(
           Positions.Left,
           Object.assign({}, fullFalseConfig, { left: [{ top: 300, left: 300 }, false, false] }) as PositionConfig,
           'start'
         )
-      ).toEqual(({ top: 300, left: 300 } as unknown) as PositionObj, 'left works');
+      ).toEqual({ top: 300, left: 300 } as unknown as PositionObj, 'left works');
       expect(
         checkNextPosition(
           Positions.Right,
           Object.assign({}, fullFalseConfig, { right: [{ top: 400, left: 400 }, false, false] }) as PositionConfig,
           'start'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'right works');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'right works');
     });
 
     it('cascades through position results as expected', () => {
@@ -281,14 +281,14 @@ describe('Positioning: ', () => {
           Object.assign({}, fullFalseConfig, { right: [false, { top: 400, left: 400 }, false] }) as PositionConfig,
           'start'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'start cascades to mid');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'start cascades to mid');
       expect(
         checkNextPosition(
           Positions.Right,
           Object.assign({}, fullFalseConfig, { right: [false, false, { top: 400, left: 400 }] }) as PositionConfig,
           'start'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'start falls through to end');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'start falls through to end');
 
       expect(
         checkNextPosition(
@@ -296,14 +296,14 @@ describe('Positioning: ', () => {
           Object.assign({}, fullFalseConfig, { right: [{ top: 400, left: 400 }, false, false] }) as PositionConfig,
           'mid'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'mid cascades to start');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'mid cascades to start');
       expect(
         checkNextPosition(
           Positions.Right,
           Object.assign({}, fullFalseConfig, { right: [false, false, { top: 400, left: 400 }] }) as PositionConfig,
           'mid'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'mid falls through to end');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'mid falls through to end');
 
       expect(
         checkNextPosition(
@@ -311,19 +311,19 @@ describe('Positioning: ', () => {
           Object.assign({}, fullFalseConfig, { right: [false, { top: 400, left: 400 }, false] }) as PositionConfig,
           'end'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'end cascades to mid');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'end cascades to mid');
       expect(
         checkNextPosition(
           Positions.Right,
           Object.assign({}, fullFalseConfig, { right: [{ top: 400, left: 400 }, false, false] }) as PositionConfig,
           'end'
         )
-      ).toEqual(({ top: 400, left: 400 } as unknown) as PositionObj, 'end falls through to start');
+      ).toEqual({ top: 400, left: 400 } as unknown as PositionObj, 'end falls through to start');
     });
 
     it('returns false if all positions are false', () => {
       expect(checkNextPosition(Positions.Bottom, Object.assign({}, fullFalseConfig) as PositionConfig, 'start')).toBe(
-        (false as unknown) as PositionObjOrNot
+        false as unknown as PositionObjOrNot
       );
       expect(
         checkNextPosition(
@@ -331,13 +331,13 @@ describe('Positioning: ', () => {
           Object.assign({}, fullFalseConfig, { bottom: [false, false, false] }) as PositionConfig,
           'start'
         )
-      ).toBe((false as unknown) as PositionObjOrNot);
+      ).toBe(false as unknown as PositionObjOrNot);
     });
 
     it('falls through to false in a bad-data scenario', () => {
-      expect(checkNextPosition(82, {} as PositionConfig, 'start')).toBe((false as unknown) as PositionObjOrNot);
+      expect(checkNextPosition(82, {} as PositionConfig, 'start')).toBe(false as unknown as PositionObjOrNot);
       expect(checkNextPosition(Positions.Top, { top: [] } as PositionConfig, 'start')).toBe(
-        (false as unknown) as PositionObjOrNot
+        false as unknown as PositionObjOrNot
       );
     });
   });
@@ -530,15 +530,15 @@ describe('Functional Utilities: ', () => {
 
         const [startPos, midPos, endPos] = testMe as PositionObj[];
 
-        expect(startPos).not.toBe((false as unknown) as PositionObj);
+        expect(startPos).not.toBe(false as unknown as PositionObj);
         expect(startPos.popup.top).toBe(300, 'sanity check "start" popup coords (1 of 2)');
         expect(startPos.popup.left).toBe(50, 'sanity check "start" popup coords (2 of 2)');
 
-        expect(midPos).not.toBe((false as unknown) as PositionObj);
+        expect(midPos).not.toBe(false as unknown as PositionObj);
         expect(midPos.popup.top).toBe(300, 'sanity check "mid" popup coords (1 of 2)');
         expect(midPos.popup.left).toBe(100, 'sanity check "mid" popup coords (2 of 2)');
 
-        expect(endPos).not.toBe((false as unknown) as PositionObj);
+        expect(endPos).not.toBe(false as unknown as PositionObj);
         expect(endPos.popup.top).toBe(300, 'sanity check "end" popup coords (1 of 2)');
         expect(endPos.popup.left).toBe(150, 'sanity check "end" popup coords (2 of 2)');
       });
@@ -576,15 +576,15 @@ describe('Functional Utilities: ', () => {
 
         const [startPos, midPos, endPos] = testMe as PositionObj[];
 
-        expect(startPos).not.toBe((false as unknown) as PositionObj);
+        expect(startPos).not.toBe(false as unknown as PositionObj);
         expect(startPos.popup.top).toBe(100, 'sanity check "start" popup coords (1 of 2)');
         expect(startPos.popup.left).toBe(50, 'sanity check "start" popup coords (2 of 2)');
 
-        expect(midPos).not.toBe((false as unknown) as PositionObj);
+        expect(midPos).not.toBe(false as unknown as PositionObj);
         expect(midPos.popup.top).toBe(100, 'sanity check "mid" popup coords (1 of 2)');
         expect(midPos.popup.left).toBe(100, 'sanity check "mid" popup coords (2 of 2)');
 
-        expect(endPos).not.toBe((false as unknown) as PositionObj);
+        expect(endPos).not.toBe(false as unknown as PositionObj);
         expect(endPos.popup.top).toBe(100, 'sanity check "end" popup coords (1 of 2)');
         expect(endPos.popup.left).toBe(150, 'sanity check "end" popup coords (2 of 2)');
       });
@@ -622,15 +622,15 @@ describe('Functional Utilities: ', () => {
 
         const [startPos, midPos, endPos] = testMe as PositionObj[];
 
-        expect(startPos).not.toBe((false as unknown) as PositionObj);
+        expect(startPos).not.toBe(false as unknown as PositionObj);
         expect(startPos.popup.top).toBe(100, 'sanity check "start" popup coords (1 of 2)');
         expect(startPos.popup.left).toBe(400, 'sanity check "start" popup coords (2 of 2)');
 
-        expect(midPos).not.toBe((false as unknown) as PositionObj);
+        expect(midPos).not.toBe(false as unknown as PositionObj);
         expect(midPos.popup.top).toBe(125, 'sanity check "mid" popup coords (1 of 2)');
         expect(midPos.popup.left).toBe(400, 'sanity check "mid" popup coords (2 of 2)');
 
-        expect(endPos).not.toBe((false as unknown) as PositionObj);
+        expect(endPos).not.toBe(false as unknown as PositionObj);
         expect(endPos.popup.top).toBe(150, 'sanity check "end" popup coords (1 of 2)');
         expect(endPos.popup.left).toBe(400, 'sanity check "end" popup coords (2 of 2)');
       });
@@ -668,15 +668,15 @@ describe('Functional Utilities: ', () => {
 
         const [startPos, midPos, endPos] = testMe as PositionObj[];
 
-        expect(startPos).not.toBe((false as unknown) as PositionObj);
+        expect(startPos).not.toBe(false as unknown as PositionObj);
         expect(startPos.popup.top).toBe(100, 'sanity check "start" popup coords (1 of 2)');
         expect(startPos.popup.left).toBe(200, 'sanity check "start" popup coords (2 of 2)');
 
-        expect(midPos).not.toBe((false as unknown) as PositionObj);
+        expect(midPos).not.toBe(false as unknown as PositionObj);
         expect(midPos.popup.top).toBe(125, 'sanity check "mid" popup coords (1 of 2)');
         expect(midPos.popup.left).toBe(200, 'sanity check "mid" popup coords (2 of 2)');
 
-        expect(endPos).not.toBe((false as unknown) as PositionObj);
+        expect(endPos).not.toBe(false as unknown as PositionObj);
         expect(endPos.popup.top).toBe(150, 'sanity check "end" popup coords (1 of 2)');
         expect(endPos.popup.left).toBe(200, 'sanity check "end" popup coords (2 of 2)');
       });

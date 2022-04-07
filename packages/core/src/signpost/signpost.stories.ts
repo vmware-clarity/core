@@ -115,9 +115,7 @@ class DemoSignpostTrigger extends LitElement {
         <cds-button id="demo-anchor" @click=${() => (this.showOverlay = true)} popup="demo-signpost">
           Show Trigger Signpost
         </cds-button>
-        <cds-button id="demo-trigger" status="danger" action="outline">
-          Trigger Receives Focus On Close
-        </cds-button>
+        <cds-button id="demo-trigger" status="danger" action="outline"> Trigger Receives Focus On Close </cds-button>
       </div>
       <cds-signpost
         id="demo-signpost"

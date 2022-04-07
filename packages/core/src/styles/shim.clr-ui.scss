@@ -98,7 +98,6 @@
   /* Buttons */
 
   // Shared colors
-  --clr-btn-default-bg-color: transparent;
   --clr-btn-outline-bg-color: transparent;
 
   // Default button colors
@@ -885,6 +884,7 @@
   .btn:disabled {
     opacity: 1;
   }
+
   .btn-primary,
   .btn-success,
   .btn-warning,

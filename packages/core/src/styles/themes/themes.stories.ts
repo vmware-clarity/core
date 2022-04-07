@@ -317,9 +317,7 @@ export function dynamicTheme() {
         </div>
 
         <cds-alert-group status="info">
-          <cds-alert closable>
-            This example is a closable banner alert inside a banner alert group.
-          </cds-alert>
+          <cds-alert closable> This example is a closable banner alert inside a banner alert group. </cds-alert>
         </cds-alert-group>
       </div>
       <div cds-layout="col:1 horizontal align:center">

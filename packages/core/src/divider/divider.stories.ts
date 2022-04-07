@@ -22,11 +22,7 @@ export default {
 };
 
 export function API(args: any) {
-  return html`
-    <cds-divider ...="${spreadProps(getElementStorybookArgs(args))}">
-      ${args.default}
-    </cds-divider>
-  `;
+  return html` <cds-divider ...="${spreadProps(getElementStorybookArgs(args))}"> ${args.default} </cds-divider> `;
 }
 
 /** @website */

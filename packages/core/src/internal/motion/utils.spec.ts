@@ -15,6 +15,8 @@ import {
   CLARITY_MOTION_FALLBACK_DURATION_IN_MS,
   CLARITY_MOTION_REVERSE_ANIMATION_SUFFIX,
   PropertyDrivenAnimation,
+  AnimationStatus,
+  TargetedAnimation,
 } from './interfaces.js';
 import {
   filterAnimationsByUpdatedProperties,
@@ -40,7 +42,6 @@ import {
 } from './utils.js';
 import { ClarityMotion } from './motion.service.js';
 import { LogService } from '../services/log.service.js';
-import { AnimationStatus, TargetedAnimation } from './interfaces.js';
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -112,7 +113,7 @@ describe('Animation Helpers: ', () => {
       const testElement = await createTestElement(html`<div>ohai</div>`);
       spyOn(LogService, 'warn');
       expect(testElement).toBeDefined();
-      const didRun = await runPropertyAnimations(new Map(), (testElement as unknown) as AnimatableElement);
+      const didRun = await runPropertyAnimations(new Map(), testElement as unknown as AnimatableElement);
       expect(LogService.warn).toHaveBeenCalled();
       expect(didRun).toBe(false);
       removeTestElement(testElement);
@@ -123,7 +124,7 @@ describe('Animation Helpers: ', () => {
       const propMap: PropertyValues<any> = new Map();
       propMap.set('jabberwocky', 'wat');
 
-      const didRun = await runPropertyAnimations(propMap, (testElement as unknown) as AnimatableElement);
+      const didRun = await runPropertyAnimations(propMap, testElement as unknown as AnimatableElement);
       expect(didRun).toBe(false);
       removeTestElement(testElement);
     });
@@ -149,7 +150,7 @@ describe('Animation Helpers: ', () => {
       const propMap: PropertyValues<any> = new Map();
       propMap.set('jabberwocky', 'wat');
       (component as any).jabberwocky = 'wat';
-      const didRun = await runPropertyAnimations(propMap, (component as unknown) as AnimatableElement);
+      const didRun = await runPropertyAnimations(propMap, component as unknown as AnimatableElement);
       expect(didRun).toBe(false);
       removeTestElement(testElement);
     });
@@ -162,7 +163,7 @@ describe('Animation Helpers: ', () => {
       await componentIsStable(component);
       const propMap: PropertyValues<any> = new Map();
       propMap.set('everythingIsFine', !component.everythingIsFine); // wants to run the 'something' animation
-      const didRun = await runPropertyAnimations(propMap, (component as unknown) as AnimatableElement);
+      const didRun = await runPropertyAnimations(propMap, component as unknown as AnimatableElement);
       expect(didRun).toBe(true);
       removeTestElement(testElement);
     });
@@ -174,7 +175,7 @@ describe('Animation Helpers: ', () => {
       await componentIsStable(component);
       const propMap: PropertyValues<any> = new Map();
       propMap.set('everythingIsFine', !component.everythingIsFine); // wants to run a 'nothing' animation; which does not exist!
-      const didRun = await runPropertyAnimations(propMap, (component as unknown) as AnimatableElement);
+      const didRun = await runPropertyAnimations(propMap, component as unknown as AnimatableElement);
       expect(didRun).toBe(false);
       removeTestElement(testElement);
     });
@@ -323,7 +324,7 @@ describe('Animation Helpers: ', () => {
     it('sets option property to static fallback if options object exists but does not have expected property', () => {
       const test = setAnimationProperty(
         'duration',
-        (testDiv as unknown) as AnimatableElement,
+        testDiv as unknown as AnimatableElement,
         clone(mockTargetedAnimation),
         250
       );
@@ -333,7 +334,7 @@ describe('Animation Helpers: ', () => {
     it('sets option property to css variable value if options object exists and expected property is a css variable name', () => {
       const test = setAnimationProperty(
         'easing',
-        (testDiv as unknown) as AnimatableElement,
+        testDiv as unknown as AnimatableElement,
         clone(mockTargetedAnimation),
         'linear'
       );
@@ -344,14 +345,14 @@ describe('Animation Helpers: ', () => {
     it('sets option property to static fallback if options object exists, expected property is a css variable name, but there is no value for that css variable', () => {
       const editMock = clone(mockTargetedAnimation);
       editMock[0].options.duration = '--animation-duration';
-      const test = setAnimationProperty('duration', (testDiv as unknown) as AnimatableElement, editMock, 500);
+      const test = setAnimationProperty('duration', testDiv as unknown as AnimatableElement, editMock, 500);
       expect(test[0].options.duration).toBe(500);
     });
 
     it('uses optional valus converter to set option property if options object exists, expected property is a css variable name, and there is a value for that css variable', () => {
       const test = setAnimationProperty(
         'easing',
-        (testDiv as unknown) as AnimatableElement,
+        testDiv as unknown as AnimatableElement,
         clone(mockTargetedAnimation),
         'linear',
         (val: string) => {
@@ -366,8 +367,8 @@ describe('Animation Helpers: ', () => {
       const editMock = clone(mockTargetedAnimation);
       editMock[0].options.duration = 750;
       editMock[0].options.easing = 'ease-out';
-      let test = setAnimationProperty('duration', (testDiv as unknown) as AnimatableElement, editMock, 500);
-      test = setAnimationProperty('easing', (testDiv as unknown) as AnimatableElement, editMock, 'linear', val => {
+      let test = setAnimationProperty('duration', testDiv as unknown as AnimatableElement, editMock, 500);
+      test = setAnimationProperty('easing', testDiv as unknown as AnimatableElement, editMock, 'linear', val => {
         return val + '-in';
       });
       expect(test[0].options.duration).not.toBe(500);
@@ -380,7 +381,7 @@ describe('Animation Helpers: ', () => {
     it('creates animation config object and sets it to the static fallback if no animation config exists and, thus, no expected property value is present', () => {
       const test = setAnimationProperty(
         'easing',
-        (testDiv as unknown) as AnimatableElement,
+        testDiv as unknown as AnimatableElement,
         clone(noConfig),
         'linear',
         val => {
@@ -393,7 +394,7 @@ describe('Animation Helpers: ', () => {
 
     it('handles empty animation config', () => {
       const empty: TargetedAnimation[] = [];
-      const test = setAnimationProperty('easing', (testDiv as unknown) as AnimatableElement, empty, 'linear', val => {
+      const test = setAnimationProperty('easing', testDiv as unknown as AnimatableElement, empty, 'linear', val => {
         return val + '-in';
       });
       expect(test).toEqual([]);
@@ -744,7 +745,7 @@ describe('Animation Helpers: ', () => {
     let eventRan = false;
     let eventMsg = '';
 
-    const mockHostEl = (({
+    const mockHostEl = {
       '_cds-animation-status': '',
       getAttribute: function () {
         return this['_cds-animation-status'];
@@ -760,7 +761,7 @@ describe('Animation Helpers: ', () => {
           eventMsg = msg;
         },
       },
-    } as { '_cds-animation-status': string }) as unknown) as AnimatableElement;
+    } as { '_cds-animation-status': string } as unknown as AnimatableElement;
 
     beforeEach(() => {
       mockHostEl['_cds-animation-status'] = '';
@@ -838,7 +839,7 @@ describe('Animation Helpers: ', () => {
     });
 
     it('adds reverse direction if animation is reversed', () => {
-      const myTestEl = (testElement as unknown) as AnimatableElement;
+      const myTestEl = testElement as unknown as AnimatableElement;
       myTestEl.cdsMotion = 'on';
       const testConfig = setAnimationConfigOptions(
         `ohai${CLARITY_MOTION_REVERSE_ANIMATION_SUFFIX}`,
@@ -849,21 +850,21 @@ describe('Animation Helpers: ', () => {
     });
 
     it('zeroes animation out if animations are turned off', () => {
-      const myTestEl = (testElement as unknown) as AnimatableElement;
+      const myTestEl = testElement as unknown as AnimatableElement;
       myTestEl.cdsMotion = 'off';
       const testConfig = setAnimationConfigOptions('ohai', clone(mockTargetedAnimationNoCssVars), myTestEl);
       expect(testConfig[0]?.options?.duration === 0).toBe(true);
     });
 
     it('zeroes animation out if cds-motion is not defined', () => {
-      const myTestEl = (testElement as unknown) as AnimatableElement;
+      const myTestEl = testElement as unknown as AnimatableElement;
       expect(myTestEl.cdsMotion).toBeUndefined('cdsMotion is not defined');
       const testConfig = setAnimationConfigOptions('ohai', clone(mockTargetedAnimationNoCssVars), myTestEl);
       expect(testConfig[0]?.options?.duration === 0).toBe(true);
     });
 
     it('sets animation to defined duration and easing', () => {
-      const myTestEl = (testElement as unknown) as AnimatableElement;
+      const myTestEl = testElement as unknown as AnimatableElement;
       myTestEl.cdsMotion = 'on';
       const testConfig = setAnimationConfigOptions('ohai', clone(mockTargetedAnimationNoCssVars), myTestEl);
       expect(testConfig[0]?.options?.duration === 2000).toBe(true);
@@ -871,7 +872,7 @@ describe('Animation Helpers: ', () => {
     });
 
     it('sets animation to defaults if CSS vars are not defined', () => {
-      const myTestEl = (testElement as unknown) as AnimatableElement;
+      const myTestEl = testElement as unknown as AnimatableElement;
       myTestEl.cdsMotion = 'on';
       const testConfig = setAnimationConfigOptions('ohai', clone(mockTargetedAnimationWithCssVars), myTestEl);
       expect(testConfig[0]?.options?.duration).toBe(CLARITY_MOTION_FALLBACK_DURATION_IN_MS);
@@ -879,7 +880,7 @@ describe('Animation Helpers: ', () => {
     });
 
     it('overrides animation defaults with CSS vars if vars are defined', () => {
-      const myTestEl = (testElementWithVars as unknown) as AnimatableElement;
+      const myTestEl = testElementWithVars as unknown as AnimatableElement;
       myTestEl.style.setProperty('--animation-duration', testDurationProperty);
       myTestEl.style.setProperty('--animation-easing', testEasingProperty);
       myTestEl.cdsMotion = 'on';
@@ -1002,7 +1003,7 @@ describe('Animation Helpers: ', () => {
       const expected = getAnimationPromiseInstructions(
         'test',
         arrayOfConfigs,
-        (component as unknown) as AnimatableElement
+        component as unknown as AnimatableElement
       );
       expect(expected.length).toBe(2);
       expect(expected.toString()).toBe('[object Promise],[object Promise]'); // typeof was no help with this!
@@ -1040,7 +1041,7 @@ describe('Animation Helpers: ', () => {
       const expected = getAnimationPromiseInstructions(
         'test',
         arrayOfConfigs,
-        (component as unknown) as AnimatableElement
+        component as unknown as AnimatableElement
       );
       expect(expected.length).toBe(2, '3 configs passed, 1 has an onlyIf that fails');
     });
@@ -1079,7 +1080,7 @@ describe('Animation Helpers: ', () => {
       const expected = getAnimationPromiseInstructions(
         'test',
         arrayOfConfigs,
-        (component as unknown) as AnimatableElement
+        component as unknown as AnimatableElement
       );
       expect(expected.length).toBe(0, 'no configs passed');
     });
@@ -1129,7 +1130,7 @@ describe('Animation Helpers: ', () => {
       const expected = getAnimationPromiseInstructions(
         'test',
         arrayOfConfigs,
-        (component as unknown) as AnimatableElement
+        component as unknown as AnimatableElement
       );
       expect(expected.length).toBe(2, 'one config passed, one config has no onlyIf defined so allowed through');
     });

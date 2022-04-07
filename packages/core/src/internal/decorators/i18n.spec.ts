@@ -126,14 +126,14 @@ describe('helpers', () => {
 
   describe('getI18nValues()', () => {
     it('should return values if not empty', () => {
-      const testMe = getI18nValues({ go: 'niners' }, (component as unknown) as I18nElement);
+      const testMe = getI18nValues({ go: 'niners' }, component as unknown as I18nElement);
       expect(testMe).toEqual({ go: 'niners' });
     });
 
     it('should try to lookup string attr if passed empty', async () => {
       component.setAttribute('cds-i18n', '{ "greet": "ohai" }');
       await componentIsStable(component);
-      const testMe = getI18nValues(void 0, (component as unknown) as I18nElement);
+      const testMe = getI18nValues(void 0, component as unknown as I18nElement);
       expect(testMe).toEqual({ greet: 'ohai' });
     });
 
@@ -141,14 +141,14 @@ describe('helpers', () => {
       component.i18n = null;
       await componentIsStable(component);
       component.setAttribute('cds-i18n', '{ notAJson: "wat" }');
-      const testMe = getI18nValues(void 0, (component as unknown) as I18nElement);
+      const testMe = getI18nValues(void 0, component as unknown as I18nElement);
       expect(testMe).toEqual({});
     });
 
     it('should return empty obj and warn if passed empty and attr is empty too', async () => {
       component.i18n = null;
       await componentIsStable(component);
-      const testMe = getI18nValues(void 0, (component as unknown) as I18nElement);
+      const testMe = getI18nValues(void 0, component as unknown as I18nElement);
       expect(testMe).toEqual({});
     });
   });

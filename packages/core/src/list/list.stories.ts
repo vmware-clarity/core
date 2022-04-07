@@ -92,9 +92,7 @@ export function API() {
 
       <h2 cds-text="title">Mixed and Nested Lists</h2>
 
-      <p cds-text="p1">
-        Lists can be nested and the varieties can be mixed within nested groupings.
-      </p>
+      <p cds-text="p1">Lists can be nested and the varieties can be mixed within nested groupings.</p>
 
       <cds-card>
         <div cds-layout="vertical gap:sm">

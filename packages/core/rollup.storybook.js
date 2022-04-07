@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-/**
+/*
  * Storybook Build
  *
  * This is the rollup build for building Storybook

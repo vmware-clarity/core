@@ -5,7 +5,7 @@
  */
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
-import { HTMLElement } from '../../types';
+import { HTMLElement } from 'eslint-html-parser';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 
 export const createESLintRule = ESLintUtils.RuleCreator(() => ``);
@@ -13,7 +13,7 @@ export type MessageIds = 'clrCardFailure';
 
 const disallowedCardElementSelector = `.card`;
 
-function hasDisallowedClass(classes: Array<string>): boolean {
+function hasDisallowedClass(classes: string[]): boolean {
   return classes.includes('card');
 }
 

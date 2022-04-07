@@ -30,11 +30,7 @@ export default {
 };
 
 export function API(args: any) {
-  return html`
-    <cds-button ...="${spreadProps(getElementStorybookArgs(args))}">
-      ${args.default}
-    </cds-button>
-  `;
+  return html` <cds-button ...="${spreadProps(getElementStorybookArgs(args))}"> ${args.default} </cds-button> `;
 }
 
 /** @website */
@@ -225,9 +221,7 @@ export function textAndBadge() {
 export function links() {
   return html`
     <div cds-layout="horizontal gap:sm">
-      <cds-button>
-        button
-      </cds-button>
+      <cds-button> button </cds-button>
 
       <a href="javascript:void(0)">
         <cds-button>link</cds-button>

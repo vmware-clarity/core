@@ -47,9 +47,7 @@ export function Basic() {
 export function WithContainer() {
   return html`
     <div style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }
@@ -57,9 +55,7 @@ export function WithContainer() {
 export function LongerContent() {
   return html`
     <div style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${longerContent}
-      </cds-internal-panel>
+      <cds-internal-panel> ${longerContent} </cds-internal-panel>
     </div>
   `;
 }
@@ -74,9 +70,7 @@ export function LongerContentScroll() {
       }
     </style>
     <div id="panel-with-longer-content-scroll" style="overflow: auto; height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${longerContent}
-      </cds-internal-panel>
+      <cds-internal-panel> ${longerContent} </cds-internal-panel>
     </div>
   `;
 }
@@ -89,9 +83,7 @@ export function WithBorder() {
       }
     </style>
     <div id="panel-with-border" style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }
@@ -104,9 +96,7 @@ export function WithBoxShadow() {
       }
     </style>
     <div id="panel-with-boxShadow" style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }
@@ -119,9 +109,7 @@ export function WithBackground() {
       }
     </style>
     <div id="panel-with-background" style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }
@@ -134,9 +122,7 @@ export function WithTextColor() {
       }
     </style>
     <div id="panel-with-textColor" style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }
@@ -149,9 +135,7 @@ export function WithPadding() {
       }
     </style>
     <div id="panel-with-padding" style="height: 100px; width: 100px;">
-      <cds-internal-panel>
-        ${placeholder}
-      </cds-internal-panel>
+      <cds-internal-panel> ${placeholder} </cds-internal-panel>
     </div>
   `;
 }

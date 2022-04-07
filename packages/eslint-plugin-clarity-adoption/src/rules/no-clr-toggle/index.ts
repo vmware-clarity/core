@@ -6,7 +6,7 @@
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
 import { parseDecoratorTemplate, reportNestedDisallowedElements } from '../decorator-template-helper';
-import { HTMLElement } from '../../types/index';
+import { HTMLElement } from 'eslint-html-parser';
 
 const disallowedDirective = 'clrToggle';
 const wrapperTagName = 'clr-toggle-wrapper';

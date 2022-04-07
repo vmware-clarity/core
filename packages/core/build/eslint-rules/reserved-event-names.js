@@ -4,10 +4,11 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-/**
+/*
  * This rule catches event overrides that conflicts with a existing event on the HTMLElement base type
  * Credit to https://github.com/ionic-team/stencil-eslint/blob/main/src/rules/reserved-event-names.ts
  */
+
 const rule = {
   meta: {
     docs: {

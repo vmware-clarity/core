@@ -35,7 +35,8 @@ export function keyNavigationGrid<T extends ReactiveElement & KeyNavigationGridC
 }
 
 export class KeyNavigationGridController<T extends ReactiveElement & KeyNavigationGridConfig>
-  implements ReactiveController {
+  implements ReactiveController
+{
   private observers: MutationObserver[] = [];
 
   private get hostGrid() {
