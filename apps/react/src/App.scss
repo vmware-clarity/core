@@ -33,10 +33,10 @@ main {
 }
 
 .demo-grid-pin-column {
-   --ch-grid: var(--ch1, 150px) var(--ch2, 350px) var(--ch3, 500px) var(--ch4, 150px);
-   --ch1:150px;
-   --ch2:350px;
-   --ch3:500px;
-   --ch4:150px;
-   --row-content-visibility:visibile; 
+  --ch-grid: var(--ch1, 150px) var(--ch2, 350px) var(--ch3, 500px) var(--ch4, 150px);
+  --ch1: 150px;
+  --ch2: 350px;
+  --ch3: 500px;
+  --ch4: 150px;
+  --row-content-visibility: visibile;
 }

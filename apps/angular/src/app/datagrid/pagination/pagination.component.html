@@ -26,7 +26,13 @@
     </cds-grid-cell>
   </cds-grid-row>
   <cds-grid-footer>
-    <cds-grid-pagination [page]="vmData.currentPage + 1" [pageSize]="getPageSize()" [pageCount]="vmData.pageCount" (pageChange)="setPage($event)" (pageSizeChange)="setPageSize($event)"></cds-grid-pagination>
+    <cds-grid-pagination
+      [page]="vmData.currentPage + 1"
+      [pageSize]="getPageSize()"
+      [pageCount]="vmData.pageCount"
+      (pageChange)="setPage($event)"
+      (pageSizeChange)="setPageSize($event)"
+    ></cds-grid-pagination>
   </cds-grid-footer>
 </cds-grid>
 <h2>@clr/angular Datagrid with pagination behavior</h2>

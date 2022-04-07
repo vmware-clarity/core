@@ -110,7 +110,11 @@
         </cds-grid-cell>
         <!-- generate row action button specific for this row model -->
         <cds-grid-cell type="action">
-          <cds-button-action popup="row-actions" aria-label="host actions" (click)="showRowActions($event, vm)"></cds-button-action>
+          <cds-button-action
+            popup="row-actions"
+            aria-label="host actions"
+            (click)="showRowActions($event, vm)"
+          ></cds-button-action>
         </cds-grid-cell>
         <!-- Add in the button for detail pane toggle and use the currentVM to set up its aria state -->
         <cds-grid-cell type="action">
@@ -233,18 +237,16 @@
   (closeChange)="closeRowActionPopover()"
 >
   <div cds-layout="vertical p:md align:stretch">
-    <cds-button action="flat" size="sm" (click)="executeRowAction('Shutdown')">Shutdown {{ selectedRow?.id }}</cds-button>
+    <cds-button action="flat" size="sm" (click)="executeRowAction('Shutdown')"
+      >Shutdown {{ selectedRow?.id }}</cds-button
+    >
     <cds-button action="flat" size="sm" (click)="executeRowAction('Restart')">Restart {{ selectedRow?.id }}</cds-button>
   </div>
 </cds-dropdown>
 
 <!-- popover for the filter -->
 <ng-container *ngIf="filterAnchor">
-  <cds-dropdown
-    [hidden]="hiddenFilter"
-    [anchor]="this.filterAnchor"
-    (closeChange)="closeFilterDropdown()"
-  >
+  <cds-dropdown [hidden]="hiddenFilter" [anchor]="this.filterAnchor" (closeChange)="closeFilterDropdown()">
     <div cds-layout="vertical p:md align:stretch">
       <cds-input>
         <input
@@ -262,12 +264,7 @@
 </ng-container>
 
 <!-- hide/show popover -->
-<cds-dropdown
-  (closeChange)="closeDropdown()"
-  *ngIf="columnAnchor"
-  [anchor]="columnAnchor"
-  position="top"
->
+<cds-dropdown (closeChange)="closeDropdown()" *ngIf="columnAnchor" [anchor]="columnAnchor" position="top">
   <div cds-layout="vertical gap:md p:md align:stretch">
     <form [formGroup]="hideShowForm">
       <cds-checkbox-group formGroupName="columns" layout="vertical">

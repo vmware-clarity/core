@@ -6,8 +6,6 @@ import { CdsCheckbox } from '@cds/react/checkbox';
 import { getVMData, TestVM } from '@cds/core/demo';
 
 function RowMultiSelect() {
-
-
   const data = getVMData();
 
   const [selectedItems, setSelectedItems] = useState<TestVM[]>([]);
@@ -28,33 +26,35 @@ function RowMultiSelect() {
   };
 
   const handleSelectAllChange = (checked: boolean) => {
-    if(checked) {
+    if (checked) {
       setSelectedItems([...data]);
     } else {
       setSelectedItems([]);
     }
-  }
+  };
 
   const checkAllInputRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     // checkbox is indeteterminate if some items are selected but not all
-    if(checkAllInputRef.current) {
-      checkAllInputRef.current.indeterminate = selectedItems.length > 0 && selectedItems.length < data.length
+    if (checkAllInputRef.current) {
+      checkAllInputRef.current.indeterminate = selectedItems.length > 0 && selectedItems.length < data.length;
     }
   });
-
 
   return (
     <div className="demo-content">
       <h2>Row Multi Select</h2>
       <div className="content">
-        <p>
-          Selected items: [{selectedItems.map(i =>i.id).join(", ")}]
-        </p>
+        <p>Selected items: [{selectedItems.map(i => i.id).join(', ')}]</p>
         <CdsGrid className="demo-grid" aria-multiselectable="true">
           <CdsGridColumn type="action">
             <CdsCheckbox>
-              <input type="checkbox" aria-label="select all hosts" ref={checkAllInputRef} onChange={event => handleSelectAllChange(event.target.checked)} />
+              <input
+                type="checkbox"
+                aria-label="select all hosts"
+                ref={checkAllInputRef}
+                onChange={event => handleSelectAllChange(event.target.checked)}
+              />
             </CdsCheckbox>
           </CdsGridColumn>
           <CdsGridColumn>Host</CdsGridColumn>
@@ -69,7 +69,7 @@ function RowMultiSelect() {
                   <input
                     type="checkbox"
                     aria-label="select host vm-host-001"
-                    {...{checked: selectedIds().includes(item.id)}}
+                    {...{ checked: selectedIds().includes(item.id) }}
                     onChange={event => handleSelectedChange(event.target.checked, item)}
                   />
                 </CdsCheckbox>

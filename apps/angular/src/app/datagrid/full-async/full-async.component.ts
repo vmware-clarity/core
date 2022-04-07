@@ -276,7 +276,7 @@ export class FullAsyncComponent {
 
   closeDropdown() {
     this.columnAnchor = null as any;
-    this.hiddenColumnPicker = !this.hiddenColumnPicker
+    this.hiddenColumnPicker = !this.hiddenColumnPicker;
   }
 
   /**
