@@ -9,9 +9,9 @@ import baseConfig from './web-test-runner.config.mjs';
 const rollupAlias = fromRollup(alias);
 
 const aliases = [
-  { find: /^@cds\/core\/([^.]+)$/, replacement: `${process.cwd()}/dist/core/$1/index.js` },
-  { find: /^@cds\/core\/(.+)\.js$/, replacement: `${process.cwd()}/dist/core/$1.js` },
-  { find: /^@cds\/core\/(.+)\.css$/, replacement: `${process.cwd()}/dist/core/$1.css` },
+  { find: /^@cds\/core\/([^.]+)$/, replacement: `${process.cwd()}/dist/lib/$1/index.js` },
+  { find: /^@cds\/core\/(.+)\.js$/, replacement: `${process.cwd()}/dist/lib/$1.js` },
+  { find: /^@cds\/core\/(.+)\.css$/, replacement: `${process.cwd()}/dist/lib/$1.css` },
   { find: /^(.*)\.ts$/, replacement: `${process.cwd()}/$1.js` },
   { find: '.js', replacement: `.ts` },
 ];

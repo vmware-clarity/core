@@ -4,50 +4,50 @@ import {
   CdsAccordionPanel,
   CdsAccordionHeader,
   CdsAccordionContent,
-} from './dist/react/accordion/index.js';
-import { CdsAlert, CdsAlertActions, CdsAlertGroup } from './dist/react/alert/index.js';
-import { CdsButton, CdsIconButton } from './dist/react/button/index.js';
-import { CdsBadge } from './dist/react/badge/index.js';
-import { CdsCheckbox } from './dist/react/checkbox/index.js';
-import { CdsControl, CdsControlMessage, CdsFormGroup } from './dist/react/forms/index.js';
-import { CdsDatalist } from './dist/react/datalist/index.js';
-import { CdsDate } from './dist/react/date/index.js';
-import { CdsFile } from './dist/react/file/index.js';
-import { CdsIcon } from './dist/react/icon/index.js';
-import { CdsInput } from './dist/react/input/index.js';
-import { CdsModal, CdsModalActions, CdsModalContent, CdsModalHeader } from './dist/react/modal/index.js';
-import { CdsPassword } from './dist/react/password/index.js';
-import { CdsProgressCircle } from './dist/react/progress-circle/index.js';
-import { CdsRadio, CdsRadioGroup } from './dist/react/radio/index.js';
-import { CdsRange } from './dist/react/range/index.js';
-import { CdsSearch } from './dist/react/search/index.js';
-import { CdsSelect } from './dist/react/select/index.js';
-import { CdsTag } from './dist/react/tag/index.js';
-import { CdsTime } from './dist/react/time/index.js';
-import { CdsTextarea } from './dist/react/textarea/index.js';
-import { CdsToggle, CdsToggleGroup } from './dist/react/toggle/index.js';
+} from './dist/lib/accordion/index.js';
+import { CdsAlert, CdsAlertActions, CdsAlertGroup } from './dist/lib/alert/index.js';
+import { CdsButton, CdsIconButton } from './dist/lib/button/index.js';
+import { CdsBadge } from './dist/lib/badge/index.js';
+import { CdsCheckbox } from './dist/lib/checkbox/index.js';
+import { CdsControl, CdsControlMessage, CdsFormGroup } from './dist/lib/forms/index.js';
+import { CdsDatalist } from './dist/lib/datalist/index.js';
+import { CdsDate } from './dist/lib/date/index.js';
+import { CdsFile } from './dist/lib/file/index.js';
+import { CdsIcon } from './dist/lib/icon/index.js';
+import { CdsInput } from './dist/lib/input/index.js';
+import { CdsModal, CdsModalActions, CdsModalContent, CdsModalHeader } from './dist/lib/modal/index.js';
+import { CdsPassword } from './dist/lib/password/index.js';
+import { CdsProgressCircle } from './dist/lib/progress-circle/index.js';
+import { CdsRadio, CdsRadioGroup } from './dist/lib/radio/index.js';
+import { CdsRange } from './dist/lib/range/index.js';
+import { CdsSearch } from './dist/lib/search/index.js';
+import { CdsSelect } from './dist/lib/select/index.js';
+import { CdsTag } from './dist/lib/tag/index.js';
+import { CdsTime } from './dist/lib/time/index.js';
+import { CdsTextarea } from './dist/lib/textarea/index.js';
+import { CdsToggle, CdsToggleGroup } from './dist/lib/toggle/index.js';
 import { ClarityIcons, userIcon, timesIcon } from '@cds/core/icon';
-import { CdsDivider } from './dist/react/divider/index.js';
-import { CdsCard } from './dist/react/card/index.js';
-import { CdsBreadcrumb } from './dist/react/breadcrumb/index.js';
+import { CdsDivider } from './dist/lib/divider/index.js';
+import { CdsCard } from './dist/lib/card/index.js';
+import { CdsBreadcrumb } from './dist/lib/breadcrumb/index.js';
 import {
   CdsNavigation,
   CdsNavigationGroup,
   CdsNavigationItem,
   CdsNavigationStart,
-} from './dist/react/navigation/index.js';
-import { CdsTree, CdsTreeItem } from './dist/react/tree-view/index.js';
-import { CdsInternalVisualCheckbox } from './dist/react/internal-components/visual-checkbox/index.js';
-import { CdsInternalCloseButton } from './dist/react/internal-components/close-button/index.js';
-import { CdsDropdown } from './dist/react/dropdown/index.js';
-import { CdsSignpost } from './dist/react/signpost/index.js';
-import { CdsInternalPanel } from './dist/react/internal-components/panel/index.js';
-import { CdsGrid, CdsGridColumn, CdsGridRow, CdsGridCell, CdsGridFooter } from './dist/react/grid/index.js';
-import { CdsButtonAction } from './dist/react/button-action/index.js';
-import { CdsButtonResize } from './dist/react/button-resize/index.js';
-import { CdsButtonSort } from './dist/react/button-sort/index.js';
-import { CdsButtonHandle } from './dist/react/button-handle/index.js';
-import { CdsButtonExpand } from './dist/react/button-expand/index.js';
+} from './dist/lib/navigation/index.js';
+import { CdsTree, CdsTreeItem } from './dist/lib/tree-view/index.js';
+import { CdsInternalVisualCheckbox } from './dist/lib/internal-components/visual-checkbox/index.js';
+import { CdsInternalCloseButton } from './dist/lib/internal-components/close-button/index.js';
+import { CdsDropdown } from './dist/lib/dropdown/index.js';
+import { CdsSignpost } from './dist/lib/signpost/index.js';
+import { CdsInternalPanel } from './dist/lib/internal-components/panel/index.js';
+import { CdsGrid, CdsGridColumn, CdsGridRow, CdsGridCell, CdsGridFooter } from './dist/lib/grid/index.js';
+import { CdsButtonAction } from './dist/lib/button-action/index.js';
+import { CdsButtonResize } from './dist/lib/button-resize/index.js';
+import { CdsButtonSort } from './dist/lib/button-sort/index.js';
+import { CdsButtonHandle } from './dist/lib/button-handle/index.js';
+import { CdsButtonExpand } from './dist/lib/button-expand/index.js';
 
 ClarityIcons.addIcons(userIcon, timesIcon);
 

@@ -1,6 +1,6 @@
 [build]
   command = "npm run _build:storybook -w core-ws"
-  publish = "./projects/core/dist/core"
+  publish = "./projects/core/dist/lib"
 
 [[redirects]]
   from = "/*"

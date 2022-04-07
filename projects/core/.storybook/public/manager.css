@@ -6,8 +6,8 @@
 
 @import '@cds/city/css/bundles/default.css';
 @import 'modern-normalize/modern-normalize.css';
-@import './../../dist/core/global.css';
-@import './../../dist/core/styles/theme.dark.css';
+@import './../../dist/lib/global.css';
+@import './../../dist/lib/styles/theme.dark.css';
 
 body {
   font-family: var(--cds-global-typography-font-family) !important;

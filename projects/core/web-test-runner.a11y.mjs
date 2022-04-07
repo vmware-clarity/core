@@ -24,10 +24,10 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
     // we don't use import maps due to Safari
     rollupAlias({
       entries: [
-        { find: '@cds/core/tokens/tokens.json', replacement: `${process.cwd()}/dist/core/tokens/tokens.json` },
-        { find: /^@cds\/core\/([^.]+)$/, replacement: `${process.cwd()}/dist/core/$1/index.js` },
-        { find: /^@cds\/core\/(.+)\/register.js$/, replacement: `${process.cwd()}/dist/core/$1/register.js` },
-        { find: /^@cds\/core\/(.+)\.js$/, replacement: `${process.cwd()}/dist/core/$1.js` },
+        { find: '@cds/core/tokens/tokens.json', replacement: `${process.cwd()}/dist/lib/tokens/tokens.json` },
+        { find: /^@cds\/core\/([^.]+)$/, replacement: `${process.cwd()}/dist/lib/$1/index.js` },
+        { find: /^@cds\/core\/(.+)\/register.js$/, replacement: `${process.cwd()}/dist/lib/$1/register.js` },
+        { find: /^@cds\/core\/(.+)\.js$/, replacement: `${process.cwd()}/dist/lib/$1.js` },
         { find: /^(.*)\.ts$/, replacement: `${process.cwd()}/$1.js` },
         { find: '.js', replacement: `.ts` },
       ],
