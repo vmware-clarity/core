@@ -16,7 +16,7 @@ import styles from './grid-placeholder.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-placeholder
  */
 export class CdsGridPlaceholder extends LitElement {

@@ -4,11 +4,11 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { registerElementSafely } from '@cds/core/internal';
 import '@cds/core/internal-components/split-handle/register.js';
 import '@cds/core/button-action/register.js';
 import '@cds/core/icon/register.js';
 
+import { registerElementSafely } from '@cds/core/internal';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { filterIcon } from '@cds/core/icon/shapes/filter.js';
 import { viewColumnsIcon } from '@cds/core/icon/shapes/view-columns.js';

@@ -19,7 +19,7 @@ import styles from './grid-pagination.element.scss';
  * <cds-grid-pagination></cds-grid-pagination>
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-pagination
  * @event pageChange
  * @event pageSizeChange
@@ -27,7 +27,7 @@ import styles from './grid-pagination.element.scss';
 export class CdsGridPagination extends LitElement {
   @i18n() i18n = I18nService.keys.grid;
 
-  @property({ type: Number }) page = 1;
+  @property({ type: Number }) page = 0;
 
   @property({ type: Number }) pageSize = 10;
 
@@ -55,13 +55,13 @@ export class CdsGridPagination extends LitElement {
         </cds-select>
         <cds-pagination-button
           .ariaLabel=${this.i18n.pagination.firstPage}
-          .disabled=${this.page === 1}
+          .disabled=${this.page === 0}
           action="first"
           @click=${this.firstPage}
         ></cds-pagination-button>
         <cds-pagination-button
           .ariaLabel=${this.i18n.pagination.previousPage}
-          .disabled=${this.page === 1}
+          .disabled=${this.page === 0}
           action="prev"
           @click=${this.prevPage}
         ></cds-pagination-button>
@@ -70,7 +70,7 @@ export class CdsGridPagination extends LitElement {
             type="number"
             .ariaLabel=${`${this.i18n.pagination.page} ${this.page} of ${this.pageCount}`}
             @input=${this.setPage}
-            .valueAsNumber=${this.page}
+            .valueAsNumber=${this.page + 1}
             min="1"
             max=${this.pageCount}
           />
@@ -78,13 +78,13 @@ export class CdsGridPagination extends LitElement {
         </cds-input>
         <cds-pagination-button
           .ariaLabel=${this.i18n.pagination.nextPage}
-          ?disabled=${this.page === this.pageCount}
+          ?disabled=${this.page === this.pageCount - 1}
           action="next"
           @click=${this.nextPage}
         ></cds-pagination-button>
         <cds-pagination-button
           .ariaLabel=${this.i18n.pagination.lastPage}
-          ?disabled=${this.page === this.pageCount}
+          ?disabled=${this.page === this.pageCount - 1}
           action="last"
           @click=${this.lastPage}
         ></cds-pagination-button>
@@ -93,7 +93,7 @@ export class CdsGridPagination extends LitElement {
   }
 
   private setPage(event: any) {
-    this.pageChange.emit((event.target as HTMLInputElement).valueAsNumber);
+    this.pageChange.emit((event.target as HTMLInputElement).valueAsNumber - 1);
   }
 
   private nextPage() {
@@ -105,10 +105,10 @@ export class CdsGridPagination extends LitElement {
   }
 
   private firstPage() {
-    this.pageChange.emit(1);
+    this.pageChange.emit(0);
   }
 
   private lastPage() {
-    this.pageChange.emit(this.pageCount);
+    this.pageChange.emit(this.pageCount - 1);
   }
 }

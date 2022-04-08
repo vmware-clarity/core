@@ -22,7 +22,7 @@ ClarityIcons.addIcons(
 );
 
 export default {
-  title: 'Stories/Grid',
+  title: 'Internal Stories/Grid',
   component: 'cds-grid',
 };
 
@@ -41,7 +41,7 @@ export { columnVisibility } from './docs/column-visibility.story.js';
 export { columnFixedWidth, columnPercentageWidth, columnOverflow } from './docs/column-width.story.js';
 export { compact } from './docs/compact.story.js';
 export { darkTheme } from './docs/dark-theme.story.js';
-export { footer, footerOptional } from './docs/footer.story.js';
+export { footer, footerOptional, footerActions } from './docs/footer.story.js';
 export { basic, keyboard, dynamicGrid } from './docs/grid.story.js';
 export { kitchenSink } from './docs/kitchen-sink.story.js';
 export { pagination } from './docs/pagination.story.js';

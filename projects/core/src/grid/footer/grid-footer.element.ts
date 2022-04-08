@@ -15,7 +15,7 @@ import styles from './grid-footer.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-footer
  * @cssprop --min-height
  */

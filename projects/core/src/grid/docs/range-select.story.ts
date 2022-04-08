@@ -95,7 +95,7 @@ export function rangeSelectContextMenu() {
           <cds-grid-footer></cds-grid-footer>
         </cds-grid>
         <cds-dropdown ?hidden=${!this.anchor} .anchor=${this.anchor} @closeChange=${() => (this.anchor = null) as void}>
-          <div cds-layout="vertical align:stretch p:sm">
+          <div cds-layout="vertical align:stretch">
             <cds-button action="flat" size="sm" @click=${() => this.log()}>Log</cds-button>
             <cds-button action="flat" size="sm" @click=${() => this.log()}>Alert</cds-button>
           </div>

@@ -17,7 +17,7 @@ import styles from './grid-row.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-row
  * @cssprop --border-top
  * @cssprop --border-bottom

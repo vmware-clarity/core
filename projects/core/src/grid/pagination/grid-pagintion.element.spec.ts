@@ -36,7 +36,7 @@ describe('cds-grid-pagination', () => {
     await componentIsStable(component);
     expect(pageInput.valueAsNumber).toBe(1);
 
-    component.page = 2;
+    component.page = 1;
     await componentIsStable(component);
     expect(pageInput.valueAsNumber).toBe(2);
   });
@@ -73,7 +73,7 @@ describe('cds-grid-pagination', () => {
     const event = onceEvent(component, 'pageChange');
     pageInput.valueAsNumber = 3;
     pageInput.dispatchEvent(new Event('input'));
-    expect((await event).detail).toBe(3);
+    expect((await event).detail).toBe(2);
   });
 
   it('should emit when page size changes by user', async () => {
@@ -104,11 +104,11 @@ describe('cds-grid-pagination', () => {
 
   it('should emit when pageChange when nextPage button is clicked', async () => {
     await componentIsStable(component);
-    expect(component.page).toBe(1);
+    expect(component.page).toBe(0);
     const event = onceEvent(component, 'pageChange');
 
     component.shadowRoot.querySelectorAll('cds-pagination-button')[2].click();
-    expect((await event).detail).toBe(2);
+    expect((await event).detail).toBe(1);
   });
 
   it('should emit when pageChange when prevPage button is clicked', async () => {
@@ -128,17 +128,17 @@ describe('cds-grid-pagination', () => {
     const event = onceEvent(component, 'pageChange');
 
     component.shadowRoot.querySelectorAll('cds-pagination-button')[0].click();
-    expect((await event).detail).toBe(1);
+    expect((await event).detail).toBe(0);
   });
 
   it('should emit when pageChange when lastPage button is clicked', async () => {
     component.page = 1;
-    component.pageCount = 5;
+    component.pageCount = 4;
     await componentIsStable(component);
     expect(component.page).toBe(1);
     const event = onceEvent(component, 'pageChange');
 
     component.shadowRoot.querySelectorAll('cds-pagination-button')[3].click();
-    expect((await event).detail).toBe(5);
+    expect((await event).detail).toBe(3);
   });
 });

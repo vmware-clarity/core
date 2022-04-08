@@ -1,6 +1,6 @@
 import { Meta, ArgsTable, Story, Preview } from '@web/storybook-prebuilt/addon-docs/blocks.js';
 
-<Meta title="Internal Preview Grid/Footer" />
+<Meta title="Internal API/Internal Preview/Footer" />
 
 # Grid Footer
 
@@ -14,7 +14,7 @@ import { Meta, ArgsTable, Story, Preview } from '@web/storybook-prebuilt/addon-d
 The Grid Footer is optional and can be omitted from markup. The Grid Footer can be
 used to display contextual information or actions.
 
-<Story id="stories-grid--footer" />
+<Story id="internal-stories-grid--footer" />
 
 ```html
 <cds-grid>
@@ -32,9 +32,23 @@ used to display contextual information or actions.
 </cds-grid>
 ```
 
+## Footer Actions
+
+The footer can have additional or custom actions projected.
+
+```html
+<cds-grid-footer>
+  <cds-button-action aria-label="view grid notifications">
+    <cds-icon shape="cloud" badge="danger"></cds-icon>
+  </cds-button-action>
+</cds-grid-footer>
+```
+
+<Story id="internal-stories-grid--footer-actions" />
+
 ## No Footer
 
-<Story id="stories-grid--footer-optional" />
+<Story id="internal-stories-grid--footer-optional" />
 
 ## API
 

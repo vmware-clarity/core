@@ -34,7 +34,7 @@ import styles from './grid-detail.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-detail
  * @event closeChange
  * @csspart close

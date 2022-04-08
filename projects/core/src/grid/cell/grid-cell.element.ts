@@ -15,7 +15,7 @@ import styles from './grid-cell.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-cell
  * @cssprop --border-right
  * @cssprop --border-left

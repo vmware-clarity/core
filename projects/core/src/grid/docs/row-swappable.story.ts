@@ -88,14 +88,9 @@ export function rowSwappable() {
           .anchor=${this.anchor}
           @closeChange=${() => (this.selectedEntryId = null) as any}
         >
-          <div cds-layout="vertical align:stretch p:sm">
-            <cds-button @click=${this.appendToOtherGrid} action="flat" size="sm"
-              >Move to
-              <span
-                >${this.listOne.find(i => i.id === this.selectedEntryId) ? 'Staging' : 'Production'}</span
-              ></cds-button
-            >
-          </div>
+          <cds-button @click=${this.appendToOtherGrid} action="flat" size="sm">
+            Move to ${this.listOne.find(i => i.id === this.selectedEntryId) ? 'Staging' : 'Production'}
+          </cds-button>
         </cds-dropdown>
       `;
     }
