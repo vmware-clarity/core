@@ -34,7 +34,7 @@ export const CdsNavigationStartTagName = 'cds-navigation-start';
  * ```html
  * <cds-navigation-start>Start text</cds-navigation-start>
  * ```
- * @beta
+ *
  * @element cds-navigation-start
  * @cssprop --color: inherit
  * @cssprop --line-height: inherit

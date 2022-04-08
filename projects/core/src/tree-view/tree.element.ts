@@ -37,7 +37,6 @@ import styles from './tree.element.scss';
  *  </cds-tree>
  * ```
  *
- * @beta
  * @element cds-tree
  * @slot - Content slot for inside the tree
  */

@@ -38,7 +38,6 @@ import styles from './card.element.scss';
   </cds-card>
  * ```
  *
- * @beta
  * @element cds-card
  * @slot - For projecting card content
  * @cssprop --width

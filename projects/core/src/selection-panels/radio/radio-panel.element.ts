@@ -35,7 +35,7 @@ import { SelectionPanelSizes } from '../shared/selection-panel.interfaces.js';
  *   </cds-radio-panel>
  * </cds-radio-group>
  * ```
- * @beta
+ *
  * @element cds-radio-panel
  * @slot - For projecting radio and it's complex label
  * @cssprop --width

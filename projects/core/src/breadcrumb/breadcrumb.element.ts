@@ -21,7 +21,6 @@ import styles from './breadcrumb.element.scss';
  * </cds-breadcrumb>
  * ```
  *
- * @beta
  * @element cds-breadcrumb
  * @cssprop --font-size
  * @cssprop --font-weight
