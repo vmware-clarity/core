@@ -111,7 +111,6 @@ export class CdsInternalStaticOverlay extends LitElement {
  * </cds-internal-overlay>
  * ```
  *
- * @beta
  * @element cds-internal-overlay
  * @slot - Content slot for the content inside the overlay's panel
  * @event closeChange - Notify user when close event has occurred

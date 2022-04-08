@@ -22,7 +22,6 @@ import styles from './test-dropdown.element.scss';
  * </cds-test-dropdown>
  * ```
  *
- * @beta
  * @slot - Content slot for dropdown content
  * @event {boolean} openChange - notify open state change of dropdown
  * @cssprop --border-color

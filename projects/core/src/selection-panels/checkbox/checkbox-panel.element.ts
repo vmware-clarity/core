@@ -27,7 +27,6 @@ import { SelectionPanelSizes } from '../shared/selection-panel.interfaces.js';
  * </cds-checkbox-panel>
  * ```
  *
- * @beta
  * @element cds-checkbox-panel
  * @slot - For projecting checkbox and it's complex label
  * @cssprop --width

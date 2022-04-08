@@ -19,7 +19,7 @@ import styles from './divider.element.scss';
  * ```html
  * <cds-divider></cds-divider>
  * ```
- * @beta
+ *
  * @element cds-divider
  * @cssprop --color
  * @cssprop --padding
