@@ -38,7 +38,7 @@ import { CdsGridPlaceholder } from '../placeholder/grid-placeholder.element.js';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid
  * @event rangeSelectionChange
  * @cssprop --background

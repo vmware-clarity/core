@@ -15,7 +15,6 @@ addons.setConfig({
       'internal-stories',
       'internal-documentation',
       'internal-api',
-      'internal-preview-grid',
       'internal-preview',
       'internal-controllers',
     ],

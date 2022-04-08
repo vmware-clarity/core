@@ -114,3 +114,15 @@ export function exportElementsToCSV(columnElements: NodeListOf<HTMLElement>, row
   );
   return `${columns.join(',')}\n${rows.map(cells => `${cells.map(c => c.trim()).join(',')}`).join('\n')}`;
 }
+
+/**
+ * @demo
+ * This is a demo function used to standardize demos across framework examples. Do not use in production.
+ */
+export function toggleRange(rows: { selected?: boolean }[], indexStart: number, indexEnd: number) {
+  if (indexStart < indexEnd) {
+    rows.slice(indexStart, indexEnd + 1).map(r => (r.selected = rows[indexStart].selected));
+  } else {
+    rows.slice(indexEnd, indexStart + 1).map(r => (r.selected = rows[indexStart].selected));
+  }
+}

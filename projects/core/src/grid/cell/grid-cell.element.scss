@@ -84,4 +84,5 @@
 :host([type='action']:focus-within) ::slotted([cds-control]) {
   --cds-alias-object-interaction-outline-webkit: none !important;
   --cds-alias-object-interaction-outline: none !important;
+  outline: 0;
 }

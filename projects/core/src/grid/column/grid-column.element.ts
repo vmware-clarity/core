@@ -17,7 +17,7 @@ import styles from './grid-column.element.scss';
  * import '@cds/core/grid/register.js';
  * ```
  *
- * @beta
+ * @internal
  * @element cds-grid-column
  * @event resizeChange - notifies when column has been resized
  * @cssprop --min-height

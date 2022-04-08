@@ -14,7 +14,7 @@ export function pagination() {
   class DemoPagination extends LitElement {
     @state() private grid = DemoService.data.grid;
     @state() private filteredList: DemoGridRow[] = [];
-    @state() private page = 1;
+    @state() private page = 0;
     @state() private pageSize = 10;
     @state() private pageCount = 1;
     @state() private pageSizeOptions = [5, 10, 20, 50];

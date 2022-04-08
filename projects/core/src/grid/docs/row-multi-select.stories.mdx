@@ -1,6 +1,6 @@
 import { Meta, ArgsTable, Story, Preview } from '@web/storybook-prebuilt/addon-docs/blocks.js';
 
-<Meta title="Internal Preview Grid/Row Multi Select" />
+<Meta title="Internal API/Internal Preview/Row Multi Select" />
 
 # Grid Row Multi Select
 
@@ -15,7 +15,9 @@ Row multi select support is similar to single select support but leverages `cds-
 multiple rows to be marked for selection. To mark a row as selected, set the `selected`
 attribute/property on the `cds-grid-row`.
 
-<Story id="stories-grid--row-multi-select" />
+To add `shift + click` bulk selection listen to the checkbox change events and update the range of rows to `selected` between the two selected checkboxes.
+
+<Story id="internal-stories-grid--row-multi-select" />
 
 ```html
 <cds-grid selectable="multi">

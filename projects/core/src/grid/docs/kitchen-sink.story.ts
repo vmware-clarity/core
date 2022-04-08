@@ -44,7 +44,7 @@ export function kitchenSink() {
     sortType: 'none',
     pageSize: 10,
     search: '',
-    page: 1,
+    page: 0,
     idFilterAnchor: null,
     columnsDropdownAnchor: null,
     detailAnchor: null,
