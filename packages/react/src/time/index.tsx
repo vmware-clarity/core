@@ -4,6 +4,6 @@ import { createComponent } from '@lit-labs/react';
 import * as React from 'react';
 import { logReactVersion } from '../utils/index.js';
 
-export const CdsTime = createComponent(React, 'cds-time', TimeInput);
+export const CdsTime = createComponent(React, 'cds-time', TimeInput, {}, 'CdsTime');
 
 logReactVersion(React);
