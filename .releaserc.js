@@ -31,19 +31,19 @@ module.exports = {
         registries: {
           angular: {
             npmPublish: true,
-            pkgRoot: './packages/angular/dist/angular',
+            pkgRoot: './projects/angular/dist/angular',
           },
           core: {
             npmPublish: true,
-            pkgRoot: './packages/core/dist/core',
+            pkgRoot: './projects/core/dist/core',
           },
           eslint: {
             npmPublish: true,
-            pkgRoot: './packages/eslint-plugin-clarity-adoption/dist/eslint-plugin-clarity-adoption',
+            pkgRoot: './projects/eslint-plugin-clarity-adoption/dist/eslint-plugin-clarity-adoption',
           },
           react: {
             npmPublish: true,
-            pkgRoot: './packages/react/dist/react',
+            pkgRoot: './projects/react/dist/react',
           },
         },
       },
