@@ -1,7 +1,5 @@
 import { addons } from '@web/storybook-prebuilt/addons';
 import { create } from '@web/storybook-prebuilt/theming';
-import './public/common.css';
-import './public/manager.css';
 
 addons.setConfig({
   enableShortcuts: false,
