@@ -3,11 +3,11 @@
 **/.angular/cache
 
 # core
-packages/core/src/styles/tokens/generated
-packages/core/custom-elements.json
+projects/core/src/styles/tokens/generated
+projects/core/custom-elements.json
 
 # angular
-packages/angular/projects/cds-angular/*/**/*
-!packages/angular/projects/cds-angular/_stubs
-!packages/angular/angular/projects/cds-angular/src/all.spec.ts
-!packages/angular/angular/projects/cds-angular/src/test.ts
+projects/angular/projects/cds-angular/*/**/*
+!projects/angular/projects/cds-angular/_stubs
+!projects/angular/angular/projects/cds-angular/src/all.spec.ts
+!projects/angular/angular/projects/cds-angular/src/test.ts

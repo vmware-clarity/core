@@ -11,4 +11,4 @@ cases as additional stories.
 
 [Developer Guideline Docs](https://clarity.design/storybook/core/?path=/docs/internal-documentation-getting-started--page)
 
-[Developer Guideline Docs (Markdown)](https://github.com/vmware-clarity/core/tree/main/packages/core/docs/development)
+[Developer Guideline Docs (Markdown)](https://github.com/vmware-clarity/core/tree/main/projects/core/docs/development)
