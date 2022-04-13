@@ -199,44 +199,6 @@ describe('Nested overlays: ', () => {
       expect(secondBackdrop.classList.contains('layered')).toBe(true, 'has layered classname (1)');
       expect(thirdBackdrop.classList.contains('layered')).toBe(true, 'has layered classname (2)');
     });
-
-    it('clicks should only apply to topmost overlay', async done => {
-      await componentIsStable(thirdOverlay);
-      const secondBackdrop = secondOverlay.shadowRoot.querySelector('.overlay-backdrop');
-      const thirdBackdrop = thirdOverlay.shadowRoot.querySelector('.overlay-backdrop');
-
-      function backdropClicked(e: CustomEvent) {
-        expect(e.detail).toBe('backdrop-click', 'backdrop click trigger identified');
-        expect(e.target).toBe(thirdOverlay, 'only the expected overlay is here');
-        done();
-      }
-
-      thirdOverlay.addEventListener<any>('closeChange', backdropClicked);
-      secondOverlay.addEventListener<any>('closeChange', backdropClicked);
-      firstOverlay.addEventListener<any>('closeChange', backdropClicked);
-
-      secondBackdrop.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-
-      await componentIsStable(secondOverlay);
-
-      thirdBackdrop.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-    });
-  });
-
-  describe('escape key - ', () => {
-    it('should only apply to topmost overlay', async done => {
-      function escKeyPressed(e: CustomEvent) {
-        expect(e.detail).toBe('escape-keypress', 'escape key trigger identified');
-        expect(e.target).toBe(thirdOverlay, 'only the expected overlay is here');
-        done();
-      }
-
-      firstOverlay.addEventListener<any>('closeChange', escKeyPressed);
-      secondOverlay.addEventListener<any>('closeChange', escKeyPressed);
-      thirdOverlay.addEventListener<any>('closeChange', escKeyPressed);
-
-      window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
-    });
   });
 
   describe('dismissing - ', () => {
