@@ -143,7 +143,7 @@ export function convertStringPropertyToObjectConfig(
     return defaultConfig;
   }
 
-  return Object.assign((defaultConfig as unknown) as object, converter(property));
+  return Object.assign(defaultConfig as unknown as object, converter(property));
 }
 
 export function pluckValueFromStringUnit(val: string, unit: string) {

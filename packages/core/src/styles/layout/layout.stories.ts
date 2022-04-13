@@ -1636,17 +1636,13 @@ const scrollableContentHtml = html`${scrollableContent}`;
 export function patternsApplicationVerticalLayout() {
   return html`
     <div class="demo-layout demo-app-layout" cds-layout="vertical align:stretch">
-      <header class="demo-header" cds-layout="p:md p@md:lg">
-        header
-      </header>
+      <header class="demo-header" cds-layout="p:md p@md:lg">header</header>
       <div cds-layout="horizontal align:vertical-stretch wrap:none">
         <nav class="demo-sidenav" cds-layout="p:md p@md:lg">sidebar</nav>
         <cds-divider class="demo-divider" orientation="vertical"></cds-divider>
         <div cds-layout="vertical align:stretch">
           <div class="demo-content demo-scrollable-content">
-            <div cds-layout="vertical gap:md p:lg">
-              ${scrollableContentHtml}
-            </div>
+            <div cds-layout="vertical gap:md p:lg">${scrollableContentHtml}</div>
           </div>
           <cds-divider class="demo-divider"></cds-divider>
           <footer class="demo-footer" cds-layout="p-y:md p-x:lg">footer</footer>
@@ -1660,9 +1656,7 @@ export function patternsApplicationVerticalLayout() {
 export function patternsApplicationVerticalLayoutSubnav() {
   return html`
     <div class="demo-layout demo-app-layout" cds-layout="vertical align:horizontal-stretch">
-      <header class="demo-header" cds-layout="p:md p@md:lg">
-        header
-      </header>
+      <header class="demo-header" cds-layout="p:md p@md:lg">header</header>
       <div class="demo-subnav" cds-layout="p:md">subnav</div>
       <cds-divider class="demo-divider"></cds-divider>
       <div cds-layout="horizontal align:vertical-stretch">
@@ -1720,9 +1714,7 @@ export function patternsApplicationVerticalIconLayoutHybrid() {
         <cds-icon shape="cog" size="lg" cds-layout="align:bottom"></cds-icon>
       </header>
       <div cds-layout="vertical align:stretch">
-        <header class="demo-header" cds-layout="p:md p@md:lg">
-          header
-        </header>
+        <header class="demo-header" cds-layout="p:md p@md:lg">header</header>
         <div cds-layout="horizontal align:vertical-stretch">
           <nav class="demo-sidenav" cds-layout="p:md p@md:lg">sidebar</nav>
           <cds-divider class="demo-divider" orientation="vertical"></cds-divider>
@@ -1741,9 +1733,7 @@ export function patternsApplicationVerticalIconLayoutHybrid() {
 export function patternsContentSiteThreeColumn() {
   return html`
     <div class="demo-layout" cds-layout="vertical align:horizontal-stretch" style="height: 100vh">
-      <header class="demo-header" cds-layout="p:md p@md:lg">
-        header
-      </header>
+      <header class="demo-header" cds-layout="p:md p@md:lg">header</header>
       <div cds-layout="horizontal align:vertical-stretch" class="demo-content">
         <nav class="demo-sidenav" cds-layout="p:md p@md:lg">sidebar</nav>
         <cds-divider class="demo-divider" orientation="vertical"></cds-divider>
@@ -1761,9 +1751,7 @@ export function patternsContentSiteThreeColumn() {
 export function patternsContentSiteSingleRail() {
   return html`
     <div class="demo-layout">
-      <header class="demo-header" cds-layout="p:md p@sm:lg">
-        header
-      </header>
+      <header class="demo-header" cds-layout="p:md p@sm:lg">header</header>
       <div cds-layout="grid gap:md gap@md:xl p:lg p@sm:xl p-y@lg:xxl container:xl container:center">
         <div cds-layout="vertical gap:lg gap@md:xl col@sm:7">
           <h3 cds-text="display">Title</h3>
@@ -1814,9 +1802,7 @@ export function patternsContentSiteSingleRail() {
 export function patternsResponsiveImageGallery() {
   return html`
     <div class="demo-layout" cds-layout="vertical align:horizontal-stretch">
-      <header class="demo-header" cds-layout="p:md p@md:lg">
-        header
-      </header>
+      <header class="demo-header" cds-layout="p:md p@md:lg">header</header>
       <div cds-layout="grid cols@sm:6 cols@md:4 cols@lg:3 cols@xl:2 p:lg gap:md" class="demo-content">
         <img src="https://dummyimage.com/600x400/000/fff" alt="placeholder image" cds-layout="fill" />
         <img src="https://dummyimage.com/600x400/000/fff" alt="placeholder image" cds-layout="fill" />

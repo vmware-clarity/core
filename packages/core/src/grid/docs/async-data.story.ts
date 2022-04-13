@@ -14,7 +14,7 @@ import '@cds/core/grid/register.js';
 export function asyncData() {
   @customElement('demo-grid-async-data')
   class DemoGridAsyncData extends LitElement {
-    @state() private grid: DemoGrid = ({ label: '', rowActions: [], columns: [], rows: [] } as unknown) as DemoGrid;
+    @state() private grid: DemoGrid = { label: '', rowActions: [], columns: [], rows: [] } as unknown as DemoGrid;
 
     @query('cds-grid') private gridElement: CdsGrid;
 
@@ -44,7 +44,7 @@ export function asyncData() {
     }
 
     private async load() {
-      this.grid = ({ label: '', rowActions: [], columns: [], rows: [] } as unknown) as DemoGrid;
+      this.grid = { label: '', rowActions: [], columns: [], rows: [] } as unknown as DemoGrid;
       this.grid = (await DemoService.asyncData).grid;
       this.gridElement.requestUpdate(); // <- we need this so the i18n hydrates itself after load
     }

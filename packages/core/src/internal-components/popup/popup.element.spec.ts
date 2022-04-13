@@ -161,7 +161,7 @@ describe('anchor: ', () => {
     popup.setAttribute('anchor', otherId);
     await componentIsStable(popup);
     expect(popup.anchor).toBe(otherId, 'the id is set');
-    expect(popup.anchorElement).toBe((otherAnchorElement as unknown) as HTMLElement, 'the anchor element is set too');
+    expect(popup.anchorElement).toBe(otherAnchorElement as unknown as HTMLElement, 'the anchor element is set too');
   });
 });
 

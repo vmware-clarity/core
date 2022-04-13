@@ -36,7 +36,7 @@ export class ResponsiveController<T extends ReactiveElement> implements Reactive
         if (this.skipFirst) {
           this.skipFirst = false;
         } else {
-          ((this.host as unknown) as HTMLElement).dispatchEvent(
+          (this.host as unknown as HTMLElement).dispatchEvent(
             new CustomEvent('cdsResizeChange', { detail: entries[0].contentRect })
           );
           this.host.requestUpdate();

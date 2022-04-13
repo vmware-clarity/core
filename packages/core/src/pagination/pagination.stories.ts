@@ -150,9 +150,7 @@ export const customPaginationContent = () => {
           <input type="number" value="20" min="1" max="103" />
         </cds-input>
         <cds-divider orientation="vertical"></cds-divider>
-        <div>
-          1 - 20 of 103 users
-        </div>
+        <div>1 - 20 of 103 users</div>
         <cds-divider orientation="vertical"></cds-divider>
         <cds-pagination-button aria-label="go to first" action="first" disabled></cds-pagination-button>
         <cds-pagination-button aria-label="go to previous" action="prev" disabled></cds-pagination-button>

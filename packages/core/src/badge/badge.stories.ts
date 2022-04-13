@@ -21,11 +21,7 @@ export default {
 };
 
 export function API(args: any) {
-  return html`
-    <cds-badge ...="${spreadProps(getElementStorybookArgs(args))}">
-      ${args.default}
-    </cds-badge>
-  `;
+  return html` <cds-badge ...="${spreadProps(getElementStorybookArgs(args))}"> ${args.default} </cds-badge> `;
 }
 
 /** @website */

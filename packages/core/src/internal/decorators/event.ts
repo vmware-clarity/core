@@ -17,9 +17,7 @@ export class EventEmitter<T> {
   constructor(private target: HTMLElement, private eventName: string) {}
 
   emit(value: T, options?: EventOptions) {
-    this.target.dispatchEvent(
-      new CustomEvent<T>(this.eventName, { detail: value, ...options })
-    );
+    this.target.dispatchEvent(new CustomEvent<T>(this.eventName, { detail: value, ...options }));
   }
 }
 

@@ -46,7 +46,7 @@ export function arrayRemoveLastInstance<T>(val: T, arr: T[]): T[] {
 }
 
 export function arrayRemoveAllInstances<T>(val: T | T[], arr: T[]): T[] {
-  const arrayRemovalMachine = ([].concat(val as never) as unknown) as T[];
+  const arrayRemovalMachine = [].concat(val as never) as unknown as T[];
   return arr.filter(item => !arrayRemovalMachine.includes(item));
 }
 

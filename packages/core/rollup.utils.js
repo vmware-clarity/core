@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-/**
+/*
  * Rollup Utils
  *
  * Utilities for the main Core library rollup build.
@@ -16,7 +16,7 @@ import { resolve, dirname, extname } from 'path';
 import * as glob from 'glob';
 import * as csso from 'csso';
 import autoprefixer from 'autoprefixer';
-import * as PurgeCSSDefault from 'purgecss';
+import { PurgeCSS } from 'purgecss';
 import styles from 'rollup-plugin-styles';
 import virtual from '@rollup/plugin-virtual';
 
@@ -117,9 +117,9 @@ export const globalStyles = config => {
 };
 
 async function treeshakeCSS(content, css) {
-  const value = await new PurgeCSSDefault.PurgeCSS().purge({
+  const value = await new PurgeCSS().purge({
     content,
-    defaultExtractor: content => content.match(/[\w-\/:@]+(?<!:)/g) || [],
+    defaultExtractor: content => content.match(/[\w-/:@]+(?<!:)/g) || [],
     safelist: [/:host$/, /:slotted$/],
     css: [{ raw: css }],
     variables: true,

@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-const rollupStorybook = require('../rollup.storybook');
+const rollupStorybook = require('../rollup.storybook.js');
 
 module.exports = {
   staticDirs: ['./public'],

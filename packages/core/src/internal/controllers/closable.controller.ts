@@ -52,8 +52,6 @@ export class ClosableController<T extends Closable> implements ReactiveControlle
   }
 
   close(detail?: any) {
-    this.host.dispatchEvent(
-      new CustomEvent<CloseChangeType>('closeChange', { detail })
-    );
+    this.host.dispatchEvent(new CustomEvent<CloseChangeType>('closeChange', { detail }));
   }
 }

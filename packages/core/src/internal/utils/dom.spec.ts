@@ -789,7 +789,7 @@ describe('Functional Helper: ', () => {
       const returnsShade = getShadowRootOrElse(component, fallback);
       const returnsHostEl = getShadowRootOrElse(div);
       const returnsFallbackInstead = getShadowRootOrElse(div, fallback);
-      expect(returnsShade).toBe((component.shadowRoot as unknown) as HTMLElement, 'returns shadow root if exists');
+      expect(returnsShade).toBe(component.shadowRoot as unknown as HTMLElement, 'returns shadow root if exists');
       expect(returnsHostEl).toBe(div, 'returns host if no shadow root or fallback');
       expect(returnsFallbackInstead).toBe(fallback, 'returns fallback');
     });

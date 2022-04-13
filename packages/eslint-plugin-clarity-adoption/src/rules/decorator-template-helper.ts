@@ -48,7 +48,7 @@ const getDecoratorProperty = (decorator: TSESTree.Decorator, name: string): TSES
     return undefined;
   }
 
-  const properties = arg.properties as Array<TSESTree.Property>;
+  const properties = arg.properties as TSESTree.Property[];
   const property = properties.find(prop => !!(prop.key && isIdentifier(prop.key) && prop.key.name === name));
 
   if (!property || !isProperty(property)) {
@@ -105,7 +105,7 @@ export function parseDecoratorTemplate(
 }
 
 export function reportNestedDisallowedElements(
-  disallowedElementSelector: string | Array<string>,
+  disallowedElementSelector: string | string[],
   context: RuleContext<any, any>,
   dom: JSDOM,
   parentNode: TSESTree.Node,
@@ -128,7 +128,7 @@ export function reportNestedDisallowedElements(
 export function lintDecoratorTemplate(
   context: RuleContext<any, any>,
   node: TSESTree.Decorator,
-  disallowedElementSelector: string | Array<string>,
+  disallowedElementSelector: string | string[],
   messageId: string
 ): void {
   const parsedTemplate = parseDecoratorTemplate(node);

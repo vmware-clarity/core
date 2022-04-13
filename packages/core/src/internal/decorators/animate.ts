@@ -17,7 +17,7 @@ import { runPropertyAnimations } from '../motion/utils.js';
 export function animate(config: PropertyDrivenAnimation) {
   // eslint-disable-next-line @typescript-eslint/ban-types
   return function _animationDecorator<T extends { new (...args: any[]): AnimatableElement }>(constructor: T) {
-    return (class extends constructor {
+    return class extends constructor {
       private _animationReady = false;
 
       private _animationDemoMode = false;
@@ -44,6 +44,6 @@ export function animate(config: PropertyDrivenAnimation) {
 
         runPropertyAnimations(props, this);
       }
-    } as unknown) as T;
+    } as unknown as T;
   };
 }

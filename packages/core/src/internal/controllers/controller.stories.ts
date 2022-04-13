@@ -423,11 +423,13 @@ export function ariaGridController() {
             </div>
           </div>
           <div class="rowgroup">
-            ${DemoService.data.grid.rows.slice(0, 10).map(
-              row => html` <div class="row">
-                ${row.cells.map(cell => html`<div class="cell" focusable>${cell.value}</div>`)}
-              </div>`
-            )}
+            ${DemoService.data.grid.rows
+              .slice(0, 10)
+              .map(
+                row => html` <div class="row">
+                  ${row.cells.map(cell => html`<div class="cell" focusable>${cell.value}</div>`)}
+                </div>`
+              )}
           </div>
         </div>
       `;

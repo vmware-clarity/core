@@ -5,7 +5,7 @@
  */
 
 import * as glob from 'glob';
-import { extractFilename, DocDemos, parseStories, saveCoreDemos } from './utils';
+import { extractFilename, DocDemos, parseStories } from './utils';
 
 const stories: DocDemos[] = [];
 // Note: even though this is in the parse directory, it executes the scripts form the build directory, one level up from here.
