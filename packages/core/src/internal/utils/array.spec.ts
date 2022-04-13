@@ -94,7 +94,7 @@ describe('array utils', () => {
       expect(arrayRemoveFirstInstance(1, testMe)).toEqual([2, 3, 1, 2, 3, 1, 2, 3], '1 of 2');
       expect(arrayRemoveFirstInstance(3, testMe)).toEqual([1, 2, 1, 2, 3, 1, 2, 3], '2 of 2');
     });
-    xit('does not mutate array', () => {
+    it('does not mutate array', () => {
       const orig = ['a', 'b', 'c', 'd'];
       const modded = arrayRemoveFirstInstance('c', orig);
       expect(modded).toEqual(['a', 'b', 'd'], 'instance removed');
