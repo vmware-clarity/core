@@ -53,11 +53,7 @@ function updateLocalPackages() {
 }
 
 function getLocalProjects() {
-  return [
-    ...read(path.join(__dirname, '../', 'packages')),
-    ...read(path.join(__dirname, '../', 'apps')),
-    ...read(path.join(__dirname, '../', 'demos')),
-  ].filter(
+  return [...read(path.join(__dirname, '../', 'packages')), ...read(path.join(__dirname, '../', 'apps'))].filter(
     p =>
       p.endsWith('/package.json') &&
       !p.includes('dist') &&
