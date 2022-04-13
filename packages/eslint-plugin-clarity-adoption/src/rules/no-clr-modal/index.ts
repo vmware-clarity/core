@@ -21,7 +21,6 @@ export default createESLintRule({
     type: 'problem',
     docs: {
       description: 'Disallow use of clr-modal',
-      category: 'Best Practices',
       recommended: 'warn',
     },
     fixable: 'code',

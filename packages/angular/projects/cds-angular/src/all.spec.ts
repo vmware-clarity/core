@@ -408,6 +408,26 @@ describe('CDS File', () => {
   });
 });
 
+describe('CDS Checkbox', () => {
+  let fixture: ComponentFixture<any>;
+  let instance: CheckboxTestComponent;
+
+  beforeEach(function () {
+    TestBed.configureTestingModule({
+      imports: [CdsModule],
+      declarations: [CheckboxTestComponent],
+    });
+
+    fixture = TestBed.createComponent(CheckboxTestComponent);
+    fixture.detectChanges();
+    instance = fixture.componentInstance;
+  });
+
+  it('cds-file should be defined', () => {
+    expect(instance.vcCdsCheckboxDirective).toBeDefined();
+  });
+});
+
 describe('CDS Control Action', () => {
   let fixture: ComponentFixture<any>;
   let instance: ControlActionTestComponent;

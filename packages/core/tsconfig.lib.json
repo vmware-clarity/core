@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "types": [],
+    "sourceMap": false,
     "strictNullChecks": true,
     "rootDir": "./src",
     "incremental": true,
@@ -17,6 +18,7 @@
     "node_modules",
     "./storybook",
     "**/*.stories.ts",
+    "**/*.story.ts",
     "./build"
   ]
 }

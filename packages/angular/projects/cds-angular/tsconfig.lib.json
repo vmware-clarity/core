@@ -8,11 +8,7 @@
     "declarationMap": true,
     "inlineSources": true,
     "types": [],
-    "lib": ["dom", "es2018"],
-    "paths": {
-      "@cds/angular": ["./"],
-      "@cds/angular/*": ["./*"]
-    }
+    "lib": ["dom", "es2018"]
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,

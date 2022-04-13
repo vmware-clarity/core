@@ -1,87 +1,39 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# core related files
-*.element.css.ts
-*.global.css.ts
-packages/core/src/styles/tokens/generated
-packages/core/coverage
-packages/react/.cache
-packages/react/coverage
-.parcel-cache
-.rollup.tscache
-.rollup.cache
-
-# auto-generated ng-core components
-packages/angular/projects/cds-angular/*
-!packages/angular/projects/cds-angular/_stubs
-!packages/angular/projects/cds-angular/*.json
-!packages/angular/projects/cds-angular/*.md
-!packages/angular/projects/cds-angular/karma.conf.js
-!packages/angular/projects/cds-angular/yarn.lock
-!packages/angular/projects/cds-angular/src/all.spec.ts
-!packages/angular/projects/cds-angular/src/test.ts
-
-
-# compiled output
-/dist
-/packages/**/dist
+# Compiled output
+**/dist
 /tmp
 /out-tsc
-/.ng_build
-src/clr-angular/.ng_build
-src/clr-angular/.ng_pkg_build
+/bazel-out
 
-/reports
-
-# dependencies
-node_modules
+# Node
+**/node_modules
+npm-debug.log
+yarn-error.log
 
 # IDEs and editors
-/.idea
+.idea/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
-*.code-workspace
 
-# IDE - VSCode
+# Visual Studio Code
 .vscode/*
-!.vscode/settings.json
-# !.vscode/tasks.json
-# !.vscode/launch.json
-# !.vscode/extensions.json
+.history/*
 
-# misc
-.awcache
-/.sass-cache
+# Miscellaneous
+**/.angular/cache
+.sass-cache/
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
 testem.log
 /typings
-sauceconnect.log
-.env
-*.tsbuildinfo
+*.orig
 
-# e2e
-/e2e/*.js
-/e2e/*.map
-
-# System Files
+# System files
 .DS_Store
 Thumbs.db
-
-# Local Netlify folder
-.netlify
-
-# Yarn
-yarn-error.log
-
-# Release test
-release-test/
-
-# Netlify logs
-logs/*

@@ -35,6 +35,7 @@
         "rules": {
           "no-missing-import": "off",
           "no-unknown-attribute": "off",
+          "no-boolean-in-attribute-binding": "off",
           "globalAttributes": ["cds-layout", "cds-list", "cds-table", "cds-text"]
         }
       }

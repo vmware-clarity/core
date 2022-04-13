@@ -20,7 +20,6 @@ export default createESLintRule({
     type: 'problem',
     docs: {
       description: 'Disallow use of clrRange',
-      category: 'Best Practices',
       recommended: 'warn',
     },
     fixable: 'code',

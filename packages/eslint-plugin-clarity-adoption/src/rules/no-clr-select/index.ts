@@ -20,7 +20,6 @@ export default createESLintRule({
     type: 'problem',
     docs: {
       description: 'Disallow use of clrSelect',
-      category: 'Best Practices',
       recommended: 'warn',
     },
     fixable: 'code',
