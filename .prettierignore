@@ -34,8 +34,5 @@ apps/website/core-components/datalist/README.md
 apps/website/core-components/checkbox/README.md
 apps/website/core-components/input/README.md
 
-# temporary
-demos/
-
 # has errors and got past build
 packages/eslint-plugin-clarity-adoption
