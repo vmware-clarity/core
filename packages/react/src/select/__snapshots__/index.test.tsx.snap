@@ -5,10 +5,10 @@ exports[`CdsSelect snapshot 1`] = `
   <h3>
     Selects
   </h3>
-  <m
+  <CdsFormGroup
     layout="horizontal"
   >
-    <m
+    <CdsFormGroup
       l={null}
       layout="horizontal"
     >
@@ -36,8 +36,8 @@ exports[`CdsSelect snapshot 1`] = `
                   option three
                 </option>
               </select>
-              <n>
-                <n
+              <CdsControlMessage>
+                <CdsControlMessage
                   l={null}
                 >
                   <cds-control-message
@@ -45,8 +45,8 @@ exports[`CdsSelect snapshot 1`] = `
                   >
                     message text
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-select>
           </CdsSelect>
         </CdsSelect>
@@ -74,10 +74,10 @@ exports[`CdsSelect snapshot 1`] = `
                   option three
                 </option>
               </select>
-              <n
+              <CdsControlMessage
                 status="error"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="error"
                 >
@@ -86,8 +86,8 @@ exports[`CdsSelect snapshot 1`] = `
                   >
                     error message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-select>
           </CdsSelect>
         </CdsSelect>
@@ -115,10 +115,10 @@ exports[`CdsSelect snapshot 1`] = `
                   option three
                 </option>
               </select>
-              <n
+              <CdsControlMessage
                 status="success"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="success"
                 >
@@ -127,14 +127,14 @@ exports[`CdsSelect snapshot 1`] = `
                   >
                     success message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-select>
           </CdsSelect>
         </CdsSelect>
       </cds-form-group>
-    </m>
-  </m>
+    </CdsFormGroup>
+  </CdsFormGroup>
   <h3>
     Multi-selects
   </h3>
@@ -167,8 +167,8 @@ exports[`CdsSelect snapshot 1`] = `
             Option Five
           </option>
         </select>
-        <n>
-          <n
+        <CdsControlMessage>
+          <CdsControlMessage
             l={null}
           >
             <cds-control-message
@@ -176,8 +176,8 @@ exports[`CdsSelect snapshot 1`] = `
             >
               message text
             </cds-control-message>
-          </n>
-        </n>
+          </CdsControlMessage>
+        </CdsControlMessage>
       </cds-select>
     </CdsSelect>
   </CdsSelect>
