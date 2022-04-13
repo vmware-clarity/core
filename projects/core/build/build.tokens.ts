@@ -13,17 +13,17 @@ import { Token } from './token-utils';
 const tokens: Token[] = Object.entries(flattenTokens(baseTheme)).map(token => token[1]);
 const experimental = `This token format is currently experimental and may change in the future`;
 
-fs.mkdirSync('./dist/core/styles/', { recursive: true });
-fs.mkdirSync('./dist/core/tokens/', { recursive: true });
+fs.mkdirSync('./dist/lib/styles/', { recursive: true });
+fs.mkdirSync('./dist/lib/tokens/', { recursive: true });
 fs.mkdirSync('./src/styles/tokens/generated', { recursive: true });
 
 // Public API Tokens
-buildCSSTokens('./dist/core/styles/module.tokens.css');
-buildJSONTokens('./dist/core/tokens/tokens.json');
-buildJSTokens('./dist/core/tokens/tokens.ts');
-buildAndroidXMLTokens('./dist/core/tokens/tokens.android.xml');
-buildIOSSwiftTokens('./dist/core/tokens/tokens.ios.swift');
-buildSassTokens('./dist/core/tokens/tokens.scss');
+buildCSSTokens('./dist/lib/styles/module.tokens.css');
+buildJSONTokens('./dist/lib/tokens/tokens.json');
+buildJSTokens('./dist/lib/tokens/tokens.ts');
+buildAndroidXMLTokens('./dist/lib/tokens/tokens.android.xml');
+buildIOSSwiftTokens('./dist/lib/tokens/tokens.ios.swift');
+buildSassTokens('./dist/lib/tokens/tokens.scss');
 
 // Internal API Tokens for custom elements with fallback values
 buildInternalSassTokens('./src/styles/tokens/generated/_index.scss');

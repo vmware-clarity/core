@@ -66,7 +66,7 @@ npm run watch
 2. Open another terminal window/tab, navigate to the `dist` directory and execute `npm link`:
 
 ```
-cd ../../dist/eslint-plugin-clarity-adoption
+cd ../../dist/lib
 npm link
 ```
 

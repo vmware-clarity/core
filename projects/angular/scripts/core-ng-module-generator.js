@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const Mustache = require('mustache');
 
-const SOURCE_PATH = path.join(__dirname, './../../core/dist/core/custom-elements.json');
+const SOURCE_PATH = path.join(__dirname, './../../core/dist/lib/custom-elements.json');
 const TARGET_PATH = path.join(__dirname, './../../angular/projects/cds-angular');
 const ROOT_SOURCE_PATH = path.join(__dirname, './../../angular/projects/cds-angular/src');
 const MUSTACHE_TEMPLTATE_PATH = path.join(__dirname, './../../angular/projects/cds-angular/_stubs');

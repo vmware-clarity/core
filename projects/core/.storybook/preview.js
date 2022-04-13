@@ -6,7 +6,7 @@
 
 import { setCustomElements } from '@web/storybook-prebuilt/web-components.js';
 import { addons } from '@web/storybook-prebuilt/addons';
-import pkg from '../dist/core/custom-elements.json';
+import pkg from '../dist/lib/custom-elements.json';
 import previewStyles from './public/preview.css';
 import commonStyles from './public/common.css';
 import managerStyles from './public/manager.css';
