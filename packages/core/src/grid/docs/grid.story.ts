@@ -181,7 +181,7 @@ export function dynamicGrid() {
                         <input
                           type="checkbox"
                           aria-label="select row"
-                          .checked=${r.selected}
+                          .checked=${r.selected as boolean}
                           @change=${(e: any) => this.selectRow(r, e.target.checked)}
                         />
                       </cds-checkbox>

@@ -50,12 +50,12 @@ export function rowBatchAction() {
           </cds-grid-column>
           ${this.grid.columns.map(column => html`<cds-grid-column>${column.label}</cds-grid-column>`)}
           ${this.rows.map(
-            row => html` <cds-grid-row .selected=${row.selected}>
+            row => html` <cds-grid-row .selected=${row.selected as boolean}>
               <cds-grid-cell>
                 <cds-checkbox>
                   <input
                     type="checkbox"
-                    .checked=${row.selected}
+                    .checked=${row.selected as boolean}
                     value=${row.id}
                     @click=${(e: any) => this.select(row, e.target.checked)}
                     aria-label="select ${row.id}"

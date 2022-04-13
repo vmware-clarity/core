@@ -15,13 +15,13 @@ export function rowSingleSelect() {
           <cds-grid-column type="action"></cds-grid-column>
           ${this.grid.columns.map(column => html`<cds-grid-column>${column.label}</cds-grid-column>`)}
           ${this.grid.rows.map(
-            row => html` <cds-grid-row .selected=${row.selected}>
+            row => html` <cds-grid-row .selected=${row.selected as boolean}>
               <cds-grid-cell>
                 <cds-radio>
                   <input
                     type="radio"
                     name="row"
-                    .checked=${row.selected}
+                    .checked=${row.selected as boolean}
                     value=${row.id}
                     aria-label="select ${row.id}"
                     @click=${(e: any) => this.select(row, e.target.checked)}

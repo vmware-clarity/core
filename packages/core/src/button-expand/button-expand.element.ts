@@ -36,7 +36,7 @@ export class CdsButtonExpand extends CdsButtonAction {
     } else if (this.action === 'horizontal') {
       return this.expanded ? 'left' : 'right';
     } else {
-      return null;
+      return 'up';
     }
   }
 
