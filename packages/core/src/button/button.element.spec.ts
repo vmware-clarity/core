@@ -214,12 +214,6 @@ describe('button element', () => {
       component.readonly = false;
     });
 
-    it('should not render a hidden button if readonly', async () => {
-      await componentIsStable(component);
-      const button = component.querySelector('button');
-      expect(button).toBeNull();
-    });
-
     it('should not have a tabIndex attribute', async () => {
       await componentIsStable(component);
       expect(component.getAttribute('tabindex')).toBeNull();
