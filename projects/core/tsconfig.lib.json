@@ -8,7 +8,7 @@
     "incremental": true,
     "isolatedModules": true,
     "noEmit": true,
-    "tsBuildInfoFile": "./dist/core/.tsbuildinfo"
+    "tsBuildInfoFile": "./dist/lib/.tsbuildinfo"
   },
   "allowSyntheticDefaultImports": false,
   "exclude": [

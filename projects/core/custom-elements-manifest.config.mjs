@@ -13,7 +13,7 @@ export default {
     '**/test/**',
     '**/demo/**',
   ],
-  outdir: '../dist/core',
+  outdir: '../dist/lib',
   litelement: true,
   plugins: [readonlyPlugin(), tsExtensionPlugin(), orderElements()],
 };
