@@ -1,7 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-// eslint-disable-next-line clarity/no-barrel-imports
 import {
   CdsAccordionContentDirective,
   CdsAccordionHeaderDirective,
