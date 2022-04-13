@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/react",
+    "outDir": "./dist/lib",
     "types": ["jest", "enzyme", "enzyme-adapter-react-16"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": false,

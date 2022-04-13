@@ -24,9 +24,9 @@
     "inlineSourceMap": false,
     "importHelpers": true,
     "paths": {
-      "@cds/core": ["./dist/core"],
-      "@cds/core/*": ["./dist/core/*"],
-      "@cds/core/*/register": ["./dist/core/*/register"]
+      "@cds/core": ["./dist/lib"],
+      "@cds/core/*": ["./dist/lib/*"],
+      "@cds/core/*/register": ["./dist/lib/*/register"]
     }
   }
 }

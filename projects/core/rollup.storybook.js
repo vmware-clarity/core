@@ -36,7 +36,7 @@ module.exports = {
 
     config.plugins = [
       nodeResolve.default(),
-      alias({ entries: [{ find: '@cds/core', replacement: path.resolve(path.resolve(__dirname), './dist/core') }] }),
+      alias({ entries: [{ find: '@cds/core', replacement: path.resolve(path.resolve(__dirname), './dist/lib') }] }),
       image(),
       json(),
       styles(),

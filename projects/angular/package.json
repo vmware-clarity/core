@@ -8,7 +8,7 @@
     "test:watch": "npm run --silent test -- --watch",
     "_build:generate": "node ./scripts/core-ng-module-generator",
     "_build:lib": "ng build cds-angular --configuration=production",
-    "_clean:dist": "rimraf ./dist/angular",
+    "_clean:dist": "rimraf ./dist/lib",
     "_clean:generated": "cd ./projects/cds-angular && git clean -dfX"
   },
   "devDependencies": {
@@ -23,8 +23,8 @@
     "@angular/platform-browser": "~12.0.2",
     "@angular/platform-browser-dynamic": "~12.0.2",
     "@angular/router": "~12.0.2",
-    "@cds/angular": "file:./dist/angular",
-    "@cds/core": "file:./../core/dist/core",
+    "@cds/angular": "file:./dist/lib",
+    "@cds/core": "file:./../core/dist/lib",
     "@types/jasmine": "~3.6.0",
     "jasmine-core": "~3.10.0",
     "jasmine-expect": "^5.0.0",

@@ -6,8 +6,8 @@
     "build:lib": "npm-run-all clean _build:tokens _build:lib",
     "build:watch": "npm run _build:lib -- --watch",
     "clean": "rimraf ./dist",
-    "public-api:check": "filessert ./dist/core/custom-elements.json ./custom-elements.json",
-    "public-api:update": "cpy ./dist/core/custom-elements.json ./",
+    "public-api:check": "filessert ./dist/lib/custom-elements.json ./custom-elements.json",
+    "public-api:update": "cpy ./dist/lib/custom-elements.json ./",
     "sandbox": "web-dev-server --config ./web-dev-server.sandbox.mjs",
     "start": "npm-run-all build --parallel build:watch _storybook:start",
     "test": "npm-run-all _test:unit _test:performance",
@@ -23,7 +23,7 @@
     "_test:unit": "wtr",
     "_test:unit:coverage": "npm run _test:unit -- --coverage"
   },
-  "customElements": "./dist/core/custom-elements.json",
+  "customElements": "./dist/lib/custom-elements.json",
   "sideEffects": [
     "./src/**/*.register.js"
   ],

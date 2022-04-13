@@ -18,7 +18,7 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
   ...jasmineTestRunnerConfig(),
   testFramework: {
     config: {
-      styles: ['./dist/core/global.min.css'],
+      styles: ['./dist/lib/global.min.css'],
     },
   },
   files: ['./src/**/*.spec.ts'],
@@ -32,9 +32,9 @@ export default /** @type {import("@web/test-runner").TestRunnerConfig} */ ({
       '**/test/**',
       '**/demo/**',
       '**/polyfills/**',
-      '**/dist/core/**/index.js',
-      '**/dist/core/**/register.js',
-      '**/dist/core/icon/shapes/**',
+      '**/dist/lib/**/index.js',
+      '**/dist/lib/**/register.js',
+      '**/dist/lib/icon/shapes/**',
     ],
     report: true,
     reportDir: 'dist/coverage',

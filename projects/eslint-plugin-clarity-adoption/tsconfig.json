@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "target": "es2020",
-    "outDir": "dist/eslint-plugin-clarity-adoption",
+    "outDir": "dist/lib",
     "typeRoots": ["./node_modules/@types/"],
     "lib": ["es2020", "dom"],
     "declaration": true,
