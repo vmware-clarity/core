@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/button-expand"
+  "name": "@cds/react/button-expand",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

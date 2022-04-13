@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/signpost"
+  "name": "@cds/react/signpost",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

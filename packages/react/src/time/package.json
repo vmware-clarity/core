@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/time"
+  "name": "@cds/react/time",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

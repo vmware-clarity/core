@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/pagination"
+  "name": "@cds/react/pagination",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

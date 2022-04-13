@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/internal-components/panel"
+  "name": "@cds/react/internal-components/panel",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }
