@@ -8,7 +8,7 @@
 
 // Shims contain non-evergreen browser CSS overrides/hacks for maximum compatibility
 
-@import '../../dist/core/tokens/tokens';
+@import '../../dist/lib/tokens/tokens';
 @import './layout/optimize';
 @import './layout/mixins/mixins';
 @import './layout/shims/gap';

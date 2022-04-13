@@ -32,14 +32,14 @@ import {
 
 const config = {
   baseDir: './src',
-  outDir: join('dist', 'core'), // rollup will fail on Windows if we don't normalize path deliminters
+  outDir: join('dist', 'lib'), // rollup will fail on Windows if we don't normalize path deliminters
   assets: ['./README.md'],
   modules: {
     entryPoints: ['./src/**/index.ts', './src/**/register.ts'],
     sideEffects: ['./src/**/register.ts', './src/polyfills/*.ts'],
   },
   styles: [
-    { input: './src/styles/global.scss', output: './dist/core/global.css' },
+    { input: './src/styles/global.scss', output: './dist/lib/global.css' },
     './src/styles/module.layout.scss',
     './src/styles/module.reset.scss',
     './src/styles/module.shims.scss',
@@ -116,7 +116,7 @@ export default [
       prod ? webComponentAnalyer(config.outDir) : [],
       prod ? packageCheck(config.outDir) : [],
       del({
-        targets: ['./dist/core/**/assets', './dist/core/**/.tsbuildinfo', './dist/core/**/_virtual'],
+        targets: ['./dist/lib/**/assets', './dist/lib/**/.tsbuildinfo', './dist/lib/**/_virtual'],
         hook: 'writeBundle',
       }),
     ],

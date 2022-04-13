@@ -6,11 +6,11 @@
 
 @import '@cds/city/css/bundles/default.min.css';
 @import 'modern-normalize/modern-normalize.css';
-@import './../../dist/core/global.css';
-@import './../../dist/core/styles/theme.dark.css';
-@import './../../dist/core/styles/theme.low-motion.css';
-@import './../../dist/core/list/list.css';
-@import './../../dist/core/table/table.css';
+@import './../../dist/lib/global.css';
+@import './../../dist/lib/styles/theme.dark.css';
+@import './../../dist/lib/styles/theme.low-motion.css';
+@import './../../dist/lib/list/list.css';
+@import './../../dist/lib/table/table.css';
 
 html {
   overflow-x: hidden;

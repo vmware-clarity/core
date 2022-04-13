@@ -7,7 +7,7 @@
     "clean": "rimraf ./dist",
     "test": "jest",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --coverage false",
-    "_build:package": "cpy package.lib.json ./dist/eslint-plugin-clarity-adoption --rename package.json && cpy README.md dist/eslint-plugin-clarity-adoption/ && cpy docs/ dist/eslint-plugin-clarity-adoption/docs/",
+    "_build:package": "cpy package.lib.json ./dist/lib --rename package.json && cpy README.md dist/lib/ && cpy docs/ dist/lib/docs/",
     "_build:tsc": "tsc"
   },
   "devDependencies": {
