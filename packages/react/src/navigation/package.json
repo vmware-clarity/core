@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/navigation"
+  "name": "@cds/react/navigation",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

@@ -41,13 +41,7 @@ function cleanPackageFiles() {
       const packageFile = fs.readJsonSync(file);
       ['alias', 'browserslist', 'scripts', 'devDependencies'].forEach(p => delete packageFile[p]);
 
-      const metaData = {
-        main: './index.js',
-        module: './index.js',
-        typings: './index.d.ts',
-        type: 'module',
-      };
-      fs.writeJsonSync(file, { ...packageFile, ...metaData }, { spaces: 2 });
+      fs.writeJsonSync(file, { ...packageFile }, { spaces: 2 });
     });
 }
 
