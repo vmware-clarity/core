@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/select"
+  "name": "@cds/react/select",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

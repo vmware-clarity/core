@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/grid"
+  "name": "@cds/react/grid",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

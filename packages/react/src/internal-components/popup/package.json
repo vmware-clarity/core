@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/internal-components/popup"
+  "name": "@cds/react/internal-components/popup",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/button-inline"
+  "name": "@cds/react/button-inline",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

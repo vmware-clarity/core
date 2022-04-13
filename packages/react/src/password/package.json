@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/password"
+  "name": "@cds/react/password",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }
