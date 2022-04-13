@@ -13,10 +13,6 @@ import {
 } from './progress-circle.utils.js';
 
 describe('progress circle helpers – ', () => {
-  // beforeEach(async () => {});
-
-  // afterEach(() => {});
-
   describe('getProgressCircleRadius:', () => {
     it('should default to viewBox size of 36', () => {
       expect(getProgressCircleRadius(3)).toBe(16);
