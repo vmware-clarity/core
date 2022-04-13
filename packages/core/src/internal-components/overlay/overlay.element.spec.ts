@@ -7,7 +7,7 @@
 import { html } from 'lit';
 import '@cds/core/internal-components/overlay/register.js';
 import { CdsInternalOverlay, isNestedOverlay, overlayIsActive } from '@cds/core/internal-components/overlay';
-import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
+import { componentIsStable, createTestElement, emulatedClick, onceEvent, removeTestElement } from '@cds/core/test';
 import { FocusTrapTrackerService } from '@cds/core/internal';
 
 describe('Overlay helper functions: ', () => {
@@ -135,54 +135,33 @@ describe('Overlay behaviors: ', () => {
   });
 
   describe('closeOverlay() - ', () => {
-    it('should default to a value of "custom"', async done => {
-      await componentIsStable(component);
-
-      component.addEventListener<any>('closeChange', (e: CustomEvent) => {
-        expect(e.detail).toBe('custom');
-        done();
-      });
-
-      await componentIsStable(component);
+    it('should default to a value of "custom"', async () => {
+      const eventPromise = onceEvent(component, 'closeChange');
       component.closeOverlay();
+      await componentIsStable(component);
+      const event = await eventPromise;
+      expect(event.detail).toBe('custom');
     });
   });
 
   describe('escape key - ', () => {
-    it('should alert if escape key pressed', async done => {
-      let value: any;
-      await componentIsStable(component);
-
-      component.addEventListener<any>('closeChange', (e: CustomEvent) => {
-        value = e.detail;
-        expect(value).toBe('escape-keypress');
-        done();
-      });
-
+    it('should alert if escape key pressed', async () => {
+      const eventPromise = onceEvent(component, 'closeChange');
       window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
-
       await componentIsStable(component);
-      window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Esc' }));
+      const event = await eventPromise;
+      expect(event.detail).toBe('escape-keypress');
     });
   });
 
   describe('backdrop click - ', () => {
-    it('should alert if the backdrop was clicked', async done => {
-      let value: any;
+    it('should alert if the backdrop was clicked', async () => {
+      const eventPromise = onceEvent(component, 'closeChange');
+      const backdrop = component.shadowRoot.querySelector<HTMLElement>('.overlay-backdrop');
+      emulatedClick(backdrop);
       await componentIsStable(component);
-      const backdrop = component.shadowRoot.querySelector('.overlay-backdrop');
-
-      component.addEventListener<any>('closeChange', (e: CustomEvent) => {
-        value = e.detail;
-        expect(value).toBe('backdrop-click');
-        done();
-      });
-
-      backdrop.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-
-      await componentIsStable(component);
-
-      backdrop.dispatchEvent(new TouchEvent('touchend', { bubbles: true, cancelable: true }));
+      const event = await eventPromise;
+      expect(event.detail).toBe('backdrop-click');
     });
   });
 });
