@@ -1,0 +1,31 @@
+{
+  "name": "@cds/react",
+  "description": "Core component modules for Clarity React",
+  "homepage": "https://clarity.design",
+  "keywords": ["react", "design system", "clarity", "ui"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmware-clarity/core.git"
+  },
+  "author": "clarity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmware-clarity/core/issues"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module",
+  "dependencies": {
+    "@lit-labs/react": "^1.0.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16.13.1",
+    "react-dom": ">= 16.13.1",
+    "@cds/core": "*"
+  },
+  "optionalDependencies": {
+    "@cds/city": "^1.1.0",
+    "modern-normalize": "^1.1.0"
+  }
+}

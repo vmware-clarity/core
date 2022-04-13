@@ -6,6 +6,7 @@
 
 module.exports = {
   roots: ['./'],
+  coverageDirectory: '<rootDir>/dist/coverage',
   globals: {
     'ts-jest': {
       tsConfig: 'tsconfig.test.json',

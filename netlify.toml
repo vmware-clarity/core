@@ -1,3 +1,7 @@
+[build]
+  command = "npm run _build:storybook -w core-ws"
+  publish = "./packages/core/dist/storybook"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

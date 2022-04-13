@@ -1,0 +1,24 @@
+{
+  "name": "@clr/eslint-plugin-clarity-adoption",
+  "description": "A set of ESLint rules for Clarity Core adoption.",
+  "homepage": "https://clarity.design",
+  "keywords": ["clarity", "eslint-plugin", "eslint"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmware-clarity/core.git"
+  },
+  "author": "clarity",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmware-clarity/core/issues"
+  },
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "dependencies": {
+    "@typescript-eslint/experimental-utils": "5.3.1",
+    "htmlparser2": "^5.0.0",
+    "eslint-html-parser": "^6.8.1",
+    "eslint-scope": "^7.1.0",
+    "jsdom": "^18.1.1"
+  }
+}

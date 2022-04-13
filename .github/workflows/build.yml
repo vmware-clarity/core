@@ -1,32 +1,30 @@
 name: Build
-
 on:
-  push:
-    branches:
-      - '*'
-    tags-ignore:
-      - '**'
   pull_request:
-
 jobs:
   build:
+    name: Build
+    timeout-minutes: 30
     runs-on: ubuntu-latest
-    if: github.repository == 'vmware-clarity/core'
-
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          check-latest: true
-      - uses: microsoft/playwright-github-action@v1
-      - run: yarn install
-      - run: yarn build
-      - run: yarn website:functions
-      - name: Website Deploy
-        continue-on-error: true
-        run: npm run website:deploy # Use NPM as a workaround for npx executing
-
-    env:
-      CI: true
-      NETLIFY_SITE_ID: 03fce0dd-9568-4ab2-a3ea-211d856989db
+          node-version-file: '.nvmrc'
+      - name: Install npm
+        run: npm i -g npm@7.8.0
+      - name: Install Dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Test
+        run: npm run test
+      - name: Upload Demo Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: demo
+          path: dist/clr-demo/

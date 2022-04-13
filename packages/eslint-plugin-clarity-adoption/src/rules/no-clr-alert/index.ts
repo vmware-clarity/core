@@ -18,7 +18,6 @@ export default createESLintRule({
     type: 'problem',
     docs: {
       description: 'Disallow use of clr-alert',
-      category: 'Best Practices',
       recommended: 'warn',
     },
     fixable: 'code',

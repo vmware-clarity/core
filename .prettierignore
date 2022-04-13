@@ -1,20 +1,12 @@
-package-lock.json
-package.json
-*/**/npm.json
-dist/
-reports/
-golden/
-.vscode
-.ng_build
-**/node_modules/**
-**/web_modules/**
-.cache
-.netlify
-packages/core/**/*.css.ts
-packages/core/custom-elements.json
-packages/core/src/styles/tokens/generated/**
-packages/core/dist/
-packages/react/coverage/
-packages/react/dist/
-docs/core
+**/node_modules
+**/dist
+**/.angular/cache
 
+# core
+packages/core/src/styles/tokens/generated
+
+# angular
+packages/angular/projects/cds-angular/*/**/*
+!packages/angular/projects/cds-angular/_stubs
+!packages/angular/angular/projects/cds-angular/src/all.spec.ts
+!packages/angular/angular/projects/cds-angular/src/test.ts

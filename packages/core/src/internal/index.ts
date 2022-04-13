@@ -14,7 +14,7 @@ export * from './base/focus-trap.base.js';
 export * from './utils/color.js';
 export * from './utils/css.js';
 export * from './utils/dom.js';
-export * from './utils/register.js';
+export * from './utils/registration.js';
 export * from './decorators/animate.js';
 export * from './decorators/query-slot.js';
 export * from './decorators/property.js';
