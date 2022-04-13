@@ -47,7 +47,7 @@ If you find a bug or want to request a new feature, please open a [GitHub issue]
 
 Include a link to the reproduction scenario you created by forking one of the
 Clarity Stackblitz Templates for the version you are using at
-[Clarity StackBlitz templates](https://stackblitz.com/@clr-team/).
+[Clarity StackBlitz templates](https://stackblitz.com/@clr-team/)..
 
 ## Support
 
