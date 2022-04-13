@@ -225,20 +225,6 @@ export const globalTypes = {
       ],
     },
   },
-  dataTheme: {
-    name: 'Data',
-    description: 'Available demo datasets',
-    defaultValue: 'infrastructure',
-    toolbar: {
-      icon: 'database',
-      showName: true,
-      items: [
-        { value: 'infrastructure', title: 'Infrastructure' },
-        { value: 'food', title: 'Food' },
-        { value: 'system', title: 'System' },
-      ],
-    },
-  },
   motion: {
     name: 'Animations',
     description: 'Clarity Animations',

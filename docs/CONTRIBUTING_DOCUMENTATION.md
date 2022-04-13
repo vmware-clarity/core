@@ -39,13 +39,13 @@ our development environment on your computer. You will need to have
 3.  Install Clarity Dependencies
 
     ```bash
-    yarn install
+    npm install
     ```
 
 4.  Start the Storybook
 
     ```bash
-    yarn run start
+    npm run start
     ```
 
 5.  See changes in your browser at `localhost:8080`
