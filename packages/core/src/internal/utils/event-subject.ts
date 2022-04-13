@@ -52,6 +52,6 @@ export class EventSubject<T> {
 
   /** Cast Subject to Observable subtype to prevent access to `emit` */
   toEventObservable() {
-    return (this as unknown) as EventObservable<T>;
+    return this as unknown as EventObservable<T>;
   }
 }

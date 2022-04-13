@@ -23,41 +23,6 @@ export default {
   },
 };
 
-// export function API(args: any) {
-//   return html`
-//     <cds-tree ...="${spreadProps(getElementStorybookArgs(args))}">
-//       <cds-tree-item expanded>
-//         1
-//         <cds-tree-item>
-//           1-1
-//           <cds-tree-item>
-//             1-1-1
-//           </cds-tree-item>
-//           <cds-tree-item>
-//             1-1-2
-//           </cds-tree-item>
-//         </cds-tree-item>
-//         <cds-tree-item>
-//           1-2
-//         </cds-tree-item>
-//         <cds-tree-item>
-//           1-3
-//         </cds-tree-item>
-//       </cds-tree-item>
-//       <cds-tree-item>
-//         2
-//         <cds-tree-item>
-//           2-1
-//         </cds-tree-item>
-//         <cds-tree-item>
-//           2-2
-//         </cds-tree-item>
-//       </cds-tree-item>
-//       <cds-tree-item>3</cds-tree-item>
-//     </cds-tree>
-//   `;
-// }
-
 /** @website */
 export function basic() {
   return html`
@@ -88,25 +53,15 @@ export function basic() {
             <cds-tree-item>Ryan Howard (Temp)</cds-tree-item>
           </cds-tree-item>
 
-          <cds-tree-item>
-            Creed Bratton (Quality Assurance)
-          </cds-tree-item>
+          <cds-tree-item> Creed Bratton (Quality Assurance) </cds-tree-item>
 
-          <cds-tree-item>
-            Meredith Palmer (Supplier Relations)
-          </cds-tree-item>
+          <cds-tree-item> Meredith Palmer (Supplier Relations) </cds-tree-item>
 
-          <cds-tree-item>
-            Toby Flenderson (Human Resources)
-          </cds-tree-item>
+          <cds-tree-item> Toby Flenderson (Human Resources) </cds-tree-item>
 
-          <cds-tree-item>
-            Pam Beesly (Reception)
-          </cds-tree-item>
+          <cds-tree-item> Pam Beesly (Reception) </cds-tree-item>
 
-          <cds-tree-item>
-            Darryl Philbin (Warehouse)
-          </cds-tree-item>
+          <cds-tree-item> Darryl Philbin (Warehouse) </cds-tree-item>
         </cds-tree-item>
       </cds-tree-item>
     </cds-tree>
@@ -142,28 +97,16 @@ export function multiSelect() {
         1
         <cds-tree-item disabled>
           1-1
-          <cds-tree-item>
-            1-1-1
-          </cds-tree-item>
-          <cds-tree-item>
-            1-1-2
-          </cds-tree-item>
+          <cds-tree-item> 1-1-1 </cds-tree-item>
+          <cds-tree-item> 1-1-2 </cds-tree-item>
         </cds-tree-item>
-        <cds-tree-item selected>
-          1-2
-        </cds-tree-item>
-        <cds-tree-item>
-          1-3
-        </cds-tree-item>
+        <cds-tree-item selected> 1-2 </cds-tree-item>
+        <cds-tree-item> 1-3 </cds-tree-item>
       </cds-tree-item>
       <cds-tree-item disabled selected>
         2
-        <cds-tree-item>
-          2-1
-        </cds-tree-item>
-        <cds-tree-item>
-          2-2
-        </cds-tree-item>
+        <cds-tree-item> 2-1 </cds-tree-item>
+        <cds-tree-item> 2-2 </cds-tree-item>
       </cds-tree-item>
       <cds-tree-item>3</cds-tree-item>
     </cds-tree>
@@ -212,12 +155,8 @@ export const async = () => {
       <p id="loadingInfo"></p>
     </div>
     <cds-tree>
-      <cds-tree-item expandable @expandedChange="${(e: any) => onExpandedChange(e, '1')}">
-        1
-      </cds-tree-item>
-      <cds-tree-item expandable @expandedChange="${(e: any) => onExpandedChange(e, '2')}">
-        2
-      </cds-tree-item>
+      <cds-tree-item expandable @expandedChange="${(e: any) => onExpandedChange(e, '1')}"> 1 </cds-tree-item>
+      <cds-tree-item expandable @expandedChange="${(e: any) => onExpandedChange(e, '2')}"> 2 </cds-tree-item>
     </cds-tree>
   `;
 };
@@ -253,17 +192,11 @@ export const recursive = () => {
 
   const recursiveTemplate = (data: any) => {
     return html`
-      <cds-tree-item expanded>
-        ${data.display} ${data.children.map((i: any) => recursiveTemplate(i))}
-      </cds-tree-item>
+      <cds-tree-item expanded> ${data.display} ${data.children.map((i: any) => recursiveTemplate(i))} </cds-tree-item>
     `;
   };
 
-  return html`
-    <cds-tree multi-select>
-      ${treeData.map((node: any) => html` ${recursiveTemplate(node)} `)}
-    </cds-tree>
-  `;
+  return html` <cds-tree multi-select> ${treeData.map((node: any) => html` ${recursiveTemplate(node)} `)} </cds-tree> `;
 };
 
 export const interactive = () => {
@@ -350,28 +283,16 @@ export const interactive = () => {
         1
         <cds-tree-item>
           1-1
-          <cds-tree-item>
-            1-1-1
-          </cds-tree-item>
-          <cds-tree-item>
-            1-1-2
-          </cds-tree-item>
+          <cds-tree-item> 1-1-1 </cds-tree-item>
+          <cds-tree-item> 1-1-2 </cds-tree-item>
         </cds-tree-item>
-        <cds-tree-item selected>
-          1-2
-        </cds-tree-item>
-        <cds-tree-item>
-          1-3
-        </cds-tree-item>
+        <cds-tree-item selected> 1-2 </cds-tree-item>
+        <cds-tree-item> 1-3 </cds-tree-item>
       </cds-tree-item>
       <cds-tree-item indeterminate>
         2
-        <cds-tree-item selected>
-          2-1
-        </cds-tree-item>
-        <cds-tree-item>
-          2-2
-        </cds-tree-item>
+        <cds-tree-item selected> 2-1 </cds-tree-item>
+        <cds-tree-item> 2-2 </cds-tree-item>
       </cds-tree-item>
       <cds-tree-item disabled>3</cds-tree-item>
       <cds-tree-item selected>4</cds-tree-item>
@@ -410,28 +331,16 @@ export function customStyles() {
           1
           <cds-tree-item disabled>
             1-1
-            <cds-tree-item>
-              1-1-1
-            </cds-tree-item>
-            <cds-tree-item>
-              1-1-2
-            </cds-tree-item>
+            <cds-tree-item> 1-1-1 </cds-tree-item>
+            <cds-tree-item> 1-1-2 </cds-tree-item>
           </cds-tree-item>
-          <cds-tree-item selected>
-            1-2
-          </cds-tree-item>
-          <cds-tree-item>
-            1-3
-          </cds-tree-item>
+          <cds-tree-item selected> 1-2 </cds-tree-item>
+          <cds-tree-item> 1-3 </cds-tree-item>
         </cds-tree-item>
         <cds-tree-item disabled selected>
           2
-          <cds-tree-item>
-            2-1
-          </cds-tree-item>
-          <cds-tree-item>
-            2-2
-          </cds-tree-item>
+          <cds-tree-item> 2-1 </cds-tree-item>
+          <cds-tree-item> 2-2 </cds-tree-item>
         </cds-tree-item>
         <cds-tree-item>3</cds-tree-item>
       </cds-tree>
@@ -448,28 +357,16 @@ export function darkTheme() {
           1
           <cds-tree-item disabled>
             1-1
-            <cds-tree-item>
-              1-1-1
-            </cds-tree-item>
-            <cds-tree-item>
-              1-1-2
-            </cds-tree-item>
+            <cds-tree-item> 1-1-1 </cds-tree-item>
+            <cds-tree-item> 1-1-2 </cds-tree-item>
           </cds-tree-item>
-          <cds-tree-item selected>
-            1-2
-          </cds-tree-item>
-          <cds-tree-item>
-            1-3
-          </cds-tree-item>
+          <cds-tree-item selected> 1-2 </cds-tree-item>
+          <cds-tree-item> 1-3 </cds-tree-item>
         </cds-tree-item>
         <cds-tree-item disabled selected>
           2
-          <cds-tree-item>
-            2-1
-          </cds-tree-item>
-          <cds-tree-item>
-            2-2
-          </cds-tree-item>
+          <cds-tree-item> 2-1 </cds-tree-item>
+          <cds-tree-item> 2-2 </cds-tree-item>
         </cds-tree-item>
         <cds-tree-item>3</cds-tree-item>
       </cds-tree>

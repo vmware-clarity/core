@@ -151,7 +151,7 @@ iframe[resizable] {
 
 .sb-inline-icon {
   width: 16px;
-  color: #ccc;
+  color: rgb(204, 204, 204);
 }
 
 .sbdocs-title,
@@ -175,7 +175,6 @@ iframe[resizable] {
 .sbdocs-h2,
 .sbdocs-h3 {
   font-weight: 300 !important;
-  margin-bottom: 24px !important;
   margin: 48px 0 12px 0 !important;
 }
 

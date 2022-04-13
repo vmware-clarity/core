@@ -156,9 +156,7 @@ export class CdsTreeItem extends LitElement implements Animatable {
     return html`
       <div class="private-host" cds-layout="p-l:md">
         <div cds-layout="horizontal align:vertical-center ${this.multiSelect ? 'gap:md' : 'gap:sm'}">
-          <div class="lhs-container">
-            ${this.treeItemLeftHandSideTemplate}
-          </div>
+          <div class="lhs-container">${this.treeItemLeftHandSideTemplate}</div>
           <div
             class="item-content"
             cds-layout="p:sm ${this.multiSelect ? 'p-x:md' : ''} align:stretch"

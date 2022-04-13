@@ -15,15 +15,15 @@ import { runPropertyAnimations } from '../motion/utils.js';
 
 // https://www.typescriptlang.org/docs/handbook/decorators.html#class-decorators
 export function animate(config: PropertyDrivenAnimation) {
-  return function _DecoratorName<T extends { new (...args: any[]): {} }>(constr: T) {
+  return function _DecoratorName<T extends { new (...args: any[]): any }>(constr: T) {
     const _constr = constr as any;
-    return (class extends _constr {
+    return class extends _constr {
       _animations: any;
 
       updated(props: PropertyValues<any>) {
         super.updated(props);
 
-        const self = (this as unknown) as Element & Animatable & { _animations: PropertyDrivenAnimation };
+        const self = this as unknown as Element & Animatable & { _animations: PropertyDrivenAnimation };
         self._animations = config || void 0;
 
         if (!self.hasAttribute(PRIVATE_ANIMATION_STATUS_ATTR_NAME)) {
@@ -33,6 +33,6 @@ export function animate(config: PropertyDrivenAnimation) {
           runPropertyAnimations(props, self);
         }
       }
-    } as unknown) as T;
+    } as unknown as T;
   };
 }

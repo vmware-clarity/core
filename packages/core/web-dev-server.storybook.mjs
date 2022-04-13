@@ -1,6 +1,6 @@
 /**
  * Storybook Web Dev Server
- * 
+ *
  * Provides a local env for running storybook with modern ESM JavaScript
  */
 

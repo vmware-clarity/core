@@ -86,7 +86,7 @@ export class CdsInternalControlInline extends CdsControl {
     `;
   }
 
-  firstUpdated(props: PropertyValues<any>) {
+  firstUpdated(props: PropertyValues<this>) {
     super.firstUpdated(props);
     this.inputControl.addEventListener('change', () => (this.checked = this.inputControl.checked));
     this.observers.push(
