@@ -11964,7 +11964,7 @@
           "type": {
             "text": "IconShapeTuple[]"
           },
-          "default": "[\n  bookmarkIcon,\n  calendarIcon,\n  chatBubbleIcon,\n  crownIcon,\n  envelopeIcon,\n  eventIcon,\n  flagIcon,\n  halfStarIcon,\n  happyFaceIcon,\n  hashtagIcon,\n  heartIcon,\n  heartBrokenIcon,\n  inboxIcon,\n  neutralFaceIcon,\n  pictureIcon,\n  sadFaceIcon,\n  shareIcon,\n  starIcon,\n  talkBubblesIcon,\n  tasksIcon,\n  thumbsDownIcon,\n  thumbsUpIcon,\n]"
+          "default": "[\n  bookmarkIcon,\n  calendarIcon,\n  chatBubbleIcon,\n  contractIcon,\n  crownIcon,\n  envelopeIcon,\n  eventIcon,\n  flagIcon,\n  halfStarIcon,\n  happyFaceIcon,\n  hashtagIcon,\n  heartIcon,\n  heartBrokenIcon,\n  inboxIcon,\n  neutralFaceIcon,\n  pictureIcon,\n  sadFaceIcon,\n  shareIcon,\n  starIcon,\n  talkBubblesIcon,\n  tasksIcon,\n  thumbsDownIcon,\n  thumbsUpIcon,\n]"
         },
         {
           "kind": "variable",
@@ -18023,6 +18023,22 @@
         },
         {
           "kind": "js",
+          "name": "contractIcon",
+          "declaration": {
+            "name": "contractIcon",
+            "module": "./shapes/contract.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "contractIconName",
+          "declaration": {
+            "name": "contractIconName",
+            "module": "./shapes/contract.js"
+          }
+        },
+        {
+          "kind": "js",
           "name": "crownIcon",
           "declaration": {
             "name": "crownIcon",
@@ -23335,6 +23351,46 @@
           "declaration": {
             "name": "containerIcon",
             "module": "icon/shapes/container.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/contract.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "contractIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'contract'"
+        },
+        {
+          "kind": "variable",
+          "name": "contractIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[contractIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "contractIconName",
+          "declaration": {
+            "name": "contractIconName",
+            "module": "icon/shapes/contract.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "contractIcon",
+          "declaration": {
+            "name": "contractIcon",
+            "module": "icon/shapes/contract.js"
           }
         }
       ]
