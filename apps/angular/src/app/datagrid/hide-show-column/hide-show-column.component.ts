@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { HideShowColumnGrid } from '../utils/vm-data.interface';
 import { VmSyncService } from '../utils/providers/vm-sync.service';
-import {HideShowColumnService} from "./hide-show-column.service";
+import { HideShowColumnService } from './hide-show-column.service';
 
 @Component({
   selector: 'app-hide-show-column',

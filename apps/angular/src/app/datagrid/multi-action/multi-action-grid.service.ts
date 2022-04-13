@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import {getVMData, TestVM} from "@cds/core/demo";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {SyncDataService} from "../utils/vm-data.interface";
-
+import { getVMData, TestVM } from '@cds/core/demo';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { SyncDataService } from '../utils/vm-data.interface';
 
 /**
  * TODO start here but only need to add the MultiActionGrid interface
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class MultiActionGridService implements SyncDataService<TestVM>{
+export class MultiActionGridService implements SyncDataService<TestVM> {
   readonly data: TestVM[];
   readonly fields: string[];
   batchActionAnchor!: HTMLElement | null;

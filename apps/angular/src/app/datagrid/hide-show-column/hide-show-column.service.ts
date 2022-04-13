@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {HideShowColumnGrid, SyncDataService} from "../utils/vm-data.interface";
-import {getVMData, TestVM} from "@cds/core/demo";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import { HideShowColumnGrid, SyncDataService } from '../utils/vm-data.interface';
+import { getVMData, TestVM } from '@cds/core/demo';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HideShowColumnService implements SyncDataService<TestVM>, HideShowColumnGrid {
   readonly data: TestVM[];
@@ -26,7 +26,7 @@ export class HideShowColumnService implements SyncDataService<TestVM>, HideShowC
     // The ternary also acts as a lifecycle guard for when the hideShowForm is undefined (b/c called in the template)
     return this.hideShowForm
       ? !!this.fields.map(column => this.hideShowForm.controls.columns.get(column)?.value).filter(value => !value)
-        .length
+          .length
       : false;
   }
 
@@ -57,6 +57,6 @@ export class HideShowColumnService implements SyncDataService<TestVM>, HideShowC
   // This idea is extendable and configurable:
   // Want to exclude some columns from being selected or unselected, this is the way
   showAllColumns(): void {
-    this.fields.forEach((column) => this.hideShowForm.controls.columns.get(column)?.setValue(true));
+    this.fields.forEach(column => this.hideShowForm.controls.columns.get(column)?.setValue(true));
   }
 }

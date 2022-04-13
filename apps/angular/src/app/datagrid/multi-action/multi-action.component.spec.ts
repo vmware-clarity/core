@@ -8,9 +8,8 @@ describe('MultiActionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MultiActionComponent ]
-    })
-    .compileComponents();
+      declarations: [MultiActionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

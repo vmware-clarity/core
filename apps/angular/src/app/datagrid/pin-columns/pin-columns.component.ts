@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {PinColumnService} from "./pin-column.service";
+import { PinColumnService } from './pin-column.service';
 
 @Component({
   selector: 'app-pin-columns',

@@ -5,20 +5,18 @@ import { TestVM } from '@cds/core/demo';
 import { useEffect, useState } from 'react';
 import { MockAPI } from '../utils/mock-api';
 
-
 function AsyncData() {
-  
   const [data, setData] = useState<TestVM[]>([]);
 
   useEffect(() => {
     const mockAPI = new MockAPI();
     mockAPI.requestData().then((data: TestVM[]) => {
       setData(() => data);
-    })
+    });
 
     return () => {
       mockAPI.disconnect();
-    }
+    };
   }, []);
 
   return (
@@ -31,20 +29,21 @@ function AsyncData() {
           <CdsGridColumn>CPU</CdsGridColumn>
           <CdsGridColumn>Memory</CdsGridColumn>
 
-
-          {data.length? data.map((item: any) => (
-            <CdsGridRow key={item.id}>
-              <CdsGridCell>{item.id}</CdsGridCell>
-              <CdsGridCell>{item.status}</CdsGridCell>
-              <CdsGridCell>{item.cpu}</CdsGridCell>
-              <CdsGridCell>{item.memory}</CdsGridCell>
-            </CdsGridRow>
-          )):(<CdsGridPlaceholder>
-            <CdsProgressCircle size="xl" status="info"></CdsProgressCircle>
-            <p cds-text="subsection">Loading VMs</p>
-          </CdsGridPlaceholder>)}
-
-          
+          {data.length ? (
+            data.map((item: any) => (
+              <CdsGridRow key={item.id}>
+                <CdsGridCell>{item.id}</CdsGridCell>
+                <CdsGridCell>{item.status}</CdsGridCell>
+                <CdsGridCell>{item.cpu}</CdsGridCell>
+                <CdsGridCell>{item.memory}</CdsGridCell>
+              </CdsGridRow>
+            ))
+          ) : (
+            <CdsGridPlaceholder>
+              <CdsProgressCircle size="xl" status="info"></CdsProgressCircle>
+              <p cds-text="subsection">Loading VMs</p>
+            </CdsGridPlaceholder>
+          )}
 
           <CdsGridFooter></CdsGridFooter>
         </CdsGrid>

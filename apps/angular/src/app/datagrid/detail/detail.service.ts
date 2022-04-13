@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
-import {DetailGrid, SyncDataService} from '../utils/vm-data.interface';
-import {getVMData, TestVM} from '@cds/core/demo';
+import { Injectable } from '@angular/core';
+import { DetailGrid, SyncDataService } from '../utils/vm-data.interface';
+import { getVMData, TestVM } from '@cds/core/demo';
 
 @Injectable({
   providedIn: 'root',

@@ -8,9 +8,8 @@ describe('HideShowColumnComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HideShowColumnComponent ]
-    })
-    .compileComponents();
+      declarations: [HideShowColumnComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

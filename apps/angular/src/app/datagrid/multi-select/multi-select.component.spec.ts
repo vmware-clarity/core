@@ -8,9 +8,8 @@ describe('MultiSelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MultiSelectComponent ]
-    })
-    .compileComponents();
+      declarations: [MultiSelectComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

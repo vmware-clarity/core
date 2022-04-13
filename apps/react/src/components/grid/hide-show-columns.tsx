@@ -6,7 +6,6 @@ import { CdsCheckbox, CdsCheckboxGroup } from '@cds/react/checkbox';
 import { CdsButton } from '@cds/react/button';
 import { useRef, useState } from 'react';
 
-
 function HideShowColumns() {
   const data = getVMData();
 
@@ -15,25 +14,25 @@ function HideShowColumns() {
   const [hideShowDrowdownHidden, setHideShowDropdownHidden] = useState<boolean>(true);
 
   const [hiddenColumns, setHiddenColumns] = useState({
-    'status': false,
-    'cpu': false,
-    'memory': true
+    status: false,
+    cpu: false,
+    memory: true,
   });
 
   const onHideShowAnchorClick = () => {
     setHideShowDropdownHidden(() => !hideShowDrowdownHidden);
-  }
+  };
 
   const toggleColumn = (column: string, checked: boolean) => {
-    setHiddenColumns({...hiddenColumns, [column]: !checked})
-  }
+    setHiddenColumns({ ...hiddenColumns, [column]: !checked });
+  };
 
   const onSelectAllClick = () => {
-    for(let key in hiddenColumns) {
+    for (let key in hiddenColumns) {
       hiddenColumns[key as keyof typeof hiddenColumns] = false;
     }
-    setHiddenColumns({...hiddenColumns});
-  }
+    setHiddenColumns({ ...hiddenColumns });
+  };
 
   return (
     <div className="demo-content">
@@ -55,25 +54,45 @@ function HideShowColumns() {
           ))}
 
           <CdsGridFooter>
-            <CdsButtonAction id="toggle-columns" shape="view-columns" aria-label="filter column" ref={hideShowAnchorRef} onClick={onHideShowAnchorClick}></CdsButtonAction>
+            <CdsButtonAction
+              id="toggle-columns"
+              shape="view-columns"
+              aria-label="filter column"
+              ref={hideShowAnchorRef}
+              onClick={onHideShowAnchorClick}
+            ></CdsButtonAction>
           </CdsGridFooter>
         </CdsGrid>
-        <CdsDropdown anchor={(hideShowAnchorRef.current)} hidden={hideShowDrowdownHidden ? true : undefined} >
+        <CdsDropdown anchor={hideShowAnchorRef.current} hidden={hideShowDrowdownHidden ? true : undefined}>
           <CdsCheckboxGroup layout="vertical">
             <CdsCheckbox>
               <label>Status</label>
-              <input type="checkbox" checked={!hiddenColumns['status']} onChange={event => toggleColumn('status', event.target.checked)}  />
+              <input
+                type="checkbox"
+                checked={!hiddenColumns['status']}
+                onChange={event => toggleColumn('status', event.target.checked)}
+              />
             </CdsCheckbox>
             <CdsCheckbox>
               <label>CPU</label>
-              <input type="checkbox" checked={!hiddenColumns['cpu']} onChange={event => toggleColumn('cpu', event.target.checked)} />
+              <input
+                type="checkbox"
+                checked={!hiddenColumns['cpu']}
+                onChange={event => toggleColumn('cpu', event.target.checked)}
+              />
             </CdsCheckbox>
             <CdsCheckbox>
               <label>Memory</label>
-              <input type="checkbox" checked={!hiddenColumns['memory']} onChange={event => toggleColumn('memory', event.target.checked)} />
+              <input
+                type="checkbox"
+                checked={!hiddenColumns['memory']}
+                onChange={event => toggleColumn('memory', event.target.checked)}
+              />
             </CdsCheckbox>
           </CdsCheckboxGroup>
-          <CdsButton action="flat" onClick={onSelectAllClick}>Select All</CdsButton>
+          <CdsButton action="flat" onClick={onSelectAllClick}>
+            Select All
+          </CdsButton>
         </CdsDropdown>
       </div>
     </div>
