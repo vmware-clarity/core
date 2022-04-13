@@ -197,13 +197,11 @@ describe('button element', () => {
       component.readonly = false;
     });
 
-    // todo fix, the button does not get removed properly
-    // when not within an Angular zone context
-    // xit('should not render a hidden button if readonly', async () => {
-    //   await componentIsStable(component);
-    //   const button = component.querySelector('button');
-    //   expect(button).toBeNull();
-    // });
+    it('should not render a hidden button if readonly', async () => {
+      await componentIsStable(component);
+      const button = component.querySelector('button');
+      expect(button).toBeNull();
+    });
 
     it('should not be in tabflow', async () => {
       await componentIsStable(component);
