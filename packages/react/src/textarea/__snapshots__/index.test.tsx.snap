@@ -5,10 +5,10 @@ exports[`CdsTextarea snapshot 1`] = `
   <h3>
     Vertical
   </h3>
-  <m
+  <CdsFormGroup
     layout="vertical"
   >
-    <m
+    <CdsFormGroup
       l={null}
       layout="vertical"
     >
@@ -30,8 +30,8 @@ exports[`CdsTextarea snapshot 1`] = `
                 label
               </label>
               <textarea />
-              <n>
-                <n
+              <CdsControlMessage>
+                <CdsControlMessage
                   l={null}
                 >
                   <cds-control-message
@@ -39,8 +39,8 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     message text
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
@@ -61,10 +61,10 @@ exports[`CdsTextarea snapshot 1`] = `
                 error status
               </label>
               <textarea />
-              <n
+              <CdsControlMessage
                 status="error"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="error"
                 >
@@ -73,8 +73,8 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     error message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
@@ -95,10 +95,10 @@ exports[`CdsTextarea snapshot 1`] = `
                 success status
               </label>
               <textarea />
-              <n
+              <CdsControlMessage
                 status="success"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="success"
                 >
@@ -107,21 +107,21 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     success message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
       </cds-form-group>
-    </m>
-  </m>
+    </CdsFormGroup>
+  </CdsFormGroup>
   <h3>
     Horizontal
   </h3>
-  <m
+  <CdsFormGroup
     layout="horizontal"
   >
-    <m
+    <CdsFormGroup
       l={null}
       layout="horizontal"
     >
@@ -143,8 +143,8 @@ exports[`CdsTextarea snapshot 1`] = `
                 label
               </label>
               <textarea />
-              <n>
-                <n
+              <CdsControlMessage>
+                <CdsControlMessage
                   l={null}
                 >
                   <cds-control-message
@@ -152,8 +152,8 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     message text
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
@@ -174,10 +174,10 @@ exports[`CdsTextarea snapshot 1`] = `
                 error status
               </label>
               <textarea />
-              <n
+              <CdsControlMessage
                 status="error"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="error"
                 >
@@ -186,8 +186,8 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     error message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
@@ -208,10 +208,10 @@ exports[`CdsTextarea snapshot 1`] = `
                 success status
               </label>
               <textarea />
-              <n
+              <CdsControlMessage
                 status="success"
               >
-                <n
+                <CdsControlMessage
                   l={null}
                   status="success"
                 >
@@ -220,13 +220,13 @@ exports[`CdsTextarea snapshot 1`] = `
                   >
                     success message
                   </cds-control-message>
-                </n>
-              </n>
+                </CdsControlMessage>
+              </CdsControlMessage>
             </cds-textarea>
           </CdsTextarea>
         </CdsTextarea>
       </cds-form-group>
-    </m>
-  </m>
+    </CdsFormGroup>
+  </CdsFormGroup>
 </div>
 `;

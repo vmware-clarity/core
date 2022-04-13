@@ -4,10 +4,10 @@ exports[`CdsControl snapshot 1`] = `
 <div
   cds-layout="vertical gap:lg"
 >
-  <w
+  <CdsControl
     layout="compact"
   >
-    <w
+    <CdsControl
       l={null}
       layout="compact"
     >
@@ -21,8 +21,8 @@ exports[`CdsControl snapshot 1`] = `
         <input
           placeholder="some custom control"
         />
-        <n>
-          <n
+        <CdsControlMessage>
+          <CdsControlMessage
             l={null}
           >
             <cds-control-message
@@ -30,16 +30,16 @@ exports[`CdsControl snapshot 1`] = `
             >
               message text
             </cds-control-message>
-          </n>
-        </n>
+          </CdsControlMessage>
+        </CdsControlMessage>
       </cds-control>
-    </w>
-  </w>
-  <w
+    </CdsControl>
+  </CdsControl>
+  <CdsControl
     layout="compact"
     status="error"
   >
-    <w
+    <CdsControl
       l={null}
       layout="compact"
       status="error"
@@ -54,10 +54,10 @@ exports[`CdsControl snapshot 1`] = `
         <input
           placeholder="some custom control"
         />
-        <n
+        <CdsControlMessage
           status="error"
         >
-          <n
+          <CdsControlMessage
             l={null}
             status="error"
           >
@@ -66,16 +66,16 @@ exports[`CdsControl snapshot 1`] = `
             >
               error message
             </cds-control-message>
-          </n>
-        </n>
+          </CdsControlMessage>
+        </CdsControlMessage>
       </cds-control>
-    </w>
-  </w>
-  <w
+    </CdsControl>
+  </CdsControl>
+  <CdsControl
     layout="compact"
     status="success"
   >
-    <w
+    <CdsControl
       l={null}
       layout="compact"
       status="success"
@@ -90,10 +90,10 @@ exports[`CdsControl snapshot 1`] = `
         <input
           placeholder="some custom control"
         />
-        <n
+        <CdsControlMessage
           status="success"
         >
-          <n
+          <CdsControlMessage
             l={null}
             status="success"
           >
@@ -102,10 +102,10 @@ exports[`CdsControl snapshot 1`] = `
             >
               success message
             </cds-control-message>
-          </n>
-        </n>
+          </CdsControlMessage>
+        </CdsControlMessage>
       </cds-control>
-    </w>
-  </w>
+    </CdsControl>
+  </CdsControl>
 </div>
 `;
