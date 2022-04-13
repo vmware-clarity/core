@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 /**
  * This rule catches property overrides that conflicts with a key in the HTMLElement prototype
  * Credit to https://github.com/ionic-team/stencil-eslint/blob/main/src/rules/reserved-member-names.ts

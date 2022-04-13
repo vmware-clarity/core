@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 import { LitElement, html } from 'lit';
 import { baseStyles, EventEmitter, i18n, I18nService, property, event } from '@cds/core/internal';
 import styles from './grid-pagination.element.scss';

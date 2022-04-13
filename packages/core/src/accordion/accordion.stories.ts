@@ -3,6 +3,7 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
+
 import '@cds/core/accordion/register.js';
 import { CdsAccordionPanel } from '@cds/core/accordion';
 import { spreadProps, getElementStorybookArgs } from '@cds/core/internal';

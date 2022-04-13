@@ -1,8 +1,9 @@
 /*
- * Copyright (c) 2016-2020 VMware, Inc.
- * All Rights ReserveThis software is released under MIT license.
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
+
 import * as fs from 'fs';
 import { FunctionDeclaration, Project, SyntaxKind, JSDoc, JSDocTag } from 'ts-morph';
 
