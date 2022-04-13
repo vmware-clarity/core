@@ -4,7 +4,6 @@ import { CdsButtonExpand } from '@cds/react/button-expand';
 import { getVMData, TestVM } from '@cds/core/demo';
 import { useRef, useState } from 'react';
 
-
 function Detail() {
   const data = getVMData();
 
@@ -12,19 +11,19 @@ function Detail() {
   const [detailItem, setDetailItem] = useState<TestVM>();
 
   const onDetailExpand = (anchor: any, item: TestVM) => {
-    if(item.id === detailItem?.id) {
+    if (item.id === detailItem?.id) {
       setDetailItem(undefined);
       detailAnchorRef.current = undefined;
       return;
     }
     setDetailItem(item);
     detailAnchorRef.current = anchor;
-  }
+  };
 
   const onCloseChange = () => {
     setDetailItem(undefined);
     detailAnchorRef.current = undefined;
-  }
+  };
 
   return (
     <div className="demo-content">
@@ -40,7 +39,15 @@ function Detail() {
           {data.map((item: any) => (
             <CdsGridRow key={item.id}>
               <CdsGridCell>
-                <CdsButtonExpand pressed={item.id === detailItem?.id} onClick={event => {onDetailExpand(event.target, item)}} id="current-detail-demo" aria-label="view host details" action="detail" />
+                <CdsButtonExpand
+                  pressed={item.id === detailItem?.id}
+                  onClick={event => {
+                    onDetailExpand(event.target, item);
+                  }}
+                  id="current-detail-demo"
+                  aria-label="view host details"
+                  action="detail"
+                />
               </CdsGridCell>
               <CdsGridCell>{item.id}</CdsGridCell>
               <CdsGridCell>{item.status}</CdsGridCell>
@@ -49,7 +56,11 @@ function Detail() {
             </CdsGridRow>
           ))}
 
-          <CdsGridDetail hidden ={!detailItem ? true : undefined} anchor={detailAnchorRef.current} onCloseChange={onCloseChange}>
+          <CdsGridDetail
+            hidden={!detailItem ? true : undefined}
+            anchor={detailAnchorRef.current}
+            onCloseChange={onCloseChange}
+          >
             <h2>Host: {detailItem?.id}</h2>
             <p>Status: {detailItem?.status}</p>
             <p>CPU: {detailItem?.cpu}</p>

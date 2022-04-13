@@ -21,7 +21,7 @@ function RowSingleSelect() {
           <CdsGridColumn>Memory</CdsGridColumn>
 
           {data.map((item: TestVM) => (
-            <CdsGridRow key={item.id} {...{'select':true}}>
+            <CdsGridRow key={item.id} {...{ select: true }}>
               <CdsGridCell>
                 <CdsRadio>
                   <input

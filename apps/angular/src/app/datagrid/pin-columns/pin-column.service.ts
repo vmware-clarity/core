@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {PinColumnGrid, SyncDataService} from "../utils/vm-data.interface";
-import {getVMData, TestVM} from "@cds/core/demo";
+import { PinColumnGrid, SyncDataService } from '../utils/vm-data.interface';
+import { getVMData, TestVM } from '@cds/core/demo';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PinColumnService implements SyncDataService<TestVM>, PinColumnGrid {
   readonly data: TestVM[];

@@ -8,9 +8,8 @@ describe('PinColumnsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PinColumnsComponent ]
-    })
-    .compileComponents();
+      declarations: [PinColumnsComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

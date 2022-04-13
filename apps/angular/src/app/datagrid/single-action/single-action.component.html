@@ -25,7 +25,11 @@
   <cds-grid-row *ngFor="let vm of data">
     <!-- generate row action button specific for this row model -->
     <cds-grid-cell>
-      <cds-button-action popup="row-actions" aria-label="host actions" (click)="displayRowActions($event, vm)"></cds-button-action>
+      <cds-button-action
+        popup="row-actions"
+        aria-label="host actions"
+        (click)="displayRowActions($event, vm)"
+      ></cds-button-action>
     </cds-grid-cell>
     <!-- Generate cells with model data -->
     <cds-grid-cell *ngFor="let column of dataFields">

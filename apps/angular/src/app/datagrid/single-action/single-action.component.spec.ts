@@ -8,9 +8,8 @@ describe('SingleActionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SingleActionComponent ]
-    })
-    .compileComponents();
+      declarations: [SingleActionComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
