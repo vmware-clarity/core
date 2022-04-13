@@ -15,7 +15,6 @@ packages
 ├── core                              # Web Components
 ├── eslint-plugin-clarity-adoption    # ESLint rules to help with migration to Core
 ├── react                             # React Wrappers Components
-├── schematics                        # Angular schematics
 ```
 
 ## Understanding the build
