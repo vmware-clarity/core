@@ -4,6 +4,7 @@
 
 # core
 packages/core/src/styles/tokens/generated
+packages/core/custom-elements.json
 
 # angular
 packages/angular/projects/cds-angular/*/**/*

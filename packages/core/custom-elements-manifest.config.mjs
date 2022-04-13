@@ -15,7 +15,7 @@ export default {
   ],
   outdir: '../dist/core',
   litelement: true,
-  plugins: [readonlyPlugin(), tsExtensionPlugin()],
+  plugins: [readonlyPlugin(), tsExtensionPlugin(), orderElements()],
 };
 
 export function tsExtensionPlugin() {
@@ -25,6 +25,15 @@ export function tsExtensionPlugin() {
       customElementsManifest.modules = JSON.parse(
         JSON.stringify(customElementsManifest.modules).replace(/\.ts"/g, '.js"')
       );
+    },
+  };
+}
+
+export function orderElements() {
+  return {
+    name: 'order-elements',
+    packageLinkPhase({ customElementsManifest }) {
+      customElementsManifest.modules.sort((a, b) => (a.path < b.path ? -1 : 1));
     },
   };
 }
