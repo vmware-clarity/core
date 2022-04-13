@@ -53,10 +53,5 @@ describe('cds-radio-group', () => {
     const radio2 = component.querySelectorAll('cds-radio')[1];
     expect(radio1.inputControl.hasAttribute('checked')).toBe(true);
     expect(radio2.inputControl.hasAttribute('checked')).toBe(false);
-
-    // radio2.inputControl.click();
-    // await componentIsStable(component);
-    // expect(radio1.inputControl.hasAttribute('checked')).toBe(true);
-    // expect(radio2.inputControl.hasAttribute('checked')).toBe(false);
   });
 });
