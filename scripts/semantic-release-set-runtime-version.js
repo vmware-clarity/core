@@ -8,7 +8,7 @@ const fs = require('fs');
 
 // https://semantic-release.gitbook.io/semantic-release/developer-guide/plugin
 function prepare(_, context) {
-  const path = './packages/core/dist/core/internal/utils/global.js';
+  const path = './projects/core/dist/core/internal/utils/global.js';
   const content = fs.readFileSync(path, 'utf8');
   const newContent = content.replace('PACKAGE_VERSION', context.nextRelease.version);
 
