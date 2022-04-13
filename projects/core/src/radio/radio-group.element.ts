@@ -50,7 +50,11 @@ export class CdsRadioGroup extends CdsInternalControlGroup {
   }
 
   private associateRadioControls() {
-    this.controls.forEach(radio => radio && radio.inputControl.setAttribute('name', this.radioName));
+    this.controls.forEach(radio => {
+      if (radio && !radio.inputControl.getAttribute('name')) {
+        radio.inputControl.setAttribute('name', this.radioName);
+      }
+    });
   }
 
   private syncRadioControls() {
