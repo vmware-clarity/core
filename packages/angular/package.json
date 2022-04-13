@@ -10,8 +10,8 @@
     "clean": "cd ./projects/cds-angular && git clean -dfX",
     "generate:core-ng-modules": "node ../../scripts/core-ng-module-generator && prettier --write ./projects/cds-angular/",
     "test": "ng test cds-angular --watch false  --source-map=false",
-    "lint": "eslint -c .eslintrc.js \"src/**/*.ts\" \"projects/**/*.ts\"",
-    "lint:fix": "eslint --fix -c .eslintrc.js \"src/**/*.ts\" \"projects/**/*.ts\""
+    "lint": "eslint -c .eslintrc.js \"projects/**/*.ts\"",
+    "lint:fix": "eslint --fix -c .eslintrc.js \"projects/**/*.ts\""
   },
   "dependencies": {
     "@angular/animations": "13.0.2",
