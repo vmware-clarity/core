@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 import { ESLintUtils } from '@typescript-eslint/experimental-utils';
 import { RuleFixer, RuleFix } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
 import { HTMLElement, HTMLAttributeName, HTMLAttribute } from '../../types';

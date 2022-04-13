@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
 import { css } from 'lit';
 import { globalStyle } from '@cds/core/internal';
 import { CdsInternalPanel } from '@cds/core/internal-components/panel';
