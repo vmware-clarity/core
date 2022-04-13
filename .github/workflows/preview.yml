@@ -23,6 +23,8 @@ jobs:
         run: npm run build
       - name: Test
         run: npm run test
+      - name: Public Api Check
+        run: npm run public-api:check
       - name: Preview Release
         run: npm run preview
       - name: Deploy Demo Preview
