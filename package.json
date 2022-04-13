@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "build:ci": "npm-run-all clean lint build test",
+    "build:ci": "npm-run-all clean lint build test public-api:check",
     "clean": "npm run clean --workspaces --if-present",
     "commit": "cz --signoff",
     "lint": "npm-run-all _lint:code _lint:styles _lint:format",
@@ -23,6 +23,8 @@
     "lint:changed:fix": "npm-run-all _lint:code:changed:fix _lint:styles:changed:fix _lint:format:changed:fix",
     "prepare": "husky install",
     "preview": "semantic-release --plugins \"@semantic-release/commit-analyzer\" \"@semantic-release/release-notes-generator\" --dry-run --no-ci",
+    "public-api:check": "npm run public-api:check --workspaces --if-present",
+    "public-api:update": "npm run public-api:update --workspaces --if-present",
     "start": "npm run start --workspace core-ws",
     "test": "npm run test --workspaces --if-present",
     "_lint:code": "eslint . --ext .js,.json,.ts",
