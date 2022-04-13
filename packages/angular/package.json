@@ -71,7 +71,7 @@
     "stmux": "1.8.0",
     "ts-node": "10.4.0",
     "tsconfig-paths-webpack-plugin": "3.5.2",
-    "typescript": "4.4.2"
+    "typescript": "4.4.3"
   },
   "browserslist": [
     "> 0.5%",
