@@ -51,6 +51,9 @@ The build process consists of the following five stages. Each stage can be ran i
 
    - `npm run test:watch`: runs a watcher on all tests
 
+5. `npm run public-api:check`: verifies the public API has not changed
+   - `npm run public-api:update`: updates the public api "golden file" and accepts the changes to the public API allowing the CI build to pass.
+
 Other commands
 
 - `npm run commit`: launches an interactive prompt to help format commit messages.
