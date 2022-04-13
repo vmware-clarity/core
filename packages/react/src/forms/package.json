@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/forms"
+  "name": "@cds/react/forms",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

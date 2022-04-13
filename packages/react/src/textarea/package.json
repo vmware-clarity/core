@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/textarea"
+  "name": "@cds/react/textarea",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

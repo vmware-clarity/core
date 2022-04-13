@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/icon"
+  "name": "@cds/react/icon",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

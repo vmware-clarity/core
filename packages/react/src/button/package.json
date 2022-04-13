@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/button"
+  "name": "@cds/react/button",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

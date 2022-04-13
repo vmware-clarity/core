@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/progress-circle"
+  "name": "@cds/react/progress-circle",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

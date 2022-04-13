@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/card"
+  "name": "@cds/react/card",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

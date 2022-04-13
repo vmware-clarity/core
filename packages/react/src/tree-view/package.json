@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/tree-view"
+  "name": "@cds/react/tree-view",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }

@@ -1,4 +1,8 @@
 {
   "sideEffects": true,
-  "name": "@cds/react/alert"
+  "name": "@cds/react/alert",
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "type": "module"
 }
