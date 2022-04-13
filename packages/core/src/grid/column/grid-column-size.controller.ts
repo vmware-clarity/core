@@ -43,7 +43,7 @@ export class GridColumnSizeController {
   }
 
   hostDisconnected() {
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   private setActionWidth() {

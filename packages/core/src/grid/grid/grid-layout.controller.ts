@@ -66,7 +66,7 @@ export class GridLayoutController {
   }
 
   hostDisconnected() {
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   private columnAddedOrRemoved(mutation: MutationRecord) {

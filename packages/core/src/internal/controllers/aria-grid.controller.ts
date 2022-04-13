@@ -59,7 +59,7 @@ export class AriaGridController<T extends ReactiveElement & AriaGrid> implements
   }
 
   hostDisconnected() {
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   update() {

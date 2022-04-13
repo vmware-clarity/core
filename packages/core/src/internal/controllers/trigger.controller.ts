@@ -61,7 +61,7 @@ export class TriggerController<T extends Triggerable> implements ReactiveControl
 
   hostDisconnected() {
     this.focusCurrent();
-    this.observer.disconnect();
+    this.observer?.disconnect();
   }
 
   private focusCurrent() {

@@ -304,7 +304,7 @@ export class CdsControl extends LitElement {
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.observers.forEach(o => o.disconnect());
+    this.observers.forEach(o => o?.disconnect());
   }
 
   protected associateInputAndLabel() {
