@@ -23,9 +23,7 @@ export const core = () => {
         cds-layout="fill"
         style="max-width: calc(var(--cds-global-layout-space-xxl) * 3)"
       />
-      <h1 cds-text="display">
-        Clarity Design System
-      </h1>
+      <h1 cds-text="display">Clarity Design System</h1>
       <div cds-layout="vertical gap:xl container:xs">
         <p cds-text="section center">
           Reusable components, Design Tokens and Themes for any Web framework or standalone UI.
@@ -39,9 +37,7 @@ export const core = () => {
       </div>
       <div cds-layout="horizontal gap:xs align:horizontal-center">
         <a href="./?path=/docs/documentation-getting-started--page">
-          <cds-button status="primary">
-            Get Started
-          </cds-button>
+          <cds-button status="primary"> Get Started </cds-button>
         </a>
         <a href="https://medium.com/claritydesignsystem/clarity-core-72f6d3a029bc" target="_blank" rel="noopener">
           <cds-button action="outline">Learn More</cds-button>

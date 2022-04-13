@@ -6,8 +6,7 @@
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
 import { RuleContext, RuleFix, RuleFixer } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
-import { HTMLAttribute } from 'eslint-html-parser';
-import { HTMLElement } from '../../types/index';
+import { HTMLAttribute, HTMLElement } from 'eslint-html-parser';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 import { getDeprecatedClassFixes } from '../html-fixer-helpers';
 
@@ -26,11 +25,11 @@ const styledListClassToAttributeMap = {
 const disallowedClasses = ['list', 'list-unstyled'];
 const disallowedListElementSelector = disallowedClasses.map(cls => `.${cls}`).join(',');
 
-function hasDisallowedClass(classes: Array<string>): boolean {
+function hasDisallowedClass(classes: string[]): boolean {
   return disallowedClasses.some(cls => classes.includes(cls));
 }
 
-function getClassFixes(fixer: RuleFixer, classNode: HTMLAttribute | undefined, classes: Array<string>): Array<RuleFix> {
+function getClassFixes(fixer: RuleFixer, classNode: HTMLAttribute | undefined, classes: string[]): RuleFix[] {
   const fixerMap = classes.includes('list-unstyled') ? unstyledListClassToAttributeMap : styledListClassToAttributeMap;
 
   return getDeprecatedClassFixes(fixer, classNode, fixerMap);

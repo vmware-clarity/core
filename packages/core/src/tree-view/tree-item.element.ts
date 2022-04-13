@@ -163,9 +163,7 @@ export class CdsTreeItem extends LitElement {
     return html`
       <div class="private-host" cds-layout="p-l:md">
         <div cds-layout="horizontal align:vertical-center ${this.multiSelect ? 'gap:xs' : 'gap:xxs'}">
-          <div class="lhs-container">
-            ${this.treeItemLeftHandSideTemplate}
-          </div>
+          <div class="lhs-container">${this.treeItemLeftHandSideTemplate}</div>
           <div
             class="item-content"
             cds-layout="horizontal p:xxs align:vertical-center align:stretch"

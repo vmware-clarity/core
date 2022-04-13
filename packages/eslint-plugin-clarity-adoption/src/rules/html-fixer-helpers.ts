@@ -5,7 +5,7 @@
  */
 
 import { RuleFixer, RuleFix } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
-import { HTMLAttribute, HTMLElement } from '../types';
+import { HTMLAttribute, HTMLElement } from 'eslint-html-parser';
 
 export function insertTextAfterNode(node: HTMLAttribute | HTMLElement, text: string, fixer: RuleFixer): RuleFix {
   return fixer.insertTextAfter(node as any, ` ${text}`);
@@ -53,13 +53,13 @@ export function getDeprecatedClassFixes(
   fixer: RuleFixer,
   classAttribute: HTMLAttribute | undefined,
   deprecatedClassToAttributeMap: { [key: string]: string }
-): Array<RuleFix> {
+): RuleFix[] {
   if (!classAttribute) {
     return [];
   }
 
   const isDeprecatedClass = isDeprecatedClassFactory(deprecatedClassToAttributeMap);
-  const fixers: Array<RuleFix> = [];
+  const fixers: RuleFix[] = [];
   const value = classAttribute.attributeValue.value;
   const classes = value.split(' ');
   const deprecatedClasses = classes.filter(isDeprecatedClass);
@@ -70,7 +70,7 @@ export function getDeprecatedClassFixes(
   const otherClasses = classes.filter(cls => !isDeprecatedClass(cls)).join(' ');
   const newAttributesFixers = deprecatedClasses
     .map(status => getSingleDeprecatedClassFix(status, classAttribute, deprecatedClassToAttributeMap, fixer))
-    .filter(fix => !!fix) as Array<RuleFix>; // remove undefined values
+    .filter(fix => !!fix) as RuleFix[]; // remove undefined values
   let classRemoveFixer: RuleFix;
   // If there are any other classes,
   // remove only the deprecated class value from the "class" attribute
@@ -88,10 +88,10 @@ export function getDeprecatedClassFixes(
 
 export function getAttributeNameFixes(
   fixer: RuleFixer,
-  attributes: Array<HTMLAttribute>,
+  attributes: HTMLAttribute[],
   oldName: string,
   newName: string
-): Array<RuleFix> {
+): RuleFix[] {
   const attributeToFix = attributes.find(attribute => attribute.attributeName.value === oldName);
   if (!attributeToFix) {
     return [];
@@ -108,8 +108,8 @@ export function getTagFixes(
   node: HTMLElement,
   oldTag: string,
   newTag: string,
-  newAttributes: Array<string> = []
-): Array<RuleFix> {
+  newAttributes: string[] = []
+): RuleFix[] {
   const openingTag = `<${oldTag}`;
   const closingTag = `</${oldTag}>`;
 
@@ -134,7 +134,7 @@ export function encloseNode(
   openingEnclosingTag: string,
   closingEnclosingTag: string,
   fixer: RuleFixer
-): Array<RuleFix> {
+): RuleFix[] {
   const {
     range: [start, end],
   } = node;

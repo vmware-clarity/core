@@ -4,12 +4,10 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-/* eslint-disable @typescript-eslint/no-use-before-define */
-/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import { AST, SourceCode } from 'eslint';
 import { extname } from 'path';
 import { ScopeManager, Scope } from 'eslint-scope';
-import { Parser, DomHandler } from 'htmlparser2';
+import { Parser, DomHandler, Tokenizer } from 'htmlparser2';
 
 import {
   ESLintHTMLParserToken,
@@ -21,7 +19,7 @@ import {
   HTMLProcessingInstruction,
   ESLintHtmlParseResult,
   HTMLSyntaxTree,
-} from './types';
+} from 'eslint-html-parser';
 
 const startsWithHtmlTag = /^\s*</;
 
@@ -60,7 +58,7 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
     return parseScript(code, options);
   }
 
-  const lineBreakIndices: Array<number> = [-1];
+  const lineBreakIndices: number[] = [-1];
   let currentIndex = code.indexOf('\n');
 
   while (currentIndex !== -1) {
@@ -68,7 +66,7 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
     currentIndex = code.indexOf('\n', currentIndex + 1);
   }
 
-  const tabIndices: Array<number> = [];
+  const tabIndices: number[] = [];
   currentIndex = code.indexOf('\t');
 
   while (currentIndex !== -1) {
@@ -118,8 +116,9 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
     HTMLProcessingInstruction: [],
   };
 
-  const tokens: Array<ESLintHTMLParserToken> = [];
+  const tokens: ESLintHTMLParserToken[] = [];
   const root: HTMLElement = {
+    attributes: [],
     type: 'HTMLElement',
     comments: [],
     children: [],
@@ -138,8 +137,7 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
   let currentAttribute: HTMLAttribute;
 
   const onattribdata: (value: string) => void = (value: string) => {
-    // @ts-ignore
-    const startIndex: number = htmlParser.tokenizer.sectionStart;
+    const startIndex: number = tokenizer.sectionStart;
 
     currentAttribute.attributeValue = {
       type: 'HTMLAttributeValue',
@@ -164,18 +162,17 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
 
   const onopentagname: (name: string) => void = (name: string) => {
     const element: HTMLElement = {
+      attributes: [],
+      children: [],
       comments: [],
       type: 'HTMLElement',
       tagName: name,
       parent: currentElement,
       value: '',
-      // @ts-ignore
-      range: [htmlParser.tokenizer.sectionStart - 1, -1],
+      range: [tokenizer.sectionStart - 1, -1],
       loc: {
-        // @ts-ignore
-        start: getLineAndColumn(htmlParser.tokenizer.sectionStart),
-        // @ts-ignore
-        end: getLineAndColumn(htmlParser.tokenizer.sectionStart),
+        start: getLineAndColumn(tokenizer.sectionStart),
+        end: getLineAndColumn(tokenizer.sectionStart),
       },
     };
 
@@ -196,15 +193,12 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
   const onattribname: (name: string) => void = (name: string) => {
     const attribute: Partial<HTMLAttribute> = {
       type: 'HTMLAttribute',
-      // @ts-ignore
-      range: [htmlParser.tokenizer.sectionStart, -1],
+      range: [tokenizer.sectionStart, -1],
       parent: currentElement,
       value: '',
       loc: {
-        // @ts-ignore
-        start: getLineAndColumn(htmlParser.tokenizer.sectionStart),
-        // @ts-ignore
-        end: getLineAndColumn(htmlParser.tokenizer.sectionStart),
+        start: getLineAndColumn(tokenizer.sectionStart),
+        end: getLineAndColumn(tokenizer.sectionStart),
       },
     };
 
@@ -434,6 +428,7 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
   };
 
   const htmlParser = new Parser(parseHandler);
+  const tokenizer: Tokenizer = (htmlParser as any).tokenizer;
   root.range = [htmlParser.startIndex, htmlParser.endIndex || -1];
   const originalOnattribname = htmlParser.onattribname;
   htmlParser.onattribname = function (...args): void {
@@ -465,10 +460,12 @@ export function parseForESLint(code: string, options = {}): ESLintHtmlParseResul
     value: code.substr(root.range[0], root.range[1] - root.range[0]),
   };
 
-  const scopeManager: ScopeManager = new ScopeManager({});
+  const _ScopeManager = ScopeManager as any;
+  const scopeManager: ScopeManager = new _ScopeManager({});
   // DO NOT REMOVE! This code has side-effects, even though the variable is unused.
   /* tslint:disable no-unused-expression */
-  new Scope(scopeManager, 'module', null, syntaxTree, false);
+  const _Scope = Scope as any;
+  new _Scope(scopeManager, 'module', null, syntaxTree, false);
 
   const result: ESLintHtmlParseResult = {
     ast: syntaxTree,

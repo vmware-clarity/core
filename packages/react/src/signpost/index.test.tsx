@@ -4,9 +4,7 @@ import { CdsSignpost } from './index';
 
 describe('CdsSignpost', () => {
   it('renders', async () => {
-    render(
-      <CdsSignpost>Oh hai</CdsSignpost>
-    );
+    render(<CdsSignpost>Oh hai</CdsSignpost>);
 
     expect(document.querySelector('cds-signpost')).toBeInTheDocument();
   });

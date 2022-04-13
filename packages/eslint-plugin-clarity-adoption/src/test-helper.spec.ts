@@ -16,7 +16,7 @@ interface Location {
 interface TestOptions {
   code: string;
   output?: string;
-  locations?: Array<Location>;
+  locations?: Location[];
 }
 
 const parser = '@typescript-eslint/parser';
@@ -121,8 +121,8 @@ function getFixturesRootDir(): string {
 function getInvalidTest(
   code: string,
   output?: string,
-  locations: Array<Location> = [],
-  messageIds: Array<string> = []
+  locations: Location[] = [],
+  messageIds: string[] = []
 ): InvalidTestCase<any, any> {
   return {
     code,

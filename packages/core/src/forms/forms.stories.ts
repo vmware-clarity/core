@@ -1397,9 +1397,7 @@ export function verticalRow() {
     <form>
       <cds-form-group layout="vertical-inline" control-width="shrink">
         <div cds-layout="horizontal gap:lg align:vertical-center">
-          <cds-button action="flat-inline" size="sm">
-            Action
-          </cds-button>
+          <cds-button action="flat-inline" size="sm"> Action </cds-button>
 
           <cds-divider orientation="vertical"></cds-divider>
 
@@ -1439,9 +1437,7 @@ export function horizontalRow() {
     <form>
       <cds-form-group class="form-group-demo" control-width="shrink" layout="horizontal-inline">
         <div cds-layout="horizontal gap:lg align:vertical-center">
-          <cds-button action="flat-inline" size="sm">
-            Action
-          </cds-button>
+          <cds-button action="flat-inline" size="sm"> Action </cds-button>
 
           <cds-divider orientation="vertical"></cds-divider>
 

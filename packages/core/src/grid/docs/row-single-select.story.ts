@@ -37,9 +37,7 @@ export function rowSingleSelect() {
               ${row.cells.map(cell => html`<cds-grid-cell>${cell.label}</cds-grid-cell>`)}
             </cds-grid-row>`
           )}
-          <cds-grid-footer>
-            Selected: ${this.grid.rows.find(i => i.selected)?.id}
-          </cds-grid-footer>
+          <cds-grid-footer> Selected: ${this.grid.rows.find(i => i.selected)?.id} </cds-grid-footer>
         </cds-grid>
       `;
     }

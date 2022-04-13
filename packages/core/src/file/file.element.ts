@@ -5,8 +5,7 @@
  */
 
 import { html, PropertyValues } from 'lit';
-import { state } from '@cds/core/internal';
-import { i18n, I18nService } from '@cds/core/internal';
+import { state, i18n, I18nService } from '@cds/core/internal';
 import { CdsControl } from '@cds/core/forms';
 import styles from './file.element.scss';
 

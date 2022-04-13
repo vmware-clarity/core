@@ -72,9 +72,7 @@ describe('cds-navigation', () => {
       element = await createTestElement(html`
         <cds-navigation cds-motion="off" id="testNav">
           <cds-navigation-start id="rootStart">Root start</cds-navigation-start>
-          <cds-navigation-item>
-            Root Item
-          </cds-navigation-item>
+          <cds-navigation-item> Root Item </cds-navigation-item>
           <cds-navigation-group>
             <cds-navigation-start id="groupStart">
               <cds-icon shape="home" size="md"></cds-icon>

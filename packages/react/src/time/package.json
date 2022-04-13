@@ -1,4 +1,4 @@
 {
-    "sideEffects": true,
-    "name": "@cds/react/time"
+  "sideEffects": true,
+  "name": "@cds/react/time"
 }

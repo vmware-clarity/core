@@ -6,7 +6,7 @@
 
 import { ESLintUtils } from '@typescript-eslint/experimental-utils';
 import { RuleFixer, RuleFix } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
-import { HTMLElement, HTMLAttributeName, HTMLAttribute } from '../../types';
+import { HTMLElement, HTMLAttributeName, HTMLAttribute } from 'eslint-html-parser';
 import {
   isDeprecatedClassFactory,
   getAttributeNameFixes,
@@ -58,7 +58,7 @@ function isDeprecatedShape(value: string): boolean {
   return shapes?.length === 2 && deprecatedShapesMap[shapes[0]] && isValidDirection(shapes[1]);
 }
 
-function getShapeFixes(fixer: RuleFixer, attributes: Array<HTMLAttribute>): Array<RuleFix> {
+function getShapeFixes(fixer: RuleFixer, attributes: HTMLAttribute[]): RuleFix[] {
   const shapeAttribute = attributes.find(attribute => attribute.attributeName.value === 'shape');
   if (!shapeAttribute) {
     return [];

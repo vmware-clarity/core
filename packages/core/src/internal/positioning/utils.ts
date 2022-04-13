@@ -86,7 +86,7 @@ export function setPopupPosition(component: PositionableElement) {
     updateElementStyles(component.pointerWrapper, ['visibility', 'hidden']);
   } else {
     if (component.pointer) {
-      const positionedPointer = ((myPosition as unknown) as PositionObj).pointer;
+      const positionedPointer = (myPosition as unknown as PositionObj).pointer;
       updateElementStyles(component.pointerWrapper, ['visibility', 'visible']);
       setAttributes(component, ['_pointer-type', component.pointer.type || false]);
       setAttributes(component, ['_position-at', (positionedPointer as PointerObj).location as string]);
@@ -95,8 +95,8 @@ export function setPopupPosition(component: PositionableElement) {
       setAttributes(component, ['_position-at', false], ['_pointer-type', false]);
     }
 
-    const posTop = ((myPosition as unknown) as PositionObj).popup.top + 'px';
-    const posLeft = ((myPosition as unknown) as PositionObj).popup.left + 'px';
+    const posTop = (myPosition as unknown as PositionObj).popup.top + 'px';
+    const posLeft = (myPosition as unknown as PositionObj).popup.left + 'px';
     updateElementStyles(component.hostWrapper, ['position', 'absolute'], ['top', posTop], ['left', posLeft]);
   }
 }
@@ -389,20 +389,18 @@ export function getPositionConfig(
           0,
           win.width,
           pointerAlign
-        ).map(
-          (crossAxisPos): PositionObjOrNot => {
-            if (crossAxisPos === false) {
-              return false;
-            } else {
-              return {
-                popup: {
-                  top: mainAxisPosition as number,
-                  left: crossAxisPos,
-                },
-              };
-            }
+        ).map((crossAxisPos): PositionObjOrNot => {
+          if (crossAxisPos === false) {
+            return false;
+          } else {
+            return {
+              popup: {
+                top: mainAxisPosition as number,
+                left: crossAxisPos,
+              },
+            };
           }
-        );
+        });
       }
     case 'bottom':
       mainAxisPosition = getMainAxisPositionOrViolation(
@@ -424,20 +422,18 @@ export function getPositionConfig(
           0,
           win.width,
           pointerAlign
-        ).map(
-          (crossAxisPos): PositionObjOrNot => {
-            if (crossAxisPos === false) {
-              return false;
-            } else {
-              return {
-                popup: {
-                  top: mainAxisPosition as number,
-                  left: crossAxisPos,
-                },
-              };
-            }
+        ).map((crossAxisPos): PositionObjOrNot => {
+          if (crossAxisPos === false) {
+            return false;
+          } else {
+            return {
+              popup: {
+                top: mainAxisPosition as number,
+                left: crossAxisPos,
+              },
+            };
           }
-        );
+        });
       }
     case 'left':
       mainAxisPosition = getMainAxisPositionOrViolation(anchor.left, pointerHeight, popup.width, mainAxisOffset, 0);
@@ -453,20 +449,18 @@ export function getPositionConfig(
           0,
           win.height,
           pointerAlign
-        ).map(
-          (crossAxisPos): PositionObjOrNot => {
-            if (crossAxisPos === false) {
-              return false;
-            } else {
-              return {
-                popup: {
-                  top: crossAxisPos,
-                  left: mainAxisPosition as number,
-                },
-              };
-            }
+        ).map((crossAxisPos): PositionObjOrNot => {
+          if (crossAxisPos === false) {
+            return false;
+          } else {
+            return {
+              popup: {
+                top: crossAxisPos,
+                left: mainAxisPosition as number,
+              },
+            };
           }
-        );
+        });
       }
     case 'right':
       mainAxisPosition = getMainAxisPositionOrViolation(
@@ -488,20 +482,18 @@ export function getPositionConfig(
           0,
           win.height,
           pointerAlign
-        ).map(
-          (crossAxisPos): PositionObjOrNot => {
-            if (crossAxisPos === false) {
-              return false;
-            } else {
-              return {
-                popup: {
-                  top: crossAxisPos,
-                  left: mainAxisPosition as number,
-                },
-              };
-            }
+        ).map((crossAxisPos): PositionObjOrNot => {
+          if (crossAxisPos === false) {
+            return false;
+          } else {
+            return {
+              popup: {
+                top: crossAxisPos,
+                left: mainAxisPosition as number,
+              },
+            };
           }
-        );
+        });
       }
   }
 }

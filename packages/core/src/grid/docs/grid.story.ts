@@ -193,16 +193,10 @@ export function dynamicGrid() {
                       </cds-checkbox>
                     </cds-grid-cell>`
                   : ''}
-                ${r.cells.map(
-                  c => html` <cds-grid-cell>
-                    ${c.label}
-                  </cds-grid-cell>`
-                )}
+                ${r.cells.map(c => html` <cds-grid-cell> ${c.label} </cds-grid-cell>`)}
               </cds-grid-row>`
             )}
-            <cds-grid-footer>
-              ${this._model.select ? html`Selected: ${this.selected}` : ''}
-            </cds-grid-footer>
+            <cds-grid-footer> ${this._model.select ? html`Selected: ${this.selected}` : ''} </cds-grid-footer>
           </cds-grid>`
         : ''}`;
     }
@@ -222,7 +216,7 @@ export function dynamicGrid() {
     }
   }
 
-  const grid = ({ ...DemoService.data.grid, select: 'single' } as unknown) as DynamicGrid;
+  const grid = { ...DemoService.data.grid, select: 'single' } as unknown as DynamicGrid;
   grid.select = 'single';
   grid.columns.forEach(c => (c.resizable = true));
 
