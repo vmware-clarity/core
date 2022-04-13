@@ -1,99 +1,70 @@
-# Local setup
+# Development Details
 
-Clarity uses NodeJS 14+ and Yarn 1.22.4+ for development, so ensure you have them installed and up to date. To find the exact
-version you could check `.nvmrc` file.
+## Public Packages
 
-It also uses Docker for running visual diff tests, so if you plan to run those tests, you'll have to have Docker installed and running.
+This repository contains the code for two public packages:
 
-The project structure is as follow:
+- `@cds/angular` - Clarity Angular package for easier consumption of Clarity Core with Angular
+
+- `@cds/core` - Clarity Web Components and common utilities
+
+- `@clr/eslint-plugin-clarity-adoption` - ESLint rules to help with migration to Core (@clr/eslint-plugin-clarity-adoption)
+
+- `@cds/react` - Clarity React package for easier consumption of Clarity Core with React (@cds/react)
+
+## Project Structure
+
+This repository consists of three projects:
 
 ```bash
 packages
 
-packages
-├── angular                           # Angular wrappers
-├── core                              # Web Components
-├── eslint-plugin-clarity-adoption    # ESLint rules to help with migration to Core
-├── react                             # React Wrappers Components
+├── angular # Clarity Angular package for easier consumption of Clarity Core with Angular (@cds/angular)
+
+├── core # Clarity Web Components and common utilities (@cds/core)
+
+├── eslint-plugin-clarity-adoption # ESLint rules to help with migration to Core (@clr/eslint-plugin-clarity-adoption)
+
+├── react # Clarity React package for easier consumption of Clarity Core with React (@cds/react)
+
 ```
 
-## Understanding the build
+## Build Process
 
-We have several packages:
+The build scripts in this repository have been designed to work with Node.js v16 or later.
 
-- `@cds/angular` - Clarity Angular package for easier consumption of Clarity Core with Angular
-- `@clr/core` - Clarity Web Components and common utilities.
-- `@cds/react` - Clarity React package for easier consumption of Clarity Core with React
+The build process consists of the following five stages. Each stage can be ran individually or all stages could be executed by running `npm run build:ci`. This is useful when submitting pull requests, because `npm run build:ci` is essentially the same command the CI system will run.
 
-Each package has a slightly different build process, and this guide describes them each separately.
-Many of these commands have a corresponding command that enables watch
-mode while you develop.
+1. `npm run clean`: deletes all generated code and artifacts
 
-## Full Project Build
+2. `npm run lint`: validates linting, formatting, and license headers for all code files
 
-To build the entire repo and all projects run the command `yarn build`.
-This command is useful to run before submitting a PR to ensure everything will
-pass the CI build.
+   - `npm run lint:fix`: automatically fixes any linting or formatting issues if possible
 
-## `@cds/core`
+   - `npm run lint:changed`: same as `npm run lint`, but only for new and modified files
 
-Build Clarity Core by running `yarn core:build`, which calls the following tasks to build the package.
+   - `npm run lint:changed:fix`: same as `npm run lint:fix`, but only for new and modified files
 
-- `core:build` - Builds the Core package for production
-- `core:start` - Run the test project for Clarity Core Web Components
-- `core:test` - Run all tests for Clarity Core
-- `core:test:watch` - Continually run all tests for Clarity Core
+3. `npm run build`: builds all projects
 
-## Additional NPM Scripts
+4. `npm run test`: verifies all tests pass
 
-There are a few other NPM scripts that can be useful during build and development.
+   - `npm run test:watch`: runs a watcher on all tests
 
-##### `yarn start`
+Other commands
 
-The start command starts up our demo app using the Angular CLI on port 4200 and watches for file changes for live reload.
+- `npm run commit`: launches an interactive prompt to help format commit messages.
 
-##### `yarn build`
+- `npm run preview`: performs a dry-run of the release process and shows you what a release would look like (branch must exist remotely).
 
-This script builds npm package candidates for all four packages we currently publish: `@clr/angular`, `@clr/ui`,
-`@clr/icons`, and `@cds/core` under the `/dist` folder.
+- `npm run start`: serves and launches the storybook project
 
-##### `yarn test` and `yarn angular:test:watch`
+## Commit Hooks
 
-This entry file now lives in src/clr-angular/test.tsand is now confined to what's under clr-angular. It used to be that the file was a single entry point across multiple packages. You can run the tests in watch mode, so they run continuously `yarn angular:test:watch`.
+This repository uses Husky to execute the following client-side commit hooks.
 
-##### `yarn build:ci`
+- `pre-commit`: Before performing a commit, all staged files will be automatically linted.
 
-The `build:ci` script is used by Github CI to run all of the library build checks, such as format, lint, and unit tests.
-If the code doesn't pass both the format and lint checkers, then the build fails before running the unit tests.
+- `commit-msg`: All commit messages will be validated to ensure they conform this repository's commit message conventions. Non-conforming commits will be automatically blocked.
 
-##### `yarn format` and `yarn format:fix`
-
-We use [prettier](https://prettier.io) as formatter for our code. `yarn format` will not
-actually format the file but only check if there are any files that would be changed.
-
-The `yarn format:fix` does the actual formatting of any staged files, which should happen as a precommit hook.
-
-##### `yarn angular:build`
-
-This script produces the `@clr/angular` package using [ng-packagr](https://github.com/dherges/ng-packagr).
-
-The script copies over the `package.json` template from our `npm` folder (this contains templates for `package.json` and
-`README.md` for all of our packages) into `src/clr-angular` and sets the correct version number. This step is necessary
-because `ng-packagr` requires the `package.json` to be at the root of the `src` (defined in `ng-package.json`).
-
-##### `yarn core:build`
-
-This script produces the `@cds/core` package that is used to consume the Clarity Core Web Components.
-
-##### `yarn lint` and `yarn lint:fix`
-
-The `lint` script runs the linter and fails if linting fails. The `lint:fix` script is very similar but
-is run with the `--fix` flag to auto-fix some rules if possible. Some lint rules cannot be auto fixed, so you have
-to fix those manually.
-
-##### `yarn format:file -- path/to/file`
-
-When contributing to Clarity, there is a post-commit hook installed and run with
-[husky](https://github.com/typicode/husky) that formats the files staged before they are committed. There are
-corner cases and editors that may not behave as expected, and it is possible to create a pull request that fails because
-the files are not correctly formatted. This command can be used to format a specific file or a space-separated list of files.
+Although it is typically not recommended, you may bypass the commit hooks by adding the `--no-verify` flag to you `git commit` command.

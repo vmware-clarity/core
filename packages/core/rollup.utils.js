@@ -22,6 +22,10 @@ import virtual from '@rollup/plugin-virtual';
 
 const prod = !process.env.ROLLUP_WATCH;
 
+function makeJsonSafePath(key) {
+  return key.replace(/\\/g, '/');
+}
+
 /**
  * Rollup plugin for running the package-check validation
  * https://docs.skypack.dev/package-authors/package-checks
@@ -142,9 +146,17 @@ export const createPackageModuleMetadata = (packageFile, config) => {
       const path = `.${resolve(m).replace(resolve(config.baseDir), '').replace('.ts', '.js')}`;
 
       if (path.includes('index.js')) {
-        return [`"./${resolve(dirname(m)).replace(resolve(config.baseDir), '').replace('/', '')}": "${path}"`];
+        return [
+          `"./${makeJsonSafePath(resolve(dirname(m)).replace(resolve(config.baseDir), '')).replace(
+            '/',
+            ''
+          )}": "${makeJsonSafePath(path)}"`,
+        ];
       } else {
-        return [`"${path}": "${path}"`, `"${path.replace('.js', '')}": "${path}"`];
+        return [
+          `"${makeJsonSafePath(path)}": "${makeJsonSafePath(path)}"`,
+          `"${makeJsonSafePath(path.replace('.js', ''))}": "${makeJsonSafePath(path)}"`,
+        ];
       }
     });
 
@@ -154,10 +166,17 @@ export const createPackageModuleMetadata = (packageFile, config) => {
       .replace(resolve(m.output ? config.outDir : config.baseDir), '')
       .replace(extname(output), '.css')}`;
     const minPath = path.replace(extname(path), '.min.css');
-    return [`"${path}": "${path}"`, `"${minPath}": "${minPath}"`];
+    return [
+      `"${makeJsonSafePath(path)}": "${makeJsonSafePath(path)}"`,
+      `"${makeJsonSafePath(minPath)}": "${makeJsonSafePath(minPath)}"`,
+    ];
   });
 
-  const packageExports = config.package.exports.map(m => (m.input ? `"${m.input}": "${m.output}"` : `"${m}": "${m}"`));
+  const packageExports = config.package.exports.map(m =>
+    m.input
+      ? `"${makeJsonSafePath(m.input)}": "${makeJsonSafePath(m.output)}"`
+      : `"${makeJsonSafePath(m)}": "${makeJsonSafePath(m)}"`
+  );
 
   const exports = JSON.parse(`{
      "./package.json": "./package.json",

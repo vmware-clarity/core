@@ -4,74 +4,42 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-const rulesDirPlugin = require('eslint-plugin-rulesdir');
-rulesDirPlugin.RULES_DIR = ['build/eslint-rules'];
+require('eslint-plugin-rulesdir').RULES_DIR = [require('path').resolve(__dirname, './build/eslint-rules')];
 
-const OFF = 0;
-const WARN = 1;
-const ERROR = 2;
-
-const bannedTSTypes = {
-  Array: 'Use [] instead.',
-  Object: 'Use {} instead.',
-  Boolean: 'Use `boolean` instead.',
-  Number: 'Use `number` instead.',
-  String: 'Use `string` instead.',
-};
-
-// only adding rules that override the defaults or enforce new standards
-const rules = {
-  'no-unused-vars': 'off', // tsc checks this
-  '@typescript-eslint/no-unused-vars': [ERROR, { varsIgnorePattern: 'Demo|Test' }], // ignore side effect demo custom element definition classes
-  '@typescript-eslint/explicit-function-return-type': OFF, // too much work at the moment
-  '@typescript-eslint/no-explicit-any': OFF, // would LOVE to turn this on
-  // cause slow analysis on TS files with Storybook, see
-  // https://github.com/typescript-eslint/typescript-eslint/issues/1856
-  '@typescript-eslint/no-use-before-define': OFF,
-  '@typescript-eslint/ban-types': [ERROR, { types: bannedTSTypes }],
-  '@typescript-eslint/explicit-member-accessibility': [ERROR, { accessibility: 'no-public' }],
-  'import/extensions': [ERROR, 'ignorePackages'],
-  'no-restricted-imports': [
-    ERROR,
+module.exports = {
+  extends: ['plugin:lit/recommended', 'plugin:lit-a11y/recommended', 'plugin:wc/recommended'],
+  plugins: ['eslint-plugin-wc', 'lit', 'lit-a11y', 'rulesdir'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: 'Demo|Test' }],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          'ramda',
+          'rxjs',
+          'rxjs/operators',
+          {
+            name: '@cds/core/icon',
+            message:
+              'Please import icon service and icons directly https://clarity.design/storybook/core/?path=/story/internal-documentation-using-icons--page',
+          },
+        ],
+        patterns: ['lit-element', 'lit-element/*', 'lit-html', 'lit-html/*', '@angular/*'],
+      },
+    ],
+    'lit-a11y/img-redundant-alt': ['off'],
+    'lit-a11y/anchor-is-valid': ['off'],
+    'lit-a11y/alt-text': ['off'],
+    'lit-a11y/click-events-have-key-events': ['off'],
+    'rulesdir/reserved-property-names': ['error'],
+    'rulesdir/reserved-event-names': ['error'],
+  },
+  overrides: [
     {
-      paths: [
-        'ramda',
-        'rxjs',
-        'rxjs/operators',
-        {
-          name: '@cds/core/icon',
-          message:
-            'Please import icon service and icons directly https://clarity.design/storybook/core/?path=/story/internal-documentation-using-icons--page',
-        },
-      ],
-      patterns: ['lit-element', 'lit-element/*', 'lit-html', 'lit-html/*', '@angular/*'],
+      files: ['./build/**'],
+      rules: {
+        'import/extensions': 'off',
+      },
     },
   ],
-  'lit/plugin/no-boolean-in-attribute-binding': [OFF],
-  'lit-a11y/img-redundant-alt': [OFF],
-  'lit-a11y/anchor-is-valid': [OFF],
-  'lit-a11y/alt-text': [OFF],
-  'lit-a11y/click-events-have-key-events': [OFF],
-  'rulesdir/reserved-property-names': [ERROR],
-  'rulesdir/reserved-event-names': [ERROR],
 };
-
-const parserOptions = {
-  project: 'tsconfig.eslint.json',
-  tsconfigRootDir: __dirname,
-  sourceType: 'module',
-};
-
-const plugins = ['@typescript-eslint', 'lit-a11y', 'lit', 'eslint-plugin-wc', 'rulesdir'];
-
-const config = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  ignorePatterns: ['dist'],
-  extends: ['../../.eslintrc.js', 'plugin:lit-a11y/recommended', 'plugin:lit/recommended', 'plugin:wc/recommended'],
-  parserOptions,
-  rules,
-  plugins,
-};
-
-module.exports = config;

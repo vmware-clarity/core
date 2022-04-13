@@ -493,6 +493,26 @@ describe('CDS File', () => {
   });
 });
 
+describe('CDS Checkbox', () => {
+  let fixture: ComponentFixture<any>;
+  let instance: CheckboxTestComponent;
+
+  beforeEach(function () {
+    TestBed.configureTestingModule({
+      imports: [CdsModule],
+      declarations: [CheckboxTestComponent],
+    });
+
+    fixture = TestBed.createComponent(CheckboxTestComponent);
+    fixture.detectChanges();
+    instance = fixture.componentInstance;
+  });
+
+  it('cds-file should be defined', () => {
+    expect(instance.vcCdsCheckboxDirective).toBeDefined();
+  });
+});
+
 describe('CDS Control Action', () => {
   let fixture: ComponentFixture<any>;
   let instance: ControlActionTestComponent;
@@ -513,25 +533,25 @@ describe('CDS Control Action', () => {
   });
 });
 
-// describe('CDS Dropdown', () => {
-//   let fixture: ComponentFixture<any>;
-//   let instance: DropdownTestComponent;
-//
-//   beforeEach(function () {
-//     TestBed.configureTestingModule({
-//       imports: [CdsModule],
-//       declarations: [DropdownTestComponent],
-//     });
-//
-//     fixture = TestBed.createComponent(DropdownTestComponent);
-//     fixture.detectChanges();
-//     instance = fixture.componentInstance;
-//   });
-//
-//   it('cds-dropdown should be defined', () => {
-//     expect(instance.vcCdsDropdownDirective).toBeDefined();
-//   });
-// });
+describe('CDS Dropdown', () => {
+  let fixture: ComponentFixture<any>;
+  let instance: DropdownTestComponent;
+
+  beforeEach(function () {
+    TestBed.configureTestingModule({
+      imports: [CdsModule],
+      declarations: [DropdownTestComponent],
+    });
+
+    fixture = TestBed.createComponent(DropdownTestComponent);
+    fixture.detectChanges();
+    instance = fixture.componentInstance;
+  });
+
+  it('cds-dropdown should be defined', () => {
+    expect(instance.vcCdsDropdownDirective).toBeDefined();
+  });
+});
 
 describe('CDS Internal Control Group', () => {
   let fixture: ComponentFixture<any>;
@@ -793,25 +813,25 @@ describe('CDS Modal Header', () => {
   });
 });
 
-// describe('CDS Modal', () => {
-//   let fixture: ComponentFixture<any>;
-//   let instance: ModalTestComponent;
-//
-//   beforeEach(function () {
-//     TestBed.configureTestingModule({
-//       imports: [CdsModule],
-//       declarations: [ModalTestComponent],
-//     });
-//
-//     fixture = TestBed.createComponent(ModalTestComponent);
-//     fixture.detectChanges();
-//     instance = fixture.componentInstance;
-//   });
-//
-//   it('cds-modal should be defined', () => {
-//     expect(instance.vcCdsModalDirective).toBeDefined();
-//   });
-// });
+describe('CDS Modal', () => {
+  let fixture: ComponentFixture<any>;
+  let instance: ModalTestComponent;
+
+  beforeEach(function () {
+    TestBed.configureTestingModule({
+      imports: [CdsModule],
+      declarations: [ModalTestComponent],
+    });
+
+    fixture = TestBed.createComponent(ModalTestComponent);
+    fixture.detectChanges();
+    instance = fixture.componentInstance;
+  });
+
+  it('cds-modal should be defined', () => {
+    expect(instance.vcCdsModalDirective).toBeDefined();
+  });
+});
 
 describe('CDS Password', () => {
   let fixture: ComponentFixture<any>;

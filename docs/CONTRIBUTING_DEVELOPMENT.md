@@ -122,13 +122,13 @@ git checkout -b topic/feature-name upstream/topic/feature-name
 Once you have the project checked out with a fork you will need to run some step
 steps.
 
-1.  Have [NodeJS](https://nodejs.org) installed and [Yarn](https://yarnpkg.com)
-2.  In the root project directory run, `yarn`
-3.  Run `yarn build` to build entire project (this may take several minutes)
+1.  Have [NodeJS](https://nodejs.org) installed and npm
+2.  In the root project directory run, `npm install`
+3.  Run `npm run build` to build entire project (this may take several minutes)
 4.  Startup the project
-    - If Angular change run `yarn start`
-    - If Web Component change run `yarn core:start`
-    - If Website Documentation change run `yarn website:start`
+    - If Angular change run `npm run start`
+    - If Web Component change run `npm run core:start`
+    - If Website Documentation change run `npm run website:start`
 5.  To run tests and other project-specific commands see our project [Build Guide](/docs/BUILD.md)
 
 ### Public API Changes
@@ -218,7 +218,7 @@ requested some help.
 To make sure your pull request will pass our automated testing, before submitting
 you should:
 
-- Make sure `yarn build` passes for on your machine.
+- Make sure `npm run build` passes for on your machine.
 - For individual lint failures, you will have to fix them manually.
 
 The CI runs three parallel Jobs for performance.
@@ -227,7 +227,7 @@ The CI runs three parallel Jobs for performance.
 2. Build website and storybook
 3. Build angular dev app
 
-To ensure your PR will pass the CI you can run `yarn run build` which will run
+To ensure your PR will pass the CI you can run `npm run build` which will run
 all three CI checks locally on your machine. This may take several minutes.
 
 If everything passes, you can push your changes to your fork of Clarity, and [submit a pull request](https://help.github.com/articles/about-pull-requests/).

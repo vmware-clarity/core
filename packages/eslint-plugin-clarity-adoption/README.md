@@ -59,8 +59,8 @@ Finally, you'll need to run eslint with the `--ext` flag to enable HTML scanning
 1. Install the dependencies, run the watch script to build the package and watch for changes:
 
 ```bash
-yarn
-yarn run watch
+npm install
+npm run watch
 ```
 
 2. Open another terminal window/tab, navigate to the `dist` directory and execute `npm link`:
@@ -69,8 +69,6 @@ yarn run watch
 cd ../../dist/eslint-plugin-clarity-adoption
 npm link
 ```
-
-**NB:** `yarn link` doesn't work properly for linking the plugin. Please use `npm link` instead.
 
 3. Create a demo project, navigate to it and link the ESLint plugin:
 
@@ -151,10 +149,6 @@ For parsing the TS files in the project, the plugin uses [`@typescript-eslint/pl
 For parsing the HTML files, the plugin uses an internalized version of [eslint-html-parser](https://www.npmjs.com/package/eslint-html-parser). The original package is patched to work with HTML files containing more than one root element, such as:
 
 ```html
-<div>
-  ...
-</div>
-<div>
-  ...
-</div>
+<div>...</div>
+<div>...</div>
 ```
