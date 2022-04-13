@@ -8,7 +8,7 @@ const fs = require('fs');
 
 // https://semantic-release.gitbook.io/semantic-release/developer-guide/plugin
 function prepare(_, context) {
-  const packagePaths = ['./packages/angular/dist/angular/package.json', './packages/react/dist/react/package.json'];
+  const packagePaths = ['./projects/angular/dist/angular/package.json', './projects/react/dist/react/package.json'];
 
   packagePaths.forEach(packagePath => {
     const package = JSON.parse(fs.readFileSync(packagePath, 'utf8'));

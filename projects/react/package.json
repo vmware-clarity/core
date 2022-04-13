@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
     "update-snapshots": "npm run build && jest --updateSnapshot",
-    "_build:package": "cpy package.lib.json ./dist/lib --rename package.json && cpy README.md ./dist/lib && cpy \"./**/package.json\" ./../dist/lib --cwd=./src --parents && del-cli ./dist/**/*.tsbuildinfo",
+    "_build:package": "cpy package.lib.json ./dist/react --rename package.json && cpy README.md ./dist/react && cpy \"./**/package.json\" ./../dist/react --cwd=./src --parents && del-cli ./dist/**/*.tsbuildinfo",
     "_build:ts": "tsc --build ./tsconfig.project.json --force",
     "_dev:start": "parcel index.html"
   },
