@@ -25,10 +25,10 @@ export interface CDSGlobal {
 
 export interface CDSState {
   focusTrapItems: Readonly<{ focusTrapId: string }[]>;
-  i18nRegistry: Readonly<{}>;
+  i18nRegistry: Readonly<any>;
   elementRegistry: Readonly<{ [key: string]: any }>;
-  iconRegistry: Readonly<{}>;
-  motionRegistry: Readonly<{}>;
+  iconRegistry: Readonly<any>;
+  motionRegistry: Readonly<any>;
 }
 
 declare global {

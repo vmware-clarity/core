@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /*
  * Copyright (c) 2016-2019 VMware, Inc. All Rights Reserved.
  * This software is released under MIT license.
