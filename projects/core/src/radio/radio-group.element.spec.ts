@@ -59,4 +59,28 @@ describe('cds-radio-group', () => {
     // expect(radio1.inputControl.hasAttribute('checked')).toBe(true);
     // expect(radio2.inputControl.hasAttribute('checked')).toBe(false);
   });
+
+  it('should allow manually setting the radio name', async () => {
+    element = await createTestElement(html`
+      <cds-radio-group>
+        <label>radio group</label>
+        <cds-radio>
+          <label>radio 1</label>
+          <input type="radio" name="my-radio" value="1" checked />
+        </cds-radio>
+        <cds-radio>
+          <label>radio 2</label>
+          <input type="radio" name="my-radio" value="2" />
+        </cds-radio>
+        <cds-control-message>message text</cds-control-message>
+      </cds-radio-group>
+    `);
+
+    component = element.querySelector<CdsRadioGroup>('cds-radio-group');
+
+    const radio1 = component.querySelectorAll('cds-radio')[0];
+    const radio2 = component.querySelectorAll('cds-radio')[1];
+    expect(radio1.inputControl.name).toBe(radio2.inputControl.name);
+    expect(radio1.inputControl.name).toEqual('my-radio');
+  });
 });
