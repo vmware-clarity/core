@@ -14,7 +14,7 @@ $list-default-unordered-type: disc;
   $ul-default: disc;
   $ol-default: decimal;
 
-  @if $styles != null {
+  @if $styles {
     @each $style in $styles {
       #{$type}[cds-list='#{$style}'] {
         list-style-type: $style;

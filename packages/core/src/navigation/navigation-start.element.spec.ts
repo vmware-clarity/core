@@ -17,11 +17,7 @@ describe('cds-navigation-start', () => {
   let icon: CdsIcon;
 
   beforeEach(async () => {
-    element = await createTestElement(html`
-      <cds-navigation-start>
-        Start Element
-      </cds-navigation-start>
-    `);
+    element = await createTestElement(html` <cds-navigation-start> Start Element </cds-navigation-start> `);
 
     component = element.querySelector<CdsNavigationStart>('cds-navigation-start');
     icon = component.shadowRoot.querySelector('cds-icon');
@@ -111,9 +107,7 @@ describe('cds-navigation-start', () => {
     beforeEach(async () => {
       element = await createTestElement(html`
         <cds-navigation-group>
-          <cds-navigation-start>
-            Start Element
-          </cds-navigation-start>
+          <cds-navigation-start> Start Element </cds-navigation-start>
         </cds-navigation-group>
       `);
 
@@ -165,9 +159,7 @@ describe('cds-navigation-start', () => {
     beforeEach(async () => {
       element = await createTestElement(html`
         <cds-navigation>
-          <cds-navigation-start>
-            Start Element
-          </cds-navigation-start>
+          <cds-navigation-start> Start Element </cds-navigation-start>
         </cds-navigation>
       `);
 

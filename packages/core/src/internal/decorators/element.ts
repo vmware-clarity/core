@@ -56,7 +56,7 @@ interface ClassElement {
   kind: 'field' | 'method';
   key: PropertyKey;
   placement: 'static' | 'prototype' | 'own';
-  initializer?: Function;
+  initializer?: any;
   extras?: ClassElement[];
   finisher?: <T>(classDef: Constructor<T>) => undefined | Constructor<T>;
   descriptor?: PropertyDescriptor;

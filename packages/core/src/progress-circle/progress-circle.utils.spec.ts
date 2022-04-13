@@ -37,7 +37,7 @@ describe('progress circle helpers – ', () => {
       const expected = `${i18nMock} ${currentValue}%`;
       const testUndefined = getAriaLabelFromTemplate(currentValue, i18nMock);
       const testNull = getAriaLabelFromTemplate(currentValue, i18nMock, null);
-      const testBadArg = getAriaLabelFromTemplate(currentValue, i18nMock, ('' as unknown) as number);
+      const testBadArg = getAriaLabelFromTemplate(currentValue, i18nMock, '' as unknown as number);
       expect(testUndefined.indexOf(currentValue + '')).not.toBe(-1, 'current val present in undefined case');
       expect(testNull.indexOf(currentValue + '')).not.toBe(-1, 'current val present in null case');
       expect(testBadArg.indexOf(currentValue + '')).not.toBe(-1, 'current val present in bad parameter case');
@@ -63,7 +63,7 @@ describe('progress circle helpers – ', () => {
     it('should return indeterminate (loading) template if value is nil', () => {
       const valUndefined = getDefaultAriaLabel(void 0, '...', loopingMsg);
       const valNull = getDefaultAriaLabel(null, '...', loopingMsg);
-      const valBadVal = getDefaultAriaLabel(('' as unknown) as number, '...', loopingMsg);
+      const valBadVal = getDefaultAriaLabel('' as unknown as number, '...', loopingMsg);
       expect(valUndefined).toBe(loopingMsg, 'undefined checks out');
       expect(valNull).toBe(loopingMsg, 'null checks out');
       expect(valBadVal).toBe(loopingMsg, 'bad argument checks out');
@@ -120,7 +120,7 @@ describe('progress circle helpers – ', () => {
       expect(testMe).toEqual(expectedLoopingAttrs as any);
     });
     it('should return indeterminate/looping attrs if value is bad', () => {
-      const testMe = getProgressCircleAriaAttributes(('' as unknown) as number, ariaLbl);
+      const testMe = getProgressCircleAriaAttributes('' as unknown as number, ariaLbl);
       expect(testMe).toEqual(expectedLoopingAttrs as any);
     });
     it('should return loading attrs if value is passed', () => {

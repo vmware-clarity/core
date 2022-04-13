@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-/**
+/*
  * Core Library Build
  *
  * This is the main rollup build for the Core library.

@@ -6,7 +6,7 @@
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
 import { RuleContext, RuleFix, RuleFixer } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
-import { HTMLAttribute, HTMLElement } from '../../types/index';
+import { HTMLAttribute, HTMLElement } from 'eslint-html-parser';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 import {
   encloseNode,
@@ -38,7 +38,7 @@ const deprecatedClassToAttributeMap = {
 const disallowedClass = 'label';
 const disallowedLabelElementSelector = `.${disallowedClass}`;
 
-function migrateAttributes(classNode: HTMLAttribute, classes: Array<string>, fixer: RuleFixer): Array<RuleFix> {
+function migrateAttributes(classNode: HTMLAttribute, classes: string[], fixer: RuleFixer): RuleFix[] {
   const fixes = getDeprecatedClassFixes(fixer, classNode, deprecatedClassToAttributeMap);
   if (!classes.includes('clickable')) {
     const addReadonlyAttributeFix = insertTextAfterNode(classNode, 'readonly', fixer);

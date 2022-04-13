@@ -5,8 +5,7 @@
  */
 
 import { html } from 'lit';
-import { CdsNavigation } from '@cds/core/navigation';
-import { CdsNavigationGroup } from '@cds/core/navigation';
+import { CdsNavigation, CdsNavigationGroup } from '@cds/core/navigation';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { CdsIcon } from '@cds/core/icon/icon.element.js';
 import { applicationsIcon } from '@cds/core/icon/shapes/applications.js';
@@ -86,34 +85,22 @@ export function verticalBasic() {
       <div cds-layout="horizontal wrap:none" style="height: 100%">
         <cds-navigation expanded cds-layout="">
           <cds-navigation-item>
-            <a href="#">
-              Home
-            </a>
+            <a href="#"> Home </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Account
-            </a>
+            <a href="#"> Account </a>
           </cds-navigation-item>
           <cds-navigation-item active>
-            <a href="#">
-              People
-            </a>
+            <a href="#"> People </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Help
-            </a>
+            <a href="#"> Help </a>
           </cds-navigation-item>
           <cds-navigation-item disabled>
-            <a href="#">
-              Service
-            </a>
+            <a href="#"> Service </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Documentation
-            </a>
+            <a href="#"> Documentation </a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-demo layout style="height: 100%; width:  100%;">
@@ -230,9 +217,7 @@ export function collapsibleVerticalNavigation() {
         </cds-navigation-item>
       </cds-navigation>
       <cds-navigation expanded @expandedChange="${onExpandChange}">
-        <cds-navigation-start>
-          Navigation toggle
-        </cds-navigation-start>
+        <cds-navigation-start> Navigation toggle </cds-navigation-start>
         <cds-navigation-item active>
           <a href="#">
             <cds-icon shape="home" size="sm"></cds-icon>
@@ -332,34 +317,22 @@ export function verticalBasicSubStart() {
             <cds-divider cds-layout="m-y:md"></cds-divider>
           </div>
           <cds-navigation-item>
-            <a href="#">
-              Home
-            </a>
+            <a href="#"> Home </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Account
-            </a>
+            <a href="#"> Account </a>
           </cds-navigation-item>
           <cds-navigation-item active>
-            <a href="#">
-              People
-            </a>
+            <a href="#"> People </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Help
-            </a>
+            <a href="#"> Help </a>
           </cds-navigation-item>
           <cds-navigation-item disabled>
-            <a href="#">
-              Service
-            </a>
+            <a href="#"> Service </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Documentation
-            </a>
+            <a href="#"> Documentation </a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-demo layout style="height: 100%; width:  100%;">
@@ -380,34 +353,22 @@ export function verticalAlignBottom() {
       <div cds-layout="horizontal wrap:none" style="height: 100%">
         <cds-navigation expanded cds-layout="">
           <cds-navigation-item active>
-            <a href="#">
-              Home
-            </a>
+            <a href="#"> Home </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Account
-            </a>
+            <a href="#"> Account </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              People
-            </a>
+            <a href="#"> People </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Help
-            </a>
+            <a href="#"> Help </a>
           </cds-navigation-item>
           <cds-navigation-item disabled>
-            <a href="#">
-              Service
-            </a>
+            <a href="#"> Service </a>
           </cds-navigation-item>
           <cds-navigation-item cds-layout="align:bottom">
-            <a href="#">
-              Documentation
-            </a>
+            <a href="#"> Documentation </a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-demo layout style="height: 100%; width:  100%;">
@@ -428,34 +389,22 @@ export function verticalEnd() {
       <div cds-layout="horizontal wrap:none" style="height: 100%">
         <cds-navigation expanded cds-layout="">
           <cds-navigation-item active>
-            <a href="#">
-              Home
-            </a>
+            <a href="#"> Home </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Account
-            </a>
+            <a href="#"> Account </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              People
-            </a>
+            <a href="#"> People </a>
           </cds-navigation-item>
           <cds-navigation-item>
-            <a href="#">
-              Help
-            </a>
+            <a href="#"> Help </a>
           </cds-navigation-item>
           <cds-navigation-item disabled>
-            <a href="#">
-              Service
-            </a>
+            <a href="#"> Service </a>
           </cds-navigation-item>
           <cds-navigation-item slot="cds-navigation-end">
-            <a href="#">
-              Documentation
-            </a>
+            <a href="#"> Documentation </a>
           </cds-navigation-item>
         </cds-navigation>
         <cds-demo layout style="height: 100%; width:  100%;">
@@ -582,35 +531,23 @@ export function darkTheme() {
     <div cds-theme="dark" style="height: 250px" cds-layout="horizontal gap:md align:vertical-stretch wrap:none">
       <cds-navigation expanded cds-layout="">
         <cds-navigation-item>
-          <a href="#">
-            Navigation One
-          </a>
+          <a href="#"> Navigation One </a>
         </cds-navigation-item>
         <cds-navigation-item>
-          <a href="#">
-            Navigation Two
-          </a>
+          <a href="#"> Navigation Two </a>
         </cds-navigation-item>
         <cds-navigation-item active>
-          <a href="#">
-            Navigation Active
-          </a>
+          <a href="#"> Navigation Active </a>
         </cds-navigation-item>
         <cds-navigation-item selected>
-          <a href="#">
-            Navigation Selected
-          </a>
+          <a href="#"> Navigation Selected </a>
         </cds-navigation-item>
         <cds-navigation-item disabled>
-          <a href="#">
-            Navigation Disabled
-          </a>
+          <a href="#"> Navigation Disabled </a>
         </cds-navigation-item>
         <cds-divider></cds-divider>
         <cds-navigation-item>
-          <a href="#">
-            Navigation Six
-          </a>
+          <a href="#"> Navigation Six </a>
         </cds-navigation-item>
       </cds-navigation>
       <cds-demo layout style="height: 100%; width: 100%;">

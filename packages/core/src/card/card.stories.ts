@@ -278,9 +278,7 @@ export function WithImage() {
 export function WithLists() {
   return html`<cds-card aria-labelledby="cardWithList" style="--width: 15rem">
     <div cds-layout="vertical gap:md">
-      <h2 id="cardWithList" cds-text="section" cds-layout="horizontal gap:sm align:vertical-center">
-        Card with list
-      </h2>
+      <h2 id="cardWithList" cds-text="section" cds-layout="horizontal gap:sm align:vertical-center">Card with list</h2>
 
       <cds-divider cds-card-remove-margin></cds-divider>
 
@@ -399,9 +397,7 @@ export function WithinGrid() {
     </cds-card>
     <cds-card aria-labelledby="gridCard2">
       <h3 id="gridCard2" cds-text="section" cds-layout="p-y:sm">Card Title</h3>
-      <div cds-text="body light" cds-layout="p-y:md">
-        Card Content.
-      </div>
+      <div cds-text="body light" cds-layout="p-y:md">Card Content.</div>
     </cds-card>
     <cds-card aria-labelledby="gridCard3">
       <h3 id="gridCard3" cds-text="section" cds-layout="p-y:sm">Card Title</h3>

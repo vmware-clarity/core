@@ -481,10 +481,10 @@ describe('Functional Helper: ', () => {
       });
       it('selects return true', async () => {
         testElement = await createTestElement(
-          html`<select id="${testId}"
-            ><option selected>ohai</option
-            ><option>kthxbye</option></select
-          >`
+          html`<select id="${testId}">
+            <option selected>ohai</option>
+            <option>kthxbye</option>
+          </select>`
         );
         expect(isFocusable(testElement.querySelector('#' + testId))).toBe(true);
       });

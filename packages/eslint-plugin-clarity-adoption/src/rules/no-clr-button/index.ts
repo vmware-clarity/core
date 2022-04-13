@@ -5,7 +5,7 @@
  */
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
-import { HTMLElement } from '../../types/index';
+import { HTMLElement } from 'eslint-html-parser';
 import { primaryDisallowedClass, additionalDisallowedClasses, disallowedButtonsSelector } from './disallowed-classes';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 import { getDeprecatedClassFixes, getTagFixes } from '../html-fixer-helpers';
@@ -13,7 +13,7 @@ import { getDeprecatedClassFixes, getTagFixes } from '../html-fixer-helpers';
 export const createESLintRule = ESLintUtils.RuleCreator(() => ``);
 export type MessageIds = 'clrButtonFailure';
 
-function hasDisallowedClasses(classes: Array<string>): boolean {
+function hasDisallowedClasses(classes: string[]): boolean {
   return classes.includes(primaryDisallowedClass) && additionalDisallowedClasses.some(cls => classes.includes(cls));
 }
 

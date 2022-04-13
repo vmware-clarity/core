@@ -6,9 +6,14 @@
 
 import '@cds/core/internal-components/overlay/register.js';
 import '@cds/core/button/register.js';
-import { ClarityMotion, AnimationHingeConfig, AnimationHingeName } from '@cds/core/internal';
+import {
+  ClarityMotion,
+  AnimationHingeConfig,
+  AnimationHingeName,
+  spreadProps,
+  getElementStorybookArgs,
+} from '@cds/core/internal';
 
-import { spreadProps, getElementStorybookArgs } from '@cds/core/internal';
 import { html } from 'lit';
 
 import { CdsInternalOverlay } from '@cds/core/internal-components/overlay/index.js';

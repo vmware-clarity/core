@@ -134,9 +134,7 @@ describe('keyboard navigation', () => {
           1
           <cds-tree-item>
             1-1
-            <cds-tree-item>
-              1-1-1
-            </cds-tree-item>
+            <cds-tree-item> 1-1-1 </cds-tree-item>
           </cds-tree-item>
           <cds-tree-item>1-2</cds-tree-item>
         </cds-tree-item>

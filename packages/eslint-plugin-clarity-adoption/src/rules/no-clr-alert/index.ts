@@ -5,7 +5,7 @@
  */
 
 import { ESLintUtils, TSESTree } from '@typescript-eslint/experimental-utils';
-import { HTMLElement } from '../../types/index';
+import { HTMLElement } from 'eslint-html-parser';
 import { lintDecoratorTemplate } from '../decorator-template-helper';
 
 const disallowedAlertsSelector = ['.alert', 'clr-alert'];
