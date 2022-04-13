@@ -368,6 +368,7 @@ export { xlsFileIcon, xlsFileIconName } from './shapes/xls-file.js';
 // SHAPES - SOCIAL
 export { bookmarkIcon, bookmarkIconName } from './shapes/bookmark.js';
 export { chatBubbleIcon, chatBubbleIconName } from './shapes/chat-bubble.js';
+export { contractIcon, contractIconName } from './shapes/contract.js';
 export { crownIcon, crownIconName } from './shapes/crown.js';
 export { envelopeIcon, envelopeIconName } from './shapes/envelope.js';
 export { flagIcon, flagIconName } from './shapes/flag.js';

@@ -10,6 +10,7 @@ import { IconAlias, IconShapeTuple } from '../interfaces/icon.interfaces.js';
 import { bookmarkIcon, bookmarkIconName } from '../shapes/bookmark.js';
 import { calendarIcon, calendarIconName } from '../shapes/calendar.js';
 import { chatBubbleIcon, chatBubbleIconName } from '../shapes/chat-bubble.js';
+import { contractIcon, contractIconName } from '../shapes/contract.js';
 import { crownIcon, crownIconName } from '../shapes/crown.js';
 import { envelopeIcon, envelopeIconName } from '../shapes/envelope.js';
 import { eventIcon, eventIconName } from '../shapes/event.js';
@@ -34,6 +35,7 @@ export const socialCollectionIcons: IconShapeTuple[] = [
   bookmarkIcon,
   calendarIcon,
   chatBubbleIcon,
+  contractIcon,
   crownIcon,
   envelopeIcon,
   eventIcon,
@@ -82,6 +84,7 @@ declare module '@cds/core/internal' {
     [bookmarkIconName]: string;
     [calendarIconName]: string;
     [chatBubbleIconName]: string;
+    [contractIconName]: string;
     [crownIconName]: string;
     [envelopeIconName]: string;
     [eventIconName]: string;
