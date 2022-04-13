@@ -19,11 +19,11 @@ This repository consists of three projects:
 ```bash
 packages
 
+├── adoption # ESLint rules to help with migration to Core (@clr/eslint-plugin-clarity-adoption)
+
 ├── angular # Clarity Angular package for easier consumption of Clarity Core with Angular (@cds/angular)
 
 ├── core # Clarity Web Components and common utilities (@cds/core)
-
-├── eslint-plugin-clarity-adoption # ESLint rules to help with migration to Core (@clr/eslint-plugin-clarity-adoption)
 
 ├── react # Clarity React package for easier consumption of Clarity Core with React (@cds/react)
 
