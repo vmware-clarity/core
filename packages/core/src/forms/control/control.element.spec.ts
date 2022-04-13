@@ -242,41 +242,6 @@ describe('cds-control validation', () => {
   });
 });
 
-describe('cds-control responsive', () => {
-  let element: HTMLElement;
-  let control: CdsControl;
-
-  beforeEach(async () => {
-    element = await createTestElement(html`
-      <cds-control layout="compact">
-        <label>control</label>
-        <input type="text" />
-        <cds-control-message>message text</cds-control-message>
-      </cds-control>
-    `);
-
-    control = element.querySelector<CdsControl>('cds-control');
-  });
-
-  afterEach(() => {
-    removeTestElement(element);
-  });
-
-  xit('should adjust layout based on available width', async () => {
-    await componentIsStable(control);
-    expect(control.getAttribute('layout')).toBe('compact');
-
-    // control.addEventListener('layoutChange', () => {
-    //   expect(control.layout).toBe('vertical');
-    //   done();
-    // });
-
-    // control.style.width = '100px';
-    // await componentIsStable(control);
-    // expect(control.layout).toBe('vertical');
-  });
-});
-
 describe('cds-control with aria-label', () => {
   let element: HTMLElement;
   let control: CdsControl;
