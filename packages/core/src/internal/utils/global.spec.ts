@@ -36,10 +36,14 @@ describe('CDS global', () => {
 
     it('should emit a state change event when the global state object is updated', done => {
       let updated = false;
-      document.addEventListener('CDS_STATE_UPDATE', () => {
-        updated = true;
-        done();
-      });
+      document.addEventListener(
+        'CDS_STATE_UPDATE',
+        () => {
+          updated = true;
+          done();
+        },
+        { once: true }
+      );
 
       // cast any here since its marked as readonly for service only usage
       (window.CDS._state.iconRegistry as any) = { ...window.CDS._state.iconRegistry, 'cool-new-icon': '...' };
