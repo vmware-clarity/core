@@ -6,7 +6,7 @@ exports[`CdsRadioPanel snapshot 1`] = `
     <CdsRadioPanel
       l={null}
     >
-      <cds-radio
+      <cds-radio-panel
         l={null}
       >
         <label>
@@ -15,7 +15,7 @@ exports[`CdsRadioPanel snapshot 1`] = `
         <input
           type="checkbox"
         />
-      </cds-radio>
+      </cds-radio-panel>
     </CdsRadioPanel>
   </CdsRadioPanel>
 </div>
