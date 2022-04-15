@@ -2,13 +2,15 @@
 
 exports[`CdsRadioPanel snapshot 1`] = `
 <div>
-  <cds-radio>
+  <cds-radio-panel
+    cds-control=""
+  >
     <label>
       Hello
     </label>
     <input
       type="checkbox"
     />
-  </cds-radio>
+  </cds-radio-panel>
 </div>
 `;

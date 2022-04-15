@@ -10,7 +10,7 @@ describe('CdsRadioPanel', () => {
         <input type="checkbox" />
       </CdsRadioPanel>
     );
-    expect(document.querySelector('cds-radio')).toHaveTextContent(/Hello/i);
+    expect(document.querySelector('cds-radio-panel')).toHaveTextContent(/Hello/i);
   });
 
   it('snapshot', () => {

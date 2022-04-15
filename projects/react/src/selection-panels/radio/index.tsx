@@ -4,6 +4,6 @@ import { createComponent } from '@lit-labs/react';
 import * as React from 'react';
 import { logReactVersion } from '../../utils/index.js';
 
-export const CdsRadioPanel = createComponent(React, 'cds-radio', RadioPanel, {}, 'CdsRadioPanel');
+export const CdsRadioPanel = createComponent(React, 'cds-radio-panel', RadioPanel, {}, 'CdsRadioPanel');
 
 logReactVersion(React);
