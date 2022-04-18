@@ -113,6 +113,7 @@ export { hourglassIcon, hourglassIconName } from './shapes/hourglass.js';
 export { idBadgeIcon, idBadgeIconName } from './shapes/id-badge.js';
 export { keyIcon, keyIconName } from './shapes/key.js';
 export { landscapeIcon, landscapeIconName } from './shapes/landscape.js';
+export { launchpadIcon, launchpadIconName } from './shapes/launchpad.js';
 export { libraryIcon, libraryIconName } from './shapes/library.js';
 export { lightbulbIcon, lightbulbIconName } from './shapes/lightbulb.js';
 export { listIcon, listIconName } from './shapes/list.js';
