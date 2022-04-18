@@ -7,7 +7,7 @@
     "build:watch": "npm run _build:lib -- --watch",
     "clean": "rimraf ./dist",
     "public-api:check": "filessert ./dist/lib/custom-elements.json ./custom-elements.json",
-    "public-api:update": "cpy ./dist/lib/custom-elements.json ./",
+    "public-api:update": "npm run build:lib && cpy ./dist/lib/custom-elements.json ./",
     "sandbox": "web-dev-server --config ./web-dev-server.sandbox.mjs",
     "start": "npm-run-all build --parallel build:watch _storybook:start",
     "test": "npm-run-all _test:unit _test:performance",
