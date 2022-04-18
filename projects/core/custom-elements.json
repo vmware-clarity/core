@@ -13165,6 +13165,22 @@
         },
         {
           "kind": "js",
+          "name": "launchpadIcon",
+          "declaration": {
+            "name": "launchpadIcon",
+            "module": "./shapes/launchpad.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "launchpadIconName",
+          "declaration": {
+            "name": "launchpadIconName",
+            "module": "./shapes/launchpad.js"
+          }
+        },
+        {
+          "kind": "js",
           "name": "libraryIcon",
           "declaration": {
             "name": "libraryIcon",
