@@ -1,5 +1,5 @@
 {
-  "name": "clarity",
+  "name": "@cds/core",
   "private": true,
   "engines": {
     "node": ">=14.0.0",
