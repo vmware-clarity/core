@@ -80,17 +80,17 @@ export class CdsAlertGroup extends LitElement {
   @querySlotAll('cds-alert') private alerts: NodeListOf<CdsAlert>;
 
   /** @private */
-  @querySlot('.pager', { assign: 'pager' }) pager: HTMLElement;
+  @querySlot('.pager, cds-pagination', { assign: 'pager' }) pager: HTMLElement;
 
   @query('.alerts') private alertSlot: HTMLElement;
 
   render() {
     return html`
       <div
-        cds-layout="${this.pager ? 'horizontal wrap:none' : 'horizontal'}"
+        cds-layout="horizontal wrap:none align:stretch"
         class="${this.pager ? 'private-host' : 'private-host no-pager'}"
       >
-        <div class="pager-wrapper" cds-layout="p-x:lg">
+        <div class="pager-wrapper">
           <slot name="pager"></slot>
         </div>
         <div class="alert-group-wrapper">

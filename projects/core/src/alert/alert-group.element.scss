@@ -8,6 +8,7 @@
 @import './../styles/mixins/mixins';
 
 :host {
+  --color: #{$cds-global-typography-color-100};
   --icon-color: var(--color);
   --icon-size: #{$cds-global-space-8};
   --font-size: #{$cds-global-typography-secondary-font-size};
@@ -48,6 +49,7 @@
 :host([status='warning']) {
   --background: #{$cds-alias-status-warning-tint};
   --border-color: #{$cds-alias-status-warning};
+  --color: #{$cds-global-typography-color-500};
 }
 
 :host([status='danger']) {
@@ -116,21 +118,17 @@
 
 .pager-wrapper {
   background-color: var(--pager-background);
-  padding-top: $cds-global-space-2;
-  padding-bottom: $cds-global-space-2;
+  padding: #{$cds-global-space-3} #{$cds-global-space-4};
+  width: calc(3 * #{$cds-global-space-12});
+  display: flex;
+  align-items: center;
 }
 
 :host([type='banner']) .alert-group-wrapper {
   padding-top: $cds-global-space-2;
-  padding-bottom: $cds-global-space-2;
+  padding-bottom: $cds-global-space-3;
 }
 
-// TODO: THESE STYLES ARE PLACEHOLDERS TO VERIFY THE ADDITION OF THE BANNER ALERT PAGER!
-::slotted(.pager) {
-  color: $cds-global-typography-color-100;
-  width: calc(2 * #{$cds-global-space-12});
-  height: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+::slotted(cds-pagination) {
+  --color: var(--icon-color);
 }
