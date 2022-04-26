@@ -502,13 +502,16 @@ export const legacyWarningAlertBanner = () => {
   `;
 };
 
-/*
-export const bannerGroupWithPager = () => {
+export const bannerGroupPagination = () => {
   return html`
     <div cds-layout="vertical gap:sm">
-      <cds-alert-group type="banner">
-        <div class="pager">Pager Here</div>
-        <cds-alert closable status="info">
+      <cds-alert-group type="banner" status="info">
+        <cds-pagination aria-label="pagination" slot="pager">
+          <cds-pagination-button aria-label="go to first" action="prev"></cds-pagination-button>
+          <span aria-label="current page">1 / 3</span>
+          <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
+        </cds-pagination>
+        <cds-alert closable>
           This example banner alert group with a pager.
           <cds-alert-actions>
             <cds-button>Button 1</cds-button>
@@ -516,9 +519,13 @@ export const bannerGroupWithPager = () => {
         </cds-alert>
       </cds-alert-group>
 
-      <cds-alert-group type="banner">
-        <div class="pager">Pager Here</div>
-        <cds-alert closable status="success">
+      <cds-alert-group type="banner" status="success">
+        <cds-pagination aria-label="pagination" slot="pager">
+          <cds-pagination-button aria-label="go to first" action="prev"></cds-pagination-button>
+          <span aria-label="current page">1 / 3</span>
+          <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
+        </cds-pagination>
+        <cds-alert closable>
           This example banner alert group with a pager.
           <cds-alert-actions>
             <cds-button>Button 1</cds-button>
@@ -526,9 +533,13 @@ export const bannerGroupWithPager = () => {
         </cds-alert>
       </cds-alert-group>
 
-      <cds-alert-group type="banner">
-        <div class="pager">Pager Here</div>
-        <cds-alert closable status="warning">
+      <cds-alert-group type="banner" status="warning">
+        <cds-pagination aria-label="pagination" slot="pager">
+          <cds-pagination-button aria-label="go to first" action="prev"></cds-pagination-button>
+          <span aria-label="current page">1 / 3</span>
+          <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
+        </cds-pagination>
+        <cds-alert closable>
           This example banner alert group with a pager.
           <cds-alert-actions>
             <cds-button>Button 1</cds-button>
@@ -536,19 +547,13 @@ export const bannerGroupWithPager = () => {
         </cds-alert>
       </cds-alert-group>
 
-      <cds-alert-group type="banner">
-        <div class="pager">Pager Here</div>
-        <cds-alert closable status="danger">
-          This example banner alert group with a pager.
-          <cds-alert-actions>
-            <cds-button>Button 1</cds-button>
-          </cds-alert-actions>
-        </cds-alert>
-      </cds-alert-group>
-
-      <cds-alert-group type="banner">
-        <div class="pager">Pager Here</div>
-        <cds-alert closable status="alt">
+      <cds-alert-group type="banner" status="danger">
+        <cds-pagination aria-label="pagination" slot="pager">
+          <cds-pagination-button aria-label="go to first" action="prev"></cds-pagination-button>
+          <span aria-label="current page">1 / 3</span>
+          <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
+        </cds-pagination>
+        <cds-alert closable>
           This example banner alert group with a pager.
           <cds-alert-actions>
             <cds-button>Button 1</cds-button>
@@ -558,7 +563,6 @@ export const bannerGroupWithPager = () => {
     </div>
   `;
 };
-*/
 
 /** @website */
 export function lightweightAlertGroup() {

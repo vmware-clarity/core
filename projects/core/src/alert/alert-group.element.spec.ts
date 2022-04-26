@@ -370,14 +370,7 @@ describe('Alert groups – ', () => {
     it('sets layouts, slots, and classnames as expected if no pager is present', async () => {
       await componentIsStable(alertGroup);
       const hostWrapper = alertGroup.shadowRoot.querySelector<HTMLElement>('.private-host');
-      expect(hostWrapper).not.toBeNull('private-host element should exist');
-      const hostWrapperLayouts = hostWrapper.getAttribute('cds-layout').split(' ');
-      expect(hostWrapper.classList.contains('no-pager')).toBe(true, 'private-host element has no-pager classname');
-      expect(hostWrapperLayouts.indexOf('horizontal') > -1).toBe(true, 'private-host element has horizontal layout');
-      expect(hostWrapperLayouts.indexOf('wrap:none') > -1).toBe(
-        false,
-        'private-host element does NOT have wrap:none layout'
-      );
+      expect(hostWrapper.classList.contains('no-pager')).toBe(true);
     });
 
     it('sets layouts, slots, and classnames as expected if pager is present', async () => {
