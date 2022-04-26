@@ -25,6 +25,10 @@ describe('CdsAccordion', () => {
           <CdsAccordionHeader id="my-header">Item 1</CdsAccordionHeader>
           <CdsAccordionContent id="my-content">Content 1</CdsAccordionContent>
         </CdsAccordionPanel>
+        <CdsAccordionPanel>
+          <CdsAccordionHeader id="my-header-2">Item 2</CdsAccordionHeader>
+          <CdsAccordionContent id="my-content-2">Content 2</CdsAccordionContent>
+        </CdsAccordionPanel>
       </CdsAccordion>
     );
     expect(container).toMatchSnapshot();

@@ -18,6 +18,21 @@ exports[`CdsAccordion snapshot 1`] = `
         Content 1
       </cds-accordion-content>
     </cds-accordion-panel>
+    <cds-accordion-panel>
+      <cds-accordion-header
+        id="my-header-2"
+        slot="accordion-header"
+      >
+        Item 2
+      </cds-accordion-header>
+      <cds-accordion-content
+        id="my-content-2"
+        role="region"
+        slot="accordion-content"
+      >
+        Content 2
+      </cds-accordion-content>
+    </cds-accordion-panel>
   </cds-accordion>
 </div>
 `;
