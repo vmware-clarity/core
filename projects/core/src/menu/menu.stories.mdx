@@ -1,0 +1,58 @@
+import { Meta, Story, Preview } from '@web/storybook-prebuilt/addon-docs/blocks.js';
+
+<Meta title="Components/Menu" />
+
+# Menu
+
+<cds-alert-group status="warning" cds-layout="m-b:lg">
+  <cds-alert>
+    This component or utility is offered as a preview. This means we are currently working on it and seeking feedback.
+    Please be aware that this component or utility may have breaking changes before we finish working on it.
+  </cds-alert>
+</cds-alert-group>
+
+Menu provides a list of menu options with keyboard navigation support. Commonly used with Dropdowns.
+
+## Installation
+
+To use the menu component import the component in your JavaScript.
+
+```typescript
+import '@cds/core/menu/register.js';
+```
+
+```html
+<cds-menu>
+  <cds-menu-item>item 1</cds-menu-item>
+  <cds-menu-item>item 2</cds-menu-item>
+  <cds-menu-item>item 3</cds-menu-item>
+</cds-menu>
+```
+
+<Story id="stories-menu--basic" />
+
+## Dropdown Menu
+
+<Story id="stories-menu--dropdown-menu" />
+
+```html
+<cds-button popup="menu" id="menu-button">Menu</cds-button>
+<cds-dropdown anchor="menu-button" id="menu">
+  <cds-menu>
+    <cds-menu-item>Item 1</cds-menu-item>
+    <cds-menu-item>Item 2</cds-menu-item>
+    <cds-menu-item popup="menu-two" id="menu-two-button">
+      Menu 2 <cds-icon shape="angle" direction="right" size="sm" cds-layout="align:right"></cds-icon>
+    </cds-menu-item>
+  </cds-menu>
+</cds-dropdown>
+<cds-dropdown anchor="menu-two-button" id="menu-two" hidden>
+  <cds-menu>
+    <cds-menu-item>Item 1-1</cds-menu-item>
+    <cds-menu-item>Item 1-2</cds-menu-item>
+    <cds-menu-item>
+      Item 1-3 <cds-icon shape="angle" direction="right" size="sm" cds-layout="align:right"></cds-icon>
+    </cds-menu-item>
+  </cds-menu>
+</cds-dropdown>
+```

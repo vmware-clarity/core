@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CdsMenu snapshot 1`] = `
+<div>
+  <cds-menu
+    aria-orientation="vertical"
+    role="menu"
+  >
+    <cds-menu-item
+      tabindex="0"
+    >
+      item 1
+    </cds-menu-item>
+    <cds-menu-item
+      tabindex="0"
+    >
+      item 2
+    </cds-menu-item>
+  </cds-menu>
+</div>
+`;

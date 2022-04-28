@@ -1,0 +1,73 @@
+/*
+ * Copyright (c) 2016-2022 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+@import './../styles/tokens/generated/index';
+
+:host {
+  --color: #{$cds-alias-object-interaction-color};
+  --background: none;
+  --cursor: pointer;
+  --border-left: 0;
+  --padding: #{$cds-global-space-6} #{$cds-global-space-7};
+  --gap: #{$cds-global-space-6};
+  --cds-alias-object-interaction-outline-offset: calc(#{$cds-global-space-2} * -1);
+}
+
+.private-host {
+  padding: var(--padding);
+  gap: var(--gap);
+  border-left: var(--border-left);
+  cursor: var(--cursor);
+  color: var(--color);
+  background: var(--background);
+  font-family: #{$cds-global-typography-font-family};
+  font-size: #{$cds-global-typography-font-size-3};
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-self: stretch;
+  border: 0;
+  text-decoration: none;
+  width: 100%;
+  position: relative;
+}
+
+:host(:hover),
+:host([_hover]) {
+  --color: #{$cds-alias-object-interaction-color-hover};
+  --background: #{$cds-alias-object-interaction-background-hover};
+}
+
+:host(:active),
+:host([_active]) {
+  --color: #{$cds-alias-object-interaction-color-active};
+  --background: #{$cds-alias-object-interaction-background-active};
+}
+
+:host([disabled]) {
+  --color: #{$cds-alias-object-interaction-color-disabled};
+  --background: #{$cds-alias-object-interaction-background-disabled};
+  --cursor: not-allowed;
+}
+
+:host([selected]) {
+  --color: #{$cds-alias-object-interaction-color-hover};
+  --background: #{$cds-alias-object-interaction-background-hover};
+  --border-left: #{$cds-alias-object-border-width-300} solid #{$cds-alias-object-interaction-background-highlight};
+}
+
+::slotted(a) {
+  color: var(--color) !important;
+  background: none !important;
+  text-decoration: none !important;
+  outline: 0 !important;
+}
+
+::slotted(a)::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+}

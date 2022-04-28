@@ -48395,6 +48395,383 @@
     },
     {
       "kind": "javascript-module",
+      "path": "menu/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./menu.element.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./menu-item.element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "menu/menu-item.element.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Menu Item\n\n```typescript\nimport '@cds/core/menu/register.js';\n```\n\n```html\n<cds-menu>\n  <cds-menu-item>item 1</cds-menu-item>\n  <cds-menu-item>item 2</cds-menu-item>\n  <cds-menu-item>item 3</cds-menu-item>\n</cds-menu>\n```",
+          "name": "CdsMenuItem",
+          "cssProperties": [
+            {
+              "name": "--background"
+            },
+            {
+              "name": "--color"
+            },
+            {
+              "name": "--cursor"
+            },
+            {
+              "name": "--outline-offset"
+            },
+            {
+              "name": "--border-left"
+            },
+            {
+              "name": "--padding"
+            },
+            {
+              "name": "--gap"
+            }
+          ],
+          "slots": [
+            {
+              "description": "content for text or anchors",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "selected"
+            },
+            {
+              "kind": "field",
+              "name": "ariaPopupAnchorController",
+              "privacy": "protected",
+              "default": "new AriaPopupTriggerController(this)"
+            },
+            {
+              "kind": "field",
+              "name": "isPopup",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "pressed",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "pressed",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "expanded",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "expanded",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "readonly",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit'"
+              },
+              "attribute": "type",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "name",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "value",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "popup",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "selected",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "selected"
+            },
+            {
+              "name": "pressed",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "pressed",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "expanded",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "expanded",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "readonly",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "type",
+              "type": {
+                "text": "'button' | 'submit'"
+              },
+              "fieldName": "type",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "name",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "name",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "value",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "name": "popup",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "CdsBaseButton",
+            "package": "@cds/core/internal"
+          },
+          "tagName": "cds-menu-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CdsMenuItem",
+          "declaration": {
+            "name": "CdsMenuItem",
+            "module": "menu/menu-item.element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "menu/menu.element.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Menu\n\n```typescript\nimport '@cds/core/menu/register.js';\n```\n\n```html\n<cds-menu>\n  <cds-menu-item>item 1</cds-menu-item>\n  <cds-menu-item>item 2</cds-menu-item>\n  <cds-menu-item>item 3</cds-menu-item>\n</cds-menu>\n```",
+          "name": "CdsMenu",
+          "cssProperties": [
+            {
+              "name": "--background"
+            }
+          ],
+          "slots": [
+            {
+              "description": "content for menu items",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "keyListItems",
+              "type": {
+                "text": "NodeListOf<HTMLElement>"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "keyNavigationListController",
+              "privacy": "protected",
+              "default": "new KeyNavigationListController(this, {\n    layout: 'vertical',\n    loop: true,\n    manageTabindex: false,\n  })"
+            },
+            {
+              "kind": "field",
+              "name": "hostDropdown",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "recursiveClose",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "closeEvent",
+                  "type": {
+                    "text": "any"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "cds-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CdsMenu",
+          "declaration": {
+            "name": "CdsMenu",
+            "module": "menu/menu.element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "menu/register.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "modal/index.js",
       "declarations": [],
       "exports": [
