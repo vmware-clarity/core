@@ -30,7 +30,7 @@
 }
 
 // size/multiple are native select APIs
-::slotted([slot='input']:not([multiple]):not([size])) {
+::slotted([slot='input']:not(select[multiple]):not(select[size])) {
   text-transform: var(--text-transform) !important;
   border: var(--border) !important;
   padding: var(--padding);
