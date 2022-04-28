@@ -39,6 +39,8 @@ import {
   CdsIconDirective,
   CdsInputGroupDirective,
   CdsInputDirective,
+  CdsMenuDirective,
+  CdsMenuItemDirective,
   CdsModalActionsDirective,
   CdsModalContentDirective,
   CdsModalHeaderActionsDirective,
@@ -1072,6 +1074,38 @@ describe('CDS Toggle', () => {
     expect(instance.vcCdsToggleDirective).toBeDefined();
   });
 });
+
+describe('CDS Menu', () => {
+  let fixture: ComponentFixture<any>;
+  let instance: MenuTestComponent;
+
+  beforeEach(function () {
+    TestBed.configureTestingModule({
+      imports: [CdsModule],
+      declarations: [MenuTestComponent],
+    });
+
+    fixture = TestBed.createComponent(MenuTestComponent);
+    fixture.detectChanges();
+    instance = fixture.componentInstance;
+  });
+
+  it('cds-menu should be defined', () => {
+    expect(instance.vcCdsMenuDirective).toBeDefined();
+  });
+
+  it('cds-menu-item should be defined', () => {
+    expect(instance.vcCdsMenuItemDirective).toBeDefined();
+  });
+});
+
+@Component({
+  template: `<cds-menu><cds-menu-item>item</cds-menu-item></cds-menu>`,
+})
+class MenuTestComponent {
+  @ViewChild(CdsMenuDirective) vcCdsMenuDirective: CdsMenuDirective;
+  @ViewChild(CdsMenuItemDirective) vcCdsMenuItemDirective: CdsMenuItemDirective;
+}
 
 @Component({
   template: ` <cds-accordion-content></cds-accordion-content> `,
