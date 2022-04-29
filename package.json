@@ -2,9 +2,9 @@
   "name": "@cds/core",
   "private": true,
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "yarn": "please-use-npm",
-    "npm": ">=7.8.0"
+    "npm": ">=7.10.0"
   },
   "workspaces": [
     "./projects/core",
