@@ -9,6 +9,7 @@ module.exports = {
   defaultSeverity: 'error',
   plugins: ['stylelint-scss', 'stylelint-plugin-license-header'],
   rules: {
+    'function-calc-no-unspaced-operator': null,
     'max-nesting-depth': 3,
     'no-descending-specificity': null,
     'no-duplicate-selectors': null,
