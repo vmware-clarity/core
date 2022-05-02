@@ -12,9 +12,17 @@ import {
   PRIVATE_ANIMATION_STATUS_ATTR_NAME,
 } from '../motion/interfaces.js';
 import { runPropertyAnimations } from '../motion/utils.js';
+import { isJestTest } from '../utils/environment.js';
 
 // https://www.typescriptlang.org/docs/handbook/decorators.html#class-decorators
 export function animate(config: PropertyDrivenAnimation) {
+  if (isJestTest()) {
+    return function () {
+      // jsdom doesn't like the class returned from the decorator below
+      // do nothing
+    };
+  }
+
   return function _DecoratorName<T extends { new (...args: any[]): any }>(constr: T) {
     const _constr = constr as any;
     return class extends _constr {
