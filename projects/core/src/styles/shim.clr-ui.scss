@@ -281,42 +281,42 @@
   // Info type
   // Usage: ./_alert.clarity.scss
   --clr-alert-info-bg-color: var(--cds-alias-status-info-tint); // var(--clr-color-action-50);
-  --clr-alert-info-font-color: var(--cds-global-typography-color-500); // var(--clr-color-neutral-700);
+  --clr-alert-info-font-color: var(--cds-global-typography-color-400); // var(--clr-color-neutral-700);
   --clr-alert-info-border-color: var(
     --cds-alias-status-info
   ); // var(--cds-global-color-blue-800); // var(--clr-color-action-800);
   --clr-alert-info-icon-color: var(
-    --cds-global-typography-color-500
+    --clr-alert-info-font-color
   ); // var(--cds-global-color-blue-800); // var(--clr-color-action-800);
-  --clr-alert-info-close-icon-color: var(--cds-global-typography-color-500);
-  --clr-alert-info-action-color: var(--cds-global-typography-color-500);
+  --clr-alert-info-close-icon-color: var(---clr-alert-info-font-color);
+  --clr-alert-info-action-color: var(--clr-alert-info-font-color);
 
   // Success type
   // Usage: ./_alert.clarity.scss
   --clr-alert-success-bg-color: var(--cds-alias-status-success-tint); // var(--clr-color-success-50);
-  --clr-alert-success-font-color: var(--cds-global-typography-color-500); // var(--clr-color-neutral-700);
+  --clr-alert-success-font-color: var(--cds-global-typography-color-400); // var(--clr-color-neutral-700);
   --clr-alert-success-border-color: var(--cds-alias-status-success); // var(--clr-color-success-800);
-  --clr-alert-success-icon-color: var(--cds-global-typography-color-500); // var(--clr-color-success-800);
-  --clr-alert-success-close-icon-color: var(--cds-global-typography-color-500);
-  --clr-alert-success-action-color: var(--cds-global-typography-color-500);
+  --clr-alert-success-icon-color: var(--clr-alert-success-font-color); // var(--clr-color-success-800);
+  --clr-alert-success-close-icon-color: var(--clr-alert-success-font-color);
+  --clr-alert-success-action-color: var(--clr-alert-success-font-color);
 
   // Warning type
   // Usage: ./_alert.clarity.scss
   --clr-alert-warning-bg-color: var(--cds-alias-status-warning-tint); // var(--clr-color-warning-100);
-  --clr-alert-warning-font-color: var(--cds-global-color-black); // var(--clr-color-neutral-900);
+  --clr-alert-warning-font-color: var(--cds-global-color-construction-900); // var(--clr-color-neutral-900);
   --clr-alert-warning-border-color: var(--cds-alias-status-warning); // var(--clr-color-warning-800);
-  --clr-alert-warning-icon-color: var(--cds-global-color-black); // var(--clr-color-warning-800);
-  --clr-alert-warning-close-icon-color: var(--cds-global-color-black);
-  --clr-alert-warning-action-color: var(--cds-global-color-black);
+  --clr-alert-warning-icon-color: var(--clr-alert-warning-font-color); // var(--clr-color-warning-800);
+  --clr-alert-warning-close-icon-color: var(--clr-alert-warning-font-color);
+  --clr-alert-warning-action-color: var(--clr-alert-warning-font-color);
 
   // Danger type
   // Usage: ./_alert.clarity.scss
   --clr-alert-danger-bg-color: var(--cds-alias-status-danger-tint); // var(--clr-color-danger-100);
-  --clr-alert-danger-font-color: var(--cds-global-typography-color-500); // var(--clr-color-neutral-700);
+  --clr-alert-danger-font-color: var(--cds-global-typography-color-400); // var(--clr-color-neutral-700);
   --clr-alert-danger-border-color: var(--cds-alias-status-danger); // var(--clr-color-danger-900);
-  --clr-alert-danger-icon-color: var(--cds-global-typography-color-500); // var(--clr-color-danger-900);
-  --clr-alert-danger-close-icon-color: var(--cds-global-typography-color-500);
-  --clr-alert-danger-action-color: var(--cds-global-typography-color-500);
+  --clr-alert-danger-icon-color: var(--clr-alert-danger-font-color); // var(--clr-color-danger-900);
+  --clr-alert-danger-close-icon-color: var(--clr-alert-danger-font-color);
+  --clr-alert-danger-action-color: var(--clr-alert-danger-font-color);
 
   // App Info type
   // Usage: ./_alert.clarity.scss
@@ -331,7 +331,7 @@
   // App Warning type
   // Usage: ./_alert.clarity.scss
   --clr-app-alert-warning-bg-color: var(--cds-alias-status-warning);
-  --clr-app-alert-warning-font-color: var(--cds-global-color-black); // indirectly mapped to CDS token
+  --clr-app-alert-warning-font-color: var(--cds-global-typography-color-500); // indirectly mapped to CDS token
   --clr-app-alert-warning-icon-color: var(--clr-app-alert-warning-font-color); // indirectly mapped to CDS token
   --clr-app-alert-warning-close-icon-color: var(--clr-app-alert-warning-font-color); // indirectly mapped to CDS token
   --clr-app-alert-warning-action-color: var(--clr-app-alert-warning-font-color); // indirectly mapped to CDS token
@@ -398,7 +398,7 @@
   ); // var(--cds-global-color-gray-600); // var(--clr-color-neutral-600); // actually border color
   --clr-label-gray-color: var(--clr-label-font-color-light); // indirectly mapped to CDS token
 
-  --clr-label-purple-bg-color: var(--cds-global-color-violet-500); // var(--clr-color-secondary-action-500);
+  --clr-label-purple-bg-color: var(--cds-global-color-violet-600); // var(--clr-color-secondary-action-500);
   --clr-label-purple-color: var(--clr-label-font-color-light); // indirectly mapped to CDS token
 
   --clr-label-blue-bg-color: var(--cds-global-color-blue-800); // var(--clr-color-action-800);
@@ -446,9 +446,9 @@
   --clr-badge-purple-color: var(--cds-global-color-white); // var(--clr-badge-font-color-light);
   --clr-badge-blue-bg-color: var(--cds-global-color-blue-800); // var(--clr-color-action-800);
   --clr-badge-blue-color: var(--cds-global-color-white); // var(--clr-badge-font-color-light);
-  --clr-badge-orange-bg-color: var(--cds-global-color-ochre-700); // var(--clr-color-warning-1000);
+  --clr-badge-orange-bg-color: var(--cds-global-color-tangerine-400); // var(--clr-color-warning-1000);
   --clr-badge-orange-color: var(--cds-global-color-black); // var(--clr-color-neutral-0);
-  --clr-badge-light-blue-bg-color: var(--cds-global-color-blue-400); // var(--clr-color-action-500);
+  --clr-badge-light-blue-bg-color: var(--cds-global-color-blue-300); // var(--clr-color-action-500);
   --clr-badge-light-blue-color: var(--cds-global-color-black); // var(--clr-color-neutral-0);
 
   /* Progress Bars */
@@ -461,14 +461,16 @@
 
   /* Accordion */
 
-  --clr-accordion-text-color: var(--cds-global-typography-color-500); // var(--cds-global-typography-color-500);
+  --clr-accordion-text-color: var(--cds-alias-object-interaction-color); // var(--cds-global-typography-color-500);
 
   --clr-accordion-active-background-color: var(
     --cds-alias-object-interaction-background-selected
   ); // var(--clr-global-selection-color);
   --clr-accordion-content-background-color: var(--cds-alias-object-app-background); // var(--clr-color-neutral-0);
 
-  --clr-accordion-header-background-color: var(--cds-alias-object-app-background); // var(--clr-color-neutral-50);
+  --clr-accordion-header-background-color: var(
+    --cds-alias-object-container-background-tint
+  ); // var(--clr-color-neutral-50);
   --clr-accordion-header-hover-background-color: var(
     --cds-alias-object-interaction-background-hover
   ); // var(--clr-color-neutral-200);
@@ -493,6 +495,7 @@
     --cds-alias-object-interaction-background-highlight
   ); // var(--clr-color-action-500);
   --clr-card-clickable-box-shadow-color: var(--clr-card-clickable-border-color); // indirectly mapped to CDS token
+  --clr-card-border-radius: var(--cds-alias-object-border-radius-100);
 
   /* Forms */
 
@@ -500,7 +503,7 @@
   --clr-form-disabled-background-color: var(--cds-alias-status-disabled-tint); // var(--clr-color-neutral-400);
 
   // Generic
-  --clr-forms-label-color: var(--cds-global-typography-color-300); // var(--clr-color-neutral-800);
+  --clr-forms-label-color: var(--cds-global-typography-color-400); // var(--clr-color-neutral-800);
   --clr-forms-text-color: var(--cds-global-typography-color-500); // var(--clr-color-neutral-1000);
   --clr-forms-invalid-color: var(--cds-alias-status-danger); // var(--clr-color-danger-800);
   --clr-forms-valid-color: var(--cds-alias-status-success); // var(--clr-color-success-700);
@@ -649,14 +652,14 @@
   /* Signpost */
 
   --clr-signpost-content-bg-color: var(--cds-alias-object-overlay-background); // var(--clr-color-neutral-0);
-  --clr-signpost-content-border-color: var(--cds-alias-object-overlay-border-color); // var(--clr-color-neutral-500);
+  --clr-signpost-content-border-color: var(--cds-alias-object-border-color); // var(--clr-color-neutral-500);
 
   --clr-signpost-action-color: var(--cds-alias-object-interaction-color); // var(--clr-color-neutral-600);
   --clr-signpost-action-hover-color: var(--cds-alias-object-interaction-color-hover); // var(--clr-color-action-700);
 
   // NOTE: I had to use hardcoded border size value in order to avoid sass variables
   --clr-signpost-border-size: 0.6rem;
-  --clr-signpost-pointer-border: var(--clr-signpost-border-size) solid var(--cds-alias-object-overlay-border-color);
+  --clr-signpost-pointer-border: var(--clr-signpost-border-size) solid var(--cds-alias-object-border-color);
   --clr-signpost-pointer-psuedo-border: var(--clr-signpost-border-size) solid var(--clr-signpost-content-bg-color);
 
   /* StackView */
@@ -795,7 +798,7 @@
   --clr-vertical-nav-item-active-color: var(
     --cds-alias-object-interaction-color-active
   ); // var(--clr-color-neutral-700);
-  --clr-vertical-nav-bg-color: var(--cds-alias-object-container-background-shade); // var(--clr-color-neutral-200);
+  --clr-vertical-nav-bg-color: var(--cds-alias-object-container-background);
 
   // Note: figure out whether it should be --cds-alias-object-interaction-background-active instead. The problem is, in the dark mode,
   // --cds-alias-object-interaction-background-active is the same as --cds-alias-object-container-background-shade.
@@ -856,7 +859,7 @@
   --clr-datagrid-pagination-input-border-color: var(--cds-alias-object-border-color); // indirectly mapped;
   --clr-datagrid-pagination-input-border-focus-color: var(--clr-color-action-400);
   --clr-datagrid-popover-bg-color: var(--cds-alias-object-overlay-background); // var(--clr-color-neutral-0);
-  --clr-datagrid-popover-border-color: var(--cds-alias-object-overlay-border-color); // indirectly mapped;
+  --clr-datagrid-popover-border-color: var(--cds-alias-object-border-color); // indirectly mapped;
   --clr-datagrid-action-popover-hover-color: var(
     --cds-alias-object-interaction-color-hover
   ); // var(--clr-color-neutral-200);
