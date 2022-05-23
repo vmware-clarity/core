@@ -6,8 +6,6 @@
 
 @import './../mixins/mixins';
 
-$typography-h0-color: hsl(0, 0%, 20%);
-$typography-h0-color-static: hsl(0, 0%, 20%);
 $typography-h0-font-size: 2rem;
 $typography-h0-font-size-static: 2rem;
 $typography-h0-font-weight: 200;
@@ -16,8 +14,6 @@ $typography-h0-letter-spacing: -0.0125em;
 $typography-h0-letter-spacing-static: -0.0125em;
 $typography-h0-line-height: 1.2em;
 $typography-h0-line-height-static: 1.2em;
-$typography-h1-color: hsl(0, 0%, 20%);
-$typography-h1-color-static: hsl(0, 0%, 20%);
 $typography-h1-font-size: 1.6rem;
 $typography-h1-font-size-static: 1.6rem;
 $typography-h1-font-weight: 200;
@@ -26,8 +22,6 @@ $typography-h1-letter-spacing: -0.0156em;
 $typography-h1-letter-spacing-static: -0.0156em;
 $typography-h1-line-height: 1.5em;
 $typography-h1-line-height-static: 1.5em;
-$typography-h2-color: hsl(0, 0%, 20%);
-$typography-h2-color-static: rgb(51, 51, 51);
 $typography-h2-font-size: 1.4rem;
 $typography-h2-font-size-static: 1.4rem;
 $typography-h2-font-weight: 200;
@@ -36,8 +30,6 @@ $typography-h2-letter-spacing: -0.017857em;
 $typography-h2-letter-spacing-static: -0.017857em;
 $typography-h2-line-height: 1.7143em;
 $typography-h2-line-height-static: 1.7143em;
-$typography-h3-color: hsl(0, 0%, 20%);
-$typography-h3-color-static: hsl(0, 0%, 20%);
 $typography-h3-font-size: 1.1rem;
 $typography-h3-font-size-static: 1.1rem;
 $typography-h3-font-weight: 200;
@@ -46,8 +38,6 @@ $typography-h3-letter-spacing: -0.013636em;
 $typography-h3-letter-spacing-static: -0.013636em;
 $typography-h3-line-height: 1.0909em;
 $typography-h3-line-height-static: 1.0909em;
-$typography-h4-color: hsl(0, 0%, 20%);
-$typography-h4-color-static: hsl(0, 0%, 20%);
 $typography-h4-font-size: 0.9rem;
 $typography-h4-font-size-static: 0.9rem;
 $typography-h4-font-weight: 200;
@@ -56,8 +46,6 @@ $typography-h4-letter-spacing: -0.011111em;
 $typography-h4-letter-spacing-static: -0.011111em;
 $typography-h4-line-height: 1.333333em;
 $typography-h4-line-height-static: 1.333333em;
-$typography-h5-color: hsl(0, 0%, 20%);
-$typography-h5-color-static: hsl(0, 0%, 20%);
 $typography-h5-font-size: 0.8rem;
 $typography-h5-font-size-static: 0.8rem;
 $typography-h5-font-weight: 400;
@@ -66,8 +54,6 @@ $typography-h5-letter-spacing: -0.0125em;
 $typography-h5-letter-spacing-static: -0.0125em;
 $typography-h5-line-height: 1.5em;
 $typography-h5-line-height-static: 1.5em;
-$typography-h6-color: hsl(0, 0%, 20%);
-$typography-h6-color-static: hsl(0, 0%, 20%);
 $typography-h6-font-size: 0.7rem;
 $typography-h6-font-size-static: 0.7rem;
 $typography-h6-font-weight: 500;
@@ -82,8 +68,6 @@ $typography-header-font-family: var(
   'Avenir Next',
   sans-serif
 );
-$typography-p0-color: hsl(0, 0%, 20%);
-$typography-p0-color-static: hsl(0, 0%, 20%);
 $typography-p0-font-size: 1.2rem;
 $typography-p0-font-size-static: 1.2rem;
 $typography-p0-font-weight: 400;
@@ -92,8 +76,6 @@ $typography-p0-letter-spacing: -0.008333em;
 $typography-p0-letter-spacing-static: -0.008333em;
 $typography-p0-line-height: 1.16667em;
 $typography-p0-line-height-static: 1.16667em;
-$typography-p1-color: hsl(0, 0%, 20%);
-$typography-p1-color-static: hsl(0, 0%, 20%);
 $typography-p1-font-size: 0.7rem;
 $typography-p1-font-size-static: 0.7rem;
 $typography-p1-font-weight: 400;
@@ -102,8 +84,6 @@ $typography-p1-letter-spacing: -0.014286em;
 $typography-p1-letter-spacing-static: -0.014286em;
 $typography-p1-line-height: 1.71429em;
 $typography-p1-line-height-static: 1.71429em;
-$typography-p2-color: hsl(0, 0%, 20%);
-$typography-p2-color-static: hsl(0, 0%, 20%);
 $typography-p2-font-size: 0.65rem;
 $typography-p2-font-size-static: 0.65rem;
 $typography-p2-font-weight: 500;
@@ -112,8 +92,6 @@ $typography-p2-letter-spacing: -0.007692em;
 $typography-p2-letter-spacing-static: -0.007692em;
 $typography-p2-line-height: 1.84615em;
 $typography-p2-line-height-static: 1.84615em;
-$typography-p3-color: hsl(0, 0%, 10%);
-$typography-p3-color-static: hsl(0, 0%, 10%);
 $typography-p3-font-size: 0.65rem;
 $typography-p3-font-size-static: 0.65rem;
 $typography-p3-font-weight: 400;
@@ -122,8 +100,6 @@ $typography-p3-letter-spacing: -0.007692em;
 $typography-p3-letter-spacing-static: -0.007692em;
 $typography-p3-line-height: 1.84615em;
 $typography-p3-line-height-static: 1.84615em;
-$typography-p4-color: hsl(0, 0%, 30%);
-$typography-p4-color-static: hsl(0, 0%, 30%);
 $typography-p4-font-size: 0.6rem;
 $typography-p4-font-size-static: 0.6rem;
 $typography-p4-font-weight: 600;
@@ -132,8 +108,6 @@ $typography-p4-letter-spacing: -0.008333em;
 $typography-p4-letter-spacing-static: -0.008333em;
 $typography-p4-line-height: 2em;
 $typography-p4-line-height-static: 2em;
-$typography-p5-color: hsl(0, 0%, 10%);
-$typography-p5-color-static: hsl(0, 0%, 10%);
 $typography-p5-font-size: 0.6rem;
 $typography-p5-font-size-static: 0.6rem;
 $typography-p5-font-weight: 400;
@@ -142,8 +116,6 @@ $typography-p5-letter-spacing: -0.008333em;
 $typography-p5-letter-spacing-static: -0.008333em;
 $typography-p5-line-height: 2em;
 $typography-p5-line-height-static: 2em;
-$typography-p6-color: hsl(0, 0%, 30%);
-$typography-p6-color-static: hsl(0, 0%, 30%);
 $typography-p6-font-size: 0.55rem;
 $typography-p6-font-size-static: 0.55rem;
 $typography-p6-font-weight: 600;
@@ -152,8 +124,6 @@ $typography-p6-letter-spacing: 0.018182em;
 $typography-p6-letter-spacing-static: 0.018182em;
 $typography-p6-line-height: 1.090909em;
 $typography-p6-line-height-static: 1.090909em;
-$typography-p7-color: hsl(0, 0%, 10%);
-$typography-p7-color-static: hsl(0, 0%, 10%);
 $typography-p7-font-size: 0.55rem;
 $typography-p7-font-size-static: 0.55rem;
 $typography-p7-font-weight: 400;
@@ -162,8 +132,6 @@ $typography-p7-letter-spacing: 0.018182em;
 $typography-p7-letter-spacing-static: 0.018182em;
 $typography-p7-line-height: 1.090909em;
 $typography-p7-line-height-static: 1.090909em;
-$typography-p8-color: hsl(0, 0%, 0%);
-$typography-p8-color-static: hsl(0, 0%, 0%);
 $typography-p8-font-size: 0.5rem;
 $typography-p8-font-size-static: 0.5rem;
 $typography-p8-font-weight: 400;
@@ -181,7 +149,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h0-font-size;
   font-weight: $typography-h0-font-weight;
-  color: $typography-h0-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h0-line-height;
   letter-spacing: $typography-h0-letter-spacing;
 }
@@ -193,7 +161,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h1-font-size;
   font-weight: $typography-h1-font-weight;
-  color: $typography-h1-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h1-line-height;
   letter-spacing: $typography-h1-letter-spacing;
 }
@@ -205,7 +173,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h2-font-size;
   font-weight: $typography-h2-font-weight;
-  color: $typography-h2-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h2-line-height;
   letter-spacing: $typography-h2-letter-spacing;
 }
@@ -217,7 +185,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h3-font-size;
   font-weight: $typography-h3-font-weight;
-  color: $typography-h3-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h3-line-height;
   letter-spacing: $typography-h3-letter-spacing;
 }
@@ -229,7 +197,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h4-font-size;
   font-weight: $typography-h4-font-weight;
-  color: $typography-h4-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h4-line-height;
   letter-spacing: $typography-h4-letter-spacing;
 }
@@ -241,7 +209,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h5-font-size;
   font-weight: $typography-h5-font-weight;
-  color: $typography-h5-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h5-line-height;
   letter-spacing: $typography-h5-letter-spacing;
 }
@@ -253,7 +221,7 @@ $typography-p8-line-height-static: 1.2em;
   font-family: $typography-header-font-family;
   font-size: $typography-h6-font-size;
   font-weight: $typography-h6-font-weight;
-  color: $typography-h6-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-h6-line-height;
   letter-spacing: $typography-h6-letter-spacing;
 }
@@ -264,7 +232,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p0-font-size;
   font-weight: $typography-p0-font-weight;
-  color: $typography-p0-color;
+  color: var(--cds-global-typography-color-500);
   line-height: $typography-p0-line-height;
   letter-spacing: $typography-p0-letter-spacing;
 }
@@ -275,7 +243,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p1-font-size;
   font-weight: $typography-p1-font-weight;
-  color: $typography-p1-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p1-line-height;
   letter-spacing: $typography-p1-letter-spacing;
 }
@@ -286,7 +254,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p2-font-size;
   font-weight: $typography-p2-font-weight;
-  color: $typography-p2-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p2-line-height;
   letter-spacing: $typography-p2-letter-spacing;
 }
@@ -297,7 +265,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p3-font-size;
   font-weight: $typography-p3-font-weight;
-  color: $typography-p3-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p3-line-height;
   letter-spacing: $typography-p3-letter-spacing;
 }
@@ -308,7 +276,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p4-font-size;
   font-weight: $typography-p4-font-weight;
-  color: $typography-p4-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p4-line-height;
   letter-spacing: $typography-p4-letter-spacing;
 }
@@ -319,7 +287,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p5-font-size;
   font-weight: $typography-p5-font-weight;
-  color: $typography-p5-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p5-line-height;
   letter-spacing: $typography-p5-letter-spacing;
 }
@@ -330,7 +298,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p6-font-size;
   font-weight: $typography-p6-font-weight;
-  color: $typography-p6-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p6-line-height;
   letter-spacing: $typography-p6-letter-spacing;
 }
@@ -341,7 +309,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p7-font-size;
   font-weight: $typography-p7-font-weight;
-  color: $typography-p7-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p7-line-height;
   letter-spacing: $typography-p7-letter-spacing;
 }
@@ -352,7 +320,7 @@ $typography-p8-line-height-static: 1.2em;
 
   font-size: $typography-p8-font-size;
   font-weight: $typography-p8-font-weight;
-  color: $typography-p8-color;
+  color: var(--cds-global-typography-color-400);
   line-height: $typography-p8-line-height;
   letter-spacing: $typography-p8-letter-spacing;
 }
