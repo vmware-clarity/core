@@ -169,13 +169,15 @@ export class CdsIcon extends LitElement {
   firstUpdated(props: PropertyValues<this>) {
     super.firstUpdated(props);
 
-    let prior = 'unknown';
-    this.subscription = GlobalStateService.stateUpdates.subscribe(update => {
-      if (update.key === 'iconRegistry' && ClarityIcons.registry[this.shape] && prior !== this.shape) {
-        prior = this.shape;
-        this.requestUpdate('shape');
-      }
-    });
+    if (this.isConnected) {
+      let prior = 'unknown';
+      this.subscription = GlobalStateService.stateUpdates.subscribe(update => {
+        if (update.key === 'iconRegistry' && ClarityIcons.registry[this.shape] && prior !== this.shape) {
+          prior = this.shape;
+          this.requestUpdate('shape');
+        }
+      });
+    }
   }
 
   disconnectedCallback() {
