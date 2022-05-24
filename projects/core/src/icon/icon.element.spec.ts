@@ -8,6 +8,7 @@ import { html } from 'lit';
 import '@cds/core/icon/register.js';
 import { CdsIcon } from '@cds/core/icon/icon.element.js';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
+import { GlobalStateService } from '@cds/core/internal';
 import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
 import { renderIcon } from './icon.renderer.js';
 
@@ -93,6 +94,31 @@ describe('icon element', () => {
       await componentIsStable(component);
       expect(component.requestUpdate).not.toHaveBeenCalled();
       expect(component.getAttribute('shape')).toEqual(testShape);
+    });
+
+    it('does not subscribe to the global state handler after the element is disconnected', async () => {
+      const spy = spyOn(GlobalStateService.stateUpdates, 'subscribe');
+
+      testElement = await createTestElement(html`<cds-icon shape="testing"></cds-icon>`);
+      expect(GlobalStateService.stateUpdates.subscribe).toHaveBeenCalledTimes(1);
+
+      spy.calls.reset();
+
+      // https://github.com/vmware-clarity/core/issues/61
+      // verify the element is not subscribed when it is removed before connecting
+      const div = document.createElement('div');
+      document.body.appendChild(div);
+
+      const icon = document.createElement('cds-icon');
+      icon.setAttribute('shape', 'testing');
+      div.appendChild(icon);
+      icon.remove();
+
+      await new Promise(resolve => setTimeout(resolve, 0));
+
+      expect(GlobalStateService.stateUpdates.subscribe).not.toHaveBeenCalled();
+
+      div.remove();
     });
   });
 
