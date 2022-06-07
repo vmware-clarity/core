@@ -24,11 +24,6 @@ _A clear and concise description of what you expected to happen._
 
 ## Versions
 
-**Clarity project:**
-
-- [ ] Clarity Core
-- [ ] Clarity Angular/UI
-
 **Clarity version:**
 
 - [ ] v5.x
