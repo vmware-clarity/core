@@ -12,7 +12,6 @@
   --action-color: var(--color);
   color: var(--color);
   display: flex;
-  width: 100%;
   flex-wrap: none;
   font-size: var(--font-size);
 }
@@ -31,7 +30,7 @@
   display: block;
 }
 
-::slotted(cds-pagination-button) {
+::slotted(cds-pagination-button:not([disabled])) {
   --color: var(--action-color);
 }
 

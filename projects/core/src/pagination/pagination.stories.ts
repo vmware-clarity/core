@@ -262,16 +262,20 @@ export const customPaginationAlignments = () => {
       </cds-pagination>
     </div>
     <div cds-layout="m-y:sm">
-      <cds-pagination aria-label="pagination" cds-layout="horizontal gap:md align:right">
-        <cds-pagination-button aria-label="go to first" action="first" disabled></cds-pagination-button>
-        <cds-pagination-button aria-label="go to previous" action="prev" disabled></cds-pagination-button>
-        <cds-input cds-pagination-number>
-          <input type="text" value="40" size="2" aria-label="current page" />
-          <cds-control-message>/ 80</cds-control-message>
-        </cds-input>
-        <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
-        <cds-pagination-button aria-label="go to last" action="last"></cds-pagination-button>
-      </cds-pagination>
+      <div cds-layout="horizontal gap:md align:right align:vertical-center">
+        <span>Viewing 1-10 of 80</span>
+
+        <cds-pagination aria-label="pagination">
+          <cds-pagination-button aria-label="go to first" action="first" disabled></cds-pagination-button>
+          <cds-pagination-button aria-label="go to previous" action="prev" disabled></cds-pagination-button>
+          <cds-input cds-pagination-number>
+            <input type="text" value="40" size="2" aria-label="current page" />
+            <cds-control-message>/ 80</cds-control-message>
+          </cds-input>
+          <cds-pagination-button aria-label="go to next" action="next"></cds-pagination-button>
+          <cds-pagination-button aria-label="go to last" action="last"></cds-pagination-button>
+        </cds-pagination>
+      </div>
     </div>
     <div cds-layout="m-y:sm">
       <cds-pagination aria-label="pagination" cds-layout="vertical gap:md align:center">
