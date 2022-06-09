@@ -223,7 +223,6 @@ cds-progress-circle {
 :host([disabled]),
 :host([disabled][action='outline']) {
   --background: #{$cds-alias-status-disabled-tint};
-  --color: #{$cds-alias-status-disabled-shade};
   --border-color: #{$cds-alias-status-disabled-tint};
   --box-shadow-color: #{$cds-alias-object-opacity-0};
 
