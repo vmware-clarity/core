@@ -44,7 +44,6 @@ import { CdsSignpost } from './dist/lib/signpost/index.js';
 import { CdsInternalPanel } from './dist/lib/internal-components/panel/index.js';
 import { CdsGrid, CdsGridColumn, CdsGridRow, CdsGridCell, CdsGridFooter } from './dist/lib/grid/index.js';
 import { CdsButtonAction } from './dist/lib/button-action/index.js';
-import { CdsButtonResize } from './dist/lib/button-resize/index.js';
 import { CdsButtonSort } from './dist/lib/button-sort/index.js';
 import { CdsButtonHandle } from './dist/lib/button-handle/index.js';
 import { CdsButtonExpand } from './dist/lib/button-expand/index.js';
@@ -219,8 +218,6 @@ export default class App extends React.Component<{}, AppState> {
           <div cds-layout="horizontal gap:lg">
             <CdsButtonAction aria-label="open options"></CdsButtonAction>
             <CdsButtonAction aria-label="open menu" shape="bars"></CdsButtonAction>
-            <CdsButtonResize direction="cross" aria-label="resize column"></CdsButtonResize>
-            <CdsButtonResize direction="main" aria-label="resize column"></CdsButtonResize>
             <CdsButtonSort aria-label="sort list"></CdsButtonSort>
             <CdsButtonHandle aria-label="move item"></CdsButtonHandle>
             <CdsButtonExpand aria-label="open item"></CdsButtonExpand>
