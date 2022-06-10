@@ -32,6 +32,7 @@ export const CdsNavigationItemTagName = 'cds-navigation-item';
  *  <cds-navigation-item><a href="/home">Home</cds-navigation-item>
  * ```
  *
+ * @beta
  * @element cds-navigation-item
  * @cssprop --color
  * @cssprop --font-size

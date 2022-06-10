@@ -43,6 +43,7 @@ export const CdsNavigationGroupTagName = 'cds-navigation-group';
  * </cds-navigation-group>
  * ```
  *
+ * @beta
  * @element cds-navigation-group
  * @event expandedChange - notify when the user has clicked the navigation expand/collapse button
  * @cssprop --animation-duration
