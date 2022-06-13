@@ -42,10 +42,11 @@
   },
   "_nohoist": "any deps that should not be hoisted list under dependencies, https://github.com/npm/rfcs/issues/287",
   "dependencies": {
-    "jasmine": "2.0.1",
-    "lit": "1.0.0",
-    "ramda": "0.1.0",
-    "tslib": "1.0.0"
+    "@rollup/plugin-typescript": "file:./no-hoist",
+    "jasmine": "file:./no-hoist",
+    "lit": "file:./no-hoist",
+    "ramda": "file:./no-hoist",
+    "tslib": "file:./no-hoist"
   },
   "devDependencies": {
     "@amanda-mitchell/semantic-release-npm-multiple": "2.17.0",
