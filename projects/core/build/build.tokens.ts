@@ -143,7 +143,10 @@ function tokenToSass(token: Token, fallback = false) {
   let fallbackValue = convertCSSValue(token);
 
   if (typeof token.value === 'number') {
-    fallbackValue = `${token.value / 16}rem`; // worst case scenario, fallback to base 16 if base 20 not set at root
+    // fallback to using the global base as a divisor,
+    //   which can be set even if global CSS isn't loaded
+    // worse case scenario, use base 20, Clarity's default
+    fallbackValue = `calc(${token.value} * (1rem / var(--cds-global-base, 20)))`;
   }
 
   if (token.config.raw) {
