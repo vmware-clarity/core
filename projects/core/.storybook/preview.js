@@ -275,5 +275,4 @@ const dataThemeDecorator = (story, { globals }) => {
 export const decorators = [themeDecorator, dataThemeDecorator];
 
 // We have this here since storybook does not have a easy way to set the <html> element in demos
-// The token system generates a base 16px set of variables for apps that may not be able to easily set the base font to 125%
 document.body.setAttribute('cds-text', 'body');
