@@ -6,22 +6,32 @@ import { Meta, Story, Preview } from '@web/storybook-prebuilt/addon-docs/blocks.
 
 Clarity provides a theme the enables the `@clr/ui` package to consume the Clarity design tokens
 and theme system. Once installed clr-ui applications will be able to use all standard Clarity
-themes available today. If your application does not use `@clr/ui` this theme is not needed.
+themes available today, in particular the color contrast adjustments in the light and dark themes.
+If your application does not use `@clr/ui` this shim is not needed.
 
-- [Repository Demo](https://github.com/vmware-clarity/core/tree/beta/apps/shim-clr-ui)
 - [Stackblitz Demo](https://stackblitz.com/edit/clarity-with-clr-angular)
 
-```scss
-// import into sass or css
-@import '@cds/core/styles/shim.clr-ui.min.css';
-
-// or import in html
-<link href="/node_modules/@cds/core/styles/shim.clr-ui.min.css" rel="stylesheet">
-```
+Follow the [Getting Started](.?path=/story/documentation-getting-started--page) directions for Clarity Core,
+including loading the relevant CSS files and setting the `cds-theme` attribute on the body tag.
+The shim will not be applied to `clr/ui` or `clr/angular` components without this attribute.
 
 Import and load the CSS shim file last after `clr-ui` global CSS. This will ensure
 that the shim can override the `clr-ui` values appropriately.
 
+```scss
+@import 'modern-normalize/modern-normalize.css';
+@import '@cds/core/global.min.css';
+@import '@cds/core/styles/theme.dark.min.css'; // to allow dark mode with cds-theme="dark"
+@import '@cds/city/css/bundles/default.css';
+@import '@cds/core/styles/shim.clr-ui.min.css'; // the shim file
+@import '@clr/ui/clr-ui.min.css'; // clr-ui CSS
+```
+
 Screenshot of demo with clr-angular and Clarity components side by side with clr-ui theme.
 
 <Story id="stories-themes--clr-theme" />
+
+## Dark Mode
+
+Core's dark mode should replace the clr/ui dark mode. Remove any reference to the clr-ui dark mode file
+from the source code, and toggle dark mode by changing the `cds-theme` attribute to "dark."
