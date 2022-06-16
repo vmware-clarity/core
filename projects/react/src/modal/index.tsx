@@ -25,7 +25,7 @@ export const CdsModalContent = createComponent(React, 'cds-modal-content', Modal
 export const CdsModalHeader = createComponent(React, 'cds-modal-header', ModalHeader, {}, 'CdsModalHeader');
 export const CdsModalHeaderActions = createComponent(
   React,
-  'cds-modal-header-action',
+  'cds-modal-header-actions',
   ModalHeaderActions,
   {},
   'CdsModalHeaderActions'

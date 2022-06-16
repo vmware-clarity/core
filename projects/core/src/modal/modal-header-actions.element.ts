@@ -19,12 +19,12 @@ import { html, LitElement } from 'lit';
  *   <cds-modal-header>
  *      <h3 cds-text="title">My Modal</h3>
  *   </cds-modal-header>
+ *   <cds-modal-header-actions>
+ *       <cds-button>Ok</cds-button>
+ *   </cds-modal-header-actions>
  *   <cds-modal-content>
  *     <p>Lorem Ipsum</p>
  *   </cds-modal-content>
- *   <cds-modal-actions>
- *       <cds-button>Ok</cds-button>
- *   </cds-modal-actions>
  * </cds-modal>
  * ```
  *

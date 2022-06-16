@@ -48513,7 +48513,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "Web component modal header actions to be used inside modal.\n\n```typescript\nimport '@cds/core/modal/register.js';\n```\n\n```html\n<cds-modal>\n  <cds-modal-header>\n     <h3 cds-text=\"title\">My Modal</h3>\n  </cds-modal-header>\n  <cds-modal-content>\n    <p>Lorem Ipsum</p>\n  </cds-modal-content>\n  <cds-modal-actions>\n      <cds-button>Ok</cds-button>\n  </cds-modal-actions>\n</cds-modal>\n```",
+          "description": "Web component modal header actions to be used inside modal.\n\n```typescript\nimport '@cds/core/modal/register.js';\n```\n\n```html\n<cds-modal>\n  <cds-modal-header>\n     <h3 cds-text=\"title\">My Modal</h3>\n  </cds-modal-header>\n  <cds-modal-header-actions>\n      <cds-button>Ok</cds-button>\n  </cds-modal-header-actions>\n  <cds-modal-content>\n    <p>Lorem Ipsum</p>\n  </cds-modal-content>\n</cds-modal>\n```",
           "name": "CdsModalHeaderActions",
           "members": [],
           "superclass": {

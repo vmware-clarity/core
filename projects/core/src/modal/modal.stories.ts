@@ -6,6 +6,7 @@
 
 import '@cds/core/modal/register.js';
 import '@cds/core/button/register.js';
+import '@cds/core/button-action/register.js';
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators/custom-element.js';
 import { getElementStorybookArgs, property, spreadProps } from '@cds/core/internal';
@@ -163,6 +164,25 @@ export function extraLarge() {
       </cds-modal>
     </cds-demo>
   `;
+}
+
+/** @website */
+export function headerActions() {
+  return html`<cds-demo popover>
+    <cds-modal _demo-mode aria-labelledby="modal-title">
+      <cds-modal-header>
+        <h3 cds-text="section" cds-first-focus id="modal-title">Header Actions Modal Example</h3>
+      </cds-modal-header>
+      <cds-modal-header-actions cds-layout="horizontal gap:sm">
+        <cds-button-action shape="bars" aria-label="filter"></cds-button-action>
+        <cds-button-action shape="filter" aria-label="filter"></cds-button-action>
+      </cds-modal-header-actions>
+      <cds-modal-content>
+        <p cds-text="body">Place holder text for the header actions modal example.</p>
+      </cds-modal-content>
+      <cds-modal-actions></cds-modal-actions>
+    </cds-modal>
+  </cds-demo>`;
 }
 
 /** @website */
