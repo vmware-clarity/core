@@ -41,6 +41,8 @@ export class CdsButtonAction extends CdsBaseButton {
 
   @property({ type: String, reflect: true }) action: string;
 
+  @property({ type: String }) iconSize: string;
+
   @i18n() i18n = I18nService.keys.actions;
 
   @state({ type: Boolean, reflect: true, attribute: 'cds-button-action' }) protected cdsButtonAction = true;
@@ -53,6 +55,7 @@ export class CdsButtonAction extends CdsBaseButton {
         <slot
           ><cds-icon
             .shape=${this.shape ? this.shape : 'ellipsis-vertical'}
+            .size=${this.iconSize}
             ?solid=${this.pressed || this.expanded}
             inner-offset=${1}
           ></cds-icon
