@@ -1227,6 +1227,14 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize"
+            },
+            {
+              "kind": "field",
               "name": "i18n"
             },
             {
@@ -1352,6 +1360,13 @@
                 "text": "string"
               },
               "fieldName": "action"
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize"
             },
             {
               "name": "pressed",
@@ -1552,6 +1567,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -1677,6 +1704,17 @@
                 "text": "string"
               },
               "fieldName": "shape",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"
@@ -1854,6 +1892,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -1997,6 +2047,17 @@
                 "text": "string"
               },
               "fieldName": "action",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"
@@ -2667,6 +2728,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -2812,6 +2885,17 @@
                 "text": "string"
               },
               "fieldName": "action",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"
@@ -7838,6 +7922,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -7975,6 +8071,17 @@
                 "text": "string"
               },
               "fieldName": "shape",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"
@@ -36080,6 +36187,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -36218,6 +36337,17 @@
                 "text": "string"
               },
               "fieldName": "action",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"
@@ -50246,6 +50376,18 @@
             },
             {
               "kind": "field",
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "iconSize",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "kind": "field",
               "name": "i18n",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
@@ -50371,6 +50513,17 @@
                 "text": "string"
               },
               "fieldName": "shape",
+              "inheritedFrom": {
+                "name": "CdsButtonAction",
+                "module": "button-action/button-action.element.js"
+              }
+            },
+            {
+              "name": "iconSize",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "iconSize",
               "inheritedFrom": {
                 "name": "CdsButtonAction",
                 "module": "button-action/button-action.element.js"

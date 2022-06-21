@@ -47,6 +47,11 @@ export function alertGroup() {
         <cds-alert closable aria-label="This is an example info alert group">
           This example is a closable alert inside an alert group with a status of "info".
         </cds-alert>
+      </cds-alert-group>
+      <cds-alert-group status="info" aria-label="This is an example info alert group">
+        <cds-alert closable aria-label="This is an example info alert group">
+          This example is a closable alert inside an alert group with a status of "info".
+        </cds-alert>
         <cds-alert closable cds-i18n='{ "closeButtonAriaLabel": "close alert with a custom icon"}'>
           <cds-icon shape="node-group" aria-label="Custom icon of a node group" role="img"></cds-icon>
           This example is an alert a user may be able to close with a custom icon shape inside an alert group with a

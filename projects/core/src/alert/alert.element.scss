@@ -36,6 +36,11 @@ $lightweight-alert-line-height: $cds-global-typography-body-line-height;
   --color: var(--icon-color);
 }
 
+.alert-close-wrapper {
+  padding: var(--container-padding);
+  padding-bottom: 0;
+}
+
 cds-internal-close-button {
   --color: inherit;
 }

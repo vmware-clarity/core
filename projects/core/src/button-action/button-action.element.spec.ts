@@ -47,4 +47,13 @@ describe('cds-button-action', () => {
     await componentIsStable(component);
     expect(component.hasAttribute('cds-button-action')).toBe(true);
   });
+
+  it('should update the size of the icon via the iconSize property', async () => {
+    await componentIsStable(component);
+    expect(component.offsetHeight).toEqual(16);
+
+    component.iconSize = '20';
+    await componentIsStable(component);
+    expect(component.offsetHeight).toEqual(20);
+  });
 });

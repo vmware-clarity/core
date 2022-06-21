@@ -252,13 +252,15 @@ export class CdsAlert extends LitElement {
           ? html`<span class="alert-spacer" cds-layout="align:stretch">&nbsp;</span>`
           : html``}
         ${this.type !== 'light' && this.closable
-          ? html`<slot name="close-button">
-              <cds-internal-close-button
-                icon-size="${this.type === 'banner' ? '20' : '16'}"
-                @click="${() => this.closableController.close(true)}"
-                aria-label="${this.i18n.closeButtonAriaLabel}"
-              ></cds-internal-close-button
-            ></slot>`
+          ? html`<span class="alert-close-wrapper"
+              ><slot name="close-button">
+                <cds-internal-close-button
+                  icon-size="${this.type === 'banner' ? '20' : '16'}"
+                  @click="${() => this.closableController.close(true)}"
+                  aria-label="${this.i18n.closeButtonAriaLabel}"
+                >
+                </cds-internal-close-button> </slot
+            ></span>`
           : html``}
       </div>
     `;
