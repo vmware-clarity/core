@@ -1,9 +1,9 @@
-name: Build
+name: PR Build
 on:
   pull_request:
 jobs:
-  build:
-    name: Build
+  pr-build:
+    name: PR Build
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
