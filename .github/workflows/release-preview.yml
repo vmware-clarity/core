@@ -1,9 +1,9 @@
-name: Preview
+name: Release Preview
 on:
   workflow_dispatch:
 jobs:
-  release:
-    name: Preview
+  release-release:
+    name: Release Preview
     timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
