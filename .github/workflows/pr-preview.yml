@@ -19,10 +19,10 @@ jobs:
           node-version-file: '.nvmrc'
       - name: Install Dependencies
         run: npm ci
-      - name: Download Demo Artifact
+      - name: Download Storybook Artifact
         uses: dawidd6/action-download-artifact@v2
         with:
-          name: demo
+          name: storybook
           path: projects/core/dist/storybook/
           workflow: ${{ github.event.workflow_run.workflow_id }}
           workflow_conclusion: success
@@ -32,7 +32,7 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           sourceRunId: ${{github.event.workflow_run.id}}
-      - name: Deploy Demo Preview
+      - name: Deploy Storybook Preview
         continue-on-error: true
         timeout-minutes: 5
         env:
