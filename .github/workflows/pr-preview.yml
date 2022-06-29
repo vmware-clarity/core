@@ -24,7 +24,7 @@ jobs:
         with:
           name: storybook
           path: projects/core/dist/storybook/
-          workflow: ${{ github.event.workflow_run.workflow_id }}
+          workflow: ${{github.event.workflow_run.workflow_id}}
           workflow_conclusion: success
       - name: Get PR Event
         id: get_pr_event
