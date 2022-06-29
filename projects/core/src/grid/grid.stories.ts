@@ -65,3 +65,4 @@ export { rowSticky } from './docs/row-sticky.story.js';
 export { rowSwappable } from './docs/row-swappable.story.js';
 export { rtl } from './docs/rtl.story.js';
 export { noScroll, minHeight } from './docs/scroll-height.story.js';
+export { vsphere } from './docs/vpshere.story.js';
