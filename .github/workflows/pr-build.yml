@@ -25,8 +25,8 @@ jobs:
         run: npm run test
       - name: Public Api Check
         run: npm run public-api:check
-      - name: Upload Demo Artifact
+      - name: Upload Storybook Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: demo
+          name: storybook
           path: projects/core/dist/storybook/
