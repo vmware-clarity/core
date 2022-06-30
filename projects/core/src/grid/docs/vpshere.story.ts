@@ -29,6 +29,8 @@ export function vsphere() {
     @state() private pageCount = 1;
     @state() private pageSizeOptions = [5, 10, 20, 50];
 
+    @state() private selectedCells: HTMLElement[];
+
     get selectedCount() {
       return this.rows.filter(i => i.selected).length;
     }
@@ -50,7 +52,7 @@ export function vsphere() {
         <cds-grid
           aria-label="row expand datagrid demo"
           height="360"
-          @rangeSelectionChange=${(e: any) => this.rangeSelectRows(e.detail)}
+          range-selection="false"
           @cdsDraggableChange=${this.sortColumns}
         >
           <cds-grid-column type="action"></cds-grid-column>
@@ -73,8 +75,8 @@ export function vsphere() {
               </cds-grid-column>`
           )}
           ${this.filteredList.map(
-            (row, i) => html`<cds-grid-row
-              data-row-idx=${i}
+            (row, rowIndex) => html`<cds-grid-row
+              data-row-idx=${rowIndex}
               .position=${this.selectedRow?.id === row.id ? 'fixed' : ''}
             >
               <cds-grid-cell>
@@ -96,7 +98,14 @@ export function vsphere() {
                   />
                 </cds-checkbox>
               </cds-grid-cell>
-              ${row.cells.map(cell => html`<cds-grid-cell>${cell.label}</cds-grid-cell>`)}
+              ${row.cells.map(
+                cell =>
+                  html`<cds-grid-cell
+                    style="cursor:pointer"
+                    @click=${(e: any) => this.cellClickSelect(e, row, rowIndex)}
+                    >${cell.label}</cds-grid-cell
+                  >`
+              )}
             </cds-grid-row>`
           )}
           <cds-grid-detail
@@ -152,8 +161,9 @@ export function vsphere() {
               <ul>
                 <li>Click on the checkbox for that row</li>
                 <li>
-                  Highlighting a selection of rows will select those rows (and clear others) on mouse up. This feature
-                  is disabled if row drag and drop is enabled
+                  Shift+click a row to select a range of rows.
+                  <em>Note:</em> You cannot put an onClick handler on a cell that has a clickable element (like a link)
+                  in it. Click zones in click zones are not valid for accessibility
                 </li>
               </ul>
             </li>
@@ -192,8 +202,44 @@ export function vsphere() {
       }
     }
 
+    private cellClickSelect(e: any, entry: any, rowIndex: number) {
+      console.log({ e, rowIndex, entry });
+      if (e.shiftKey && !entry.selected) {
+        // shift click selects the clicked row to the closest selected row, unselecting everything else
+
+        // we only need the first and last values, so this could be done better
+        // but I'm lazy
+        const selectedIndexes = this.rows
+          .map((r, i) => [r.selected, i])
+          .filter(r => r[0])
+          .map(r => r[1]) as number[];
+        console.log(selectedIndexes);
+
+        const first = selectedIndexes[0];
+        const last = selectedIndexes[selectedIndexes.length - 1];
+
+        console.log({ first, last });
+        if (rowIndex < first) {
+          this.rows.forEach(r => (r.selected = false));
+          for (let i = rowIndex; i <= first; i++) {
+            this.rows[i].selected = true;
+          }
+        } else if (last && rowIndex > last) {
+          this.rows.forEach(r => (r.selected = false));
+          for (let j = last; j <= rowIndex; j++) {
+            this.rows[j].selected = true;
+          }
+        }
+      } else {
+        this.rows.forEach(r => (r.selected = false));
+        entry.selected = true;
+      }
+      this.rows = [...this.rows];
+    }
+
     /* selection */
     private select(entry: any, checked: boolean) {
+      console.log({ entry, checked });
       this.rows.find(i => i.id === entry.id).selected = checked;
       this.rows = [...this.rows];
     }
@@ -201,15 +247,6 @@ export function vsphere() {
     private selectAll(checked: boolean) {
       this.rows.forEach(i => (i.selected = checked));
       this.rows = [...this.rows];
-    }
-
-    private rangeSelectRows(activeCells: any) {
-      if (activeCells.length > 0) {
-        const rowIndexes = new Set(activeCells.map((c: any) => c.parentElement.getAttribute('data-row-idx')));
-        this.rows.forEach(i => (i.selected = false));
-        rowIndexes.forEach((i: any) => (this.rows[i].selected = true));
-        this.rows = [...this.rows];
-      }
     }
 
     private action(name: string) {
