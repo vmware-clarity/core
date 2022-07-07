@@ -1,7 +1,7 @@
 {
   "name": "@cds/react",
   "description": "Core component modules for Clarity React",
-  "homepage": "https://clarity.design",
+  "homepage": "https://core.clarity.design",
   "keywords": ["react", "design system", "clarity", "ui"],
   "repository": {
     "type": "git",
