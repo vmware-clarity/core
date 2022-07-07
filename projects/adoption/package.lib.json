@@ -1,7 +1,7 @@
 {
   "name": "@clr/eslint-plugin-clarity-adoption",
   "description": "A set of ESLint rules for Clarity Core adoption.",
-  "homepage": "https://clarity.design",
+  "homepage": "https://core.clarity.design",
   "keywords": ["clarity", "eslint-plugin", "eslint"],
   "repository": {
     "type": "git",
