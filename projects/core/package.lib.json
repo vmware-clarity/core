@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "clarity",
   "description": "Clarity Design System - common components, themes, and utilties",
-  "homepage": "https://clarity.design",
+  "homepage": "https://core.clarity.design",
   "customElements": "./custom-elements.json",
   "keywords": ["web component", "design system", "clarity", "ui"],
   "repository": {
