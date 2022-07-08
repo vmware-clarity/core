@@ -43,7 +43,9 @@
 }
 
 // we need the check against hidden='false' here because React is pushing string through instead of adding/removing the boolean attribute
-:host([hidden*='false']) {
+:host([hidden*='false']),
+:host([role='dialog'][hidden*='false']),
+[role='dialog'][hidden*='false'] {
   display: inline-flex !important;
 }
 
