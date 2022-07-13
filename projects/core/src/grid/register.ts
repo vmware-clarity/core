@@ -25,6 +25,8 @@ import { CdsGridFooter } from './footer/grid-footer.element.js';
 import { CdsGridPagination } from './pagination/grid-pagination.element.js';
 import { CdsGridPlaceholder } from './placeholder/grid-placeholder.element.js';
 
+import { CdsGridVirtualScroll } from './virtual-scroll.element.js';
+
 ClarityIcons.addIcons(filterIcon, viewColumnsIcon, timesIcon, pinIcon, unpinIcon);
 
 registerElementSafely('cds-grid', CdsGrid);
@@ -36,6 +38,8 @@ registerElementSafely('cds-grid-footer', CdsGridFooter);
 registerElementSafely('cds-grid-pagination', CdsGridPagination);
 registerElementSafely('cds-grid-placeholder', CdsGridPlaceholder);
 
+registerElementSafely('cds-grid-virtual-scroll', CdsGridVirtualScroll);
+
 declare global {
   interface HTMLElementTagNameMap {
     'cds-grid': CdsGrid;
@@ -46,5 +50,6 @@ declare global {
     'cds-grid-footer': CdsGridFooter;
     'cds-grid-pagination': CdsGridPagination;
     'cds-grid-placeholder': CdsGridPlaceholder;
+    'cds-grid-virtual-scroll': CdsGridVirtualScroll;
   }
 }

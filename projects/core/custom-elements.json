@@ -10775,6 +10775,12 @@
     },
     {
       "kind": "javascript-module",
+      "path": "grid/virtual-scroll.element.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/collections/chart.js",
       "declarations": [
         {
