@@ -130,7 +130,6 @@ export function vsphere() {
                 <cds-button-handle aria-label="sort ${column.label} column"></cds-button-handle>
               </cds-grid-column>`
           )}
-          ${console.log(this.filteredList.length)}
           ${this.virtualScroll
             ? html`<cds-grid-virtual-scroll
                 .items=${this.filteredList}
