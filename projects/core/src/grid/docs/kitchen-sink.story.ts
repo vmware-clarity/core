@@ -28,6 +28,7 @@ export function kitchenSink() {
     currentDetail: string | null;
     sortType: 'none' | 'ascending' | 'descending';
     search: string;
+    statusFilter: string;
     page: number;
     pageSize: number;
     idFilterAnchor: HTMLElement | null;
@@ -44,11 +45,35 @@ export function kitchenSink() {
     sortType: 'none',
     pageSize: 10,
     search: '',
+    statusFilter: '',
     page: 0,
     idFilterAnchor: null,
     columnsDropdownAnchor: null,
     detailAnchor: null,
   };
+
+  @customElement('demo-filter-grid-cell')
+  class DemoFilterGridCell extends LitElement {
+    @state() private editMode = false;
+
+    render() {
+      return html`
+        <cds-grid-cell @click=${(e: any) => this.toggleFilter(e)}>
+          <slot></slot>
+        </cds-grid-cell>
+      `;
+    }
+
+    toggleFilter(e: any) {
+      if (!this.editMode && (e.code === 'Enter' || e.type === 'click')) {
+        console.log('focus', e.currentTarget.querySelector('input, select'));
+        e.currentTarget.querySelector('input, select')?.focus();
+      } else if (this.editMode && e.type === 'blur') {
+        console.log('blur', e.currentTarget.closest('cds-grid-cell'));
+        e.currentTarget.closest('cds-grid-cell').focus();
+      }
+    }
+  }
 
   @customElement('demo-grid-kitchen-sink')
   class DemoKitchenSink extends LitElement {
@@ -107,18 +132,27 @@ export function kitchenSink() {
             <cds-grid-row position="sticky">
               <cds-grid-cell></cds-grid-cell>
               <cds-grid-cell></cds-grid-cell>
-              <cds-grid-cell @click=${(e: any) => this.toggleFilter(e)}>
+              <demo-filter-grid-cell>
                 <cds-input>
                   <input
                     placeholder="Search"
                     aria-label="search rows"
                     .value=${this.state.search}
                     @input=${(e: any) => this.search(e.target.value)}
-                    @blur=${(e: any) => this.toggleFilter(e)}
                   />
                 </cds-input>
-              </cds-grid-cell>
-              ${this.columnVisible(ColumnTypes.Status) ? html` <cds-grid-cell></cds-grid-cell>` : ''}
+              </demo-filter-grid-cell>
+              ${this.columnVisible(ColumnTypes.Status)
+                ? html` <demo-filter-grid-cell>
+                    <cds-select>
+                      <select aria-label="filter on status" @input=${(e: any) => this.filterStatus(e.target.value)}>
+                        ${['', 'online', 'disruption', 'offline', 'deactivated'].map(
+                          s => html` <option value="${s}" .checked="${this.state.statusFilter === s}">${s}</option> `
+                        )}
+                      </select>
+                    </cds-select>
+                  </demo-filter-grid-cell>`
+                : ''}
               ${this.columnVisible(ColumnTypes.CPU) ? html` <cds-grid-cell></cds-grid-cell>` : ''}
               ${this.columnVisible(ColumnTypes.Memory) ? html` <cds-grid-cell></cds-grid-cell>` : ''}
             </cds-grid-row>
@@ -317,17 +351,6 @@ ${JSON.stringify(
       );
     }
 
-    toggleFilter(e: any) {
-      console.log(e);
-      if (e.code === 'Enter' || e.type === 'click') {
-        console.log('focus', e.currentTarget.querySelector('input'));
-        e.currentTarget.querySelector('input')?.focus();
-      } else if (e.type === 'blur') {
-        console.log('blur', e.currentTarget.closest('cds-grid-cell'));
-        e.currentTarget.closest('cds-grid-cell').focus();
-      }
-    }
-
     private get currentDetail() {
       return this.state.data.find(i => i.id === this.state.currentDetail);
     }
@@ -347,6 +370,7 @@ ${JSON.stringify(
             this.state.orderPreference.indexOf(a.id) > this.state.orderPreference.indexOf(b.id) ? 1 : -1
           ),
         d => filter<TestVM>(d, 'id', this.state.search),
+        d => filter<TestVM>(d, 'status', this.state.statusFilter),
         d => sortStrings<TestVM>(d, 'status', this.state.sortType)
       )([...this.state.data]);
     }
@@ -357,6 +381,10 @@ ${JSON.stringify(
 
     private search(value: string) {
       this.state = { ...this.state, search: value, page: 0 };
+    }
+
+    private filterStatus(value: string) {
+      this.state = { ...this.state, statusFilter: value, page: 0 };
     }
 
     private showDetail(id: string, detailAnchor: HTMLElement) {

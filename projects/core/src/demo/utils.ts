@@ -9,7 +9,14 @@
  * This is a demo function used to standardize demos across framework examples. Do not use in production.
  */
 export function filter<T>(list: T[], key: string, term: string) {
-  return [...list].filter(i => (i as any)[key].toLocaleLowerCase().includes(term.toLocaleLowerCase()));
+  return [...list].filter(i => {
+    const value = (i as any)[key];
+    if (!value) {
+      console.log({ key, value, i });
+    }
+
+    return value.toLocaleLowerCase().includes(term.toLocaleLowerCase());
+  });
 }
 
 /**
