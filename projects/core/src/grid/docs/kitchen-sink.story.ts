@@ -28,6 +28,7 @@ export function kitchenSink() {
     currentDetail: string | null;
     sortType: 'none' | 'ascending' | 'descending';
     search: string;
+    statusFilter: string;
     page: number;
     pageSize: number;
     idFilterAnchor: HTMLElement | null;
@@ -44,11 +45,35 @@ export function kitchenSink() {
     sortType: 'none',
     pageSize: 10,
     search: '',
+    statusFilter: '',
     page: 0,
     idFilterAnchor: null,
     columnsDropdownAnchor: null,
     detailAnchor: null,
   };
+
+  @customElement('demo-filter-grid-cell')
+  class DemoFilterGridCell extends LitElement {
+    @state() private editMode = false;
+
+    render() {
+      return html`
+        <cds-grid-cell @click=${(e: any) => this.toggleFilter(e)}>
+          <slot></slot>
+        </cds-grid-cell>
+      `;
+    }
+
+    toggleFilter(e: any) {
+      if (!this.editMode && (e.code === 'Enter' || e.type === 'click')) {
+        console.log('focus', e.currentTarget.querySelector('input, select'));
+        e.currentTarget.querySelector('input, select')?.focus();
+      } else if (this.editMode && e.type === 'blur') {
+        console.log('blur', e.currentTarget.closest('cds-grid-cell'));
+        e.currentTarget.closest('cds-grid-cell').focus();
+      }
+    }
+  }
 
   @customElement('demo-grid-kitchen-sink')
   class DemoKitchenSink extends LitElement {
@@ -59,138 +84,176 @@ export function kitchenSink() {
     }
 
     render() {
-      return html` <cds-grid aria-label="Active VM Management" height="360">
-          <cds-grid-column type="action">
-            <cds-checkbox>
-              <input
-                type="checkbox"
-                .checked=${this.selected === this.state.data.length}
-                .indeterminate=${this.selected > 0 && this.selected < this.state.data.length}
-                @change=${(e: any) => this.selectAll(e)}
-                aria-label="select all hosts"
-              />
-            </cds-checkbox>
-          </cds-grid-column>
-          <cds-grid-column type="action"></cds-grid-column>
-          <cds-grid-column resizable width="180">
-            Host
-            <cds-button-action
-              popup="id-filter"
-              @click=${(e: any) => (this.state = { ...this.state, idFilterAnchor: e.target })}
-              aria-label="column filter options"
-              shape="filter"
-              .expanded=${!!this.state.search}
-            ></cds-button-action>
-          </cds-grid-column>
-          ${this.columnVisible(ColumnTypes.Status)
-            ? html` <cds-grid-column resizable width="180">
-                Status
-                <cds-button-sort
-                  aria-label="sort status"
-                  .sort=${this.state.sortType}
-                  @sortChange=${(e: any) => this.setSortType(e.detail)}
-                ></cds-button-sort>
-              </cds-grid-column>`
-            : ''}
-          ${this.columnVisible(ColumnTypes.CPU) ? html`<cds-grid-column resizable>CPU</cds-grid-column>` : ''}
-          ${this.columnVisible(ColumnTypes.Memory) ? html`<cds-grid-column resizable>Memory</cds-grid-column>` : ''}
-          ${this.currentPage.map(
-            entry => html` <cds-grid-row .selected=${entry.selected}>
-              <cds-grid-cell>
-                <cds-checkbox>
+      return html` <div cds-layout="vertical gap:md">
+          <cds-search control-width="shrink">
+            <input
+              type="search"
+              placeholder="Search"
+              aria-label="search rows"
+              .value=${this.state.search}
+              @input=${(e: any) => this.search(e.target.value)}
+            />
+          </cds-search>
+          <cds-grid aria-label="Active VM Management" height="360">
+            <cds-grid-column type="action">
+              <cds-checkbox>
+                <input
+                  type="checkbox"
+                  .checked=${this.selected === this.state.data.length}
+                  .indeterminate=${this.selected > 0 && this.selected < this.state.data.length}
+                  @change=${(e: any) => this.selectAll(e)}
+                  aria-label="select all hosts"
+                />
+              </cds-checkbox>
+            </cds-grid-column>
+            <cds-grid-column type="action"></cds-grid-column>
+            <cds-grid-column resizable width="180">
+              Host
+              <cds-button-action
+                popup="id-filter"
+                @click=${(e: any) => (this.state = { ...this.state, idFilterAnchor: e.target })}
+                aria-label="column filter options"
+                shape="filter"
+                .expanded=${!!this.state.search}
+              ></cds-button-action>
+            </cds-grid-column>
+            ${this.columnVisible(ColumnTypes.Status)
+              ? html` <cds-grid-column resizable width="180">
+                  Status
+                  <cds-button-sort
+                    aria-label="sort status"
+                    .sort=${this.state.sortType}
+                    @sortChange=${(e: any) => this.setSortType(e.detail)}
+                  ></cds-button-sort>
+                </cds-grid-column>`
+              : ''}
+            ${this.columnVisible(ColumnTypes.CPU) ? html`<cds-grid-column resizable>CPU</cds-grid-column>` : ''}
+            ${this.columnVisible(ColumnTypes.Memory) ? html`<cds-grid-column resizable>Memory</cds-grid-column>` : ''}
+            <cds-grid-row position="sticky">
+              <cds-grid-cell></cds-grid-cell>
+              <cds-grid-cell></cds-grid-cell>
+              <demo-filter-grid-cell>
+                <cds-input>
                   <input
-                    type="checkbox"
-                    .checked=${entry.selected}
-                    value=${entry.id}
-                    @click=${(e: any) => this.select(entry, e.target.checked)}
-                    aria-label="select host ${entry.id}"
+                    placeholder="Search"
+                    aria-label="search rows"
+                    .value=${this.state.search}
+                    @input=${(e: any) => this.search(e.target.value)}
                   />
-                </cds-checkbox>
-              </cds-grid-cell>
-              <cds-grid-cell>
-                <cds-button-expand
-                  popup="row-detail"
-                  action="detail"
-                  aria-label="${entry.id} details"
-                  .expanded=${this.currentDetail?.id === entry.id}
-                  @click=${(e: any) => this.showDetail(entry.id, e.target)}
-                ></cds-button-expand>
-              </cds-grid-cell>
-              <cds-grid-cell role="rowheader">${entry.id}</cds-grid-cell>
+                </cds-input>
+              </demo-filter-grid-cell>
               ${this.columnVisible(ColumnTypes.Status)
-                ? html` <cds-grid-cell>
-                    <cds-tag status=${StatusDisplayType[entry.status]} readonly
-                      ><cds-icon
-                        shape=${StatusIconType[entry.status]}
-                        inner-offset=${entry.status === 'deactivated' ? 0 : 3}
-                      ></cds-icon>
-                      ${entry.status}</cds-tag
-                    >
-                  </cds-grid-cell>`
+                ? html` <demo-filter-grid-cell>
+                    <cds-select>
+                      <select aria-label="filter on status" @input=${(e: any) => this.filterStatus(e.target.value)}>
+                        ${['', 'online', 'disruption', 'offline', 'deactivated'].map(
+                          s => html` <option value="${s}" .checked="${this.state.statusFilter === s}">${s}</option> `
+                        )}
+                      </select>
+                    </cds-select>
+                  </demo-filter-grid-cell>`
                 : ''}
-              ${this.columnVisible(ColumnTypes.CPU) ? html`<cds-grid-cell>${entry.cpu}%</cds-grid-cell>` : ''}
-              ${this.columnVisible(ColumnTypes.Memory) ? html`<cds-grid-cell>${entry.memory}%</cds-grid-cell>` : ''}
-            </cds-grid-row>`
-          )}
-          <cds-grid-footer>
-            <cds-button-action
-              popup="column-visibility"
-              @click=${(e: any) => (this.state = { ...this.state, columnsDropdownAnchor: e.target })}
-              aria-label="filter columns"
-              shape="view-columns"
-              .expanded=${!!this.state.search}
-            ></cds-button-action>
-            <cds-grid-pagination
-              .page=${this.state.page}
-              .pageSize=${this.state.pageSize}
-              .pageCount=${this.pageCount}
-              @pageChange=${(e: any) => (this.state = { ...this.state, page: e.detail })}
-              @pageSizeChange=${(e: any) => (this.state = { ...this.state, pageSize: e.detail })}
+              ${this.columnVisible(ColumnTypes.CPU) ? html` <cds-grid-cell></cds-grid-cell>` : ''}
+              ${this.columnVisible(ColumnTypes.Memory) ? html` <cds-grid-cell></cds-grid-cell>` : ''}
+            </cds-grid-row>
+            ${this.currentPage.map(
+              entry => html` <cds-grid-row .selected=${entry.selected}>
+                <cds-grid-cell>
+                  <cds-checkbox>
+                    <input
+                      type="checkbox"
+                      .checked=${entry.selected}
+                      value=${entry.id}
+                      @click=${(e: any) => this.select(entry, e.target.checked)}
+                      aria-label="select host ${entry.id}"
+                    />
+                  </cds-checkbox>
+                </cds-grid-cell>
+                <cds-grid-cell>
+                  <cds-button-expand
+                    popup="row-detail"
+                    action="detail"
+                    aria-label="${entry.id} details"
+                    .expanded=${this.currentDetail?.id === entry.id}
+                    @click=${(e: any) => this.showDetail(entry.id, e.target)}
+                  ></cds-button-expand>
+                </cds-grid-cell>
+                <cds-grid-cell role="rowheader">${entry.id}</cds-grid-cell>
+                ${this.columnVisible(ColumnTypes.Status)
+                  ? html` <cds-grid-cell>
+                      <cds-tag status=${StatusDisplayType[entry.status]} readonly
+                        ><cds-icon
+                          shape=${StatusIconType[entry.status]}
+                          inner-offset=${entry.status === 'deactivated' ? 0 : 3}
+                        ></cds-icon>
+                        ${entry.status}</cds-tag
+                      >
+                    </cds-grid-cell>`
+                  : ''}
+                ${this.columnVisible(ColumnTypes.CPU) ? html`<cds-grid-cell>${entry.cpu}%</cds-grid-cell>` : ''}
+                ${this.columnVisible(ColumnTypes.Memory) ? html`<cds-grid-cell>${entry.memory}%</cds-grid-cell>` : ''}
+              </cds-grid-row>`
+            )}
+            <cds-grid-footer>
+              <cds-button-action
+                popup="column-visibility"
+                @click=${(e: any) => (this.state = { ...this.state, columnsDropdownAnchor: e.target })}
+                aria-label="filter columns"
+                shape="view-columns"
+                .expanded=${!!this.state.search}
+              ></cds-button-action>
+              <cds-grid-pagination
+                .page=${this.state.page}
+                .pageSize=${this.state.pageSize}
+                .pageCount=${this.pageCount}
+                @pageChange=${(e: any) => (this.state = { ...this.state, page: e.detail })}
+                @pageSizeChange=${(e: any) => (this.state = { ...this.state, pageSize: e.detail })}
+              >
+              </cds-grid-pagination>
+              <div cds-layout="display:screen-reader-only" aria-live="polite" aria-relevant="all" role="status">
+                navigated to page ${this.state.page}
+              </div>
+            </cds-grid-footer>
+            <cds-grid-detail
+              id="row-detail"
+              ?hidden=${!this.currentDetail}
+              .anchor=${this.state.detailAnchor}
+              @closeChange=${this.closeDetail}
             >
-            </cds-grid-pagination>
-            <div cds-layout="display:screen-reader-only" aria-live="polite" aria-relevant="all" role="status">
-              navigated to page ${this.state.page}
-            </div>
-          </cds-grid-footer>
-          <cds-grid-detail
-            id="row-detail"
-            ?hidden=${!this.currentDetail}
-            .anchor=${this.state.detailAnchor}
-            @closeChange=${this.closeDetail}
-          >
-            <section cds-layout="vertical gap:xxl">
-              <div cds-layout="horizontal gap:sm">
-                <h2 cds-text="heading">${this.currentDetail?.id}</h2>
-                <cds-tag status=${StatusDisplayType[this.currentDetail?.status]} readonly>
-                  <cds-icon
-                    shape=${StatusIconType[this.currentDetail?.status]}
-                    size=${this.currentDetail?.status === 'deactivated' ? 15 : 16}
-                    inner-offset=${this.currentDetail?.status === 'deactivated' ? 0 : 3}
-                  ></cds-icon>
-                  ${this.currentDetail?.status}
-                </cds-tag>
-              </div>
-              <div cds-layout="grid cols:6">
-                <div cds-layout="vertical gap:sm align:center">
-                  <cds-progress-circle
-                    size="xxl"
-                    status=${StatusDisplayType[this.currentDetail?.status]}
-                    value=${this.currentDetail?.cpu as number}
-                  ></cds-progress-circle>
-                  <p cds-text="subsection">CPU: ${this.currentDetail?.cpu}%</p>
+              <section cds-layout="vertical gap:xxl">
+                <div cds-layout="horizontal gap:sm">
+                  <h2 cds-text="heading">${this.currentDetail?.id}</h2>
+                  <cds-tag status=${StatusDisplayType[this.currentDetail?.status]} readonly>
+                    <cds-icon
+                      shape=${StatusIconType[this.currentDetail?.status]}
+                      size=${this.currentDetail?.status === 'deactivated' ? 15 : 16}
+                      inner-offset=${this.currentDetail?.status === 'deactivated' ? 0 : 3}
+                    ></cds-icon>
+                    ${this.currentDetail?.status}
+                  </cds-tag>
                 </div>
-                <div cds-layout="vertical gap:sm align:center">
-                  <cds-progress-circle
-                    size="xxl"
-                    status=${StatusDisplayType[this.currentDetail?.status]}
-                    value=${this.currentDetail?.memory as number}
-                  ></cds-progress-circle>
-                  <p cds-text="subsection">Memory: ${this.currentDetail?.memory}%</p>
+                <div cds-layout="grid cols:6">
+                  <div cds-layout="vertical gap:sm align:center">
+                    <cds-progress-circle
+                      size="xxl"
+                      status=${StatusDisplayType[this.currentDetail?.status]}
+                      value=${this.currentDetail?.cpu as number}
+                    ></cds-progress-circle>
+                    <p cds-text="subsection">CPU: ${this.currentDetail?.cpu}%</p>
+                  </div>
+                  <div cds-layout="vertical gap:sm align:center">
+                    <cds-progress-circle
+                      size="xxl"
+                      status=${StatusDisplayType[this.currentDetail?.status]}
+                      value=${this.currentDetail?.memory as number}
+                    ></cds-progress-circle>
+                    <p cds-text="subsection">Memory: ${this.currentDetail?.memory}%</p>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </cds-grid-detail>
-        </cds-grid>
+              </section>
+            </cds-grid-detail>
+          </cds-grid>
+        </div>
         <cds-dropdown
           id="id-filter"
           ?hidden=${!this.state.idFilterAnchor}
@@ -307,6 +370,7 @@ ${JSON.stringify(
             this.state.orderPreference.indexOf(a.id) > this.state.orderPreference.indexOf(b.id) ? 1 : -1
           ),
         d => filter<TestVM>(d, 'id', this.state.search),
+        d => filter<TestVM>(d, 'status', this.state.statusFilter),
         d => sortStrings<TestVM>(d, 'status', this.state.sortType)
       )([...this.state.data]);
     }
@@ -317,6 +381,10 @@ ${JSON.stringify(
 
     private search(value: string) {
       this.state = { ...this.state, search: value, page: 0 };
+    }
+
+    private filterStatus(value: string) {
+      this.state = { ...this.state, statusFilter: value, page: 0 };
     }
 
     private showDetail(id: string, detailAnchor: HTMLElement) {

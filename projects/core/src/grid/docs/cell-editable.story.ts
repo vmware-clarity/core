@@ -51,11 +51,11 @@ export function cellEditable() {
       if (!cell.selected && (e.code === 'Enter' || e.type === 'dblclick')) {
         cell.selected = true;
         this.grid = { ...this.grid };
-        e.target.querySelector('input')?.focus();
+        e.currentTarget.querySelector('input')?.focus();
       } else if (cell.selected && (e.code === 'Enter' || e.code === 'Escape' || e.type === 'blur')) {
         cell.selected = false;
         this.grid = { ...this.grid };
-        e.target.closest('cds-grid-cell').focus();
+        e.currentTarget.closest('cds-grid-cell').focus();
       }
     }
   }

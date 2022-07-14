@@ -91,12 +91,15 @@
     "sass": "1.48.0",
     "stylelint-no-px": "1.0.1",
     "terser": "5.10.0",
-    "tslib": "^2.3.1",
     "ts-lit-plugin": "1.2.1",
     "ts-node": "10.4.0",
+    "tslib": "^2.3.1",
     "typescript": "4.5.4",
     "web-test-runner-jasmine": "^0.0.1",
     "web-test-runner-performance": "^0.1.4",
     "web-test-runner-voiceover": "^0.0.7"
+  },
+  "dependencies": {
+    "@lit-labs/virtualizer": "^0.7.0"
   }
 }
