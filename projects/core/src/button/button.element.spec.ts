@@ -279,7 +279,7 @@ describe('button element', () => {
       expect(component.disabled).not.toBeTruthy();
     });
 
-    it('should stay disabled when loadingState changes to default', async () => {
+    it('should stay disabled when loadingState changes back to default', async () => {
       await componentIsStable(component);
       component.disabled = true;
       component.loadingState = ClrLoadingState.default;
@@ -290,6 +290,25 @@ describe('button element', () => {
       expect(component.disabled).toBeTruthy();
 
       component.loadingState = ClrLoadingState.success;
+      await componentIsStable(component);
+      expect(component.disabled).toBeTruthy();
+
+      component.loadingState = ClrLoadingState.default;
+      await componentIsStable(component);
+      expect(component.disabled).toBeTruthy();
+    });
+
+    it('should return to disabled state when set in non-default loadingState status', async () => {
+      await componentIsStable(component);
+      component.loadingState = ClrLoadingState.default;
+      await componentIsStable(component);
+
+      component.loadingState = ClrLoadingState.loading;
+      await componentIsStable(component);
+      expect(component.disabled).toBeTruthy();
+
+      component.loadingState = ClrLoadingState.success;
+      component.disabled = true;
       await componentIsStable(component);
       expect(component.disabled).toBeTruthy();
 
@@ -309,6 +328,25 @@ describe('button element', () => {
       component.size = 'sm';
       await componentIsStable(component);
       expect(component.shadowRoot.querySelector<any>('cds-progress-circle').size).toBe('12');
+    });
+
+    it('should not have hardcoded width on initial render', async () => {
+      // the width is only hardcoded when switching from default (with button text) to a loading status (with icon)
+      const testElement2 = await createTestElement(html`
+        <form>
+          <cds-button loading-state="loading">
+            <span>${placeholderText}</span>
+          </cds-button>
+        </form>
+      `);
+
+      const component2 = testElement2.querySelector<CdsButton>('cds-button');
+      await componentIsStable(component2);
+
+      expect(component2.style.width).toEqual('');
+      expect(component2.getBoundingClientRect().width).toBeGreaterThan(12);
+
+      removeTestElement(testElement2);
     });
   });
 });
