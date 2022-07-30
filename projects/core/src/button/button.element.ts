@@ -83,6 +83,16 @@ export class CdsButton extends CdsBaseButton {
   @property({ type: String })
   loadingState: keyof typeof ClrLoadingState = ClrLoadingState.default;
 
+  @property({ type: Boolean })
+  get disabled(): boolean {
+    return super.disabled;
+  }
+
+  set disabled(value: boolean) {
+    this._disabledExternally = value;
+    super.disabled = value;
+  }
+
   firstUpdated(props: PropertyValues<this>) {
     super.firstUpdated(props);
 
@@ -92,25 +102,16 @@ export class CdsButton extends CdsBaseButton {
   }
 
   update(props: PropertyValues<this>) {
-    if (props.has('loadingState')) {
-      if (this.isDefaultLoadingState(props.get('loadingState') as string)) {
-        // track prior disabled state to set prior value after button is re-enabled from a loading state
-        this._disabled = this.disabled;
-      }
-
-      if (props.get('loadingState') !== undefined) {
-        if (this.isDefaultLoadingState(this.loadingState)) {
-          this.enableButton();
-        } else {
-          this.disableButton();
-        }
+    if (props.has('loadingState') && props.get('loadingState') !== undefined) {
+      if (this.isDefaultLoadingState(this.loadingState)) {
+        this.restoreButton();
+      } else {
+        this.disableButton();
       }
     }
 
     super.update(props);
   }
-
-  private _disabled = false;
 
   render() {
     return html`<div class="private-host" cds-layout="horizontal gap:xs wrap:none align:center">
@@ -135,11 +136,16 @@ export class CdsButton extends CdsBaseButton {
 
   private disableButton() {
     this.style.width = getElementWidth(this);
-    this.disabled = true;
+    super.disabled = true;
   }
 
-  private enableButton() {
+  private restoreButton() {
     this.style.removeProperty('width');
-    this.disabled = this._disabled;
+    super.disabled = this._disabledExternally;
   }
+
+  // when the loading state changes, the disabled state should be set to what the consumer manually set, if set
+  // the setter here should never be called in the component, call super instead
+  //  https://github.com/vmware-clarity/core/issues/129
+  private _disabledExternally = false;
 }

@@ -1326,7 +1326,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -1340,6 +1339,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -1439,7 +1451,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -1665,7 +1676,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -1679,6 +1689,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -1791,7 +1814,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2003,7 +2025,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2017,6 +2038,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -2134,7 +2168,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2305,7 +2338,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2319,6 +2351,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -2403,7 +2448,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2503,7 +2547,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2613,7 +2656,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2627,6 +2669,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -2839,7 +2894,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -2853,6 +2907,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -2972,7 +3039,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -3172,12 +3238,15 @@
             },
             {
               "kind": "field",
-              "name": "_disabled",
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
-              "privacy": "private",
-              "default": "false"
+              "attribute": "disabled",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
             },
             {
               "kind": "method",
@@ -3198,8 +3267,17 @@
             },
             {
               "kind": "method",
-              "name": "enableButton",
+              "name": "restoreButton",
               "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_disabledExternally",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
             },
             {
               "kind": "field",
@@ -3275,12 +3353,11 @@
             },
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "popup",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "attribute": "disabled",
+              "attribute": "popup",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -3288,11 +3365,12 @@
             },
             {
               "kind": "field",
-              "name": "popup",
+              "name": "_disabled",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "attribute": "popup",
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -3343,6 +3421,17 @@
               },
               "description": "`default`: shows the content of the button\n- `loading`: disables the button and shows a spinner inside the button\n- `success`: disables the button and shows a check mark inside the button; auto-triggers to change back to DEFAULT state after 1000 ms\n- `error`: shows the content of the button (in the context of application, this state is usually entered from a LOADING state. the application should show appropriate error message)",
               "fieldName": "loadingState"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
             },
             {
               "name": "pressed",
@@ -3405,18 +3494,6 @@
                 "text": "string"
               },
               "fieldName": "value",
-              "inheritedFrom": {
-                "name": "CdsBaseButton",
-                "module": "internal/base/button.base.js"
-              }
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -3568,15 +3645,14 @@
             },
             {
               "kind": "field",
-              "name": "_disabled",
+              "name": "disabled",
               "type": {
                 "text": "boolean"
               },
-              "privacy": "private",
-              "default": "false",
+              "attribute": "disabled",
               "inheritedFrom": {
-                "name": "CdsButton",
-                "module": "button/button.element.js"
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
               }
             },
             {
@@ -3606,8 +3682,21 @@
             },
             {
               "kind": "method",
-              "name": "enableButton",
+              "name": "restoreButton",
               "privacy": "private",
+              "inheritedFrom": {
+                "name": "CdsButton",
+                "module": "button/button.element.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabledExternally",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsButton",
                 "module": "button/button.element.js"
@@ -3687,12 +3776,11 @@
             },
             {
               "kind": "field",
-              "name": "disabled",
+              "name": "popup",
               "type": {
-                "text": "boolean"
+                "text": "string"
               },
-              "default": "false",
-              "attribute": "disabled",
+              "attribute": "popup",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -3700,11 +3788,12 @@
             },
             {
               "kind": "field",
-              "name": "popup",
+              "name": "_disabled",
               "type": {
-                "text": "string"
+                "text": "boolean"
               },
-              "attribute": "popup",
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -3783,6 +3872,17 @@
               }
             },
             {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
               "name": "pressed",
               "type": {
                 "text": "boolean"
@@ -3843,18 +3943,6 @@
                 "text": "string"
               },
               "fieldName": "value",
-              "inheritedFrom": {
-                "name": "CdsBaseButton",
-                "module": "internal/base/button.base.js"
-              }
-            },
-            {
-              "name": "disabled",
-              "type": {
-                "text": "boolean"
-              },
-              "default": "false",
-              "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -8033,7 +8121,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -8047,6 +8134,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -8158,7 +8258,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -36298,7 +36397,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -36312,6 +36410,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -36424,7 +36535,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -37933,7 +38043,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled"
             },
             {
@@ -37943,6 +38052,15 @@
                 "text": "string"
               },
               "attribute": "popup"
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
             }
           ],
           "attributes": [
@@ -37993,7 +38111,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled"
             },
             {
@@ -50355,7 +50472,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -50492,6 +50608,19 @@
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
               }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
             }
           ],
           "attributes": [
@@ -50600,7 +50729,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -57347,7 +57475,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "attribute": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
@@ -57361,6 +57488,19 @@
                 "text": "string"
               },
               "attribute": "popup",
+              "inheritedFrom": {
+                "name": "CdsBaseButton",
+                "module": "internal/base/button.base.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
@@ -57465,7 +57605,6 @@
               "type": {
                 "text": "boolean"
               },
-              "default": "false",
               "fieldName": "disabled",
               "inheritedFrom": {
                 "name": "CdsBaseButton",

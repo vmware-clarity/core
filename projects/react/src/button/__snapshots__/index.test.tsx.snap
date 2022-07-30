@@ -18,6 +18,7 @@ exports[`CdsButton snapshot 1`] = `
     danger
   </cds-button>
   <cds-button
+    disabled="true"
     tabindex="0"
   >
     disabled

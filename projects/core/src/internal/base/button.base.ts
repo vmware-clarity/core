@@ -39,7 +39,18 @@ export class CdsBaseButton extends LitElement {
 
   @property({ type: String }) value: string;
 
-  @property({ type: Boolean }) disabled = false;
+  @property({ type: Boolean })
+  get disabled(): boolean {
+    return this._disabled;
+  }
+
+  set disabled(value: boolean) {
+    const oldValue = this._disabled;
+    this._disabled = value;
+    this.requestUpdate('disabled', oldValue);
+  }
 
   @property({ type: String }) popup: string;
+
+  private _disabled = false;
 }
