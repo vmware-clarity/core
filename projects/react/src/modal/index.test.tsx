@@ -23,6 +23,20 @@ describe('CdsModal', () => {
     expect(await screen.findByText('My Modal')).toBeInTheDocument();
     expect(document.querySelector('cds-modal-content')).toHaveTextContent(/Lorem Ipsum/);
     expect(document.querySelector('cds-modal-actions')).toHaveTextContent(/Foo/);
+
+    expect(document.querySelector('cds-modal')).not.toHaveAttribute('hidden');
+  });
+
+  it('has attribute hidden when hidden', () => {
+    render(
+      <CdsModal hidden>
+        <CdsModalHeader>
+          <h3 cds-text="title">My Modal</h3>
+        </CdsModalHeader>
+      </CdsModal>
+    );
+
+    expect(document.querySelector('cds-modal')).toHaveAttribute('hidden', 'true');
   });
 
   it('snapshot', () => {
