@@ -157,6 +157,23 @@ export function clickable() {
           <cds-badge aria-label="notification 12" status="danger">12</cds-badge></cds-tag
         >
       </div>
+      <div cds-layout="horizontal gap:sm">
+        <cds-tag status="info" disabled
+          ><cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Disabled</cds-tag
+        >
+        <cds-tag status="info" disabled
+          ><cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Info Disabled</cds-tag
+        >
+        <cds-tag status="success" disabled
+          ><cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Success Disabled</cds-tag
+        >
+        <cds-tag status="warning" disabled
+          ><cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Warning Disabled</cds-tag
+        >
+        <cds-tag status="danger" disabled
+          ><cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Danger Disabled</cds-tag
+        >
+      </div>
       <br />
       <div cds-layout="horizontal gap:sm">
         <cds-tag color="purple">Purple</cds-tag>
@@ -195,6 +212,13 @@ export function clickable() {
           <cds-icon shape="info-standard" role="img" alt="info"></cds-icon>Light Blue
           <cds-badge aria-label="notification 1">1</cds-badge>
         </cds-tag>
+      </div>
+      <div cds-layout="horizontal gap:sm">
+        <cds-tag disabled color="gray">Default <cds-badge aria-label="notification 1">1</cds-badge></cds-tag>
+        <cds-tag disabled color="purple">Purple <cds-badge aria-label="notification 2">2</cds-badge></cds-tag>
+        <cds-tag disabled color="blue">Blue <cds-badge aria-label="notification 3">3</cds-badge></cds-tag>
+        <cds-tag disabled color="orange">Orange <cds-badge aria-label="notification 12">12</cds-badge></cds-tag>
+        <cds-tag disabled color="light-blue">Light Blue <cds-badge aria-label="notification 15">15</cds-badge></cds-tag>
       </div>
     </div>
   `;
