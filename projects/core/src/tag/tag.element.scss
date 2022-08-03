@@ -106,7 +106,7 @@ cds-icon[shape='times'] {
 :host([color]) {
   --background: #{$cds-alias-object-opacity-0};
 
-  :hover {
+  &:host(:not([disabled])) :hover {
     --background: #{$cds-alias-status-neutral-tint};
   }
 }
