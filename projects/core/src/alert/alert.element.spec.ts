@@ -56,6 +56,33 @@ describe('Alert element – ', () => {
     });
   });
 
+  describe('layout:', () => {
+    beforeEach(async () => {
+      testElement = await createTestElement(html`
+        <cds-alert-group status="info" style="width: 200px">
+          <cds-alert>
+            <pre style="overflow-x: auto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </pre
+            >
+          </cds-alert>
+        </cds-alert-group>
+      `);
+      component = testElement.querySelector<CdsAlert>('cds-alert');
+    });
+
+    afterEach(() => {
+      removeTestElement(testElement);
+    });
+
+    it('should not let content overflow alert', async () => {
+      await componentIsStable(component);
+      const content = component.querySelector('pre');
+      expect(content.getBoundingClientRect().width).toBeLessThan(component.getBoundingClientRect().width);
+    });
+  });
+
   describe('custom icons: ', () => {
     let customComponent: CdsAlert;
 
