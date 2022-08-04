@@ -50,6 +50,7 @@ cds-internal-close-button {
   display: flex;
   min-height: #{$cds-global-space-6};
   padding: var(--container-padding);
+  min-width: 0;
 }
 
 .alert-icon-wrapper {
@@ -68,6 +69,10 @@ cds-internal-close-button {
   font-weight: var(--font-weight);
   letter-spacing: var(--letter-spacing);
   line-height: $lightweight-alert-line-height;
+}
+
+.alert-content {
+  min-width: 0;
 }
 
 ::slotted(cds-alert-actions) {
