@@ -50,6 +50,37 @@ import '@cds/core/file/register.js';
   <Story id="stories-file--dark-theme" />
 </Preview>
 
+## React Usage
+
+Due to React's synthetic event system, the `onChange` prop is not called when the file input is cleared using the X button.
+Use a ref to access the native event instead.
+
+```typescript
+const Component = () => {
+  const inputRef = useRef<HTMLInputElement>();
+
+  const onNativeChange = useCallback(e => {
+    // e.target.files
+  }, []);
+
+  useEffect(() => {
+    inputRef.current?.addEventListener('change', onNativeChange);
+
+    return () => {
+      // remove the listener when the component unmounts
+      inputRef.current?.removeEventListener('change', onNativeChange);
+    };
+  }, []);
+
+  return (
+    <CdsFile>
+      <label>My File Input</label>
+      <input type="file" ref={inputRef}></input>
+    </CdsFile>
+  );
+};
+```
+
 ## File API
 
 <Props of={'cds-file'} />
