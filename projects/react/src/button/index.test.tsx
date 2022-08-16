@@ -17,9 +17,8 @@ describe('CdsButton', () => {
 
     expect(await screen.findByRole('button', { name: 'primary' })).toHaveAttribute('status', 'primary');
     expect(await screen.findByRole('button', { name: 'success' })).toHaveAttribute('status', 'success');
-    // There's a lit issue that is resulting in this being 'true' instead of ''
-    // https://github.com/lit/lit/issues/2799#issuecomment-1203178300
-    expect(await screen.findByRole('button', { name: 'disabled' })).toHaveAttribute('disabled', 'true');
+    expect(await screen.findByRole('button', { name: 'disabled' })).toBeDisabled();
+    expect(await screen.findByRole('button', { name: 'disabled' })).toHaveAttribute('disabled', '');
   });
 
   it('snapshot', () => {

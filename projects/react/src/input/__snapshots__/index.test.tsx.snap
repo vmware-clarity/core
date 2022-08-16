@@ -8,7 +8,6 @@ exports[`CdsInput snapshot 1`] = `
   >
     <cds-input
       cds-control=""
-      layout="vertical"
     >
       <label>
         label
@@ -19,7 +18,6 @@ exports[`CdsInput snapshot 1`] = `
     </cds-input>
     <cds-input
       cds-control=""
-      layout="vertical"
     >
       <label>
         disabled

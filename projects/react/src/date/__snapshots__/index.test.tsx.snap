@@ -5,7 +5,6 @@ exports[`CdsDate snapshot 1`] = `
   <cds-date
     cds-control=""
     control-width="shrink"
-    layout="horizontal"
   >
     <style />
     <label

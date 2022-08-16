@@ -4,7 +4,6 @@ exports[`CdsFile snapshot 1`] = `
 <div>
   <cds-file
     cds-control=""
-    layout="vertical"
   >
     <label>
       label

@@ -2,25 +2,10 @@
 
 exports[`CdsIcon snapshot 1`] = `
 <div>
-  <cds-icon
-    shape="user"
-    size="lg"
-  />
-  <cds-icon
-    shape="user"
-    size="lg"
-  />
-  <cds-icon
-    shape="user"
-    size="lg"
-  />
-  <cds-icon
-    shape="user"
-    size="lg"
-  />
-  <cds-icon
-    shape="user"
-    size="lg"
-  />
+  <cds-icon />
+  <cds-icon />
+  <cds-icon />
+  <cds-icon />
+  <cds-icon />
 </div>
 `;

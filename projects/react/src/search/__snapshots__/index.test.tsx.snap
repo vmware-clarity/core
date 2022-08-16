@@ -62,7 +62,6 @@ exports[`CdsSearch snapshot 1`] = `
     <cds-form-group>
       <cds-search
         cds-control=""
-        layout="horizontal"
       >
         <style />
         <label>
@@ -79,7 +78,6 @@ exports[`CdsSearch snapshot 1`] = `
       </cds-search>
       <cds-search
         cds-control=""
-        layout="horizontal"
       >
         <style />
         <label>
@@ -96,7 +94,6 @@ exports[`CdsSearch snapshot 1`] = `
       </cds-search>
       <cds-search
         cds-control=""
-        layout="horizontal"
       >
         <style />
         <label>
@@ -118,7 +115,6 @@ exports[`CdsSearch snapshot 1`] = `
     <cds-form-group>
       <cds-search
         cds-control=""
-        layout="compact"
       >
         <style />
         <label>
@@ -135,7 +131,6 @@ exports[`CdsSearch snapshot 1`] = `
       </cds-search>
       <cds-search
         cds-control=""
-        layout="compact"
       >
         <style />
         <label>
@@ -152,7 +147,6 @@ exports[`CdsSearch snapshot 1`] = `
       </cds-search>
       <cds-search
         cds-control=""
-        layout="compact"
       >
         <style />
         <label>
