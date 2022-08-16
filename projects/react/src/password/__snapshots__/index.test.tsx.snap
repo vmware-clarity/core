@@ -4,7 +4,6 @@ exports[`CdsPassword snapshot 1`] = `
 <div>
   <cds-password
     cds-control=""
-    layout="vertical"
   >
     <label>
       label

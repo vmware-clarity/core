@@ -9,7 +9,6 @@ exports[`CdsTextarea snapshot 1`] = `
     <cds-form-group>
       <cds-textarea
         cds-control=""
-        layout="vertical"
       >
         <label>
           label
@@ -23,7 +22,6 @@ exports[`CdsTextarea snapshot 1`] = `
       </cds-textarea>
       <cds-textarea
         cds-control=""
-        layout="vertical"
       >
         <label>
           error status
@@ -37,7 +35,6 @@ exports[`CdsTextarea snapshot 1`] = `
       </cds-textarea>
       <cds-textarea
         cds-control=""
-        layout="vertical"
       >
         <label>
           success status
@@ -56,7 +53,6 @@ exports[`CdsTextarea snapshot 1`] = `
     <cds-form-group>
       <cds-textarea
         cds-control=""
-        layout="horizontal"
       >
         <label>
           label
@@ -70,7 +66,6 @@ exports[`CdsTextarea snapshot 1`] = `
       </cds-textarea>
       <cds-textarea
         cds-control=""
-        layout="horizontal"
       >
         <label>
           error status
@@ -84,7 +79,6 @@ exports[`CdsTextarea snapshot 1`] = `
       </cds-textarea>
       <cds-textarea
         cds-control=""
-        layout="horizontal"
       >
         <label>
           success status

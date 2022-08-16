@@ -8,7 +8,6 @@ exports[`CdsPagination snapshot 1`] = `
     <style />
     <cds-pagination-button
       aria-label="go to first"
-      disabled="true"
       tabindex="0"
     />
     <cds-pagination-button

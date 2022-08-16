@@ -5,7 +5,6 @@ exports[`CdsRange snapshot 1`] = `
   <cds-form-group>
     <cds-range
       cds-control=""
-      layout="horizontal"
     >
       <style />
       <label>
@@ -22,7 +21,6 @@ exports[`CdsRange snapshot 1`] = `
     </cds-range>
     <cds-range
       cds-control=""
-      layout="horizontal"
     >
       <style />
       <label>
@@ -40,7 +38,6 @@ exports[`CdsRange snapshot 1`] = `
     </cds-range>
     <cds-range
       cds-control=""
-      layout="horizontal"
     >
       <style />
       <label>
@@ -57,7 +54,6 @@ exports[`CdsRange snapshot 1`] = `
     </cds-range>
     <cds-range
       cds-control=""
-      layout="horizontal"
     >
       <style />
       <label>
