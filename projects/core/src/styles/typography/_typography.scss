@@ -131,6 +131,11 @@
   line-height: $cds-global-typography-body-line-height;
 }
 
+// remove extra margin on the body tag to avoid an unnecessary scrollbar
+body[cds-text*='body'] {
+  @include remove-line-height-erasers;
+}
+
 [cds-text*='message'] {
   $lh-gap: getLineHeightGap(
     $cds-global-typography-message-line-height-static,
