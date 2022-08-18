@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { CdsModal, CdsModalActions, CdsModalContent, CdsModalHeader } from './index';
 
 describe('CdsModal', () => {
@@ -27,16 +28,33 @@ describe('CdsModal', () => {
     expect(document.querySelector('cds-modal')).not.toHaveAttribute('hidden');
   });
 
-  it('has attribute hidden when hidden', () => {
-    render(
-      <CdsModal hidden>
-        <CdsModalHeader>
-          <h3 cds-text="title">My Modal</h3>
-        </CdsModalHeader>
-      </CdsModal>
-    );
+  it('should open and close', async () => {
+    const user = userEvent.setup();
+    const TestComponent = () => {
+      const [hidden, setHidden] = React.useState(true);
+      return (
+        <>
+          <button onClick={() => setHidden(false)}></button>
+          <CdsModal hidden={hidden} onCloseChange={() => setHidden(true)}>
+            <CdsModalHeader>
+              <h3 cds-text="title">My Modal</h3>
+            </CdsModalHeader>
+          </CdsModal>
+        </>
+      );
+    };
 
-    expect(document.querySelector('cds-modal')).toHaveAttribute('hidden', 'true');
+    render(<TestComponent></TestComponent>);
+
+    const modal = document.querySelector('cds-modal');
+    expect(modal).toHaveAttribute('hidden', 'true');
+
+    await user.click(screen.getByRole('button'));
+    expect(modal).not.toHaveAttribute('hidden');
+
+    // clicking the backdrop should hide the modal
+    await user.click(modal.shadowRoot.querySelector('.overlay-backdrop'));
+    expect(modal).toHaveAttribute('hidden', 'true');
   });
 
   it('snapshot', () => {
