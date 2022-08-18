@@ -1,14 +1,17 @@
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { CdsDropdown } from './index';
 
-const TestComponent = () => {
+const TestComponent = ({ defaultHidden = false }: { defaultHidden?: boolean }) => {
+  const [hidden, setHidden] = React.useState(defaultHidden);
   const ref = React.useRef<HTMLSpanElement>();
 
   return (
     <>
+      <button onClick={() => setHidden(false)} />
       <span ref={ref}>Anchor Element</span>
-      <CdsDropdown anchor={ref.current}></CdsDropdown>
+      <CdsDropdown hidden={hidden} anchor={ref.current} onCloseChange={() => setHidden(true)}></CdsDropdown>
     </>
   );
 };
@@ -17,6 +20,27 @@ describe('CdsDropdown', () => {
   // throws Error: Uncaught [TypeError: Cannot read property 'disconnect' of undefined]
   it('renders', () => {
     render(<TestComponent></TestComponent>);
+  });
+
+  it('should open and close', async () => {
+    const user = userEvent.setup();
+    render(<TestComponent defaultHidden></TestComponent>);
+
+    const dropdown = document.querySelector('cds-dropdown');
+    expect(dropdown).toHaveAttribute('hidden', 'true');
+    expect(await screen.queryByRole('dialog')).not.toBeInTheDocument();
+
+    await user.click(await screen.findByRole('button'));
+    expect(dropdown).not.toHaveAttribute('hidden');
+    expect(await screen.queryByRole('dialog')).toBeInTheDocument();
+
+    // clicking the backdrop should hide the dropdown
+    const overlay = dropdown.shadowRoot.querySelector('.overlay-backdrop');
+    expect(overlay).not.toBeUndefined();
+
+    await user.click(overlay);
+    expect(dropdown).toHaveAttribute('hidden', 'true');
+    expect(await screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
   it('snapshot', () => {
