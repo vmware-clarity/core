@@ -5,7 +5,7 @@
  */
 
 import { html, PropertyValues } from 'lit';
-import { globalStyle } from '@cds/core/internal';
+import { getElementUpdates, globalStyle } from '@cds/core/internal';
 import { CdsControl } from '@cds/core/forms';
 import globalStyles from './range.global.scss';
 import styles from './range.element.scss';
@@ -51,10 +51,19 @@ export class CdsRange extends CdsControl {
     super.firstUpdated(props);
     this.setTrackWidth();
     this.inputControl.addEventListener('input', () => this.setTrackWidth());
+
+    // `input` event doesnt fire when the value is changed programmatically
+    // at this point, inputControl.valueAsNumber is still the old value
+    // https://github.com/vmware-clarity/core/issues/157
+    this.observers.push(
+      getElementUpdates(this.inputControl, 'value', (value: number) => {
+        this.setTrackWidth(value);
+      })
+    );
   }
 
-  private setTrackWidth() {
-    const value = this.inputControl.valueAsNumber;
+  private setTrackWidth(val?: number) {
+    const value = val ?? this.inputControl.valueAsNumber;
     const min = this.inputControl.min ? parseInt(this.inputControl.min) : 0;
     const max = this.inputControl.max ? parseInt(this.inputControl.max) : 100;
     this.style.setProperty('--track-width', `${Math.floor(((value - min) / (max - min)) * 100)}%`);
