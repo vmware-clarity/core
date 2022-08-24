@@ -125,11 +125,23 @@ describe('cds-navigation', () => {
       itemRefs.forEach(item => {
         expect(item.expanded).toBe(component.expanded);
       });
+
+      component.expanded = true;
+      await componentIsStable(component);
+      itemRefs.forEach(item => {
+        expect(item.expanded).toBe(component.expanded);
+      });
     });
 
     it('to navigationStartRefs', async () => {
       await componentIsStable(component);
       const startRefs = component.querySelectorAll<CdsNavigationStart>('cds-navigation-start');
+      startRefs.forEach(start => {
+        expect(start.expandedRoot).toBe(component.expandedRoot);
+      });
+
+      component.expanded = true;
+      await componentIsStable(component);
       startRefs.forEach(start => {
         expect(start.expandedRoot).toBe(component.expandedRoot);
       });
@@ -139,6 +151,10 @@ describe('cds-navigation', () => {
       await componentIsStable(component);
       const rootStart = component.querySelector<CdsNavigationStart>(':scope > cds-navigation-start');
       expect(rootStart.expanded).toBe(component.expanded);
+
+      component.expanded = true;
+      await componentIsStable(component);
+      expect(rootStart.expanded).toBe(component.expanded);
     });
 
     it('to rootNavigationItems', async () => {
@@ -147,6 +163,28 @@ describe('cds-navigation', () => {
       rootItems.forEach(item => {
         expect(item.expanded).toBe(component.expanded);
       });
+
+      component.expanded = true;
+      await componentIsStable(component);
+      rootItems.forEach(item => {
+        expect(item.expanded).toBe(component.expanded);
+      });
+    });
+
+    it('to new navigation items', async () => {
+      component.expanded = true;
+      await componentIsStable(component);
+
+      const navItem = document.createElement('cds-navigation-item');
+      navItem.id = 'my-new-nav-item';
+      navItem.innerHTML = '<a href="#">My New Nav Item</a>';
+
+      component.appendChild(navItem);
+
+      await componentIsStable(component);
+
+      expect(navItem.expanded).toBe(component.expanded);
+      expect(navItem.tabIndex).toBe(-1);
     });
   });
 });

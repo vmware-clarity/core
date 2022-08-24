@@ -182,7 +182,7 @@ export class CdsNavigation extends LitElement implements Animatable {
     return this.navigationEnd
       ? html`
           <div class="navigation-end" cds-layout="vertical align:horizontal-stretch">
-            <slot name="cds-navigation-end"></slot>
+            <slot name="cds-navigation-end" @slotchange=${this.onItemSlotChange}></slot>
           </div>
         `
       : '';
@@ -194,7 +194,7 @@ export class CdsNavigation extends LitElement implements Animatable {
     this.rootNavigationStart
       ? (returnHTML = html`
           <div class="navigation-start" cds-layout="vertical align:horizontal-stretch">
-            <slot @slotchange="${() => this.addStartEventListener()}" name="navigation-start"></slot>
+            <slot @slotchange="${() => this.onStartItemSlotChange()}" name="navigation-start"></slot>
             <cds-divider class="start-divider"></cds-divider>
           </div>
         `)
@@ -210,7 +210,7 @@ export class CdsNavigation extends LitElement implements Animatable {
       <nav class="navigation-body-wrapper">
         <div .ariaActiveDescendant=${this.ariaActiveDescendant} tabindex="0" id="item-container">
           <div class="navigation-body" cds-layout="vertical wrap:none align:horizontal-stretch">
-            <slot></slot>
+            <slot @slotchange=${this.onItemSlotChange}></slot>
           </div>
         </div>
       </nav>
@@ -235,10 +235,6 @@ export class CdsNavigation extends LitElement implements Animatable {
 
   firstUpdated(props: PropertyValues) {
     super.firstUpdated(props);
-    // set all visible navigation elements to tabindex = -1
-    this.allNavigationElements.forEach(item => {
-      setAttributes(item, ['tabindex', '-1']);
-    });
 
     const itemWrapper = this.shadowRoot?.querySelector('#item-container');
     itemWrapper?.addEventListener('focus', this.initItemKeys.bind(this));
@@ -256,12 +252,23 @@ export class CdsNavigation extends LitElement implements Animatable {
     this.updateChildrenProps();
   }
 
-  addStartEventListener() {
+  onStartItemSlotChange() {
+    this.onItemSlotChange();
+
     // This is controlled by the slotchange event on the navigation-start slot
     // Make sure we reattach the click handler for toggle if consumer changes the start element (e.g *ngIf)
     if (this.rootNavigationStart) {
       this.rootNavigationStart.addEventListener('click', this.toggle.bind(this));
     }
+  }
+
+  onItemSlotChange() {
+    this.updateChildrenProps();
+
+    // set all visible navigation elements to tabindex = -1
+    this.allNavigationElements.forEach(item => {
+      setAttributes(item, ['tabindex', '-1']);
+    });
   }
 
   updateChildrenProps() {
