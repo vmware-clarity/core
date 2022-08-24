@@ -173,12 +173,8 @@ export class CdsNavigation extends LitElement {
   @querySlotAll('cds-navigation-group')
   protected navigationGroupRefs: NodeListOf<CdsNavigationGroup>;
 
-  private toggle() {
-    this.expandedChange.emit(!this.expanded);
-  }
-
-  private get currentActiveItem() {
-    return this.visibleChildren.find(c => c.id === this.ariaActiveDescendant);
+  static get styles() {
+    return [baseStyles, styles];
   }
 
   protected get endTemplate() {
@@ -206,15 +202,33 @@ export class CdsNavigation extends LitElement {
     return returnHTML;
   }
 
-  protected get visibleChildren(): FocusableElement[] {
-    return Array.from(this.allNavigationElements).filter(n => isVisible(n));
+  render() {
+    return html`<div class="private-host" aria-label="${this.i18n.navigationLabel}" cds-layout="vertical wrap:none">
+      ${this.startTemplate}
+      <slot name="cds-navigation-substart"></slot>
+      <nav class="navigation-body-wrapper">
+        <div .ariaActiveDescendant=${this.ariaActiveDescendant} tabindex="0" id="item-container">
+          <div class="navigation-body" cds-layout="vertical wrap:none align:horizontal-stretch">
+            <slot></slot>
+          </div>
+        </div>
+      </nav>
+      ${this.endTemplate}
+    </div>`;
   }
 
-  addStartEventListener() {
-    // This is controlled by the slotchange event on the navigation-start slot
-    // Make sure we reattach the click handler for toggle if consumer changes the start element (e.g *ngIf)
+  connectedCallback() {
+    super.connectedCallback();
+    this.role = 'list';
+    this.rootNavigationStart?.addEventListener('focus', this.focusRootStart.bind(this));
+    this.rootNavigationStart?.addEventListener('blur', this.blurRootStart.bind(this));
+    this.rootNavigationStart?.addEventListener('keydown', this.handleRootStartKeys.bind(this));
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
     if (this.rootNavigationStart) {
-      this.rootNavigationStart.addEventListener('click', this.toggle.bind(this));
+      this.rootNavigationStart.removeEventListener('click', this.toggle.bind(this));
     }
   }
 
@@ -229,6 +243,72 @@ export class CdsNavigation extends LitElement {
     itemWrapper?.addEventListener('focus', this.initItemKeys.bind(this));
     itemWrapper?.addEventListener('keydown', this.handleItemKeys.bind(this));
     itemWrapper?.addEventListener('blur', this.blurItemKeys.bind(this));
+  }
+
+  updated(props: PropertyValues<this>) {
+    super.updated(props);
+
+    if (props.has('expanded')) {
+      this.expandedRoot = this.expanded;
+    }
+
+    this.updateChildrenProps();
+  }
+
+  addStartEventListener() {
+    // This is controlled by the slotchange event on the navigation-start slot
+    // Make sure we reattach the click handler for toggle if consumer changes the start element (e.g *ngIf)
+    if (this.rootNavigationStart) {
+      this.rootNavigationStart.addEventListener('click', this.toggle.bind(this));
+    }
+  }
+
+  updateChildrenProps() {
+    if (this.navigationGroupItems) {
+      syncPropsForAllItems(Array.from(this.navigationGroupItems), this, { groupItem: true });
+    }
+
+    if (this.navigationItemRefs) {
+      syncPropsForAllItems(Array.from(this.navigationItemRefs), this, {
+        expanded: true,
+      });
+    }
+
+    if (this.navigationStartRefs) {
+      syncPropsForAllItems(Array.from(this.navigationStartRefs), this, {
+        expandedRoot: true,
+      });
+    }
+
+    if (this.rootNavigationStart) {
+      syncProps(this.rootNavigationStart, this, {
+        expanded: this.expanded,
+      });
+    }
+
+    if (this.rootNavigationItems.length > 0) {
+      syncPropsForAllItems(Array.from(this.rootNavigationItems), this, {
+        expanded: this.expanded,
+      });
+    }
+
+    if (this.navigationGroupRefs.length > 0) {
+      syncPropsForAllItems(Array.from(this.navigationGroupRefs), this, {
+        layout: true,
+      });
+    }
+  }
+
+  protected get visibleChildren(): FocusableElement[] {
+    return Array.from(this.allNavigationElements).filter(n => isVisible(n));
+  }
+
+  private toggle() {
+    this.expandedChange.emit(!this.expanded);
+  }
+
+  private get currentActiveItem() {
+    return this.visibleChildren.find(c => c.id === this.ariaActiveDescendant);
   }
 
   private blurItemKeys() {
@@ -358,85 +438,5 @@ export class CdsNavigation extends LitElement {
         return;
       }
     });
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
-    this.role = 'list';
-    this.rootNavigationStart?.addEventListener('focus', this.focusRootStart.bind(this));
-    this.rootNavigationStart?.addEventListener('blur', this.blurRootStart.bind(this));
-    this.rootNavigationStart?.addEventListener('keydown', this.handleRootStartKeys.bind(this));
-  }
-
-  disconnectedCallback() {
-    super.disconnectedCallback();
-    if (this.rootNavigationStart) {
-      this.rootNavigationStart.removeEventListener('click', this.toggle.bind(this));
-    }
-  }
-
-  render() {
-    return html`<div class="private-host" aria-label="${this.i18n.navigationLabel}" cds-layout="vertical wrap:none">
-      ${this.startTemplate}
-      <slot name="cds-navigation-substart"></slot>
-      <nav class="navigation-body-wrapper">
-        <div .ariaActiveDescendant=${this.ariaActiveDescendant} tabindex="0" id="item-container">
-          <div class="navigation-body" cds-layout="vertical wrap:none align:horizontal-stretch">
-            <slot></slot>
-          </div>
-        </div>
-      </nav>
-      ${this.endTemplate}
-    </div>`;
-  }
-
-  updated(props: PropertyValues<this>) {
-    super.updated(props);
-
-    if (props.has('expanded')) {
-      this.expandedRoot = this.expanded;
-    }
-
-    this.updateChildrenProps();
-  }
-
-  updateChildrenProps() {
-    if (this.navigationGroupItems) {
-      syncPropsForAllItems(Array.from(this.navigationGroupItems), this, { groupItem: true });
-    }
-
-    if (this.navigationItemRefs) {
-      syncPropsForAllItems(Array.from(this.navigationItemRefs), this, {
-        expanded: true,
-      });
-    }
-
-    if (this.navigationStartRefs) {
-      syncPropsForAllItems(Array.from(this.navigationStartRefs), this, {
-        expandedRoot: true,
-      });
-    }
-
-    if (this.rootNavigationStart) {
-      syncProps(this.rootNavigationStart, this, {
-        expanded: this.expanded,
-      });
-    }
-
-    if (this.rootNavigationItems.length > 0) {
-      syncPropsForAllItems(Array.from(this.rootNavigationItems), this, {
-        expanded: this.expanded,
-      });
-    }
-
-    if (this.navigationGroupRefs.length > 0) {
-      syncPropsForAllItems(Array.from(this.navigationGroupRefs), this, {
-        layout: true,
-      });
-    }
-  }
-
-  static get styles() {
-    return [baseStyles, styles];
   }
 }
