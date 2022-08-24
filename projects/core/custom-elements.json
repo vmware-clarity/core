@@ -49999,17 +49999,6 @@
               "description": "query for all groups (including any nested groups), used ot pass state down"
             },
             {
-              "kind": "method",
-              "name": "toggle",
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "currentActiveItem",
-              "privacy": "private",
-              "readonly": true
-            },
-            {
               "kind": "field",
               "name": "endTemplate",
               "privacy": "protected",
@@ -50022,6 +50011,14 @@
               "readonly": true
             },
             {
+              "kind": "method",
+              "name": "addStartEventListener"
+            },
+            {
+              "kind": "method",
+              "name": "updateChildrenProps"
+            },
+            {
               "kind": "field",
               "name": "visibleChildren",
               "type": {
@@ -50032,7 +50029,14 @@
             },
             {
               "kind": "method",
-              "name": "addStartEventListener"
+              "name": "toggle",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "currentActiveItem",
+              "privacy": "private",
+              "readonly": true
             },
             {
               "kind": "method",
@@ -50085,10 +50089,6 @@
                   }
                 }
               ]
-            },
-            {
-              "kind": "method",
-              "name": "updateChildrenProps"
             }
           ],
           "events": [
