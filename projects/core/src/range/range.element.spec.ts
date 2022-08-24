@@ -47,4 +47,14 @@ describe('cds-range', () => {
     await componentIsStable(component);
     expect(getCssPropertyValue('--track-width', component)).toBe('77%');
   });
+
+  it('should update the track width style when the value is changed programmatically (no input event)', async () => {
+    await componentIsStable(component);
+    expect(getCssPropertyValue('--track-width', component)).toBe('50%');
+
+    component.inputControl.value = '75';
+
+    await componentIsStable(component);
+    expect(getCssPropertyValue('--track-width', component)).toBe('75%');
+  });
 });
