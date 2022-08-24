@@ -45599,7 +45599,16 @@
             {
               "kind": "method",
               "name": "setTrackWidth",
-              "privacy": "private"
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "val",
+                  "optional": true,
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
             },
             {
               "kind": "field",
