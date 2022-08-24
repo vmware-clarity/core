@@ -42268,7 +42268,11 @@
             },
             {
               "kind": "method",
-              "name": "addStartEventListener"
+              "name": "onStartItemSlotChange"
+            },
+            {
+              "kind": "method",
+              "name": "onItemSlotChange"
             },
             {
               "kind": "method",
