@@ -279,6 +279,28 @@ describe('button element', () => {
       expect(component.disabled).not.toBeTruthy();
     });
 
+    it('should go back to enabled when loadingState changes back to default, starting non default', async () => {
+      console.log('my test');
+      const testElement2 = await createTestElement(html`
+        <cds-button loading-state="loading">
+          <span>${placeholderText}</span>
+        </cds-button>
+      `);
+
+      const component2 = testElement2.querySelector<CdsButton>('cds-button');
+
+      await componentIsStable(component2);
+      expect(component2.disabled).toBeTruthy();
+
+      component2.loadingState = ClrLoadingState.success;
+      await componentIsStable(component2);
+      expect(component2.disabled).toBeTruthy();
+
+      component2.loadingState = ClrLoadingState.default;
+      await componentIsStable(component2);
+      expect(component2.disabled).not.toBeTruthy();
+    });
+
     it('should stay disabled when loadingState changes back to default', async () => {
       await componentIsStable(component);
       component.disabled = true;
