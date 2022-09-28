@@ -97,7 +97,7 @@ export class CdsButton extends CdsBaseButton {
     super.firstUpdated(props);
 
     if (!this.isDefaultLoadingState(this.loadingState)) {
-      this.disabled = true;
+      super.disabled = true;
     }
   }
 
@@ -144,7 +144,8 @@ export class CdsButton extends CdsBaseButton {
     super.disabled = this._disabledExternally;
   }
 
-  // when the loading state changes, the disabled state should be set to what the consumer manually set, if set
+  // when the loading state changes,
+  //    the disabled state should be set back to what the consumer manually set (if they set it)
   // the setter here should never be called in the component, call super instead
   //  https://github.com/vmware-clarity/core/issues/129
   private _disabledExternally = false;
