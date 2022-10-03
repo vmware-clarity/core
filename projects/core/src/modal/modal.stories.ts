@@ -180,7 +180,6 @@ export function headerActions() {
       <cds-modal-content>
         <p cds-text="body">Place holder text for the header actions modal example.</p>
       </cds-modal-content>
-      <cds-modal-actions></cds-modal-actions>
     </cds-modal>
   </cds-demo>`;
 }
