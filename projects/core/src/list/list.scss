@@ -26,9 +26,11 @@ $list-default-unordered-type: disc;
 %kill-list-styles {
   padding-inline-start: 0 !important;
   margin: 0 !important;
-  // zero-width blank space added to help VoiceOver screen reader read a list-style-type none list
-  list-style: '\200B' !important;
-  list-style-position: inside !important;
+
+  // VoiceOver can't read a list-style-type none list, so use a transparent marker instead
+  li::marker {
+    color: transparent;
+  }
 }
 
 [cds-list] {
