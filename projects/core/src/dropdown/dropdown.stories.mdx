@@ -9,6 +9,14 @@ import { Meta, Props, Story, Preview } from '@web/storybook-prebuilt/addon-docs/
     This component or utility is offered as a preview. This means we are currently working on it and seeking feedback.
     Please be aware that this component or utility may have breaking changes before we finish working on it.
   </cds-alert>
+  <cds-alert>
+    <strong>Breaking:</strong> In 6.2.0, the `popup` attribute on the dropdown trigger was renamed to `aria-controls` to
+    avoid a console error in Chromium browsers. See{' '}
+    <a href="https://github.com/vmware-clarity/core/issues/140" target="_blank">
+      vmware-clarity/core#140 on GitHub
+    </a>{' '}
+    for details.
+  </cds-alert>
 </cds-alert-group>
 
 Dropdowns are a generic popup container that can be positioned on the screen. This means thay act as a container for
@@ -27,7 +35,7 @@ import '@cds/core/dropdown/register.js';
 ```
 
 ```html
-<cds-button popup="my-dropdown" id="my-button" onclick="document.getElementById('my-dropdown').hidden = false"
+<cds-button aria-controls="my-dropdown" id="my-button" onclick="document.getElementById('my-dropdown').hidden = false"
   >Open Dropdown</cds-button
 >
 <cds-dropdown anchor="my-button" id="my-dropdown" orientation="right not:top">
@@ -46,7 +54,7 @@ The dropdown consists of a number of components, some of which are optional.
 
 - **Trigger (optional)** The trigger is an element that shows the dropdown through user interaction, like a user clicking
   a button. There is no requirement that all dropdowns have a trigger. A trigger is associated with a dropdown by passing
-  the dropdown's id into the trigger's `popup` attribute. If a trigger is defined, the dropdown will manage its aria
+  the dropdown's id into the trigger's `aria-controls` attribute. If a trigger is defined, the dropdown will manage its aria
   attributes so that screen readers will associate the trigger with the dropdown. This will help screen readers identify
   the connection between the trigger and dropdown, as well as announce when the dropdown is open.
 

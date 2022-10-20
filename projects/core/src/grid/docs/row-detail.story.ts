@@ -24,7 +24,7 @@ export function rowDetail() {
           row => html` <cds-grid-row>
             <cds-grid-cell>
               <cds-button-expand
-                popup="row-detail"
+                aria-controls="row-detail"
                 action="detail"
                 aria-label="${row.id} details"
                 .expanded=${this.selectedRow?.id === row.id}
@@ -89,7 +89,7 @@ export function rowDetailExpand() {
           row => html` <cds-grid-row .position=${this.selectedRow?.id === row.id ? 'fixed' : ''}>
             <cds-grid-cell>
               <cds-button-expand
-                popup="row-expand"
+                aria-controls="row-expand"
                 aria-label="${row.id} details"
                 .expanded=${this.selectedRow?.id === row.id}
                 @click=${(e: any) => this.showDetail(e.target, row)}

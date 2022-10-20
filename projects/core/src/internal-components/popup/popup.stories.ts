@@ -37,7 +37,12 @@ export const test = () => {
     }
   }
 
-  return html` <cds-button id="${anchorId}" status="primary" type="button" @click=${showOverlay} popup="${popupId2}"
+  return html` <cds-button
+      id="${anchorId}"
+      status="primary"
+      type="button"
+      @click=${showOverlay}
+      aria-controls="${popupId2}"
       >Show</cds-button
     >
     <cds-internal-popup hidden id="${popupId2}" aria-labelledby="${popupId2}-title" anchor="${anchorId}">
@@ -74,7 +79,7 @@ export const scrollTest = () => {
       status="primary"
       type="button"
       @click=${showScrollingPopup}
-      popup="${popupId2}"
+      aria-controls="${popupId2}"
       >Show Scrolling Popup</cds-button
     >
     <cds-internal-popup hidden id="${popupId2}" aria-labelledby="${popupId2}-title">
@@ -131,7 +136,7 @@ export const responsiveTest = () => {
       status="primary"
       type="button"
       @click=${showScrollingPopup}
-      popup="${popupId2}"
+      aria-controls="${popupId2}"
       >Show Responsive Popup</cds-button
     >
     <cds-internal-popup hidden id="${popupId2}" aria-labelledby="${popupId2}-title" orientation="none">

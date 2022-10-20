@@ -13,19 +13,24 @@ a popup type component with an trigger/trigger.
 
 ## Consumer Usage
 
-Emulating the [popup API proposal](https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Popup/explainer.md) the
-controllers will associate the two components via the `trigger` and `popup` attr/properties.
-This will add the appropriate aria attributes including, `aria-controls`, `aria-haspopup` and `aria-expanded`.
+Originally, the controller was intended to emulate the
+[popup API proposal](https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Popup/explainer.md).
+The controllers associated the two components via the `trigger` and `popup` attr/properties,
+and added the appropriate aria attributes including, `aria-controls`, `aria-haspopup` and `aria-expanded`.
 Then the popup component is removed from the DOM or has a `hidden` attr applied it will updated the `aria-expanded`
 attribute on its associated trigger.
 
+Chrome [implemented the attribute](https://bugs.chromium.org/p/chromium/issues/detail?id=1307772)
+with different behavior matching the [Open UI API spec](https://open-ui.org/components/popup.research.explainer) and now logs errors in the console about using the prop,
+so the attribute was renamed from `popup` to `aria-controls` in 6.
+
 ```html
 <!-- user template -->
-<demo-trigger popup="my-popup" id="my-trigger">trigger</demo-trigger>
+<demo-trigger aria-controls="my-popup" id="my-trigger">trigger</demo-trigger>
 <demo-popup hidden anchor="my-trigger" id="my-popup">popup</demo-popup>
 
 <!-- rendered output -->
-<demo-trigger popup="my-popup" id="my-trigger" aria-controls="my-popup" aria-haspopup="true" aria-expanded="false">trigger</demo-anchor>
+<demo-trigger aria-controls="my-popup" id="my-trigger" aria-controls="my-popup" aria-hasaria-controls="true" aria-expanded="false">trigger</demo-anchor>
 <demo-popup hidden anchor="my-trigger" id="my-popup">popup</demo-popup>
 ```
 
@@ -55,7 +60,12 @@ class DemoPopupController extends LitElement {
 
   render() {
     return html`
-      <aria-trigger popup="my-popup" id="my-trigger" role="button" tabindex="0" @click=${() => (this.show = true)}
+      <aria-trigger
+        aria-controls="my-popup"
+        id="my-trigger"
+        role="button"
+        tabindex="0"
+        @click=${() => (this.show = true)}
         >trigger</aria-trigger
       >
       <aria-popup ?hidden=${!this.show} anchor="my-trigger" id="my-popup" @click=${() => (this.show = false)}

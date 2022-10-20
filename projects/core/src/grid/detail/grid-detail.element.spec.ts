@@ -25,7 +25,7 @@ describe('cds-grid-detail', () => {
         <cds-grid-column>Column 3</cds-grid-column>
         <cds-grid-row>
           <cds-grid-cell>
-            <cds-button-action popup="detail" id="cell-1-action"></cds-button-action>
+            <cds-button-action aria-controls="detail" id="cell-1-action"></cds-button-action>
           </cds-grid-cell>
           <cds-grid-cell role="rowheader">Cell 1</cds-grid-cell>
           <cds-grid-cell>Cell 2</cds-grid-cell>
@@ -33,7 +33,7 @@ describe('cds-grid-detail', () => {
         </cds-grid-row>
         <cds-grid-row>
           <cds-grid-cell>
-            <cds-button-action popup="detail" id="cell-2-action"></cds-button-action>
+            <cds-button-action aria-controls="detail" id="cell-2-action"></cds-button-action>
           </cds-grid-cell>
           <cds-grid-cell role="rowheader">Cell 1</cds-grid-cell>
           <cds-grid-cell>Cell 2</cds-grid-cell>

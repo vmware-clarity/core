@@ -64,7 +64,7 @@ class DemoSignpostBasic extends DemoSignpost {
         status="primary"
         type="button"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-signpost-basic"
+        aria-controls="demo-signpost-basic"
         >Show Basic Signpost</cds-button
       >
       <cds-signpost
@@ -112,7 +112,7 @@ class DemoSignpostTrigger extends LitElement {
   render() {
     return html`
       <div cds-layout="horizontal gap:sm">
-        <cds-button id="demo-anchor" @click=${() => (this.showOverlay = true)} popup="demo-signpost">
+        <cds-button id="demo-anchor" @click=${() => (this.showOverlay = true)} aria-controls="demo-signpost">
           Show Trigger Signpost
         </cds-button>
         <cds-button id="demo-trigger" status="danger" action="outline"> Trigger Receives Focus On Close </cds-button>
@@ -251,7 +251,7 @@ class DemoSignpostTour extends DemoSignpost {
               }}
               status="primary"
               id="${this.signpostButtonIdPrefix}-0"
-              popup="${this.signpostId}"
+              aria-controls="${this.signpostId}"
               >Click to Start Tour</cds-button
             >
           </cds-placeholder>
@@ -357,7 +357,7 @@ class DemoSignpostStacked extends DemoSignpost {
           status="primary"
           type="button"
           @click=${() => (this.showOverlay = true)}
-          popup="demo-signpost-stacked"
+          aria-controls="demo-signpost-stacked"
           >Show Modal With Signpost</cds-button
         >
       </div>
@@ -456,7 +456,7 @@ export function custompointer() {
       @click=${() => {
         toggleCustomPointerSignpost(true);
       }}
-      popup="${customPointerSignpostDemoId}"
+      aria-controls="${customPointerSignpostDemoId}"
       >Show Signpost With Custom Pointer</cds-button
     >
     <cds-signpost
@@ -522,7 +522,7 @@ class DemoSignpostDarkTheme extends DemoSignpost {
         status="primary"
         type="button"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-signpost-dark-theme"
+        aria-controls="demo-signpost-dark-theme"
         >Show Dark Theme Signpost</cds-button
       >
       <cds-signpost
@@ -588,7 +588,7 @@ class DemoSignpostCustom extends DemoSignpost {
           status="primary"
           type="button"
           @click=${() => (this.showOverlay = true)}
-          popup="demo-signpost-custom"
+          aria-controls="demo-signpost-custom"
           >Show Custom Signpost</cds-button
         >
         <cds-signpost

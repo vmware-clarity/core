@@ -28,7 +28,7 @@ import '@cds/core/signpost/register.js';
 ```
 
 ```html
-<cds-button popup="my-signpost" id="my-button" onclick="document.getElementById('my-signpost').hidden = false"
+<cds-button aria-controls="my-signpost" id="my-button" onclick="document.getElementById('my-signpost').hidden = false"
   >Open Signpost</cds-button
 >
 <cds-signpost anchor="my-button" id="my-signpost" orientation="right bottom">

@@ -22,8 +22,8 @@ describe('aria-popup.controller', () => {
 
   beforeEach(async () => {
     element = await createTestElement(
-      html` <div id="trigger-1" popup="popup-el"></div>
-        <div id="trigger-2" popup="popup-el"></div>
+      html` <div id="trigger-1" aria-controls="popup-el"></div>
+        <div id="trigger-2" aria-controls="popup-el"></div>
         <aria-popup-controller-test-element id="popup-el" hidden></aria-popup-controller-test-element>`
     );
     component = element.querySelector<AriaPopupControllerTestElement>('aria-popup-controller-test-element');

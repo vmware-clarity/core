@@ -44,7 +44,7 @@ export function columnVisibility() {
           )}
           <cds-grid-footer>
             <cds-button-action
-              popup="column-visbility"
+              aria-controls="column-visbility"
               @click=${(e: any) => (this.columnAnchor = e.target)}
               aria-label="filter column"
               shape="view-columns"

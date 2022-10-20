@@ -6,24 +6,21 @@
 
 import { ReactiveController, ReactiveElement } from 'lit';
 
-export type AriaPopupTrigger = { popup: string };
-
 /**
  * Provides all nessesary aria-* attributes to create a vaild aria popup trigger.
  * Used in combination of the `@ariaPopup` controller.
  */
-export function ariaPopupTrigger<T extends ReactiveElement & AriaPopupTrigger>(): ClassDecorator {
+export function ariaPopupTrigger<T extends ReactiveElement>(): ClassDecorator {
   return (target: any) => target.addInitializer((instance: T) => new AriaPopupTriggerController(instance));
 }
 
-export class AriaPopupTriggerController<T extends ReactiveElement & AriaPopupTrigger> implements ReactiveController {
+export class AriaPopupTriggerController<T extends ReactiveElement> implements ReactiveController {
   constructor(private host: T) {
     this.host.addController(this);
   }
 
   hostConnected() {
-    if (this.host.popup) {
-      this.host.ariaControls = this.host.popup;
+    if (this.host.hasAttribute('aria-controls') || this.host.ariaControls) {
       this.host.ariaHasPopup = 'true';
       this.host.ariaExpanded = 'false';
     }

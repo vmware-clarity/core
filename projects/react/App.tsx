@@ -303,7 +303,7 @@ function DropdownDemo() {
       <div cds-layout="horizontal gap:lg p-y:md">
         <CdsButton
           id="dropdown-btn"
-          popup="my-dropdown"
+          aria-controls="my-dropdown"
           onClick={() => {
             const timer = setTimeout(() => {
               setDropdownOpen(true);
@@ -315,7 +315,7 @@ function DropdownDemo() {
         </CdsButton>
         <CdsButton
           id="resp-dropdown-btn"
-          popup="my-resp-dropdown"
+          aria-controls="my-resp-dropdown"
           onClick={() => {
             const timer = setTimeout(() => {
               setResponsiveDropdownOpen(true);
@@ -327,7 +327,7 @@ function DropdownDemo() {
         </CdsButton>
         <CdsButton
           id="signpost-btn"
-          popup="my-signpost"
+          aria-controls="my-signpost"
           onClick={() => {
             const timer = setTimeout(() => {
               setSignpostOpen(true);

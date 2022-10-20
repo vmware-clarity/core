@@ -39,7 +39,7 @@ export function columnFilter() {
               ${column.label}
               ${i === 0
                 ? html`<cds-button-action
-                    popup="column-filter"
+                    aria-controls="column-filter"
                     @click=${(e: any) => (this.anchor = e.target)}
                     shape="filter"
                     .expanded=${!!this.search.length}

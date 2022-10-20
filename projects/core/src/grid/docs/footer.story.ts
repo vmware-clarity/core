@@ -44,7 +44,7 @@ export function footerActions() {
     @state() private showNotifications = false;
 
     get visibilityAnchor() {
-      return this.shadowRoot.querySelector('[popup="notifications"]');
+      return this.shadowRoot.querySelector('[aria-controls="notifications"]');
     }
 
     static styles = [
@@ -74,7 +74,7 @@ export function footerActions() {
           <cds-grid-footer>
             <div cds-layout="horizontal gap:lg">
               <cds-button-action
-                popup="notifications"
+                aria-controls="notifications"
                 @click=${() => (this.showNotifications = true)}
                 aria-label="notifications"
               >
@@ -82,7 +82,7 @@ export function footerActions() {
               </cds-button-action>
               <cds-button-inline
                 cds-layout="align:right"
-                popup="column-visbility"
+                aria-controls="column-visbility"
                 @click=${(e: any) => (this.columnAnchor = e.target)}
                 aria-label="filter column"
                 .expanded=${!this.checked(this.all)}
