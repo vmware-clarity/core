@@ -280,7 +280,6 @@ describe('button element', () => {
     });
 
     it('should go back to enabled when loadingState changes back to default, starting non default', async () => {
-      console.log('my test');
       const testElement2 = await createTestElement(html`
         <cds-button loading-state="loading">
           <span>${placeholderText}</span>
