@@ -43,7 +43,7 @@ export function rowSwappable() {
                 </cds-grid-cell>
                 <cds-grid-cell>
                   <cds-button-action
-                    popup="migrate-dropdown"
+                    aria-controls="migrate-dropdown"
                     aria-label="${row.id} actions"
                     @click=${(e: any) => this.selectEntry(row, e.target)}
                   ></cds-button-action>
@@ -70,7 +70,7 @@ export function rowSwappable() {
                 </cds-grid-cell>
                 <cds-grid-cell>
                   <cds-button-action
-                    popup="migrate-dropdown"
+                    aria-controls="migrate-dropdown"
                     aria-label="${row.id} actions"
                     @click=${(e: any) => this.selectEntry(row, e.target)}
                   ></cds-button-action>

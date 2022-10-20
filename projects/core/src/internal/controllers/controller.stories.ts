@@ -355,7 +355,12 @@ export function ariaPopupController() {
 
     render() {
       return html`
-        <demo-trigger popup="my-popup" id="my-trigger" role="button" tabindex="0" @click=${() => (this.show = true)}
+        <demo-trigger
+          aria-controls="my-popup"
+          id="my-trigger"
+          role="button"
+          tabindex="0"
+          @click=${() => (this.show = true)}
           >trigger</demo-trigger
         ><br />
         <demo-popup ?hidden=${!this.show} anchor="my-trigger" id="my-popup" @click=${() => (this.show = false)}

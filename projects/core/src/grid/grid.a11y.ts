@@ -319,7 +319,7 @@ describe('cds-grid row action', () => {
           <cds-grid-row>
             <cds-grid-cell>
               <cds-button-action
-                popup="row-actions"
+                aria-controls="row-actions"
                 aria-label="vm-host-001 actions"
                 @click=${(e: any) => (this.anchor = e.target)}
               ></cds-button-action>
@@ -467,7 +467,7 @@ describe('cds-grid row detail', () => {
         <cds-grid-row>
           <cds-grid-cell>
             <cds-button-expand
-              popup="row-detail"
+              aria-controls="row-detail"
               action="detail"
               aria-label="view details"
               .expanded=${this.open}
@@ -539,7 +539,7 @@ describe('cds-grid column filter', () => {
           <cds-grid-column
             >Host
             <cds-button-action
-              popup="column-filter"
+              aria-controls="column-filter"
               @click=${(e: any) => (this.anchor = e.target)}
               shape="filter"
               aria-label="search hosts"

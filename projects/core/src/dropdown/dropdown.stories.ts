@@ -59,7 +59,7 @@ class DemoDropdownBasic extends DemoDropdown {
         status="primary"
         type="button"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-dropdown-basic-dd"
+        aria-controls="demo-dropdown-basic-dd"
         >Show Basic Dropdown</cds-button
       >
       <cds-dropdown
@@ -92,7 +92,7 @@ class DemoDropdownScrollable extends DemoDropdown {
         status="primary"
         type="button"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-dropdown-scrollable-dd"
+        aria-controls="demo-dropdown-scrollable-dd"
         >Show Scrollable Dropdown</cds-button
       >
       <cds-dropdown
@@ -187,7 +187,7 @@ class DemoDropdownPointer extends DemoDropdown {
             status="primary"
             type="button"
             @click=${() => (this.showOverlay = true)}
-            popup="demo-pointer-dd"
+            aria-controls="demo-pointer-dd"
             id="demo-pointer-anchor"
             >Show Dropdown With Pointer</cds-button
           >
@@ -259,7 +259,7 @@ class DemoDropdownResponsive extends DemoDropdown {
         type="button"
         @click=${() => (this.showOverlay = true)}
         id="demo-responsive-anchor"
-        popup="demo-responsive-dd"
+        aria-controls="demo-responsive-dd"
         >Show Responsive Dropdown</cds-button
       >
       <cds-dropdown
@@ -303,7 +303,7 @@ class DemoDropdownClosable extends DemoDropdown {
         status="primary"
         type="button"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-closable-dd"
+        aria-controls="demo-closable-dd"
         >Show Closable Dropdown</cds-button
       >
       <cds-dropdown
@@ -336,7 +336,11 @@ class DemoDropdownAltAnchored extends DemoDropdown {
   render() {
     return html` <div cds-layout="grid gap:md">
         <div cds-layout="col:4">
-          <cds-button status="primary" type="button" @click=${() => (this.showOverlay = true)} popup="demo-anchored-dd"
+          <cds-button
+            status="primary"
+            type="button"
+            @click=${() => (this.showOverlay = true)}
+            aria-controls="demo-anchored-dd"
             >Show Anchored Dropdown</cds-button
           >
         </div>
@@ -461,7 +465,7 @@ class DemoDropdownOrientation extends DemoDropdown {
             status="primary"
             type="button"
             @click=${() => (this.showOverlay = true)}
-            popup="demo-orientations-dd"
+            aria-controls="demo-orientations-dd"
             id="demo-orientations-anchor"
             >Show Dropdown</cds-button
           >
@@ -505,7 +509,7 @@ class DemoDropdownDarkTheme extends DemoDropdown {
         type="button"
         id="dark-theme-btn"
         @click=${() => (this.showOverlay = true)}
-        popup="demo-dark-dd"
+        aria-controls="demo-dark-dd"
         >Show Dark Theme Dropdown</cds-button
       >
       <cds-dropdown
@@ -549,7 +553,7 @@ class DemoDropdownInModal extends DemoDropdown {
           <p cds-text="body">
             This is an example of a modal with a dropdown inside of it. Click the button below to open the dropdown.
           </p>
-          <cds-button @click=${() => (this.showDropdown = true)} popup="demo-modal-dd" id="ddown-anchor"
+          <cds-button @click=${() => (this.showDropdown = true)} aria-controls="demo-modal-dd" id="ddown-anchor"
             >Open Dropdown</cds-button
           >
         </cds-modal-content>

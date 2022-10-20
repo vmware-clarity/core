@@ -75,7 +75,7 @@ export function kitchenSink() {
           <cds-grid-column resizable width="180">
             Host
             <cds-button-action
-              popup="id-filter"
+              aria-controls="id-filter"
               @click=${(e: any) => (this.state = { ...this.state, idFilterAnchor: e.target })}
               aria-label="column filter options"
               shape="filter"
@@ -109,7 +109,7 @@ export function kitchenSink() {
               </cds-grid-cell>
               <cds-grid-cell>
                 <cds-button-expand
-                  popup="row-detail"
+                  aria-controls="row-detail"
                   action="detail"
                   aria-label="${entry.id} details"
                   .expanded=${this.currentDetail?.id === entry.id}
@@ -134,7 +134,7 @@ export function kitchenSink() {
           )}
           <cds-grid-footer>
             <cds-button-action
-              popup="column-visibility"
+              aria-controls="column-visibility"
               @click=${(e: any) => (this.state = { ...this.state, columnsDropdownAnchor: e.target })}
               aria-label="filter columns"
               shape="view-columns"

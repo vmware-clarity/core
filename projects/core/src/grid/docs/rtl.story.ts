@@ -25,7 +25,7 @@ export function rtl() {
           row => html` <cds-grid-row>
             <cds-grid-cell>
               <cds-button-expand
-                popup="row-detail"
+                aria-controls="row-detail"
                 action="detail"
                 aria-label="${row.id} details"
                 .expanded=${this.selectedRow?.id === row.id}

@@ -33,7 +33,7 @@ export function rowAction() {
             row => html` <cds-grid-row>
               <cds-grid-cell>
                 <cds-button-action
-                  popup="row-actions"
+                  aria-controls="row-actions"
                   aria-label="${row.id} actions"
                   @click=${(e: any) => this.select(e.target, row)}
                 ></cds-button-action>

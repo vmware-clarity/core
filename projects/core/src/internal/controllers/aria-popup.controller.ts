@@ -44,11 +44,11 @@ export class AriaPopupController<T extends AriaPopup> implements ReactiveControl
   }
 
   private updateTrigger(expanded: boolean) {
-    if (this.trigger.current?.hasAttribute('popup')) {
+    if (this.trigger.current?.hasAttribute('aria-controls')) {
       this.trigger.current.ariaExpanded = `${expanded}`;
     }
 
-    if (this.trigger.prev?.hasAttribute('popup') && this.trigger.prev !== this.trigger.current) {
+    if (this.trigger.prev?.hasAttribute('aria-controls') && this.trigger.prev !== this.trigger.current) {
       this.trigger.prev.ariaExpanded = 'false';
     }
   }
