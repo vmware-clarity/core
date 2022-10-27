@@ -23,6 +23,7 @@ import {
   hasAriaLabelTypeAttr,
   calculateOptimalLayout,
   responsive,
+  elementVisible,
 } from '@cds/core/internal';
 import { CdsControlAction } from '../control-action/control-action.element.js';
 import { CdsControlMessage } from './../control-message/control-message.element.js';
@@ -288,7 +289,7 @@ export class CdsControl extends LitElement {
     super.firstUpdated(props);
     this.setupHostAttributes();
     this.setupHTML5Validation();
-    this.setActionOffsetPadding();
+    this.setupPositioningListeners();
     this.setupResponsive();
     this.setupDescribedByUpdates();
     this.setupLabelLayout();
@@ -340,6 +341,12 @@ export class CdsControl extends LitElement {
     if (!this.inputControl?.form?.noValidate && this.validate) {
       syncHTML5Validation(this, Array.from(this.messages));
     }
+  }
+
+  private setupPositioningListeners() {
+    this.setActionOffsetPadding();
+    // https://github.com/vmware-clarity/core/issues/182
+    this.observers.push(elementVisible(this.inputControl, () => this.setActionOffsetPadding()));
   }
 
   private async setActionOffsetPadding() {
