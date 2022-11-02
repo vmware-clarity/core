@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { html, TemplateResult } from 'lit';
+import { html } from 'lit';
 import { query } from 'lit/decorators/query.js';
 import {
   animate,
@@ -92,16 +92,6 @@ export class CdsModal extends CdsInternalOverlay {
 
   protected isScrollable = false;
 
-  private get modalFooterTemplate(): TemplateResult {
-    if (this.modalFooter) {
-      return html`<div cds-layout="align-stretch p-x:lg">
-        <slot name="modal-actions"></slot>
-      </div>`;
-    } else {
-      return html``;
-    }
-  }
-
   protected observers: (MutationObserver | ResizeObserver)[] = [];
 
   // modal-body requires a tab index so it can be scrolled
@@ -123,7 +113,9 @@ export class CdsModal extends CdsInternalOverlay {
           <div class="modal-body" cds-layout="p-x:lg">
             <slot></slot>
           </div>
-          ${this.modalFooterTemplate}
+          <div cds-layout="align-stretch p-x:lg" ?hidden=${!this.modalFooter}>
+            <slot name="modal-actions" @slotchange=${() => this.requestUpdate()}></slot>
+          </div>
         </div>
         <div cds-layout="display:screen-reader-only">${this.i18n.contentEnd}</div>
       </div>
