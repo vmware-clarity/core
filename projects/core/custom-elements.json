@@ -49002,15 +49002,6 @@
             },
             {
               "kind": "field",
-              "name": "modalFooterTemplate",
-              "type": {
-                "text": "TemplateResult"
-              },
-              "privacy": "private",
-              "readonly": true
-            },
-            {
-              "kind": "field",
               "name": "observers",
               "type": {
                 "text": "(MutationObserver | ResizeObserver)[]"

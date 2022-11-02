@@ -21,6 +21,7 @@ describe('modal element', () => {
   let testElement: HTMLElement;
   let component: CdsModal;
   let scrollComponent: CdsModal;
+  let noActionsComponent: CdsModal;
   const placeholderHeader = 'I have a nice title';
   const placeholderContent = 'But not much to say...';
   const placeholderActionText = 'Ok';
@@ -38,19 +39,28 @@ describe('modal element', () => {
 
       <cds-modal id="scroll-modal" style="--max-height: 400px" hidden>
         <cds-modal-header>${placeholderHeader}</cds-modal-header>
-        <cds-modal-content
-          ><div style="padding-bottom: 1200px"><p>${placeholderContent}</p></div></cds-modal-content
-        >
+        <cds-modal-content>
+          <div style="padding-bottom: 1200px"><p>${placeholderContent}</p></div>
+        </cds-modal-content>
         <cds-modal-actions>${placeholderAction}</cds-modal-actions>
+      </cds-modal>
+
+      <cds-modal id="no-actions-modal" style="--max-height: 400px" hidden>
+        <cds-modal-header>${placeholderHeader}</cds-modal-header>
+        <cds-modal-content>
+          <div style="padding-bottom: 1200px"><p>${placeholderContent}</p></div>
+        </cds-modal-content>
       </cds-modal>
     `);
     component = testElement.querySelector<CdsModal>('#normal-modal');
     scrollComponent = testElement.querySelector<CdsModal>('#scroll-modal');
+    noActionsComponent = testElement.querySelector<CdsModal>('#no-actions-modal');
   });
 
   afterEach(() => {
     removeTestElement(testElement);
     removeTestElement(scrollComponent);
+    removeTestElement(noActionsComponent);
   });
 
   it('should create the component', async () => {
@@ -243,5 +253,30 @@ describe('modal element', () => {
     const event = onceEvent(component, 'closeChange');
     component.shadowRoot.querySelector<CdsInternalCloseButton>('cds-internal-close-button').click();
     expect((await event).detail).toBe('close-button-click');
+  });
+
+  it('should rerender when action slot is added', async () => {
+    await componentIsStable(noActionsComponent);
+
+    let slots = getComponentSlotContent(noActionsComponent);
+
+    const slot = noActionsComponent.shadowRoot.querySelector('slot[name="modal-actions"]');
+
+    expect(slots['modal-actions']).not.toContain(`${placeholderActionText}`);
+    expect(slot.parentElement.hasAttribute('hidden')).toBe(true);
+
+    await new Promise(resolve =>
+      setTimeout(() => {
+        noActionsComponent.innerHTML =
+          noActionsComponent.innerHTML +
+          `<cds-modal-actions><cds-button>${placeholderActionText}</cds-button></cds-modal-actions>`;
+        resolve('ok');
+      }, 100)
+    );
+
+    await componentIsStable(noActionsComponent);
+    slots = getComponentSlotContent(noActionsComponent);
+    expect(slots['modal-actions']).toContain(`${placeholderActionText}`);
+    expect(slot.parentElement.hasAttribute('hidden')).toBe(false);
   });
 });
