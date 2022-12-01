@@ -908,3 +908,9 @@
     --clr-btn-icon-disabled-color: var(--cds-global-typography-color-100);
   }
 }
+
+[cds-theme~='light'] {
+  --clr-vertical-nav-bg-color: var(--cds-global-color-gray-200);
+  --clr-vertical-nav-active-bg-color: var(--cds-global-color-gray-0);
+  --clr-vertical-nav-hover-bg-color: var(--cds-global-color-gray-400);
+}
