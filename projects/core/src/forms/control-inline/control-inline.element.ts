@@ -119,6 +119,7 @@ export class CdsInternalControlInline extends CdsControl {
   }
 
   private selectInput(e: any) {
+    this.inputControl.focus();
     this.inputControl.click();
     e.preventDefault(); // prevent any events from the input div, only the native input
   }
