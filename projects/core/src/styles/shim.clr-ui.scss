@@ -877,6 +877,10 @@
 
   --clr-datagrid-placeholder-color: var(--cds-global-color-gray-700); // var(--clr-color-neutral-700);
 
+  --clr-datagrid-loading-background: var(
+    --cds-alias-object-opacity-100
+  ); // #{$clr-datagrid-loading-background}; // hsla(0, 0%, 100%, 0.6);
+
   .login-wrapper {
     // these are set in the ng css, but seem to be getting overridden somewhere
     --clr-login-background-color: var(--clr-global-app-background);
@@ -913,4 +917,10 @@
   --clr-vertical-nav-bg-color: var(--cds-global-color-gray-200);
   --clr-vertical-nav-active-bg-color: var(--cds-global-color-gray-0);
   --clr-vertical-nav-hover-bg-color: var(--cds-global-color-gray-400);
+}
+
+[cds-theme~='dark'] {
+  --clr-datagrid-loading-background: var(
+    --cds-alias-object-opacity-300
+  ); // #{$clr-datagrid-loading-background}; // rgba(0, 0, 0, 0.5);
 }
