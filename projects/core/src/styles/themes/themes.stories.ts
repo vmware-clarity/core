@@ -8,7 +8,6 @@ import { html } from 'lit';
 import { default as tokenData } from '@cds/core/tokens/tokens.json';
 import light from '../../../.storybook/public/assets/images/clarity-high-contrast-light.png';
 import dark from '../../../.storybook/public/assets/images/clarity-high-contrast-dark.png';
-import clrui from '../../../.storybook/public/assets/images/clarity-ui-theme.png';
 
 export default {
   title: 'Stories/Themes',
@@ -464,12 +463,4 @@ export function highContrastTheme() {
       </cds-demo>
     </section>
   `;
-}
-
-export function clrTheme() {
-  return html`<img
-    src=${clrui}
-    alt="clarity ui theme example with clr-angular and clarity components side by side"
-    style="width: 100%; max-width: 700px;"
-  />`;
 }
