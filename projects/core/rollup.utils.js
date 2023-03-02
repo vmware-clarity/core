@@ -146,12 +146,9 @@ export const createPackageModuleMetadata = (packageFile, config) => {
       const path = `.${resolve(m).replace(resolve(config.baseDir), '').replace('.ts', '.js')}`;
 
       if (path.includes('index.js')) {
-        return [
-          `"./${makeJsonSafePath(resolve(dirname(m)).replace(resolve(config.baseDir), '')).replace(
-            '/',
-            ''
-          )}": "${makeJsonSafePath(path)}"`,
-        ];
+        const parsedPath = makeJsonSafePath(resolve(dirname(m)).replace(resolve(config.baseDir), '')).replace('/', '');
+
+        return [`".${parsedPath ? '/' : ''}${parsedPath}" : "${makeJsonSafePath(path)}"`];
       } else {
         return [
           `"${makeJsonSafePath(path)}": "${makeJsonSafePath(path)}"`,
