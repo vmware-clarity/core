@@ -35,7 +35,7 @@ export class TouchController<T extends Touch> implements ReactiveController {
   }
 
   private start(e: PointerEvent) {
-    if ((e as any).path.find((el: any) => el === this.host)) {
+    if (e.composedPath().find((el: any) => el === this.host)) {
       this.startPosition = { x: e.clientX, y: e.clientY };
       document.addEventListener('pointerup', this.endHandler, { passive: true });
       document.addEventListener('pointermove', this.moveHandler, { passive: true });
