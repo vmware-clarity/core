@@ -13,7 +13,6 @@ import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
-import { IconShapeTuple } from './interfaces/icon.interfaces.js';
 
 // here for testing
 ClarityIcons.addIcons(userIcon, imageIcon, homeIcon);
@@ -72,49 +71,25 @@ class AllIcons extends LitElement {
 class CollectionIcons extends LitElement {
   @state() icons: string[] = [];
 
-  private _collection: string;
-  get collection(): string {
-    return this._collection;
-  }
-
-  @property({ type: String })
-  set collection(val: string) {
-    this._collection = val;
-  }
+  @property({ type: String }) collection: string;
 
   connectedCallback() {
     super.connectedCallback();
-    import('@cds/core/icon').then(module => {
-      module.loadChartIconSet();
-      module.loadCommerceIconSet();
-      module.loadCoreIconSet();
-      module.loadEssentialIconSet();
-      module.loadMediaIconSet();
-      module.loadMiniIconSet();
-      module.loadSocialIconSet();
-      module.loadTechnologyIconSet();
-      module.loadTextEditIconSet();
-      module.loadTravelIconSet();
 
-      const collections: any = {
-        chart: module.chartCollectionIcons,
-        commerce: module.commerceCollectionIcons,
-        core: module.coreCollectionIcons,
-        essential: module.essentialCollectionIcons,
-        media: module.mediaCollectionIcons,
-        mini: module.miniCollectionIcons,
-        social: module.socialCollectionIcons,
-        technology: module.technologyCollectionIcons,
-        textEdit: module.textEditCollectionIcons,
-        travel: module.travelCollectionIcons,
-      };
-      this.icons = collections[this.collection].map((icon: IconShapeTuple) => ClarityIcons.getIconNameFromShape(icon));
+    import('@cds/core/icon').then(module => {
+      const collection = (module as any)[`${this.collection}CollectionIcons`];
+      const aliases = (module as any)[`${this.collection}CollectionAliases`];
+
+      ClarityIcons.addIcons(...collection);
+      ClarityIcons.addAliases(...aliases);
+
+      this.icons = collection.map(ClarityIcons.getIconNameFromShape);
     });
   }
 
   render() {
     return html`
-      <strong>${this.collection}</strong>
+      <strong>${this.collection} (${this.icons.length})</strong>
       <div>
         ${this.icons.map(
           (icon, index) =>
