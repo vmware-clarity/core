@@ -12,7 +12,7 @@ import { userIcon } from '@cds/core/icon/shapes/user.js';
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
-import { baseStyles, spreadProps, getElementStorybookArgs } from '@cds/core/internal';
+import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
 // here for testing
 ClarityIcons.addIcons(userIcon, imageIcon, homeIcon);
@@ -67,10 +67,74 @@ class AllIcons extends LitElement {
   }
 }
 
+@customElement('demo-icons-collection')
+class CollectionIcons extends LitElement {
+  @state() icons: string[] = [];
+
+  @property({ type: String }) collection: string;
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    import('@cds/core/icon').then(module => {
+      const collection = (module as any)[`${this.collection}CollectionIcons`];
+      const aliases = (module as any)[`${this.collection}CollectionAliases`];
+
+      ClarityIcons.addIcons(...collection);
+      ClarityIcons.addAliases(...aliases);
+
+      this.icons = collection.map(ClarityIcons.getIconNameFromShape);
+    });
+  }
+
+  render() {
+    return html`
+      <strong>${this.collection} (${this.icons.length})</strong>
+      <div>
+        ${this.icons.map(
+          (icon, index) =>
+            html`
+              <div style="whitespace: no-wrap; display: inline-block; margin-right: .5rem;">
+                ${index + 1}.
+                <cds-icon
+                  size="lg"
+                  role="img"
+                  .shape=${icon}
+                  aria-label="This is an example of an icon using the ${icon} shape"
+                >
+                </cds-icon>
+                ${icon}
+              </div>
+            `
+        )}
+      </div>
+    `;
+  }
+}
+
 all.element = AllIcons; // get around unused class
 
 export function all() {
   return html`<demo-all-icons></demo-all-icons>`;
+}
+
+collections.element = CollectionIcons; // get around unused class
+
+export function collections() {
+  return html`
+    <div cds-layout="vertical gap:xs">
+      <demo-icons-collection collection="chart"></demo-icons-collection>
+      <demo-icons-collection collection="commerce"></demo-icons-collection>
+      <demo-icons-collection collection="core"></demo-icons-collection>
+      <demo-icons-collection collection="essential"></demo-icons-collection>
+      <demo-icons-collection collection="media"></demo-icons-collection>
+      <demo-icons-collection collection="mini"></demo-icons-collection>
+      <demo-icons-collection collection="social"></demo-icons-collection>
+      <demo-icons-collection collection="technology"></demo-icons-collection>
+      <demo-icons-collection collection="textEdit"></demo-icons-collection>
+      <demo-icons-collection collection="travel"></demo-icons-collection>
+    </div>
+  `;
 }
 
 export function API(args: any) {
