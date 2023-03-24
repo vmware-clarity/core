@@ -11433,7 +11433,7 @@
           "type": {
             "text": "IconShapeTuple[]"
           },
-          "default": "[\n  airplaneIcon,\n  bicycleIcon,\n  boatIcon,\n  carIcon,\n  campervanIcon,\n  caravanIcon,\n  compassIcon,\n  ferryIcon,\n  mapIcon,\n  mapMarkerIcon,\n  onHolidayIcon,\n  trailerIcon,\n  truckIcon,\n]"
+          "default": "[\n  airplaneIcon,\n  bicycleIcon,\n  boatIcon,\n  carIcon,\n  campervanIcon,\n  canoeIcon,\n  caravanIcon,\n  castleIcon,\n  compassIcon,\n  ferryIcon,\n  gymIcon,\n  hotelIcon,\n  mapIcon,\n  mapMarkerIcon,\n  noSmokingIcon,\n  onHolidayIcon,\n  palmTreeIcon,\n  passportIcon,\n  planeTicketIcon,\n  poolIcon,\n  smokingIcon,\n  suitcaseIcon,\n  suitcase2Icon,\n  tentIcon,\n  trailerIcon,\n  trainIcon,\n  truckIcon,\n]"
         },
         {
           "kind": "variable",
@@ -21219,6 +21219,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/canoe.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "canoeIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'canoe'"
+        },
+        {
+          "kind": "variable",
+          "name": "canoeIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[canoeIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "canoeIconName",
+          "declaration": {
+            "name": "canoeIconName",
+            "module": "icon/shapes/canoe.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "canoeIcon",
+          "declaration": {
+            "name": "canoeIcon",
+            "module": "icon/shapes/canoe.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/capacitor.js",
       "declarations": [
         {
@@ -21333,6 +21373,46 @@
           "declaration": {
             "name": "caravanIcon",
             "module": "icon/shapes/caravan.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/castle.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "castleIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'castle'"
+        },
+        {
+          "kind": "variable",
+          "name": "castleIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[castleIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "castleIconName",
+          "declaration": {
+            "name": "castleIconName",
+            "module": "icon/shapes/castle.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "castleIcon",
+          "declaration": {
+            "name": "castleIcon",
+            "module": "icon/shapes/castle.js"
           }
         }
       ]
@@ -25979,6 +26059,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/gym.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "gymIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'gym'"
+        },
+        {
+          "kind": "variable",
+          "name": "gymIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[gymIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "gymIconName",
+          "declaration": {
+            "name": "gymIconName",
+            "module": "icon/shapes/gym.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "gymIcon",
+          "declaration": {
+            "name": "gymIcon",
+            "module": "icon/shapes/gym.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/half-star.js",
       "declarations": [
         {
@@ -26693,6 +26813,46 @@
           "declaration": {
             "name": "hostIcon",
             "module": "icon/shapes/host.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/hotel.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "hotelIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'hotel'"
+        },
+        {
+          "kind": "variable",
+          "name": "hotelIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[hotelIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "hotelIconName",
+          "declaration": {
+            "name": "hotelIconName",
+            "module": "icon/shapes/hotel.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hotelIcon",
+          "declaration": {
+            "name": "hotelIcon",
+            "module": "icon/shapes/hotel.js"
           }
         }
       ]
@@ -28659,6 +28819,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/no-smoking.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "noSmokingIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'noSmoking'"
+        },
+        {
+          "kind": "variable",
+          "name": "noSmokingIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[noSmokingIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "noSmokingIconName",
+          "declaration": {
+            "name": "noSmokingIconName",
+            "module": "icon/shapes/no-smoking.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "noSmokingIcon",
+          "declaration": {
+            "name": "noSmokingIcon",
+            "module": "icon/shapes/no-smoking.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/no-wifi.js",
       "declarations": [
         {
@@ -29139,6 +29339,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/palm-tree.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "palmTreeIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'palmTree'"
+        },
+        {
+          "kind": "variable",
+          "name": "palmTreeIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[palmTreeIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "palmTreeIconName",
+          "declaration": {
+            "name": "palmTreeIconName",
+            "module": "icon/shapes/palm-tree.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "palmTreeIcon",
+          "declaration": {
+            "name": "palmTreeIcon",
+            "module": "icon/shapes/palm-tree.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/paperclip.js",
       "declarations": [
         {
@@ -29173,6 +29413,46 @@
           "declaration": {
             "name": "paperclipIcon",
             "module": "icon/shapes/paperclip.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/passport.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "passportIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'passport'"
+        },
+        {
+          "kind": "variable",
+          "name": "passportIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[passportIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "passportIconName",
+          "declaration": {
+            "name": "passportIconName",
+            "module": "icon/shapes/passport.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "passportIcon",
+          "declaration": {
+            "name": "passportIcon",
+            "module": "icon/shapes/passport.js"
           }
         }
       ]
@@ -29619,6 +29899,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/plane-ticket.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "planeTicketIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'planeTicket'"
+        },
+        {
+          "kind": "variable",
+          "name": "planeTicketIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[planeTicketIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "planeTicketIconName",
+          "declaration": {
+            "name": "planeTicketIconName",
+            "module": "icon/shapes/plane-ticket.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "planeTicketIcon",
+          "declaration": {
+            "name": "planeTicketIcon",
+            "module": "icon/shapes/plane-ticket.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/play.js",
       "declarations": [
         {
@@ -29813,6 +30133,46 @@
           "declaration": {
             "name": "podIcon",
             "module": "icon/shapes/pod.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/pool.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "poolIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'pool'"
+        },
+        {
+          "kind": "variable",
+          "name": "poolIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[poolIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "poolIconName",
+          "declaration": {
+            "name": "poolIconName",
+            "module": "icon/shapes/pool.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "poolIcon",
+          "declaration": {
+            "name": "poolIcon",
+            "module": "icon/shapes/pool.js"
           }
         }
       ]
@@ -31379,6 +31739,46 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/smoking.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "smokingIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'smoking'"
+        },
+        {
+          "kind": "variable",
+          "name": "smokingIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[smokingIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "smokingIconName",
+          "declaration": {
+            "name": "smokingIconName",
+            "module": "icon/shapes/smoking.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "smokingIcon",
+          "declaration": {
+            "name": "smokingIcon",
+            "module": "icon/shapes/smoking.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/snowflake.js",
       "declarations": [
         {
@@ -31939,6 +32339,86 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/shapes/suitcase-2.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "suitcase2IconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'suitcase2'"
+        },
+        {
+          "kind": "variable",
+          "name": "suitcase2Icon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[suitcase2IconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "suitcase2IconName",
+          "declaration": {
+            "name": "suitcase2IconName",
+            "module": "icon/shapes/suitcase-2.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "suitcase2Icon",
+          "declaration": {
+            "name": "suitcase2Icon",
+            "module": "icon/shapes/suitcase-2.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/suitcase.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "suitcaseIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'suitcase'"
+        },
+        {
+          "kind": "variable",
+          "name": "suitcaseIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[suitcaseIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "suitcaseIconName",
+          "declaration": {
+            "name": "suitcaseIconName",
+            "module": "icon/shapes/suitcase.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "suitcaseIcon",
+          "declaration": {
+            "name": "suitcaseIcon",
+            "module": "icon/shapes/suitcase.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/shapes/sun.js",
       "declarations": [
         {
@@ -32413,6 +32893,46 @@
           "declaration": {
             "name": "tasksIcon",
             "module": "icon/shapes/tasks.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/tent.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "tentIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'tent'"
+        },
+        {
+          "kind": "variable",
+          "name": "tentIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[tentIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "tentIconName",
+          "declaration": {
+            "name": "tentIconName",
+            "module": "icon/shapes/tent.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "tentIcon",
+          "declaration": {
+            "name": "tentIcon",
+            "module": "icon/shapes/tent.js"
           }
         }
       ]
@@ -32997,6 +33517,46 @@
           "declaration": {
             "name": "trailerIcon",
             "module": "icon/shapes/trailer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/train.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "trainIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'train'"
+        },
+        {
+          "kind": "variable",
+          "name": "trainIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[trainIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "trainIconName",
+          "declaration": {
+            "name": "trainIconName",
+            "module": "icon/shapes/train.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "trainIcon",
+          "declaration": {
+            "name": "trainIcon",
+            "module": "icon/shapes/train.js"
           }
         }
       ]
