@@ -14,12 +14,14 @@ import {
   pxToRem,
   syncDefinedProps,
   elementVisible,
+  globalStyle,
 } from '@cds/core/internal';
 import { CdsInternalControlGroup } from '../control-group/control-group.element.js';
 import { CdsInternalControlInline } from '../control-inline/control-inline.element.js';
 import { CdsControl } from '../control/control.element.js';
 import { FormLayout, ControlWidth } from '../utils/interfaces.js';
 import { getLargestPrimaryLabelWidth, isVerticalLayout, defaultFormLayout } from '../utils/utils.js';
+import globalStyles from './form-group.global.scss';
 import styles from './form-group.element.scss';
 
 /**
@@ -72,6 +74,8 @@ export class CdsFormGroup extends LitElement {
    * https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
    */
   @property({ type: Boolean }) validate = false;
+
+  @globalStyle() protected globalStyles = globalStyles;
 
   @querySlotAll('[cds-control]') private controls: NodeListOf<CdsControl | CdsInternalControlInline>;
 

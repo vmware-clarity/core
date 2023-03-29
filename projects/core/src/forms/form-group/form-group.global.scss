@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2016-2023 VMware, Inc. All Rights Reserved.
+ * This software is released under MIT license.
+ * The full license information can be found in LICENSE in the root directory of this project.
+ */
+
+@import './../../styles/tokens/generated/index';
+
+.cds-required-mark {
+  &::before {
+    content: '*';
+    display: inline;
+    color: #{$cds-global-color-red-700};
+    fill: #{$cds-global-color-red-700};
+    font-size: #{$cds-global-typography-font-size-3};
+    padding-right: var(--cds-global-space-4);
+  }
+}
