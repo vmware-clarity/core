@@ -10,9 +10,9 @@
   &::before {
     content: '*';
     display: inline;
-    color: #{$cds-global-color-red-700};
-    fill: #{$cds-global-color-red-700};
-    font-size: #{$cds-global-typography-font-size-3};
-    padding-right: var(--cds-global-space-4);
+    color: $cds-global-color-red-700;
+    fill: $cds-global-color-red-700;
+    font-size: $cds-global-typography-font-size-3;
+    padding-right: $cds-global-space-4;
   }
 }
