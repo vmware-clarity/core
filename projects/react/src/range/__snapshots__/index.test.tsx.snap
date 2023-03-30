@@ -3,6 +3,7 @@
 exports[`CdsRange snapshot 1`] = `
 <div>
   <cds-form-group>
+    <style />
     <cds-range
       cds-control=""
     >
