@@ -88,7 +88,7 @@ svg {
 }
 
 :host([status='info']) {
-  --color: #{$cds-alias-status-info-shade};
+  --color: #{$cds-alias-status-info};
 }
 
 :host([inverse]) {
