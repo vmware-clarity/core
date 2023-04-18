@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement, PropertyValues } from 'lit';
-import pipe from 'ramda/es/pipe.js';
+import pipe from 'ramda/es/pipe';
 import { state, customElement } from '@cds/core/internal';
 import {
   paginate,
