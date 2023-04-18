@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import curryN from 'ramda/es/curryN.js';
+import curryN from 'ramda/es/curryN';
 import { isBrowser } from './environment.js';
 import { elementExists, existsInWindow } from './exists.js';
 import { CDSState, setupCDSGlobal } from './global.js';

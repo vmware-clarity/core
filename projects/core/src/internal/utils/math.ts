@@ -4,9 +4,9 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import isNil from 'ramda/es/isNil.js';
-import sum from 'ramda/es/sum.js';
-import curryN from 'ramda/es/curryN.js';
+import isNil from 'ramda/es/isNil';
+import sum from 'ramda/es/sum';
+import curryN from 'ramda/es/curryN';
 
 export function getMillisecondsFromSeconds(sec: number): number {
   return isNil(sec) ? 0 : Number(sec) * 1000;

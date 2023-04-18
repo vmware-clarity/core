@@ -4,8 +4,8 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import curryN from 'ramda/es/curryN.js';
-import path from 'ramda/es/path.js';
+import curryN from 'ramda/es/curryN';
+import path from 'ramda/es/path';
 import __ from './__.js';
 
 export const existsIn = curryN(2, (pathToCheck: string[], obj: object): boolean => {

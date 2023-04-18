@@ -4,8 +4,8 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import includes from 'ramda/es/includes.js';
-import without from 'ramda/es/without.js';
+import includes from 'ramda/es/includes';
+import without from 'ramda/es/without';
 
 import { getCssPropertyValue } from './css.js';
 import { pluckPixelValue, transformSpacedStringToArray } from './string.js';

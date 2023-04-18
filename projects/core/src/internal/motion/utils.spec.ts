@@ -5,7 +5,7 @@
  */
 
 import { html, LitElement, PropertyValues } from 'lit';
-import clone from 'ramda/es/clone.js';
+import clone from 'ramda/es/clone';
 import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
 import { registerElementSafely, property, event, EventEmitter } from '@cds/core/internal';
 import { animate } from '../decorators/animate.js';

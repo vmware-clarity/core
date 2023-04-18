@@ -35,8 +35,6 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
           imports: {
             'lit/': '/node_modules/lit/',
             lit: '/node_modules/lit/index.js',
-            'ramda/': '/node_modules/ramda/',
-            ramda: '/node_modules/ramda/es/index.js',
             'tslib/': '/node_modules/tslib/',
             tslib: '/node_modules/tslib/tslib.es6.js',
             '@cds/core/': '/dist/lib/',

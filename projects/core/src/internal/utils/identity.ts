@@ -4,8 +4,8 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import is from 'ramda/es/is.js';
-import isEmpty from 'ramda/es/isEmpty.js';
+import is from 'ramda/es/is';
+import isEmpty from 'ramda/es/isEmpty';
 
 export function isNil(val: any): boolean {
   return val === null || val === undefined;
