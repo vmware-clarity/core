@@ -80,7 +80,7 @@ export class CdsFile extends CdsControl {
     // when input is reset like this it isn't registering an onchange event
     // NOTE: tsc + karma is complaining about dispatchEvent being a method on inputControl
     if (fireEvent && this.inputControl.dispatchEvent) {
-      (this.inputControl as Element).dispatchEvent(new Event('change'));
+      (this.inputControl as Element).dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
     }
 
     const browseButton = this.shadowRoot?.querySelector('cds-button');
