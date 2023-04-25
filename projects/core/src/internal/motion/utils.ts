@@ -20,7 +20,7 @@ import {
 } from './interfaces.js';
 import { LogService } from '../services/log.service.js';
 import { ClarityMotion } from './motion.service.js';
-import clone from 'ramda/es/clone.js';
+import clone from 'ramda/es/clone';
 import { getCssPropertyValue, isCssPropertyName } from '../utils/css.js';
 import { isPrefixedBy, isSuffixedBy, getNumericValueFromCssSecondsStyleValue, removePrefix } from '../utils/string.js';
 import { queryChildFromLightOrShadowDom } from '../utils/dom.js';
