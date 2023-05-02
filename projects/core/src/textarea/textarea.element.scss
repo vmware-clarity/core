@@ -13,6 +13,9 @@
   --font-size: #{$cds-global-typography-font-size-3};
   --color: #{$cds-global-typography-color-400};
   --border-radius: #{$cds-alias-object-border-radius-100};
+  --width: 100%;
+  --min-height: #{$cds-global-space-15};
+  --resize: vertical;
   display: block;
   width: 100%;
 }
@@ -24,9 +27,9 @@
   border-radius: var(--border-radius) !important;
   padding: var(--padding) !important;
   font-size: var(--font-size) !important;
-  resize: vertical !important;
-  width: 100% !important;
-  min-height: $cds-global-space-15 !important;
+  resize: var(--resize) !important;
+  width: var(--width) !important;
+  min-height: var(--min-height) !important;
 }
 
 :host([status='error']) {

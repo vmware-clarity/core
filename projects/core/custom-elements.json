@@ -58504,6 +58504,15 @@
             },
             {
               "name": "--border-radius"
+            },
+            {
+              "name": "--width"
+            },
+            {
+              "name": "--min-height"
+            },
+            {
+              "name": "--resize"
             }
           ],
           "slots": [

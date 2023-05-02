@@ -29,6 +29,9 @@ import styles from './textarea.element.scss';
  * @cssprop --font-size
  * @cssprop --color
  * @cssprop --border-radius
+ * @cssprop --width
+ * @cssprop --min-height
+ * @cssprop --resize
  */
 export class CdsTextarea extends CdsControl {
   protected supportsPrefixSuffixActions = false;
