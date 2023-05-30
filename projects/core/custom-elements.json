@@ -12605,6 +12605,22 @@
         },
         {
           "kind": "js",
+          "name": "birthdayCakeIcon",
+          "declaration": {
+            "name": "birthdayCakeIcon",
+            "module": "./shapes/birthday-cake.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "birthdayCakeIconName",
+          "declaration": {
+            "name": "birthdayCakeIconName",
+            "module": "./shapes/birthday-cake.js"
+          }
+        },
+        {
+          "kind": "js",
           "name": "boltIcon",
           "declaration": {
             "name": "boltIcon",
@@ -13305,6 +13321,22 @@
           "declaration": {
             "name": "fuelIconName",
             "module": "./shapes/fuel.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "gavelIcon",
+          "declaration": {
+            "name": "gavelIcon",
+            "module": "./shapes/gavel.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "gavelIconName",
+          "declaration": {
+            "name": "gavelIconName",
+            "module": "./shapes/gavel.js"
           }
         },
         {
@@ -14121,6 +14153,22 @@
           "declaration": {
             "name": "thermometerIconName",
             "module": "./shapes/thermometer.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "timelineIcon",
+          "declaration": {
+            "name": "timelineIcon",
+            "module": "./shapes/timeline.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "timelineIconName",
+          "declaration": {
+            "name": "timelineIconName",
+            "module": "./shapes/timeline.js"
           }
         },
         {
@@ -16745,6 +16793,22 @@
           "declaration": {
             "name": "nvmeIconName",
             "module": "./shapes/nvme.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "pdfFileIcon",
+          "declaration": {
+            "name": "pdfFileIcon",
+            "module": "./shapes/pdf-file.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "pdfFileIconName",
+          "declaration": {
+            "name": "pdfFileIconName",
+            "module": "./shapes/pdf-file.js"
           }
         },
         {
