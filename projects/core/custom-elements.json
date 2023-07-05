@@ -11576,7 +11576,7 @@
               "kind": "field",
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "attribute": "badge"
@@ -11665,7 +11665,7 @@
             {
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "fieldName": "badge"

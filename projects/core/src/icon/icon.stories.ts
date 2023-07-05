@@ -266,6 +266,13 @@ export function badges() {
     <cds-icon
       shape="user"
       size="lg"
+      badge="neutral"
+      role="img"
+      aria-label="This is an example of an icon of a user with a gray neutral badge"
+    ></cds-icon>
+    <cds-icon
+      shape="user"
+      size="lg"
       badge="warning-triangle"
       role="img"
       aria-label="This is an example of an icon of a user with a dark orange triangle indicating something may be wrong"
@@ -556,6 +563,7 @@ export function darkTheme() {
         <cds-icon shape="user" size="lg" badge="success"></cds-icon>
         <cds-icon shape="user" size="lg" badge="danger"></cds-icon>
         <cds-icon shape="user" size="lg" badge="warning"></cds-icon>
+        <cds-icon shape="user" size="lg" badge="neutral"></cds-icon>
         <cds-icon shape="user" size="lg" badge="warning-triangle"></cds-icon>
       </div>
 

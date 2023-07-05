@@ -151,6 +151,10 @@ svg {
   --badge-color: #{$cds-alias-status-info};
 }
 
+:host([badge='neutral']) {
+  --badge-color: #{$cds-alias-status-neutral};
+}
+
 // alert colors
 :host([badge='inherit-triangle']) {
   --badge-color: currentColor;

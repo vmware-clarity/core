@@ -140,7 +140,7 @@ export class CdsIcon extends LitElement {
    * By default, the badge displays a 'danger' dot (a red-colored dot).
    *
    * Setting the badge to 'false' or removing the attribute will remove the default icon badge.
-   * @type {info | success | warning | danger | inherit | warning-triangle | inherit-triangle}
+   * @type {neutral | info | success | warning | danger | inherit | warning-triangle | inherit-triangle}
    */
   @property({ type: String })
   badge: StatusTypes | 'inherit' | 'warning-triangle' | 'inherit-triangle' | true | false;
