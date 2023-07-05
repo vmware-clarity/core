@@ -110,7 +110,7 @@ export class CdsIcon extends LitElement {
 
   /**
    * Changes color of icon fills and outlines
-   * @type {info | success | warning | danger}
+   * @type {neutral | info | success | warning | danger}
    */
   @property({ type: String })
   status: StatusTypes;

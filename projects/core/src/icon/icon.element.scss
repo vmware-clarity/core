@@ -91,6 +91,10 @@ svg {
   --color: #{$cds-alias-status-info};
 }
 
+:host([status='neutral']) {
+  --color: #{$cds-alias-status-neutral};
+}
+
 :host([inverse]) {
   --color: #{$cds-global-color-construction-200};
 }
