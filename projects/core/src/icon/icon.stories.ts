@@ -266,6 +266,13 @@ export function badges() {
     <cds-icon
       shape="user"
       size="lg"
+      badge="neutral"
+      role="img"
+      aria-label="This is an example of an icon of a user with a gray neutral badge"
+    ></cds-icon>
+    <cds-icon
+      shape="user"
+      size="lg"
       badge="warning-triangle"
       role="img"
       aria-label="This is an example of an icon of a user with a dark orange triangle indicating something may be wrong"
@@ -320,6 +327,13 @@ export function status() {
       role="img"
       aria-label="This is an example of a red icon of a user indicating danger or an error"
     ></cds-icon>
+    <cds-icon
+      shape="user"
+      status="neutral"
+      size="lg"
+      role="img"
+      aria-label="This is an example of a gray icon of a user indicating a neutral status"
+    ></cds-icon>
 
     <cds-icon
       shape="user"
@@ -360,6 +374,14 @@ export function status() {
       role="img"
       aria-label="This is an example of an icon of a user completely filled in with a red color indicating danger or an error"
     ></cds-icon>
+    <cds-icon
+      shape="user"
+      status="neutral"
+      size="lg"
+      solid
+      role="img"
+      aria-label="This is an example of an icon of a user completely filled in with a gray color indicating a neutral status"
+    ></cds-icon>
   `;
 }
 
@@ -372,12 +394,14 @@ export function statusInverse() {
       <cds-icon shape="user" inverse status="success" size="lg" role="img" aria-label="This is an example of a green icon of a user on a dark background indicating success"></cds-icon>
       <cds-icon shape="user" inverse status="warning" size="lg" role="img" aria-label="This is an example of a dark orange icon of a user on a dark background indicating a warning"></cds-icon>
       <cds-icon shape="user" inverse status="danger" size="lg" role="img" aria-label="This is an example of a red icon of a user on a dark background indicating danger or an error"></cds-icon>
+      <cds-icon shape="user" inverse status="neutral" size="lg" role="img" aria-label="This is an example of a gray icon of a user on a dark background indicating a neutral status"></cds-icon>
 
       <cds-icon shape="user" inverse size="lg" solid role="img" aria-label="This is an example of an icon of a user completely filled in with the default color of the surrounding text on a dark background"></cds-icon>
       <cds-icon shape="user" inverse status="info" size="lg" solid role="img" aria-label="This is an example of an icon of a user completely filled in with the blue, informational color on a dark background"></cds-icon>
       <cds-icon shape="user" inverse status="success" size="lg" solid role="img" aria-label="This is an example of an icon of a user on a dark background completely filled in with a green color indicating success"></cds-icon>
       <cds-icon shape="user" inverse status="warning" size="lg" solid role="img" aria-label="This is an example of an icon of a user on a dark background completely filled in with a dark orange color indicating warning"></cds-icon>
       <cds-icon shape="user" inverse status="danger" size="lg" solid role="img" aria-label="This is an example of an icon of a user on a dark background completely filled in with a red color indicating danger or an error"></cds-icon></cds-icon>
+      <cds-icon shape="user" inverse status="neutral" size="lg" solid role="img" aria-label="This is an example of an icon of a user on a dark background completely filled in with a gray color indicating a neutral status"></cds-icon></cds-icon>
     </cds-demo>
   `;
 }
@@ -539,6 +563,7 @@ export function darkTheme() {
         <cds-icon shape="user" size="lg" badge="success"></cds-icon>
         <cds-icon shape="user" size="lg" badge="danger"></cds-icon>
         <cds-icon shape="user" size="lg" badge="warning"></cds-icon>
+        <cds-icon shape="user" size="lg" badge="neutral"></cds-icon>
         <cds-icon shape="user" size="lg" badge="warning-triangle"></cds-icon>
       </div>
 
@@ -548,6 +573,7 @@ export function darkTheme() {
         <cds-icon shape="user" status="success" size="lg"></cds-icon>
         <cds-icon shape="user" status="warning" size="lg"></cds-icon>
         <cds-icon shape="user" status="danger" size="lg"></cds-icon>
+        <cds-icon shape="user" status="neutral" size="lg"></cds-icon>
       </div>
 
       <div cds-layout="horizontal gap:sm">
@@ -556,6 +582,7 @@ export function darkTheme() {
         <cds-icon shape="user" status="success" size="lg" solid></cds-icon>
         <cds-icon shape="user" status="warning" size="lg" solid></cds-icon>
         <cds-icon shape="user" status="danger" size="lg" solid></cds-icon>
+        <cds-icon shape="user" status="neutral" size="lg" solid></cds-icon>
       </div>
     </div>
   `;

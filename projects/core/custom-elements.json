@@ -11557,7 +11557,7 @@
               "kind": "field",
               "name": "status",
               "type": {
-                "text": "info | success | warning | danger"
+                "text": "neutral | info | success | warning | danger"
               },
               "description": "Changes color of icon fills and outlines",
               "attribute": "status"
@@ -11576,7 +11576,7 @@
               "kind": "field",
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "attribute": "badge"
@@ -11648,7 +11648,7 @@
             {
               "name": "status",
               "type": {
-                "text": "info | success | warning | danger"
+                "text": "neutral | info | success | warning | danger"
               },
               "description": "Changes color of icon fills and outlines",
               "fieldName": "status"
@@ -11665,7 +11665,7 @@
             {
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "fieldName": "badge"
