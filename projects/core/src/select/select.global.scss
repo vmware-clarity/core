@@ -15,6 +15,10 @@ cds-select option {
   &:checked {
     background: $cds-alias-object-interaction-background-selected;
   }
+
+  &:hover {
+    background: $cds-alias-object-interaction-background-hover;
+  }
 }
 
 cds-select input::-webkit-calendar-picker-indicator {
