@@ -11,6 +11,14 @@ cds-select option {
   color: $cds-global-typography-color-400;
   padding: $cds-global-space-4;
   font-size: $cds-global-typography-font-size-3;
+
+  &:checked {
+    background: $cds-alias-object-interaction-background-selected;
+  }
+
+  &:hover {
+    background: $cds-alias-object-interaction-background-hover;
+  }
 }
 
 cds-select input::-webkit-calendar-picker-indicator {
