@@ -116,8 +116,8 @@ const color = {
     600: token([9, 100, 59]),
     700: token([9, 100, 44]),
     800: token([9, 100, 38]),
-    900: token([9, 100, 28]),
-    1000: token([9, 100, 22]),
+    900: token([9, 100, 22]),
+    1000: token([7, 10, 17]),
   },
   ochre: {
     50: token([41, 100, 96]),
@@ -195,7 +195,7 @@ const color = {
     700: token([40, 100, 37]),
     800: token([40, 100, 26]),
     900: token([40, 100, 18]),
-    1000: token([40, 100, 13]),
+    1000: token([40, 32, 14]),
   },
   lime: {
     50: token([66, 100, 94]),
@@ -380,8 +380,8 @@ const typography = {
   xHeight: token('0.517em'), // line-height eraser
   link: {
     color: {
-      value: token(color.blue[800]),
-      hover: token(color.blue[900]),
+      value: token(color.blue[700]),
+      hover: token(color.blue[800]),
       visited: {
         value: token(color.lavender[600]),
         hover: token(color.lavender[700]),
@@ -521,7 +521,7 @@ const aliases = {
         highlight: token(color.blue[700]),
       },
       color: {
-        value: token(color.construction[700]),
+        value: token(color.construction[500]),
         hover: token(color.construction[1000]),
         active: token(color.construction[1000]),
         selected: token(color.construction[700]),
