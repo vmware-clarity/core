@@ -1235,7 +1235,7 @@ export function complexRadioLabelSizes() {
         <cds-radio selection-panel size="lg">
           <label>
             <div style="width: 100%; height: 100%" cds-layout="vertical gap:lg align:center">
-              <span cds-text="heading">VM One</span>
+              <span cds-text="headline">VM One</span>
               <!-- inert icon that does not provide any context to screen readers / is not interactive -->
               <cds-icon shape="vm" size="xl" badge="info"></cds-icon>
               <p cds-text="section center">Orchestrate & Automate</p>
@@ -1246,7 +1246,7 @@ export function complexRadioLabelSizes() {
         <cds-radio selection-panel size="lg">
           <label>
             <div style="width: 100%; height: 100%" cds-layout="vertical gap:lg align:center">
-              <span cds-text="heading">VM Two</span>
+              <span cds-text="headline">VM Two</span>
               <!-- inert icon that does not provide any context to screen readers / is not interactive -->
               <cds-icon shape="vm" size="xl" badge="success"></cds-icon>
               <p cds-text="section center">Replication & Remediation</p>
@@ -1261,7 +1261,7 @@ export function complexRadioLabelSizes() {
         <cds-radio selection-panel size="xl">
           <label>
             <div style="width: 100%; height: 100%" cds-layout="vertical gap:xxl align:center">
-              <span cds-text="heading">VM One</span>
+              <span cds-text="headline">VM One</span>
               <!-- inert icon that does not provide any context to screen readers / is not interactive -->
               <cds-icon shape="vm" size="xxl" badge="info"></cds-icon>
               <p cds-text="section center">Orchestrate & Automate</p>
@@ -1272,7 +1272,7 @@ export function complexRadioLabelSizes() {
         <cds-radio selection-panel size="xl">
           <label>
             <div style="width: 100%; height: 100%" cds-layout="vertical gap:xxl align:center">
-              <span cds-text="heading">VM Two</span>
+              <span cds-text="headline">VM Two</span>
               <!-- inert icon that does not provide any context to screen readers / is not interactive -->
               <cds-icon shape="vm" size="xxl" badge="success"></cds-icon>
               <p cds-text="section center">Replication & Remediation</p>

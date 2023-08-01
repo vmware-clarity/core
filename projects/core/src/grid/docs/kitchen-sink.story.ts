@@ -160,7 +160,7 @@ export function kitchenSink() {
           >
             <section cds-layout="vertical gap:xxl">
               <div cds-layout="horizontal gap:sm">
-                <h2 cds-text="heading">${this.currentDetail?.id}</h2>
+                <h2 cds-text="headline">${this.currentDetail?.id}</h2>
                 <cds-tag status=${StatusDisplayType[this.currentDetail?.status]} readonly>
                   <cds-icon
                     shape=${StatusIconType[this.currentDetail?.status]}

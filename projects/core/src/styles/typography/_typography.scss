@@ -32,7 +32,8 @@
 }
 
 [cds-text*='display'],
-[cds-text*='heading'],
+[cds-text*='heading'], // TODO(CDE-821): Remove heading in v7
+[cds-text*='headline'],
 [cds-text*='title'],
 [cds-text*='section'],
 [cds-text*='subsection'] {
@@ -66,7 +67,8 @@
   letter-spacing: $cds-global-typography-display-letter-spacing;
 }
 
-[cds-text*='heading'] {
+[cds-text*='heading'], // TODO(CDE-821): Remove heading in v7
+[cds-text*='headline'] {
   $lh-gap: getLineHeightGap(
     $cds-global-typography-heading-line-height-static,
     $cds-global-typography-heading-line-height

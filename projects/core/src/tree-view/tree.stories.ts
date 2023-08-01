@@ -342,7 +342,7 @@ export function conditionalItems() {
 
     render() {
       return html` <section cds-layout="vertical gap:lg p:lg">
-        <h1 cds-text="heading">Conditional Tree Items</h1>
+        <h1 cds-text="headline">Conditional Tree Items</h1>
         <cds-button @click=${() => (this.show = !this.show)}>Toggle Tree Visibility</cds-button>
 
         <cds-tree> ${this.show ? this.generateTreeItems(this.nodes) : ''} </cds-tree>

@@ -492,14 +492,14 @@ export function sizes() {
         <label>Large (lg)</label>
         <cds-radio-panel size="lg">
           <label cds-layout="vertical gap:lg align:center">
-            <span cds-text="heading">VM One</span>
+            <span cds-text="headline">VM One</span>
             <span cds-text="section center">Orchestrate & Automate</span>
           </label>
           <input type="radio" value="1" />
         </cds-radio-panel>
         <cds-radio-panel size="lg">
           <label cds-layout="vertical gap:lg align:center">
-            <span cds-text="heading">VM Two</span>
+            <span cds-text="headline">VM Two</span>
             <span cds-text="section center">Replication & Remediation</span>
           </label>
           <input type="radio" value="1" />
@@ -510,14 +510,14 @@ export function sizes() {
         <label>Extra-large (xl)</label>
         <cds-radio-panel size="xl">
           <label cds-layout="vertical gap:lg align:center">
-            <span cds-text="heading">VM One</span>
+            <span cds-text="headline">VM One</span>
             <span cds-text="section center">Orchestrate & Automate</span>
           </label>
           <input type="radio" value="1" />
         </cds-radio-panel>
         <cds-radio-panel size="xl">
           <label cds-layout="vertical gap:lg align:center">
-            <span cds-text="heading">VM Two</span>
+            <span cds-text="headline">VM Two</span>
             <span cds-text="section center">Replication & Remediation</span>
           </label>
           <input type="radio" value="1" />
