@@ -23,7 +23,7 @@ export function headings() {
   return html`
     <cds-demo cds-layout="vertical gap:lg">
       <p cds-text="display">The five boxing wizards jump quickly (display)</p>
-      <p cds-text="heading">The five boxing wizards jump quickly (heading)</p>
+      <p cds-text="headline">The five boxing wizards jump quickly (heading)</p>
       <p cds-text="title">The five boxing wizards jump quickly (title)</p>
       <p cds-text="section">The five boxing wizards jump quickly (section)</p>
       <p cds-text="subsection">The five boxing wizards jump quickly (subsection)</p>
@@ -194,7 +194,7 @@ export function disableLineHightRemover() {
 
       <cds-card show-padding>
         <p cds-text="display">The five boxing wizards jump quickly (display)</p>
-        <p cds-text="heading">The five boxing wizards jump quickly (heading)</p>
+        <p cds-text="headline">The five boxing wizards jump quickly (heading)</p>
         <p cds-text="title">The five boxing wizards jump quickly (title)</p>
         <p cds-text="section">The five boxing wizards jump quickly (section)</p>
         <p cds-text="subsection">The five boxing wizards jump quickly (subsection)</p>
@@ -209,7 +209,7 @@ export function darkTheme() {
     <div cds-layout="vertical gap:lg" cds-theme="dark">
       <div cds-layout="vertical gap:md">
         <p cds-text="display">The five boxing wizards jump quickly (display)</p>
-        <p cds-text="heading">The five boxing wizards jump quickly (heading)</p>
+        <p cds-text="headline">The five boxing wizards jump quickly (heading)</p>
         <p cds-text="title">The five boxing wizards jump quickly (title)</p>
         <p cds-text="section">The five boxing wizards jump quickly (section)</p>
         <p cds-text="subsection">The five boxing wizards jump quickly (subsection)</p>

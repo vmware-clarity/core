@@ -492,14 +492,14 @@ export function sizes() {
         <label>Large (lg)</label>
         <cds-checkbox-panel size="lg">
           <label cds-layout="vertical gap:xxl align:center">
-            <span cds-text="heading">VM One</span>
+            <span cds-text="headline">VM One</span>
             <span cds-text="section center">Orchestrate & Automate</span>
           </label>
           <input type="checkbox" value="1" />
         </cds-checkbox-panel>
         <cds-checkbox-panel size="lg">
           <label cds-layout="vertical gap:xxl align:center">
-            <span cds-text="heading">VM Two</span>
+            <span cds-text="headline">VM Two</span>
             <span cds-text="section center">Replication & Remediation</span>
           </label>
           <input type="checkbox" value="1" />
@@ -510,14 +510,14 @@ export function sizes() {
         <label>Extra-large (xl)</label>
         <cds-checkbox-panel size="xl">
           <label cds-layout="vertical gap:xxl align:center">
-            <span cds-text="heading">VM One</span>
+            <span cds-text="headline">VM One</span>
             <span cds-text="section center">Orchestrate & Automate</span>
           </label>
           <input type="checkbox" value="1" />
         </cds-checkbox-panel>
         <cds-checkbox-panel size="xl">
           <label cds-layout="vertical gap:xxl align:center">
-            <span cds-text="heading">VM Two</span>
+            <span cds-text="headline">VM Two</span>
             <span cds-text="section center">Replication & Remediation</span>
           </label>
           <input type="checkbox" value="1" />
