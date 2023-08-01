@@ -401,7 +401,7 @@ const typography = {
     fontWeight: token('400'),
   },
   heading: {
-    // TODO(v7): Remove in favor of headline
+    // TODO(CDE-821): Remove heading in v7
     fontSize: token(32, { scale: internal.scale3 }),
     lineHeight: token('1.125em', { static: true }),
     letterSpacing: token('-0.0125em'),

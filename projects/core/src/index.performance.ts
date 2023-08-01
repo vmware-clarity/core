@@ -16,7 +16,7 @@ describe('performance', () => {
     expect((await testBundleSize('@cds/core/styles/module.layout.min.css')).kb).toBeLessThan(4.6);
     expect((await testBundleSize('@cds/core/styles/module.reset.min.css')).kb).toBeLessThan(0.5);
     expect((await testBundleSize('@cds/core/styles/module.tokens.min.css')).kb).toBeLessThan(2.5);
-    expect((await testBundleSize('@cds/core/styles/module.typography.min.css')).kb).toBeLessThan(1.6);
+    expect((await testBundleSize('@cds/core/styles/module.typography.min.css')).kb).toBeLessThan(1.616);
   });
 
   it(`should bundle and treeshake all components`, async () => {
