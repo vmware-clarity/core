@@ -46506,6 +46506,10 @@
         {
           "kind": "function",
           "name": "isJestTest"
+        },
+        {
+          "kind": "function",
+          "name": "isJsdomTest"
         }
       ],
       "exports": [
@@ -46522,6 +46526,14 @@
           "name": "isJestTest",
           "declaration": {
             "name": "isJestTest",
+            "module": "internal/utils/environment.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "isJsdomTest",
+          "declaration": {
+            "name": "isJsdomTest",
             "module": "internal/utils/environment.js"
           }
         }

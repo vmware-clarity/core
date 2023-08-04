@@ -13,3 +13,12 @@ export function isBrowser(win = window) {
 export function isJestTest() {
   return (globalThis as any)?.process?.env?.JEST_WORKER_ID !== undefined;
 }
+
+export function isJsdomTest() {
+  // This is to avoid breaking existing usage: prior to the addition of this function, isJestTest()
+  // was used to determine whether the execution environment was a test using Jsdom.
+  if (isJestTest()) {
+    return true;
+  }
+  return (globalThis as any)?.process?.env?.NODE_ENV === 'test' && navigator?.userAgent?.includes('jsdom');
+}
