@@ -4,7 +4,7 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { isJestTest } from './environment.js';
+import { isJsdomTest } from './environment.js';
 
 export function stopEvent(event: Event) {
   event.preventDefault();
@@ -31,8 +31,8 @@ export const getElementUpdates = (
 
   const updatedProp = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(element), propertyKey) as any;
 
-  //  Jest and JSDom breaks defining a new property, so skip
-  if (updatedProp && !isJestTest()) {
+  //  Tests using JSDom break defining a new property, so skip
+  if (updatedProp && !isJsdomTest()) {
     Object.defineProperty(element, propertyKey, {
       get: updatedProp.get,
       set: val => {
