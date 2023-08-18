@@ -5,6 +5,7 @@
  */
 
 import { token, CdsTheme } from './token-utils';
+import { cloneDeep } from 'lodash';
 
 // internal optimization so tokens can refer to pre-calculated values rather than generating/duplicating the same calc over many tokens
 const internal = {
@@ -315,6 +316,7 @@ const color = {
     1000: token([41, 22, 16]),
   },
   construction: {
+    25: token([198, 33, 99]),
     50: token([198, 36, 96]),
     100: token([198, 20, 91]),
     200: token([198, 14, 82]),
@@ -350,6 +352,7 @@ const typography = {
     300: token(color.construction[800]), // labels
     400: token(color.construction[900]), // headings
     500: token(color.black), // content
+    450: token(color.construction[1000]),
   },
   fontWeight: {
     // Clarity City is limited to a minimum weight of 300 and max weight of 600, tokens provide hooks for customization
@@ -386,6 +389,9 @@ const typography = {
         value: token(color.lavender[600]),
         hover: token(color.lavender[700]),
       },
+    },
+    onColorbg: {
+      value: token(color.black),
     },
   },
   body: {
@@ -454,6 +460,25 @@ const typography = {
     lineHeight: token('1.2em', { static: true }),
     letterSpacing: token('0.05em'),
     fontWeight: token('500'),
+  },
+  infoHover: {
+    value: token(color.blue[800]),
+  },
+  successHover: {
+    value: token(color.green[800]),
+  },
+  warningHover: {
+    value: token(color.ochre[900]),
+  },
+  dangerHover: {
+    value: token(color.red[800]),
+  },
+  neutralHover: {
+    value: token(color.construction[700]),
+  },
+  disabled: {
+    value: token(color.construction[400]),
+    button: token(color.construction[500]),
   },
 };
 
@@ -536,7 +561,7 @@ const aliases = {
       },
     },
     app: {
-      background: token(color.gray[50]),
+      background: token(color.construction[25]),
     },
     overlay: {
       background: token(color.white),
@@ -547,8 +572,38 @@ const aliases = {
         value: token(color.white),
         tint: token(color.construction[50]),
         shade: token(color.construction[100]),
+        dark: token(color.construction[200]),
       },
       borderColor: token(color.construction[200]),
+    },
+    info: {
+      hover: token(color.blue[800]),
+      click: token(color.blue[900]),
+      secondaryHover: token(color.blue[50]),
+    },
+    success: {
+      hover: token(color.green[800]),
+      click: token(color.green[900]),
+      secondaryHover: token(color.green[50]),
+    },
+    warning: {
+      hover: token(color.ochre[600]),
+      click: token(color.ochre[700]),
+      secondaryHover: token(color.ochre[50]),
+    },
+    danger: {
+      hover: token(color.red[800]),
+      click: token(color.red[900]),
+      secondaryHover: token(color.red[50]),
+    },
+    neutral: {
+      hover: token(color.construction[700]),
+      click: token(color.construction[800]),
+      secondaryHover: token(color.construction[50]),
+    },
+    inverse: {
+      hover: token(color.construction[600]),
+      click: token(color.construction[800]),
     },
   },
   status: {
@@ -590,6 +645,7 @@ const aliases = {
       shade: token(color.violet[900]),
     },
   },
+  typography: cloneDeep(typography), // Typography will move from -global to -alias in the future.
 };
 
 export const baseTheme: CdsTheme = {
