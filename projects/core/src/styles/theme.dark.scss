@@ -91,4 +91,32 @@
   --cds-alias-typography-danger-hover: #{$cds-global-color-red-400};
   --cds-alias-typography-neutral-hover: #{$cds-global-color-construction-200};
   --cds-alias-typography-link-on-colorbg: #{$cds-global-color-construction-1000};
+
+  --cds-alias-utility-gray: #{$cds-global-color-construction-300};
+  --cds-alias-utility-gray-tint: #{$cds-global-color-construction-1000};
+  --cds-alias-utility-gray-shade: #{$cds-global-color-construction-200};
+  --cds-alias-utility-blue: #{$cds-global-color-blue-300};
+  --cds-alias-utility-blue-tint: #{$cds-global-color-blue-1000};
+  --cds-alias-utility-blue-shade: #{$cds-global-color-blue-200};
+  --cds-alias-utility-light-blue: #{$cds-global-color-blue-700};
+  --cds-alias-utility-light-blue-tint: #{$cds-global-color-blue-1000};
+  --cds-alias-utility-light-blue-shade: #{$cds-global-color-blue-500};
+  --cds-alias-utility-dark-blue: #{$cds-global-color-azure-200};
+  --cds-alias-utility-dark-blue-tint: #{$cds-global-color-azure-1000};
+  --cds-alias-utility-dark-blue-shade: #{$cds-global-color-azure-50};
+  --cds-alias-utility-green: #{$cds-global-color-green-400};
+  --cds-alias-utility-green-tint: #{$cds-global-color-green-1000};
+  --cds-alias-utility-green-shade: #{$cds-global-color-green-200};
+  --cds-alias-utility-yellow: #{$cds-global-color-ochre-400};
+  --cds-alias-utility-yellow-tint: #{$cds-global-color-ochre-900};
+  --cds-alias-utility-yellow-shade: #{$cds-global-color-ochre-300};
+  --cds-alias-utility-red: #{$cds-global-color-red-300};
+  --cds-alias-utility-red-tint: #{$cds-global-color-red-1000};
+  --cds-alias-utility-red-shade: #{$cds-global-color-red-200};
+  --cds-alias-utility-tangerine: #{$cds-global-color-tangerine-600};
+  --cds-alias-utility-tangerine-tint: #{$cds-global-color-tangerine-1000};
+  --cds-alias-utility-tangerine-shade: #{$cds-global-color-tangerine-400};
+  --cds-alias-utility-violet: #{$cds-global-color-violet-400};
+  --cds-alias-utility-violet-tint: #{$cds-global-color-violet-1000};
+  --cds-alias-utility-violet-shade: #{$cds-global-color-violet-200};
 }

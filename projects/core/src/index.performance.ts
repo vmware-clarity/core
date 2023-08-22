@@ -8,14 +8,14 @@ import { testBundleSize } from 'web-test-runner-performance/browser.js';
 
 describe('performance', () => {
   it(`should meet maximum individual css bundle size limits`, async () => {
-    expect((await testBundleSize('@cds/core/global.min.css')).kb).toBeLessThan(8.622);
-    expect((await testBundleSize('@cds/core/styles/theme.dark.min.css')).kb).toBeLessThan(0.627);
+    expect((await testBundleSize('@cds/core/global.min.css')).kb).toBeLessThan(8.716);
+    expect((await testBundleSize('@cds/core/styles/theme.dark.min.css')).kb).toBeLessThan(0.79);
     expect((await testBundleSize('@cds/core/list/list.min.css')).kb).toBeLessThan(0.5);
 
     // contained in @cds/core/global.min.css
     expect((await testBundleSize('@cds/core/styles/module.layout.min.css')).kb).toBeLessThan(4.6);
     expect((await testBundleSize('@cds/core/styles/module.reset.min.css')).kb).toBeLessThan(0.5);
-    expect((await testBundleSize('@cds/core/styles/module.tokens.min.css')).kb).toBeLessThan(2.91);
+    expect((await testBundleSize('@cds/core/styles/module.tokens.min.css')).kb).toBeLessThan(3.042);
     expect((await testBundleSize('@cds/core/styles/module.typography.min.css')).kb).toBeLessThan(1.616);
   });
 

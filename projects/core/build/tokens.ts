@@ -645,6 +645,53 @@ const aliases = {
       shade: token(color.violet[900]),
     },
   },
+  utility: {
+    gray: {
+      value: token(color.construction[500]),
+      tint: token(color.construction[50]),
+      shade: token(color.construction[700]),
+    },
+    blue: {
+      value: token(color.blue[700]),
+      tint: token(color.blue[50]),
+      shade: token(color.blue[800]),
+    },
+    lightBlue: {
+      value: token(color.blue[300]),
+      tint: token(color.blue[50]),
+      shade: token(color.blue[600]),
+    },
+    darkBlue: {
+      value: token(color.azure[800]),
+      tint: token(color.azure[50]),
+      shade: token(color.azure[1000]),
+    },
+    green: {
+      value: token(color.green[700]),
+      tint: token(color.green[50]),
+      shade: token(color.green[800]),
+    },
+    yellow: {
+      value: token(color.ochre[500]),
+      tint: token(color.ochre[100]),
+      shade: token(color.ochre[700]),
+    },
+    red: {
+      value: token(color.red[700]),
+      tint: token(color.red[50]),
+      shade: token(color.red[800]),
+    },
+    tangerine: {
+      value: token(color.tangerine[400]),
+      tint: token(color.tangerine[50]),
+      shade: token(color.tangerine[600]),
+    },
+    violet: {
+      value: token(color.violet[600]),
+      tint: token(color.violet[50]),
+      shade: token(color.violet[800]),
+    },
+  },
   typography: cloneDeep(typography), // Typography will move from -global to -alias in the future.
 };
 
