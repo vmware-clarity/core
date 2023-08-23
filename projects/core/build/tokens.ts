@@ -573,6 +573,11 @@ const aliases = {
         tint: token(color.construction[50]),
         shade: token(color.construction[100]),
         dark: token(color.construction[200]),
+        inverse: {
+          value: token(color.construction[200]),
+          tint: token(color.construction[100]),
+          shade: token(color.construction[300]),
+        },
       },
       borderColor: token(color.construction[200]),
     },
