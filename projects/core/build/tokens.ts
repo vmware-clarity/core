@@ -5,7 +5,6 @@
  */
 
 import { token, CdsTheme } from './token-utils';
-import { cloneDeep } from 'lodash';
 
 // internal optimization so tokens can refer to pre-calculated values rather than generating/duplicating the same calc over many tokens
 const internal = {
@@ -345,142 +344,146 @@ const color = {
   },
 };
 
-const typography = {
-  color: {
-    100: token(color.white),
-    200: token(color.construction[600]), // placeholders
-    300: token(color.construction[800]), // labels
-    400: token(color.construction[900]), // headings
-    500: token(color.black), // content
-    450: token(color.construction[1000]),
-  },
-  fontWeight: {
-    // Clarity City is limited to a minimum weight of 300 and max weight of 600, tokens provide hooks for customization
-    light: token('300'),
-    regular: token('400'),
-    medium: token('500'),
-    semibold: token('600'),
-    bold: token('600'),
-    extrabold: token('600'),
-  },
-  fontSize: {
-    0: token(10, { scale: internal.scale3 }),
-    1: token(11, { scale: internal.scale3 }),
-    2: token(12, { scale: internal.scale3 }),
-    3: token(13, { scale: internal.scale3 }),
-    4: token(14, { scale: internal.scale3 }),
-    5: token(16, { scale: internal.scale3 }),
-    6: token(20, { scale: internal.scale3 }),
-    7: token(24, { scale: internal.scale3 }),
-    8: token(32, { scale: internal.scale3 }),
-    9: token(40, { scale: internal.scale3 }),
-  },
-  fontFamily: token("'Clarity City', 'Avenir Next', sans-serif"),
-  headerFontFamily: token("'Clarity City', 'Avenir Next', sans-serif"),
-  monospaceFontFamily: token('ui-monospace, Consolas, Menlo, Monaco, monospace'),
-  topGapHeight: token('0.1475em'), // line-height eraser
-  ascenderHeight: token('0.1703em'), // line-height eraser
-  xHeight: token('0.517em'), // line-height eraser
-  link: {
+const generateTypographyTokens = () => {
+  return {
     color: {
-      value: token(color.blue[700]),
-      hover: token(color.blue[800]),
-      visited: {
-        value: token(color.lavender[600]),
-        hover: token(color.lavender[700]),
+      100: token(color.white),
+      200: token(color.construction[600]), // placeholders
+      300: token(color.construction[800]), // labels
+      400: token(color.construction[900]), // headings
+      500: token(color.black), // content
+      450: token(color.construction[1000]),
+    },
+    fontWeight: {
+      // Clarity City is limited to a minimum weight of 300 and max weight of 600, tokens provide hooks for customization
+      light: token('300'),
+      regular: token('400'),
+      medium: token('500'),
+      semibold: token('600'),
+      bold: token('600'),
+      extrabold: token('600'),
+    },
+    fontSize: {
+      0: token(10, { scale: internal.scale3 }),
+      1: token(11, { scale: internal.scale3 }),
+      2: token(12, { scale: internal.scale3 }),
+      3: token(13, { scale: internal.scale3 }),
+      4: token(14, { scale: internal.scale3 }),
+      5: token(16, { scale: internal.scale3 }),
+      6: token(20, { scale: internal.scale3 }),
+      7: token(24, { scale: internal.scale3 }),
+      8: token(32, { scale: internal.scale3 }),
+      9: token(40, { scale: internal.scale3 }),
+    },
+    fontFamily: token("'Clarity City', 'Avenir Next', sans-serif"),
+    headerFontFamily: token("'Clarity City', 'Avenir Next', sans-serif"),
+    monospaceFontFamily: token('ui-monospace, Consolas, Menlo, Monaco, monospace'),
+    topGapHeight: token('0.1475em'), // line-height eraser
+    ascenderHeight: token('0.1703em'), // line-height eraser
+    xHeight: token('0.517em'), // line-height eraser
+    link: {
+      color: {
+        value: token(color.blue[700]),
+        hover: token(color.blue[800]),
+        visited: {
+          value: token(color.lavender[600]),
+          hover: token(color.lavender[700]),
+        },
+      },
+      onColorbg: {
+        value: token(color.black),
       },
     },
-    onColorbg: {
-      value: token(color.black),
+    body: {
+      fontSize: token(14, { scale: internal.scale3 }),
+      lineHeight: token('1.42857em', { static: true }), // static for line height eraser calcs
+      letterSpacing: token('-0.014286em'),
+      fontWeight: token('400'),
     },
-  },
-  body: {
-    fontSize: token(14, { scale: internal.scale3 }),
-    lineHeight: token('1.42857em', { static: true }), // static for line height eraser calcs
-    letterSpacing: token('-0.014286em'),
-    fontWeight: token('400'),
-  },
-  display: {
-    fontSize: token(40, { scale: internal.scale3 }),
-    lineHeight: token('1.1em', { static: true }),
-    letterSpacing: token('-0.0125em'),
-    fontWeight: token('400'),
-  },
-  heading: {
-    // TODO(CDE-821): Remove heading in v7
-    fontSize: token(32, { scale: internal.scale3 }),
-    lineHeight: token('1.125em', { static: true }),
-    letterSpacing: token('-0.0125em'),
-    fontWeight: token('400'),
-  },
-  headline: {
-    fontSize: token(32, { scale: internal.scale3 }),
-    lineHeight: token('1.125em', { static: true }),
-    letterSpacing: token('-0.0125em'),
-    fontWeight: token('400'),
-  },
-  title: {
-    fontSize: token(24, { scale: internal.scale3 }),
-    lineHeight: token('1.16667em', { static: true }),
-    letterSpacing: token('-0.008333em'),
-    fontWeight: token('400'),
-  },
-  section: {
-    fontSize: token(20, { scale: internal.scale3 }),
-    lineHeight: token('1.2em', { static: true }),
-    letterSpacing: token('-0.01em'),
-    fontWeight: token('400'),
-  },
-  subsection: {
-    fontSize: token(16, { scale: internal.scale3 }),
-    lineHeight: token('1.25em', { static: true }),
-    letterSpacing: token('-0.0125em'),
-    fontWeight: token('400'),
-  },
-  message: {
-    fontSize: token(16, { scale: internal.scale3 }),
-    lineHeight: token('1.25em', { static: true }),
-    letterSpacing: token('-0.0125em'),
-    fontWeight: token(400),
-  },
-  secondary: {
-    fontSize: token(13, { scale: internal.scale3 }),
-    lineHeight: token('1.23077em', { static: true }),
-    letterSpacing: token('-0.007692em'),
-    fontWeight: token('400'),
-  },
-  caption: {
-    fontSize: token(11, { scale: internal.scale3 }),
-    lineHeight: token('1.454545em', { static: true }),
-    letterSpacing: token('0.018182em'),
-    fontWeight: token('400'),
-  },
-  smallcaption: {
-    fontSize: token(10, { scale: internal.scale3 }),
-    lineHeight: token('1.2em', { static: true }),
-    letterSpacing: token('0.05em'),
-    fontWeight: token('500'),
-  },
-  infoHover: {
-    value: token(color.blue[800]),
-  },
-  successHover: {
-    value: token(color.green[800]),
-  },
-  warningHover: {
-    value: token(color.ochre[900]),
-  },
-  dangerHover: {
-    value: token(color.red[800]),
-  },
-  neutralHover: {
-    value: token(color.construction[700]),
-  },
-  disabled: {
-    value: token(color.construction[400]),
-    button: token(color.construction[500]),
-  },
+    display: {
+      fontSize: token(40, { scale: internal.scale3 }),
+      lineHeight: token('1.1em', { static: true }),
+      letterSpacing: token('-0.0125em'),
+      fontWeight: token('400'),
+    },
+    heading: {
+      // TODO(CDE-821): Remove heading in v7
+      fontSize: token(32, { scale: internal.scale3 }),
+      lineHeight: token('1.125em', { static: true }),
+      letterSpacing: token('-0.0125em'),
+      fontWeight: token('400'),
+    },
+    headline: {
+      fontSize: token(32, { scale: internal.scale3 }),
+      lineHeight: token('1.125em', { static: true }),
+      letterSpacing: token('-0.0125em'),
+      fontWeight: token('400'),
+    },
+    title: {
+      fontSize: token(24, { scale: internal.scale3 }),
+      lineHeight: token('1.16667em', { static: true }),
+      letterSpacing: token('-0.008333em'),
+      fontWeight: token('400'),
+    },
+    section: {
+      fontSize: token(20, { scale: internal.scale3 }),
+      lineHeight: token('1.2em', { static: true }),
+      letterSpacing: token('-0.01em'),
+      fontWeight: token('400'),
+    },
+    subsection: {
+      fontSize: token(16, { scale: internal.scale3 }),
+      lineHeight: token('1.25em', { static: true }),
+      letterSpacing: token('-0.0125em'),
+      fontWeight: token('400'),
+    },
+    message: {
+      fontSize: token(16, { scale: internal.scale3 }),
+      lineHeight: token('1.25em', { static: true }),
+      letterSpacing: token('-0.0125em'),
+      fontWeight: token(400),
+    },
+    secondary: {
+      fontSize: token(13, { scale: internal.scale3 }),
+      lineHeight: token('1.23077em', { static: true }),
+      letterSpacing: token('-0.007692em'),
+      fontWeight: token('400'),
+    },
+    caption: {
+      fontSize: token(11, { scale: internal.scale3 }),
+      lineHeight: token('1.454545em', { static: true }),
+      letterSpacing: token('0.018182em'),
+      fontWeight: token('400'),
+    },
+    smallcaption: {
+      fontSize: token(10, { scale: internal.scale3 }),
+      lineHeight: token('1.2em', { static: true }),
+      letterSpacing: token('0.05em'),
+      fontWeight: token('500'),
+    },
+    infoHover: {
+      value: token(color.blue[800]),
+    },
+    successHover: {
+      value: token(color.green[800]),
+    },
+    warningHover: {
+      value: token(color.ochre[900]),
+    },
+    dangerHover: {
+      value: token(color.red[800]),
+    },
+    neutralHover: {
+      value: token(color.construction[700]),
+    },
+    disabled: {
+      value: token(color.construction[400]),
+      button: token(color.construction[500]),
+    },
+  };
 };
+
+const typography = generateTypographyTokens();
 
 const animation = {
   duration: {
@@ -697,7 +700,7 @@ const aliases = {
       shade: token(color.violet[800]),
     },
   },
-  typography: cloneDeep(typography), // Typography will move from -global to -alias in the future.
+  typography: generateTypographyTokens(), // Typography will move from -global to -alias in the future.
 };
 
 export const baseTheme: CdsTheme = {
