@@ -562,6 +562,35 @@ const aliases = {
         selected: token(color.construction[700]),
         disabled: token(color.construction[300]),
       },
+      info: {
+        hover: token(color.blue[800]),
+        click: token(color.blue[900]),
+        secondaryHover: token(color.blue[50]),
+      },
+      success: {
+        hover: token(color.green[800]),
+        click: token(color.green[900]),
+        secondaryHover: token(color.green[50]),
+      },
+      warning: {
+        hover: token(color.ochre[600]),
+        click: token(color.ochre[700]),
+        secondaryHover: token(color.ochre[50]),
+      },
+      danger: {
+        hover: token(color.red[800]),
+        click: token(color.red[900]),
+        secondaryHover: token(color.red[50]),
+      },
+      neutral: {
+        hover: token(color.construction[700]),
+        click: token(color.construction[800]),
+        secondaryHover: token(color.construction[50]),
+      },
+      inverse: {
+        hover: token(color.construction[600]),
+        click: token(color.construction[800]),
+      },
     },
     app: {
       background: token(color.construction[25]),
@@ -583,35 +612,6 @@ const aliases = {
         },
       },
       borderColor: token(color.construction[200]),
-    },
-    info: {
-      hover: token(color.blue[800]),
-      click: token(color.blue[900]),
-      secondaryHover: token(color.blue[50]),
-    },
-    success: {
-      hover: token(color.green[800]),
-      click: token(color.green[900]),
-      secondaryHover: token(color.green[50]),
-    },
-    warning: {
-      hover: token(color.ochre[600]),
-      click: token(color.ochre[700]),
-      secondaryHover: token(color.ochre[50]),
-    },
-    danger: {
-      hover: token(color.red[800]),
-      click: token(color.red[900]),
-      secondaryHover: token(color.red[50]),
-    },
-    neutral: {
-      hover: token(color.construction[700]),
-      click: token(color.construction[800]),
-      secondaryHover: token(color.construction[50]),
-    },
-    inverse: {
-      hover: token(color.construction[600]),
-      click: token(color.construction[800]),
     },
   },
   status: {
