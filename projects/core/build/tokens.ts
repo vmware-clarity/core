@@ -461,6 +461,12 @@ const generateTypographyTokens = () => {
       letterSpacing: token('0.05em'),
       fontWeight: token('500'),
     },
+    button: {
+      fontSize: token(13, { scale: internal.scale3 }),
+      lineHeight: token('1.23077em', { static: true }),
+      letterSpacing: token('-0.05em'),
+      fontWeight: token('500'),
+    },
     infoHover: {
       value: token(color.blue[800]),
     },
