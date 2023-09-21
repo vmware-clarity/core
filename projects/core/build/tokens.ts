@@ -82,6 +82,7 @@ const color = {
   },
   blue: {
     50: token([198, 100, 95]),
+    75: token([198, 100, 94]),
     100: token([198, 100, 87]),
     200: token([198, 100, 78]),
     300: token([198, 100, 70]),
@@ -477,7 +478,7 @@ const generateTypographyTokens = () => {
       value: token(color.construction[700]),
     },
     disabled: {
-      value: token(color.construction[400]),
+      value: token(color.construction[500]),
       button: token(color.construction[500]),
     },
   };
@@ -550,7 +551,7 @@ const aliases = {
       background: {
         value: token(color.white),
         hover: token(color.blue[50]),
-        active: token(color.blue[100]),
+        active: token(color.blue[75]),
         selected: token(color.blue[50]),
         disabled: token(color.white),
         highlight: token(color.blue[700]),
