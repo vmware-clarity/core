@@ -26,6 +26,12 @@
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   color: var(--color);
+  box-shadow: var(--box-shadow);
+}
+
+.expand-button {
+  visibility: var(--icon-visibility);
+  margin: var(--icon-margin);
 }
 
 :host(:hover) {
