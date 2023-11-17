@@ -66,10 +66,16 @@
               "name": "--background"
             },
             {
-              "name": "--icon-color"
+              "name": "--padding"
             },
             {
-              "name": "--icon-transform"
+              "name": "--icon-visibility"
+            },
+            {
+              "name": "--icon-margin"
+            },
+            {
+              "name": "--box-shadow"
             }
           ],
           "members": [
