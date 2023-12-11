@@ -422,8 +422,8 @@ const generateTypographyTokens = () => {
     },
     title: {
       fontSize: token(24, { scale: internal.scale3 }),
-      lineHeight: token('1.16667em', { static: true }),
-      letterSpacing: token('-0.008333em'),
+      lineHeight: token('1.333333em', { static: true }),
+      letterSpacing: token('-0.00833333em'),
       fontWeight: token('500'),
     },
     section: {
@@ -434,13 +434,13 @@ const generateTypographyTokens = () => {
     },
     subsection: {
       fontSize: token(16, { scale: internal.scale3 }),
-      lineHeight: token('1.25em', { static: true }),
+      lineHeight: token('1.5em', { static: true }),
       letterSpacing: token('-0.0125em'),
       fontWeight: token('500'),
     },
     message: {
       fontSize: token(16, { scale: internal.scale3 }),
-      lineHeight: token('1.25em', { static: true }),
+      lineHeight: token('1.5em', { static: true }),
       letterSpacing: token('-0.0125em'),
       fontWeight: token(400),
     },
