@@ -398,7 +398,7 @@ const generateTypographyTokens = () => {
     body: {
       fontSize: token(14, { scale: internal.scale3 }),
       lineHeight: token('1.4285714em', { static: true }), // static for line height eraser calcs
-      letterSpacing: token('-0.014286em'),
+      letterSpacing: token('-0.00714286em'),
       fontWeight: token('400'),
     },
     display: {
