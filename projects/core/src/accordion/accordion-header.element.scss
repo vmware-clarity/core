@@ -12,8 +12,7 @@
  * included to provide users with the flexibility to extend the accordion
  * component, enabling them to create a stepper component that aligns with the
  * style of the ng-clarity stepper.
-*/
-
+ */
 :host {
   --color: #{$cds-alias-object-interaction-color};
   --background: #{$cds-alias-object-container-background-tint};
