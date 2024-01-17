@@ -20,7 +20,6 @@
   --outline-offset: calc(#{$cds-alias-object-interaction-outline-offset} * -1);
   pointer-events: none;
   display: inline-block;
-  outline: 0 !important;
 }
 
 :host([role='button']) {
