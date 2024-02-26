@@ -37,6 +37,16 @@ describe('cds-file', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have a default button label', async () => {
+    expect(button.innerText.trim().toLocaleLowerCase()).toBe('browse');
+  });
+
+  it('should have a customizable button label', async () => {
+    component.buttonLabel = 'custom browse';
+    await componentIsStable(component);
+    expect(button.innerText.trim().toLocaleLowerCase()).toBe('custom browse');
+  });
+
   it('should set the file input as active when button is clicked', done => {
     let clicked = false;
     element.querySelector('label').addEventListener('click', () => {
@@ -97,16 +107,18 @@ describe('cds-file', () => {
   });
 
   it('should clear file input', async () => {
-    (component.inputControl as HTMLInputElement).dispatchEvent(new Event('change'));
+    await selectFileAndThenClearFile();
 
-    Object.defineProperty(component, 'inputControl', { get: () => ({ files: [{ name: 'test.png' }] }) });
-    component.requestUpdate();
-    await componentIsStable(component);
-
-    component.shadowRoot.querySelector('cds-button-action').click();
-    await componentIsStable(component);
     expect(document.activeElement).toBe(component);
     expect(button.innerText.trim().toLocaleLowerCase()).toBe('browse');
+  });
+
+  it('should clear file input with button custom label', async () => {
+    component.buttonLabel = 'custom browse';
+    await selectFileAndThenClearFile();
+
+    expect(document.activeElement).toBe(component);
+    expect(button.innerText.trim().toLocaleLowerCase()).toBe('custom browse');
   });
 
   it('should not run an update on a programmatic change event', async () => {
@@ -127,4 +139,15 @@ describe('cds-file', () => {
     component.clearFiles(); // defaults to firing the event
     expect(component.inputControl.dispatchEvent).toHaveBeenCalledTimes(2);
   });
+
+  async function selectFileAndThenClearFile() {
+    (component.inputControl as HTMLInputElement).dispatchEvent(new Event('change'));
+
+    Object.defineProperty(component, 'inputControl', { get: () => ({ files: [{ name: 'test.png' }] }) });
+    component.requestUpdate();
+    await componentIsStable(component);
+
+    component.shadowRoot.querySelector('cds-button-action').click();
+    await componentIsStable(component);
+  }
 });

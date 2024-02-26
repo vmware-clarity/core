@@ -5,7 +5,7 @@
  */
 
 import { html, PropertyValues } from 'lit';
-import { state, i18n, I18nService } from '@cds/core/internal';
+import { state, i18n, I18nService, property } from '@cds/core/internal';
 import { CdsControl } from '@cds/core/forms';
 import styles from './file.element.scss';
 
@@ -29,7 +29,12 @@ import styles from './file.element.scss';
 export class CdsFile extends CdsControl {
   @i18n() i18n = I18nService.keys.file;
 
-  @state() private buttonLabel = this.i18n.browse;
+  /**
+   * Set the label of the browse button.
+   */
+  @property() buttonLabel = this.i18n.browse;
+
+  @state() private buttonLabelForSelection: string;
 
   @state() protected fixedControlWidth = true;
 
@@ -44,7 +49,7 @@ export class CdsFile extends CdsControl {
       <div cds-layout="horizontal gap:sm align:vertical-center">
         <cds-button size="sm" action="outline" @click="${() => this.label.click()}" ?disabled=${this.disabled}>
           <cds-icon shape="folder" aria-hidden="true"></cds-icon>
-          <span>${this.buttonLabel}</span>
+          <span>${this.buttonLabelForSelection || this.buttonLabel}</span>
         </cds-button>
         ${this.clearFilesControlTemplate}
       </div>
@@ -74,7 +79,7 @@ export class CdsFile extends CdsControl {
 
   /** @private */
   clearFiles(fireEvent = true) {
-    this.buttonLabel = this.i18n.browse;
+    this.buttonLabelForSelection = '';
     this.inputControl.value = '';
 
     // when input is reset like this it isn't registering an onchange event
@@ -92,7 +97,7 @@ export class CdsFile extends CdsControl {
   /** @private */
   updateLabelAndFocus(files?: FileList) {
     if (files && files.length) {
-      this.buttonLabel = files.length > 1 ? `${files.length} ${this.i18n.files}` : files[0].name;
+      this.buttonLabelForSelection = files.length > 1 ? `${files.length} ${this.i18n.files}` : files[0].name;
     } else {
       this.clearFiles(false);
     }
