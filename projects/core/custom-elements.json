@@ -66,10 +66,16 @@
               "name": "--background"
             },
             {
-              "name": "--icon-color"
+              "name": "--padding"
             },
             {
-              "name": "--icon-transform"
+              "name": "--icon-visibility"
+            },
+            {
+              "name": "--icon-margin"
+            },
+            {
+              "name": "--box-shadow"
             }
           ],
           "members": [
@@ -7344,6 +7350,15 @@
             {
               "kind": "field",
               "name": "buttonLabel",
+              "description": "Set the label of the browse button.",
+              "attribute": "buttonLabel"
+            },
+            {
+              "kind": "field",
+              "name": "buttonLabelForSelection",
+              "type": {
+                "text": "string"
+              },
               "privacy": "private"
             },
             {
@@ -7895,13 +7910,12 @@
               }
             }
           ],
-          "superclass": {
-            "name": "CdsControl",
-            "package": "@cds/core/forms"
-          },
-          "tagName": "cds-file",
-          "customElement": true,
           "attributes": [
+            {
+              "name": "buttonLabel",
+              "description": "Set the label of the browse button.",
+              "fieldName": "buttonLabel"
+            },
             {
               "name": "status",
               "type": {
@@ -7969,7 +7983,13 @@
                 "module": "forms/control/control.element.js"
               }
             }
-          ]
+          ],
+          "superclass": {
+            "name": "CdsControl",
+            "package": "@cds/core/forms"
+          },
+          "tagName": "cds-file",
+          "customElement": true
         }
       ],
       "exports": [
@@ -11557,7 +11577,7 @@
               "kind": "field",
               "name": "status",
               "type": {
-                "text": "info | success | warning | danger"
+                "text": "neutral | info | success | warning | danger"
               },
               "description": "Changes color of icon fills and outlines",
               "attribute": "status"
@@ -11576,7 +11596,7 @@
               "kind": "field",
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "attribute": "badge"
@@ -11648,7 +11668,7 @@
             {
               "name": "status",
               "type": {
-                "text": "info | success | warning | danger"
+                "text": "neutral | info | success | warning | danger"
               },
               "description": "Changes color of icon fills and outlines",
               "fieldName": "status"
@@ -11665,7 +11685,7 @@
             {
               "name": "badge",
               "type": {
-                "text": "info | success | warning | danger | inherit | warning"
+                "text": "neutral | info | success | warning | danger | inherit | warning"
               },
               "description": "-triangle | inherit-triangle}",
               "fieldName": "badge"
@@ -12605,6 +12625,22 @@
         },
         {
           "kind": "js",
+          "name": "birthdayCakeIcon",
+          "declaration": {
+            "name": "birthdayCakeIcon",
+            "module": "./shapes/birthday-cake.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "birthdayCakeIconName",
+          "declaration": {
+            "name": "birthdayCakeIconName",
+            "module": "./shapes/birthday-cake.js"
+          }
+        },
+        {
+          "kind": "js",
           "name": "boltIcon",
           "declaration": {
             "name": "boltIcon",
@@ -13305,6 +13341,22 @@
           "declaration": {
             "name": "fuelIconName",
             "module": "./shapes/fuel.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "gavelIcon",
+          "declaration": {
+            "name": "gavelIcon",
+            "module": "./shapes/gavel.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "gavelIconName",
+          "declaration": {
+            "name": "gavelIconName",
+            "module": "./shapes/gavel.js"
           }
         },
         {
@@ -14121,6 +14173,22 @@
           "declaration": {
             "name": "thermometerIconName",
             "module": "./shapes/thermometer.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "timelineIcon",
+          "declaration": {
+            "name": "timelineIcon",
+            "module": "./shapes/timeline.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "timelineIconName",
+          "declaration": {
+            "name": "timelineIconName",
+            "module": "./shapes/timeline.js"
           }
         },
         {
@@ -16745,6 +16813,22 @@
           "declaration": {
             "name": "nvmeIconName",
             "module": "./shapes/nvme.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "pdfFileIcon",
+          "declaration": {
+            "name": "pdfFileIcon",
+            "module": "./shapes/pdf-file.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "pdfFileIconName",
+          "declaration": {
+            "name": "pdfFileIconName",
+            "module": "./shapes/pdf-file.js"
           }
         },
         {
@@ -46442,6 +46526,10 @@
         {
           "kind": "function",
           "name": "isJestTest"
+        },
+        {
+          "kind": "function",
+          "name": "isJsdomTest"
         }
       ],
       "exports": [
@@ -46458,6 +46546,14 @@
           "name": "isJestTest",
           "declaration": {
             "name": "isJestTest",
+            "module": "internal/utils/environment.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "isJsdomTest",
+          "declaration": {
+            "name": "isJsdomTest",
             "module": "internal/utils/environment.js"
           }
         }

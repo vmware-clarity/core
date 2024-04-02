@@ -1,6 +1,6 @@
 ![Clarity](logo.png)
 
-# Clarity Design System
+# Clarity Core
 
 ![Build](https://github.com/vmware-clarity/core/workflows/Build/badge.svg)
 [![npm version core](https://img.shields.io/npm/v/@cds/core/next?label=%40cds%2Fcore&style=flat-square)](https://www.npmjs.com/package/@cds/core)

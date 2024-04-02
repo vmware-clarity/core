@@ -107,5 +107,6 @@ cds-icon,
 @media (-webkit-min-device-pixel-ratio: 0) {
   :host(:focus) .private-host::after {
     outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
   }
 }

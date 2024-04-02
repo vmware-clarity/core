@@ -887,7 +887,7 @@ export function interactionHorizontalNavigationDemo() {
       .cds-horizontal-nav-mock button[selected] {
         box-shadow: inset 0 calc(var(--cds-alias-object-border-width-300) * -1) 0 0
           var(--cds-alias-object-interaction-background-highlight);
-        color: var(--cds-alias-object-interaction-selected);
+        color: var(--cds-alias-object-interaction-color-selected);
       }
 
       .cds-horizontal-nav-mock button[disabled] {
@@ -1021,7 +1021,7 @@ export function interactionTabsDemo() {
       .cds-tabs-mock button[selected] {
         box-shadow: inset 0 calc(var(--cds-alias-object-border-width-300) * -1) 0 0
           var(--cds-alias-object-interaction-background-highlight);
-        color: var(--cds-alias-object-interaction-selected);
+        color: var(--cds-alias-object-interaction-color-selected);
       }
 
       .cds-tabs-mock button[disabled] {

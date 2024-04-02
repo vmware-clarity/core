@@ -12,11 +12,11 @@ import {
   PRIVATE_ANIMATION_STATUS_ATTR_NAME,
 } from '../motion/interfaces.js';
 import { runPropertyAnimations } from '../motion/utils.js';
-import { isJestTest } from '../utils/environment.js';
+import { isJsdomTest } from '../utils/environment.js';
 
 // decorator factory that extends the component constructor to inject animations code into it
 export function animate(config: PropertyDrivenAnimation) {
-  if (isJestTest()) {
+  if (isJsdomTest()) {
     return function () {
       // jsdom doesn't like the class returned from the decorator below
       // do nothing
