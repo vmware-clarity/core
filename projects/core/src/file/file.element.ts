@@ -77,7 +77,6 @@ export class CdsFile extends CdsControl {
     });
   }
 
-  /** @private */
   clearFiles(fireEvent = true) {
     this.buttonLabelForSelection = '';
     this.inputControl.value = '';
