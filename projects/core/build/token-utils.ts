@@ -5,17 +5,17 @@
  */
 
 export interface CdsTheme {
-  internal: Tokens;
+  internal?: Tokens;
   global: {
-    scale: Tokens;
-    layout: Tokens;
-    space: Tokens;
-    color: Tokens;
-    typography: Tokens;
-    animation: Tokens;
-    base: Token;
+    scale?: Tokens;
+    layout?: Tokens;
+    space?: Tokens;
+    color?: Tokens;
+    typography?: Tokens;
+    animation?: Tokens;
+    base?: Token;
   };
-  aliases: Tokens;
+  aliases?: Tokens;
 }
 
 export interface Tokens {

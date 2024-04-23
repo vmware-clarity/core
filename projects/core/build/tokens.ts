@@ -709,3 +709,400 @@ export const baseTheme: CdsTheme = {
   aliases,
   internal,
 };
+
+export const darkTheme: CdsTheme = {
+  global: {
+    typography: {
+      color: {
+        100: token(color.black),
+        200: token(color.construction[300]), // placeholders
+        300: token(color.construction[200]), // labels
+        400: token(color.construction[100]), // headings
+        450: token(color.construction[50]),
+        500: token(color.white), // content
+      },
+      link: {
+        color: {
+          value: token(color.blue[400]),
+          hover: token(color.blue[200]),
+          visited: {
+            value: token(color.lavender[300]),
+            hover: token(color.lavender[200]),
+          },
+        },
+        onColorbg: {
+          value: token(color.construction[1000]),
+        },
+      },
+      infoHover: {
+        value: token(color.blue[200]),
+      },
+      successHover: {
+        value: token(color.green[400]),
+      },
+      warningHover: {
+        value: token(color.yellow[600]),
+      },
+      dangerHover: {
+        value: token(color.red[400]),
+      },
+      neutralHover: {
+        value: token(color.construction[200]),
+      },
+      disabled: {
+        value: token(color.construction[500]),
+        button: token(color.construction[900]),
+      },
+    },
+  },
+  aliases: {
+    typography: {
+      color: {
+        100: token(color.black),
+        200: token(color.construction[300]), // placeholders
+        300: token(color.construction[200]), // labels
+        400: token(color.construction[100]), // headings
+        450: token(color.construction[50]),
+        500: token(color.white), // content
+      },
+      link: {
+        color: {
+          value: token(color.blue[400]),
+          hover: token(color.blue[200]),
+          visited: {
+            value: token(color.lavender[300]),
+            hover: token(color.lavender[200]),
+          },
+        },
+        onColorbg: {
+          value: token(color.construction[1000]),
+        },
+      },
+      infoHover: {
+        value: token(color.blue[200]),
+      },
+      successHover: {
+        value: token(color.green[400]),
+      },
+      warningHover: {
+        value: token(color.yellow[600]),
+      },
+      dangerHover: {
+        value: token(color.red[400]),
+      },
+      neutralHover: {
+        value: token(color.construction[200]),
+      },
+      disabled: {
+        value: token(color.construction[500]),
+        button: token(color.construction[900]),
+      },
+    },
+    object: {
+      border: {
+        radius: {
+          100: token(4),
+          200: token(12),
+          300: token('50%'),
+        },
+        width: {
+          100: token(1),
+          200: token(2),
+          300: token(3),
+          400: token(4),
+        },
+        color: {
+          value: token(color.construction[500]),
+          tint: token(color.construction[400]),
+          shade: token(color.construction[600]),
+        },
+      },
+      shadow: {
+        100: token(`0 var(--cds-global-space-1) var(--cds-global-space-2) 0 var(--cds-alias-object-opacity-300)`),
+        200: token('0 var(--cds-global-space-1) var(--cds-global-space-2) 0 var(--cds-alias-object-opacity-200)'),
+        300: token('0 var(--cds-global-space-1) var(--cds-global-space-2) 0 var(--cds-alias-object-opacity-100)'),
+      },
+      opacity: {
+        0: token('hsla(0, 0%, 0%, 0)'),
+        100: token('hsla(0, 0%, 0%, 0.2)'),
+        200: token('hsla(0, 0%, 0%, 0.4)'),
+        300: token('hsla(0, 0%, 0%, 0.6)'),
+      },
+      interaction: {
+        outline: token('Highlight solid 2px', { raw: true, static: true }),
+        outlineWebkit: token('5px auto -webkit-focus-ring-color', { raw: true, static: true }), // https://coryrylan.com/blog/dont-override-css-outline-focus-styles
+        outlineOffset: token('1px', { raw: true, static: true }),
+        touchTarget: token(36),
+        borderColor: token(color.construction[300]),
+        background: {
+          value: token(color.construction[1000]),
+          hover: token(color.blue[600]),
+          active: token(color.blue[800]),
+          selected: token(color.blue[700]),
+          disabled: token(color.construction[700]),
+          highlight: token(color.blue[400]),
+        },
+        color: {
+          value: token(color.construction[200]),
+          hover: token(color.construction[50]),
+          active: token(color.construction[100]),
+          selected: token(color.construction[200]),
+          disabled: token(color.construction[600]),
+        },
+        info: {
+          hover: token(color.blue[300]),
+          click: token(color.blue[500]),
+          secondaryHover: token(color.blue[1000]),
+        },
+        success: {
+          hover: token(color.green[400]),
+          click: token(color.green[600]),
+          secondaryHover: token(color.green[1000]),
+        },
+        warning: {
+          hover: token(color.yellow[300]),
+          click: token(color.yellow[500]),
+          secondaryHover: token(color.yellow[1000]),
+        },
+        danger: {
+          hover: token(color.red[400]),
+          click: token(color.red[600]),
+          secondaryHover: token(color.red[1000]),
+        },
+        neutral: {
+          hover: token(color.construction[200]),
+          click: token(color.construction[400]),
+          secondaryHover: token(color.construction[800]),
+        },
+        inverse: {
+          hover: token(color.construction[700]),
+          click: token(color.construction[800]),
+        },
+      },
+      app: {
+        background: token(color.construction[1000]),
+      },
+      overlay: {
+        background: token(color.construction[900]),
+        backdropBackground: token('hsla(0, 0%, 0%, 0.6)'),
+      },
+      container: {
+        background: {
+          value: token(color.construction[900]),
+          tint: token(color.construction[1000]),
+          shade: token(color.construction[800]),
+          dark: token(color.construction[800]),
+          inverse: {
+            value: token(color.construction[600]),
+            tint: token(color.construction[500]),
+            shade: token(color.construction[800]),
+          },
+        },
+        borderColor: token(color.black),
+      },
+    },
+    status: {
+      info: {
+        value: token(color.blue[400]),
+        tint: token(color.blue[800]),
+        shade: token(color.blue[500]),
+      },
+      success: {
+        value: token(color.green[500]),
+        tint: token(color.green[800]),
+        shade: token(color.green[600]),
+      },
+      warning: {
+        value: token(color.ochre[400]),
+        tint: token(color.ochre[600]),
+        shade: token(color.ochre[500]),
+        dark: token(color.ochre[700]),
+      },
+      danger: {
+        value: token(color.red[500]),
+        tint: token(color.red[800]),
+        shade: token(color.red[600]),
+        dark: token(color.red[900]),
+      },
+      neutral: {
+        value: token(color.construction[300]),
+        tint: token(color.construction[700]),
+        shade: token(color.construction[400]),
+      },
+      disabled: {
+        value: token(color.construction[600]),
+        tint: token(color.construction[700]),
+        shade: token(color.construction[500]),
+      },
+      alt: {
+        value: token(color.violet[700]),
+        tint: token(color.violet[600]),
+        shade: token(color.violet[900]),
+      },
+    },
+    utility: {
+      gray: {
+        value: token(color.construction[300]),
+        tint: token(color.construction[1000]),
+        shade: token(color.construction[200]),
+      },
+      blue: {
+        value: token(color.blue[300]),
+        tint: token(color.blue[1000]),
+        shade: token(color.blue[200]),
+      },
+      lightBlue: {
+        value: token(color.blue[700]),
+        tint: token(color.blue[1000]),
+        shade: token(color.blue[500]),
+      },
+      darkBlue: {
+        value: token(color.azure[200]),
+        tint: token(color.azure[1000]),
+        shade: token(color.azure[50]),
+      },
+      green: {
+        value: token(color.green[400]),
+        tint: token(color.green[1000]),
+        shade: token(color.green[200]),
+      },
+      yellow: {
+        value: token(color.ochre[400]),
+        tint: token(color.ochre[900]),
+        shade: token(color.ochre[300]),
+      },
+      red: {
+        value: token(color.red[300]),
+        tint: token(color.red[1000]),
+        shade: token(color.red[200]),
+      },
+      tangerine: {
+        value: token(color.tangerine[600]),
+        tint: token(color.tangerine[1000]),
+        shade: token(color.tangerine[400]),
+      },
+      violet: {
+        value: token(color.violet[400]),
+        tint: token(color.violet[1000]),
+        shade: token(color.violet[200]),
+      },
+    },
+  },
+};
+
+export const highContrastTheme: CdsTheme = {
+  global: {
+    typography: {
+      color: {
+        300: token('CanvasText', { raw: true, static: true }), // labels
+        400: token('CanvasText', { raw: true, static: true }), // headings
+        500: token('CanvasText', { raw: true, static: true }), // content
+      },
+      link: {
+        color: {
+          value: token('LinkText', { raw: true, static: true }),
+          hover: token('ActiveText', { raw: true, static: true }),
+          visited: {
+            value: token('VisitedText', { raw: true, static: true }),
+            hover: token('VisitedText', { raw: true, static: true }),
+          },
+        },
+        onColorbg: {
+          value: token(color.construction[1000]),
+        },
+      },
+    },
+  },
+  aliases: {
+    typography: {
+      color: {
+        300: token('CanvasText', { raw: true, static: true }), // labels
+        400: token('CanvasText', { raw: true, static: true }), // headings
+        500: token('CanvasText', { raw: true, static: true }), // content
+      },
+      link: {
+        color: {
+          value: token('LinkText', { raw: true, static: true }),
+          hover: token('ActiveText', { raw: true, static: true }),
+          visited: {
+            value: token('VisitedText', { raw: true, static: true }),
+            hover: token('VisitedText', { raw: true, static: true }),
+          },
+        },
+        onColorbg: {
+          value: token(color.construction[1000]),
+        },
+      },
+    },
+    status: {
+      info: {
+        value: token('CanvasText', { raw: true, static: true }),
+      },
+      success: {
+        value: token('CanvasText', { raw: true, static: true }),
+      },
+      warning: {
+        value: token('CanvasText', { raw: true, static: true }),
+      },
+      danger: {
+        value: token('CanvasText', { raw: true, static: true }),
+      },
+      neutral: {
+        value: token('GrayText', { raw: true, static: true }),
+        tint: token('GrayText', { raw: true, static: true }),
+        shade: token('GrayText', { raw: true, static: true }),
+      },
+    },
+    object: {
+      border: {
+        color: {
+          value: token('CanvasText', { raw: true, static: true }),
+          tint: token('CanvasText', { raw: true, static: true }),
+          shade: token('CanvasText', { raw: true, static: true }),
+        },
+      },
+      app: {
+        background: token('Canvas', { raw: true, static: true }),
+      },
+      container: {
+        borderColor: token('CanvasText', { raw: true, static: true }),
+      },
+      interaction: {
+        borderColor: token('CanvasText', { raw: true, static: true }),
+        color: {
+          value: token('ButtonText', { raw: true, static: true }),
+          hover: token('HighlightText', { raw: true, static: true }),
+          active: token('ActiveText', { raw: true, static: true }),
+          selected: token('SelectedItemText', { raw: true, static: true }),
+          disabled: token('GrayText', { raw: true, static: true }),
+        },
+        background: {
+          value: token('ButtonFace', { raw: true, static: true }),
+          hover: token('Highlight', { raw: true, static: true }),
+          active: token('Highlight', { raw: true, static: true }),
+          selected: token('SelectedItem', { raw: true, static: true }),
+          disabled: token('Canvas', { raw: true, static: true }),
+          highlight: token('Highlight', { raw: true, static: true }),
+        },
+      },
+    },
+  },
+};
+
+export const lowMotionTheme: CdsTheme = {
+  global: {
+    animation: {
+      duration: {
+        instant: token('0s'),
+        quickest: token('0s'),
+        quicker: token('0s'),
+        quick: token('0s'),
+        secondary: token('0s'),
+        primary: token('0s'),
+        slow: token('2s'),
+        slower: token('2s'),
+        slowest: token('2s'),
+      },
+    },
+  },
+};

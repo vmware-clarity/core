@@ -7,10 +7,13 @@
 import * as ts from 'typescript';
 import * as fs from 'fs';
 import * as csso from 'csso';
-import { baseTheme } from './tokens';
+import { baseTheme, darkTheme, highContrastTheme, lowMotionTheme } from './tokens';
 import { Token } from './token-utils';
 
 const tokens: Token[] = Object.entries(flattenTokens(baseTheme)).map(token => token[1]);
+const darkTokens: Token[] = Object.entries(flattenTokens(darkTheme)).map(token => token[1]);
+const highContrastTokens: Token[] = Object.entries(flattenTokens(highContrastTheme)).map(token => token[1]);
+const lowMotionTokens: Token[] = Object.entries(flattenTokens(lowMotionTheme)).map(token => token[1]);
 const experimental = `This token format is currently experimental and may change in the future`;
 
 fs.mkdirSync('./dist/lib/styles/', { recursive: true });
@@ -19,12 +22,12 @@ fs.mkdirSync('./src/styles/tokens/generated', { recursive: true });
 
 // Public API Tokens
 buildCSSTokens('./dist/lib/styles/module.tokens.css');
-buildCSSLightTokens('./dist/lib/styles/theme.light.css');
 buildJSONTokens('./dist/lib/tokens/tokens.json');
 buildJSTokens('./dist/lib/tokens/tokens.ts');
 buildAndroidXMLTokens('./dist/lib/tokens/tokens.android.xml');
 buildIOSSwiftTokens('./dist/lib/tokens/tokens.ios.swift');
 buildSassTokens('./dist/lib/tokens/tokens.scss');
+buildSassMixins('./dist/lib/tokens/theme.mixins.scss');
 
 // Internal API Tokens for custom elements with fallback values
 buildInternalSassTokens('./src/styles/tokens/generated/_index.scss');
@@ -124,14 +127,29 @@ ${tokens.map(token => `  ${getTokenCSSName(token)}: ${convertCSSValue(token, fal
   fs.writeFileSync(path, cssTokens);
   fs.writeFileSync(path.replace('.css', '.min.css'), csso.minify(cssTokens).css);
 }
-function buildCSSLightTokens(path) {
-  const cssTokens = `
-[cds-theme~='light'] {
+
+function createMixin(tokens, name) {
+  return `
+@mixin ${name} { 
 ${tokens.map(token => `  ${getTokenCSSName(token)}: ${convertCSSValue(token, false)};`).join('\n')}
 }`;
+}
 
-  fs.writeFileSync(path, cssTokens);
-  fs.writeFileSync(path.replace('.css', '.min.css'), csso.minify(cssTokens).css);
+function buildSassMixins(path) {
+  const lightThemeMixin = createMixin(tokens, 'ligh-theme-mixin');
+  const darkThemeMixin = createMixin(darkTokens, 'dark-theme-mixin');
+  const highContrastThemeMixin = createMixin(highContrastTokens, 'high-contrast-theme-mixin');
+  const lowMotionThemeMixin = createMixin(lowMotionTokens, 'low-motion-theme-mixin');
+  const mixins = `
+${lightThemeMixin}
+
+${darkThemeMixin}
+
+${highContrastThemeMixin}
+
+${lowMotionThemeMixin}
+  `;
+  fs.writeFileSync(path, mixins);
 }
 
 function buildInternalSassTokens(path) {

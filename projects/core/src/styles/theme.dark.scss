@@ -6,7 +6,7 @@
 
 @import '../../dist/lib/tokens/tokens';
 
-@mixin darkThemeTokens {
+[cds-theme~='dark'] {
   --cds-global-typography-color-500: #{$cds-global-color-white};
   --cds-global-typography-color-400: #{$cds-global-color-construction-100};
   --cds-global-typography-color-300: #{$cds-global-color-construction-200};
@@ -141,8 +141,4 @@
   --cds-alias-utility-violet: #{$cds-global-color-violet-400};
   --cds-alias-utility-violet-tint: #{$cds-global-color-violet-1000};
   --cds-alias-utility-violet-shade: #{$cds-global-color-violet-200};
-}
-
-[cds-theme~='dark'] {
-  @include darkThemeTokens();
 }
