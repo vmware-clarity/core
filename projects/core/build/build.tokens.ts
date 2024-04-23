@@ -19,6 +19,7 @@ fs.mkdirSync('./src/styles/tokens/generated', { recursive: true });
 
 // Public API Tokens
 buildCSSTokens('./dist/lib/styles/module.tokens.css');
+buildCSSLightTokens('./dist/lib/styles/theme.light.css');
 buildJSONTokens('./dist/lib/tokens/tokens.json');
 buildJSTokens('./dist/lib/tokens/tokens.ts');
 buildAndroidXMLTokens('./dist/lib/tokens/tokens.android.xml');
@@ -117,6 +118,15 @@ function buildSassTokens(path) {
 function buildCSSTokens(path) {
   const cssTokens = `
 :root {
+${tokens.map(token => `  ${getTokenCSSName(token)}: ${convertCSSValue(token, false)};`).join('\n')}
+}`;
+
+  fs.writeFileSync(path, cssTokens);
+  fs.writeFileSync(path.replace('.css', '.min.css'), csso.minify(cssTokens).css);
+}
+function buildCSSLightTokens(path) {
+  const cssTokens = `
+[cds-theme~='light'] {
 ${tokens.map(token => `  ${getTokenCSSName(token)}: ${convertCSSValue(token, false)};`).join('\n')}
 }`;
 

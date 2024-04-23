@@ -464,3 +464,42 @@ export function highContrastTheme() {
     </section>
   `;
 }
+
+export function nestedThemes() {
+  return html`
+    <div style="height: 1000px; background-color: gray; padding: 2rem;">
+      <div cds-theme="dark" style="padding: 1rem; padding: 1rem;" cds-layout="vertical gap:md">
+        <h1>Dark Theme</h2>
+        <div cds-layout="horizontal gap:sm">
+          <cds-button>solid</cds-button>
+          <cds-button action="outline">outline</cds-button>
+          <cds-button action="flat">flat</cds-button>
+        </div>
+        <div cds-theme="light" style="padding: 1rem;" cds-layout="vertical gap:md">
+          <h2>Light Theme</h2>
+          <div cds-layout="horizontal gap:sm">
+            <cds-button>solid</cds-button>
+            <cds-button action="outline">outline</cds-button>
+            <cds-button action="flat">flat</cds-button>
+          </div>
+          <div cds-theme="dark" style="padding: 1rem; padding: 1rem;" cds-layout="vertical gap:md">
+            <h1>Dark Theme</h2>
+            <div cds-layout="horizontal gap:sm">
+              <cds-button>solid</cds-button>
+              <cds-button action="outline">outline</cds-button>
+              <cds-button action="flat">flat</cds-button>
+            </div>
+            <div cds-theme="light" style="padding: 1rem;">
+              <h2>Light Theme</h2>
+              <div cds-layout="horizontal gap:sm">
+                <cds-button>solid</cds-button>
+                <cds-button action="outline">outline</cds-button>
+                <cds-button action="flat">flat</cds-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div>
+  `;
+}

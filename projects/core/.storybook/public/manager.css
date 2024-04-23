@@ -6,8 +6,11 @@
 
 @import '@cds/city/css/bundles/default.css';
 @import 'modern-normalize/modern-normalize.css';
-@import './../../dist/lib/global.css';
-@import './../../dist/lib/styles/theme.dark.css';
+@import './../../dist/lib/styles/theme.dark.min.css';
+@import './../../dist/lib/styles/theme.light.min.css';
+@import './../../dist/lib/styles/module.reset.min.css';
+@import './../../dist/lib/styles/module.typography.min.css';
+@import './../../dist/lib/styles/module.layout.min.css';
 
 body {
   font-family: var(--cds-global-typography-font-family) !important;
