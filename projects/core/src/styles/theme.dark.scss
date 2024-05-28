@@ -37,6 +37,7 @@
   --cds-alias-typography-link-color-visited-hover: #{$cds-global-color-lavender-200};
 
   --cds-alias-object-app-background: #{$cds-global-color-construction-1000};
+  --cds-alias-object-container-backdrop-background: #{$cds-alias-object-opacity-300};
   --cds-alias-object-container-background: #{$cds-global-color-construction-900};
   --cds-alias-object-container-background-tint: #{$cds-global-color-construction-1000};
   --cds-alias-object-container-background-shade: #{$cds-global-color-construction-800};
@@ -57,9 +58,11 @@
   --cds-alias-object-interaction-color-selected: #{$cds-global-color-construction-200};
   --cds-alias-object-interaction-color-disabled: #{$cds-global-color-construction-600};
   --cds-alias-object-interaction-background: #{$cds-global-color-construction-1000};
-  --cds-alias-object-interaction-background-hover: #{$cds-global-color-construction-600};
-  --cds-alias-object-interaction-background-active: #{$cds-global-color-construction-800};
-  --cds-alias-object-interaction-background-selected: #{$cds-global-color-construction-700};
+  --cds-alias-object-interaction-background-hover: #{$cds-global-color-construction-800};
+  --cds-alias-object-interaction-background-active: #{$cds-global-color-construction-600};
+  --cds-alias-object-interaction-background-selected: #{$cds-global-color-blue-900};
+  --cds-alias-object-interaction-background-selected-active: #{$cds-global-color-blue-600};
+  --cds-alias-object-interaction-background-selected-hover: #{$cds-global-color-blue-700};
   --cds-alias-object-interaction-background-disabled: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-background-highlight: #{$cds-global-color-blue-400};
   --cds-alias-object-interaction-border-color: #{$cds-global-color-construction-300};
