@@ -551,9 +551,13 @@ const aliases = {
       borderColor: token(color.construction[500]),
       background: {
         value: token(color.white),
-        hover: token(color.blue[50]),
-        active: token(color.blue[75]),
-        selected: token(color.blue[50]),
+        hover: token(color.construction[50]),
+        active: token(color.construction[100]),
+        selected: {
+          value: token(color.blue[75]),
+          hover: token(color.construction[100]),
+          active: token(color.construction[200]),
+        },
         disabled: token(color.white),
         highlight: token(color.blue[700]),
       },
@@ -611,6 +615,11 @@ const aliases = {
           value: token(color.construction[200]),
           tint: token(color.construction[100]),
           shade: token(color.construction[300]),
+        },
+      },
+      backdrop: {
+        background: {
+          value: token('hsla(0, 0%, 100%, 0.6)'),
         },
       },
       borderColor: token(color.construction[200]),
