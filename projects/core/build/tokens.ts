@@ -711,6 +711,224 @@ const aliases = {
       shade: token(color.violet[800]),
     },
   },
+  viz: {
+    border: token(color.coolGray[50]),
+    general: {
+      1: {
+        blue: token(color.blue[600])
+      },
+      2: {
+        violet: token(color.violet[600])
+      },
+      3: {
+        aqua: token(color.aqua[800])
+      },
+      4: {
+        lime: token(color.lime[700])
+      },
+      5: {
+        blue: token(color.blue[800])
+      },
+      6: {
+        aqua: token(color.aqua[1000])
+      },
+      7: {
+        violet: token(color.violet[800])
+      },
+      8: {
+        lime: token(color.lime[900])
+      },
+      9: {
+        blue: token(color.blue[700])
+      },
+      10: {
+        lime: token(color.lime[1000])
+      },
+      11: {
+        aqua: token(color.aqua[600])
+      },
+      12: {
+        violet: token(color.violet[1000])
+      },
+      13: {
+        violet: token(color.violet[700])
+      },
+      14: {
+        blue: token(color.blue[1000])
+      },
+      15: {
+        aqua: token(color.aqua[700])
+      },
+      16: {
+        lime: token(color.lime[800])
+      },
+    },
+    severity: {
+      neutral: token(color.construction[600]),
+      success: token(color.green[700]),
+      warning: token(color.yellow[700]),
+      immediate: token(color.tangerine[700]),
+      critical: token(color.red[700]),
+    },
+    sequential: {
+      blue: {
+        50: token(color.blue[50]),
+        100: token(color.blue[100]),
+        200: token(color.blue[200]),
+        300: token(color.blue[300]),
+        400: token(color.blue[400]),
+        500: token(color.blue[500]),
+        600: token(color.blue[600]),
+        700: token(color.blue[700]),
+        800: token(color.blue[800]),
+        900: token(color.blue[900]),
+        1000: token(color.blue[1000]),
+      },
+      violet: {
+        50: token(color.violet[50]),
+        100: token(color.violet[100]),
+        200: token(color.violet[200]),
+        300: token(color.violet[300]),
+        400: token(color.violet[400]),
+        500: token(color.violet[500]),
+        600: token(color.violet[600]),
+        700: token(color.violet[700]),
+        800: token(color.violet[800]),
+        900: token(color.violet[900]),
+        1000: token(color.violet[1000]),
+      },
+      ochre: {
+        50: token(color.ochre[50]),
+        100: token(color.ochre[100]),
+        200: token(color.ochre[200]),
+        300: token(color.ochre[300]),
+        400: token(color.ochre[400]),
+        500: token(color.ochre[500]),
+        600: token(color.ochre[600]),
+        700: token(color.ochre[700]),
+        800: token(color.ochre[800]),
+        900: token(color.ochre[900]),
+        1000: token(color.ochre[1000]),
+      },
+      aqua: {
+        50: token(color.aqua[50]),
+        100: token(color.aqua[100]),
+        200: token(color.aqua[200]),
+        300: token(color.aqua[300]),
+        400: token(color.aqua[400]),
+        500: token(color.aqua[500]),
+        600: token(color.aqua[600]),
+        700: token(color.aqua[700]),
+        800: token(color.aqua[800]),
+        900: token(color.aqua[900]),
+        1000: token(color.aqua[1000]),
+      },
+      green: {
+        50: token(color.green[50]),
+        100: token(color.green[100]),
+        200: token(color.green[200]),
+        300: token(color.green[300]),
+        400: token(color.green[400]),
+        500: token(color.green[500]),
+        600: token(color.green[600]),
+        700: token(color.green[700]),
+        800: token(color.green[800]),
+        900: token(color.green[900]),
+        1000: token(color.green[1000]),
+      },
+      red: {
+        50: token(color.red[50]),
+        100: token(color.red[100]),
+        200: token(color.red[200]),
+        300: token(color.red[300]),
+        400: token(color.red[400]),
+        500: token(color.red[500]),
+        600: token(color.red[600]),
+        700: token(color.red[700]),
+        800: token(color.red[800]),
+        900: token(color.red[900]),
+        1000: token(color.red[1000]),
+      },
+    },
+    diverging: {
+      "violet-aqua": {
+        v: {
+          700: token(color.violet[700]),
+          600: token(color.violet[600]),
+          500: token(color.violet[500]),
+          400: token(color.violet[400]),
+          300: token(color.violet[300]),
+          200: token(color.violet[200]),
+        },
+        neutral: token(color.violet[50]),
+        a: {
+          400: token(color.aqua[400]),
+          500: token(color.aqua[500]),
+          600: token(color.aqua[600]),
+          700: token(color.aqua[700]),
+          800: token(color.aqua[800]),
+          900: token(color.aqua[900]),
+        },
+      },
+      "blue-jade": {
+        b: {
+          800: token(color.blue[800]),
+          700: token(color.blue[700]),
+          600: token(color.blue[600]),
+          500: token(color.blue[500]),
+          400: token(color.blue[400]),
+          300: token(color.blue[300]),
+        },
+        neutral: token(color.blue[50]),
+        j: {
+          300: token(color.jade[300]),
+          400: token(color.jade[400]),
+          500: token(color.jade[500]),
+          600: token(color.jade[600]),
+          700: token(color.jade[700]),
+          800: token(color.jade[800]),
+        },
+      },
+      "blue-green": {
+        b: {
+          800: token(color.blue[800]),
+          700: token(color.blue[700]),
+          600: token(color.blue[600]),
+          500: token(color.blue[500]),
+          400: token(color.blue[400]),
+          300: token(color.blue[300]),
+        },
+        neutral: token(color.blue[50]),
+        g: {
+          300: token(color.green[300]),
+          400: token(color.green[400]),
+          500: token(color.green[500]),
+          600: token(color.green[600]),
+          700: token(color.green[700]),
+          800: token(color.green[800]),
+        },
+      },
+      "green-yellow-red": {
+        g: {
+          700: token(color.green[700]),
+          600: token(color.green[600]),
+          500: token(color.green[500]),
+          400: token(color.green[400]),
+          300: token(color.green[300]),
+          200: token(color.green[200]),
+        },
+        neutral: token(color.yellow[200]),
+        r: {
+          400: token(color.red[400]),
+          500: token(color.red[500]),
+          600: token(color.red[600]),
+          700: token(color.red[700]),
+          800: token(color.red[800]),
+          900: token(color.red[900]),
+        },
+      },
+    }
+  },
   typography: generateTypographyTokens(), // Typography will move from -global to -alias in the future.
 };
 
