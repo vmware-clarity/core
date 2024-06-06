@@ -715,52 +715,52 @@ const aliases = {
     border: token(color.coolGray[50]),
     general: {
       1: {
-        blue: token(color.blue[600])
+        blue: token(color.blue[600]),
       },
       2: {
-        violet: token(color.violet[600])
+        violet: token(color.violet[600]),
       },
       3: {
-        aqua: token(color.aqua[800])
+        aqua: token(color.aqua[800]),
       },
       4: {
-        lime: token(color.lime[700])
+        lime: token(color.lime[700]),
       },
       5: {
-        blue: token(color.blue[800])
+        blue: token(color.blue[800]),
       },
       6: {
-        aqua: token(color.aqua[1000])
+        aqua: token(color.aqua[1000]),
       },
       7: {
-        violet: token(color.violet[800])
+        violet: token(color.violet[800]),
       },
       8: {
-        lime: token(color.lime[900])
+        lime: token(color.lime[900]),
       },
       9: {
-        blue: token(color.blue[700])
+        blue: token(color.blue[700]),
       },
       10: {
-        lime: token(color.lime[1000])
+        lime: token(color.lime[1000]),
       },
       11: {
-        aqua: token(color.aqua[600])
+        aqua: token(color.aqua[600]),
       },
       12: {
-        violet: token(color.violet[1000])
+        violet: token(color.violet[1000]),
       },
       13: {
-        violet: token(color.violet[700])
+        violet: token(color.violet[700]),
       },
       14: {
-        blue: token(color.blue[1000])
+        blue: token(color.blue[1000]),
       },
       15: {
-        aqua: token(color.aqua[700])
+        aqua: token(color.aqua[700]),
       },
       16: {
-        lime: token(color.lime[800])
+        lime: token(color.lime[800]),
       },
     },
     severity: {
@@ -851,7 +851,7 @@ const aliases = {
       },
     },
     diverging: {
-      "violet-aqua": {
+      'violet-aqua': {
         v: {
           700: token(color.violet[700]),
           600: token(color.violet[600]),
@@ -870,7 +870,7 @@ const aliases = {
           900: token(color.aqua[900]),
         },
       },
-      "blue-jade": {
+      'blue-jade': {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -889,7 +889,7 @@ const aliases = {
           800: token(color.jade[800]),
         },
       },
-      "blue-green": {
+      'blue-green': {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -908,7 +908,7 @@ const aliases = {
           800: token(color.green[800]),
         },
       },
-      "green-yellow-red": {
+      'green-yellow-red': {
         g: {
           700: token(color.green[700]),
           600: token(color.green[600]),
@@ -927,7 +927,7 @@ const aliases = {
           900: token(color.red[900]),
         },
       },
-    }
+    },
   },
   typography: generateTypographyTokens(), // Typography will move from -global to -alias in the future.
 };
