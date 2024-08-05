@@ -41,9 +41,9 @@
   --cds-alias-object-container-background: #{$cds-global-color-construction-900};
   --cds-alias-object-container-background-tint: #{$cds-global-color-construction-1000};
   --cds-alias-object-container-background-shade: #{$cds-global-color-construction-800};
-  --cds-alias-object-container-background-inverse: #{$cds-global-color-construction-600};
-  --cds-alias-object-container-background-inverse-tint: #{$cds-global-color-construction-500};
-  --cds-alias-object-container-background-inverse-shade: #{$cds-global-color-construction-800};
+  --cds-alias-object-container-background-inverse: #{$cds-global-color-construction-200};
+  --cds-alias-object-container-background-inverse-tint: #{$cds-global-color-construction-100};
+  --cds-alias-object-container-background-inverse-shade: #{$cds-global-color-construction-300};
   --cds-alias-object-container-border-color: #{$cds-global-color-black};
   --cds-alias-object-overlay-background: #{$cds-global-color-construction-900};
   --cds-alias-object-border-color: #{$cds-global-color-construction-500};
@@ -83,7 +83,7 @@
   --cds-alias-object-interaction-neutral-secondary-hover: #{$cds-global-color-construction-800};
   --cds-alias-object-interaction-inverse-hover: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-inverse-click: #{$cds-global-color-construction-800};
-  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-800};
+  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-700};
 
   --cds-alias-status-tint: transparent;
   --cds-alias-status-info: #{$cds-global-color-blue-400};
