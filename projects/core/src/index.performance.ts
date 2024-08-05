@@ -9,7 +9,7 @@ import { testBundleSize } from 'web-test-runner-performance/browser.js';
 describe('performance', () => {
   it(`should meet maximum individual css bundle size limits`, async () => {
     expect((await testBundleSize('@cds/core/global.min.css')).kb).toBeLessThan(9.4);
-    expect((await testBundleSize('@cds/core/styles/theme.dark.min.css')).kb).toBeLessThan(1.235);
+    expect((await testBundleSize('@cds/core/styles/theme.dark.min.css')).kb).toBeLessThan(1.236);
     expect((await testBundleSize('@cds/core/list/list.min.css')).kb).toBeLessThan(0.5);
 
     // contained in @cds/core/global.min.css

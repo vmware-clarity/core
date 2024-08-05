@@ -612,9 +612,9 @@ const aliases = {
         shade: token(color.construction[100]),
         dark: token(color.construction[200]),
         inverse: {
-          value: token(color.construction[200]),
-          tint: token(color.construction[100]),
-          shade: token(color.construction[300]),
+          value: token(color.construction[600]),
+          tint: token(color.construction[800]),
+          shade: token(color.construction[500]),
         },
       },
       backdrop: {
