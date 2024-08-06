@@ -600,13 +600,13 @@ const aliases = {
       vertical: {
         navigation: {
           background: {
-            color: token(color.construction[100]),
-            hover: token(color.construction[200]),
-            active: token(color.construction[300]),
+            color: token(color.coolGray[50]),
+            hover: token(color.construction[100]),
+            active: token(color.blue[75]),
             selected: {
               value: token(color.white),
-              hover: token(color.construction[200]),
-              active: token(color.construction[300]),
+              hover: token(color.construction[100]),
+              active: token(color.construction[200]),
             },
           },
         },
