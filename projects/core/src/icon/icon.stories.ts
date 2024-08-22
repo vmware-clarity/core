@@ -149,6 +149,10 @@ export function API(args: any) {
   `;
 }
 
+export function iconsV3_1_0() {
+  return html`<cds-icon shape="user" role="img" aria-label="Icons v3.1.0"></cds-icon>`;
+}
+
 /** @website */
 export function icon() {
   return html`<cds-icon
