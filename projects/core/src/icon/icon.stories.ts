@@ -9,13 +9,14 @@ import '@cds/core/button/register.js';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { imageIcon } from '@cds/core/icon/shapes/image.js';
 import { userIcon } from '@cds/core/icon/shapes/user.js';
+import { axisChartIcon } from '@cds/core/icon/shapes/axis-chart.js';
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
 // here for testing
-ClarityIcons.addIcons(userIcon, imageIcon, homeIcon);
+ClarityIcons.addIcons(userIcon, imageIcon, homeIcon, axisChartIcon);
 
 export default {
   title: 'Stories/Icon',
@@ -150,7 +151,7 @@ export function API(args: any) {
 }
 
 export function iconsV3_1_0() {
-  return html`<cds-icon shape="bubble-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>`;
+  return html`<cds-icon shape="axis-chart-solid" role="img" aria-label="Icons v3.1.0"></cds-icon>`;
 }
 
 /** @website */
