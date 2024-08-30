@@ -37,8 +37,10 @@ import styles from './accordion-header.element.scss';
  * @cssprop --font-size
  * @cssprop --font-weight
  * @cssprop --background
- * @cssprop --icon-color
- * @cssprop --icon-transform
+ * @cssprop --padding
+ * @cssprop --icon-visibility
+ * @cssprop --icon-margin
+ * @cssprop --box-shadow
  */
 export class CdsAccordionHeader extends LitElement {
   /** @private */
@@ -55,7 +57,12 @@ export class CdsAccordionHeader extends LitElement {
 
   render() {
     return html`<div class="private-host" cds-layout="horizontal gap:sm align:vertical-center wrap:none">
-      <cds-button-expand .expanded=${this.expanded} readonly action="vertical"></cds-button-expand>
+      <cds-button-expand
+        class="expand-button"
+        .expanded=${this.expanded}
+        readonly
+        action="vertical"
+      ></cds-button-expand>
       <div cds-layout="align:stretch"><slot></slot></div>
     </div>`;
   }

@@ -66,10 +66,16 @@
               "name": "--background"
             },
             {
-              "name": "--icon-color"
+              "name": "--padding"
             },
             {
-              "name": "--icon-transform"
+              "name": "--icon-visibility"
+            },
+            {
+              "name": "--icon-margin"
+            },
+            {
+              "name": "--box-shadow"
             }
           ],
           "members": [
@@ -7344,6 +7350,15 @@
             {
               "kind": "field",
               "name": "buttonLabel",
+              "description": "Set the label of the browse button.",
+              "attribute": "buttonLabel"
+            },
+            {
+              "kind": "field",
+              "name": "buttonLabelForSelection",
+              "type": {
+                "text": "string"
+              },
               "privacy": "private"
             },
             {
@@ -7895,13 +7910,12 @@
               }
             }
           ],
-          "superclass": {
-            "name": "CdsControl",
-            "package": "@cds/core/forms"
-          },
-          "tagName": "cds-file",
-          "customElement": true,
           "attributes": [
+            {
+              "name": "buttonLabel",
+              "description": "Set the label of the browse button.",
+              "fieldName": "buttonLabel"
+            },
             {
               "name": "status",
               "type": {
@@ -7969,7 +7983,13 @@
                 "module": "forms/control/control.element.js"
               }
             }
-          ]
+          ],
+          "superclass": {
+            "name": "CdsControl",
+            "package": "@cds/core/forms"
+          },
+          "tagName": "cds-file",
+          "customElement": true
         }
       ],
       "exports": [

@@ -7,12 +7,21 @@
 @import './../styles/tokens/generated/index';
 @import './../styles/mixins/mixins';
 
+/*
+ * The variables '--box-shadow', '--icon-visibility', and '--icon-margin' are
+ * included to provide users with the flexibility to extend the accordion
+ * component, enabling them to create a stepper component that aligns with the
+ * style of the ng-clarity stepper.
+ */
 :host {
   --color: #{$cds-alias-object-interaction-color};
   --background: #{$cds-alias-object-container-background-tint};
   --font-size: #{$cds-global-typography-secondary-font-size};
   --font-weight: #{$cds-global-typography-secondary-font-weight};
   --padding: calc(#{$cds-global-space-5} + #{$cds-global-space-2});
+  --box-shadow: 0;
+  --icon-visibility: visible;
+  --icon-margin: 0;
   cursor: pointer;
   width: 100%;
   contain: inherit;
@@ -26,6 +35,12 @@
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   color: var(--color);
+  box-shadow: var(--box-shadow);
+}
+
+.expand-button {
+  visibility: var(--icon-visibility);
+  margin: var(--icon-margin);
 }
 
 :host(:hover) {
