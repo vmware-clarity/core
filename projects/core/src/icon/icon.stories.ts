@@ -151,7 +151,20 @@ export function API(args: any) {
 }
 
 export function iconsV3_1_0() {
-  return html`<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>`;
+  return (
+    html`<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `<cds-icon shape="axis-chart-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart-solid-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>`
+  );
 }
 
 /** @website */
