@@ -181,7 +181,6 @@ export function API(args: any) {
     </cds-demo>
   `;
 }
-
 export function iconsV3_1_0() {
   return (
     html`<br />` +
@@ -302,7 +301,19 @@ export function iconsV3_1_0() {
     `<cds-icon shape="bell-curve" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bell-curve" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bell-curve" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="bell-curve" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
+    `<cds-icon shape="bell-curve" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `</br>` +
+    `Commerce` +
+    `</br>` +
+    `<br/>` +
+    `calculator (Dev) calculator (Figma):` +
+    `<br/>` +
+    `<cds-icon shape="calculator" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="calculator" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="calculator" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="calculator" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="calculator" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="calculator" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
   );
 }
 
