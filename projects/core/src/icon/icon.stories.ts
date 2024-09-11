@@ -10,13 +10,14 @@ import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { imageIcon } from '@cds/core/icon/shapes/image.js';
 import { userIcon } from '@cds/core/icon/shapes/user.js';
 import { axisChartIcon } from '@cds/core/icon/shapes/axis-chart.js';
+import { barChartIcon } from '@cds/core/icon/shapes/bar-chart.js';
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
 // here for testing
-ClarityIcons.addIcons(userIcon, imageIcon, homeIcon, axisChartIcon);
+ClarityIcons.addIcons(userIcon, imageIcon, homeIcon, axisChartIcon, barChartIcon);
 
 export default {
   title: 'Stories/Icon',
@@ -152,18 +153,37 @@ export function API(args: any) {
 
 export function iconsV3_1_0() {
   return (
-    html`<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    html`Axis-chart (Dev) Axes (Figma):` +
+    `<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="axis-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<br/>` +
-    `<cds-icon shape="axis-chart-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid-alerted" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="axis-chart-solid-badged" role="img" aria-label="Icons v3.1.0"></cds-icon>`
+    `Bar-chart (Dev) Bar (Figma):` +
+    `<cds-icon shape="bar-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bar-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bar-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bar-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bar-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bar-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `box-plot (Dev) box (Figma):` +
+    `<cds-icon shape="box-plot" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="box-plot" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="box-plot" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="box-plot" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="box-plot" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="box-plot" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `bubble-chart (Dev) bubble (Figma):` +
+    `<cds-icon shape="bubble-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bubble-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bubble-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bubble-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bubble-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bubble-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
   );
 }
 
