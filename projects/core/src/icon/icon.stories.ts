@@ -184,7 +184,9 @@ export function API(args: any) {
 
 export function iconsV3_1_0() {
   return (
-    html`<b>Charts</b>` +
+    html`<br />` +
+    `Charts` +
+    `</br>` +
     `Axis-chart (Dev) Axes (Figma):` +
     `<br/>` +
     `<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
@@ -221,14 +223,14 @@ export function iconsV3_1_0() {
     `<cds-icon shape="bubble-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bubble-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<br/>` +
-    `cloud (Dev) cloud (Figma):` +
+    `cloud-chart (Dev) cloud (Figma):` +
     `<br/>` +
-    `<cds-icon shape="cloud" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="cloud" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="cloud" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="cloud" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="cloud" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="cloud" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<br/>` +
     `curve-chart (Dev) curve (Figma):` +
     `<br/>` +
