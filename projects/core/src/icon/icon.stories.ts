@@ -14,8 +14,8 @@ import { axisChartIcon } from '@cds/core/icon/shapes/axis-chart.js';
 import { barChartIcon } from '@cds/core/icon/shapes/bar-chart.js';
 import { boxPlotIcon } from '@cds/core/icon/shapes/box-plot.js';
 import { bubbleChartIcon } from '@cds/core/icon/shapes/bubble-chart.js';
-import { cloudChartIcon } from '@cds/core/icon/shapes/cloud-chart';
-import { curveChartIcon } from '@cds/core/icon/shapes/curve-chart';
+import { cloudChartIcon } from '@cds/core/icon/shapes/cloud-chart.js';
+import { curveChartIcon } from '@cds/core/icon/shapes/curve-chart.js';
 
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
