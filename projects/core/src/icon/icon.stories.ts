@@ -9,15 +9,31 @@ import '@cds/core/button/register.js';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { imageIcon } from '@cds/core/icon/shapes/image.js';
 import { userIcon } from '@cds/core/icon/shapes/user.js';
+
 import { axisChartIcon } from '@cds/core/icon/shapes/axis-chart.js';
 import { barChartIcon } from '@cds/core/icon/shapes/bar-chart.js';
+import { boxPlotIcon } from '@cds/core/icon/shapes/box-plot.js';
+import { bubbleChartIcon } from '@cds/core/icon/shapes/bubble-chart.js';
+import { cloudChartIcon } from '@cds/core/icon/shapes/cloud-chart';
+import { curveChartIcon } from '@cds/core/icon/shapes/curve-chart';
+
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
 // here for testing
-ClarityIcons.addIcons(userIcon, imageIcon, homeIcon, axisChartIcon, barChartIcon);
+ClarityIcons.addIcons(
+  userIcon,
+  imageIcon,
+  homeIcon,
+  axisChartIcon,
+  barChartIcon,
+  boxPlotIcon,
+  bubbleChartIcon,
+  cloudChartIcon,
+  curveChartIcon
+);
 
 export default {
   title: 'Stories/Icon',
@@ -183,7 +199,21 @@ export function iconsV3_1_0() {
     `<cds-icon shape="bubble-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bubble-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bubble-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="bubble-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
+    `<cds-icon shape="bubble-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `cloud (Dev) cloud (Figma):` +
+    `<cds-icon shape="cloud" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="cloud" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `curve-chart (Dev) curve (Figma):` +
+    `<cds-icon shape="curve-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="curve-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="curve-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="curve-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="curve-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="curve-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
   );
 }
 
