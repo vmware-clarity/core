@@ -24,6 +24,8 @@ import { scatterPlotIcon } from '@cds/core/icon/shapes/scatter-plot.js';
 import { tickChartIcon } from '@cds/core/icon/shapes/tick-chart.js';
 import { bellCurveIcon } from '@cds/core/icon/shapes/bell-curve.js';
 
+import { calculatorIcon } from '@cds/core/icon/shapes/calculator.js';
+
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
@@ -47,7 +49,9 @@ ClarityIcons.addIcons(
   pieChartIcon,
   scatterPlotIcon,
   tickChartIcon,
-  bellCurveIcon
+  bellCurveIcon,
+  // Commerce
+  calculatorIcon
 );
 
 export default {
