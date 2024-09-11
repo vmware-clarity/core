@@ -16,6 +16,13 @@ import { boxPlotIcon } from '@cds/core/icon/shapes/box-plot.js';
 import { bubbleChartIcon } from '@cds/core/icon/shapes/bubble-chart.js';
 import { cloudChartIcon } from '@cds/core/icon/shapes/cloud-chart.js';
 import { curveChartIcon } from '@cds/core/icon/shapes/curve-chart.js';
+import { gridChartIcon } from '@cds/core/icon/shapes/grid-chart.js';
+import { heatMapIcon } from '@cds/core/icon/shapes/heat-map.js';
+import { lineChartIcon } from '@cds/core/icon/shapes/line-chart.js';
+import { pieChartIcon } from '@cds/core/icon/shapes/pie-chart.js';
+import { scatterPlotIcon } from '@cds/core/icon/shapes/scatter-plot.js';
+import { tickChartIcon } from '@cds/core/icon/shapes/tick-chart.js';
+import { bellCurveIcon } from '@cds/core/icon/shapes/bell-curve.js';
 
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
@@ -27,12 +34,20 @@ ClarityIcons.addIcons(
   userIcon,
   imageIcon,
   homeIcon,
+  // Charts
   axisChartIcon,
   barChartIcon,
   boxPlotIcon,
   bubbleChartIcon,
   cloudChartIcon,
-  curveChartIcon
+  curveChartIcon,
+  gridChartIcon,
+  heatMapIcon,
+  lineChartIcon,
+  pieChartIcon,
+  scatterPlotIcon,
+  tickChartIcon,
+  bellCurveIcon
 );
 
 export default {
@@ -169,7 +184,8 @@ export function API(args: any) {
 
 export function iconsV3_1_0() {
   return (
-    html`Axis-chart (Dev) Axes (Figma):` +
+    html`<h3>Charts</h3>` +
+    `Axis-chart (Dev) Axes (Figma):` +
     `<cds-icon shape="axis-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="axis-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="axis-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
@@ -200,6 +216,7 @@ export function iconsV3_1_0() {
     `<cds-icon shape="bubble-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bubble-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="bubble-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
     `cloud (Dev) cloud (Figma):` +
     `<cds-icon shape="cloud" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="cloud" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
@@ -207,13 +224,70 @@ export function iconsV3_1_0() {
     `<cds-icon shape="cloud" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="cloud" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="cloud" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
     `curve-chart (Dev) curve (Figma):` +
     `<cds-icon shape="curve-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="curve-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="curve-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="curve-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="curve-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="curve-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
+    `<cds-icon shape="curve-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `grid-chart (Dev) grid (Figma):` +
+    `<cds-icon shape="grid-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="grid-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="grid-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="grid-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="grid-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="grid-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `heat-map (Dev) heat (Figma):` +
+    `<cds-icon shape="heat-map" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="heat-map" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="heat-map" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="heat-map" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="heat-map" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="heat-map" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `line-chart (Dev) line (Figma):` +
+    `<cds-icon shape="line-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="line-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="line-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="line-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="line-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="line-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `pie-chart (Dev) pie (Figma):` +
+    `<cds-icon shape="pie-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="pie-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="pie-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="pie-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="pie-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="pie-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `scatter-plot (Dev) scatter (Figma):` +
+    `<cds-icon shape="scatter-plot" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="scatter-plot" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="scatter-plot" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="scatter-plot" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="scatter-plot" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="scatter-plot" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `tick-chart (Dev) ticks (Figma):` +
+    `<cds-icon shape="tick-chart" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="tick-chart" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="tick-chart" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="tick-chart" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="tick-chart" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="tick-chart" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `bell-curve (Dev) bell-curve (Figma):` +
+    `<cds-icon shape="bell-curve" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bell-curve" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bell-curve" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bell-curve" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bell-curve" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="bell-curve" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
   );
 }
 
