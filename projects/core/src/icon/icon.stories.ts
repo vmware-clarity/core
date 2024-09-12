@@ -66,8 +66,8 @@ import { imageGalleryIcon } from '@cds/core/icon/shapes/image-gallery.js';
 import { videoGalleryIcon } from '@cds/core/icon/shapes/video-gallery.js';
 import { shuffleIcon } from '@cds/core/icon/shapes/shuffle.js';
 import { wandIcon } from '@cds/core/icon/shapes/wand.js';
-
-
+import { replayAllIcon } from '@cds/core/icon/shapes/replay-all.js';
+import { replayOneIcon } from '@cds/core/icon/shapes/replay-one.js';
 
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
@@ -137,7 +137,9 @@ ClarityIcons.addIcons(
   imageGalleryIcon,
   videoGalleryIcon,
   shuffleIcon,
-  wandIcon
+  wandIcon,
+  replayAllIcon,
+  replayOneIcon
 );
 
 export default {
@@ -775,7 +777,25 @@ export function iconsV3_1_0() {
     `<cds-icon shape="wand" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="wand" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
     `<cds-icon shape="wand" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-    `<cds-icon shape="wand" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
+    `<cds-icon shape="wand" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `reply-all (Dev) reply-all (Figma):` +
+    `<br/>` +
+    `<cds-icon shape="reply-all" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-all" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-all" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-all" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-all" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-all" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<br/>` +
+    `reply-one (Dev) reply-one (Figma):` +
+    `<br/>` +
+    `<cds-icon shape="reply-one" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-one" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-one" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-one" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-one" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+    `<cds-icon shape="reply-one" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`
   );
 }
 
