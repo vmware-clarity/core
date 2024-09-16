@@ -107,7 +107,7 @@ import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
-import { textIcon } from '@cds/core/icon/shapes/text';
+import { textIcon } from '@cds/core/icon/shapes/text.js';
 // import { listAllIcons } from '@cds/core/icon/utils/all-groups.js';
 
 // here for testing
