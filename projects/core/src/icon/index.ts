@@ -369,6 +369,7 @@ export { vmIcon, vmIconName } from './shapes/vm.js';
 export { vmwAppIcon, vmwAppIconName } from './shapes/vmw-app.js';
 export { wifiIcon, wifiIconName } from './shapes/wifi.js';
 export { xlsFileIcon, xlsFileIconName } from './shapes/xls-file.js';
+export { listAllIcons } from './shapes/all-groups.js';
 
 // SHAPES - SOCIAL
 export { bookmarkIcon, bookmarkIconName } from './shapes/bookmark.js';
