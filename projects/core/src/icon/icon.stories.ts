@@ -108,7 +108,7 @@ import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
 import { textIcon } from '@cds/core/icon/shapes/text.js';
-// import { listAllIcons } from '@cds/core/icon/utils/all-groups.js';
+import { listAllIcons } from '@cds/core/icon/utils/all-groups.js';
 
 // here for testing
 ClarityIcons.addIcons(
@@ -344,9 +344,9 @@ export function API(args: any) {
     </cds-demo>
   `;
 }
-// export function iconsV3_1_0() {
-// return listAllIcons();
-// }
+export function iconsV3_1_0() {
+  return listAllIcons();
+}
 
 /** @website */
 export function icon() {
