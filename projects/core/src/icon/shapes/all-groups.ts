@@ -5,9 +5,9 @@
  */
 
 import { html } from 'lit';
-import { CHART_ICONS } from '@cds/core/icon/utils/charts';
-import { COMMERCE_ICONS } from '@cds/core/icon/utils/commerce';
-import { MEDIA_ICONS } from '@cds/core/icon/utils/media';
+import { CHART_ICONS } from '@cds/core/icon/shapes/charts';
+import { COMMERCE_ICONS } from '@cds/core/icon/shapes/commerce';
+import { MEDIA_ICONS } from '@cds/core/icon/shapes/media';
 
 export function listAllIcons() {
   return (
