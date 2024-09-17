@@ -35607,6 +35607,66 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/utils/all-groups.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "listAllIcons"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "listAllIcons",
+          "declaration": {
+            "name": "listAllIcons",
+            "module": "icon/utils/all-groups.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/charts.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "CHART_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CHART_ICONS",
+          "declaration": {
+            "name": "CHART_ICONS",
+            "module": "icon/utils/charts.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/commerce.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "COMMERCE_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "COMMERCE_ICONS",
+          "declaration": {
+            "name": "COMMERCE_ICONS",
+            "module": "icon/utils/commerce.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/utils/icon.classnames.js",
       "declarations": [
         {
@@ -35774,6 +35834,26 @@
           "declaration": {
             "name": "getIconSVG",
             "module": "icon/utils/icon.svg-helpers.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/media.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "MEDIA_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MEDIA_ICONS",
+          "declaration": {
+            "name": "MEDIA_ICONS",
+            "module": "icon/utils/media.js"
           }
         }
       ]
