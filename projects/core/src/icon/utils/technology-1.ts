@@ -218,4 +218,85 @@ export const TECHNOLOGY_ICONS_PART_ONE =
   `<cds-icon shape="process-on-vm" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<cds-icon shape="process-on-vm" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<cds-icon shape="process-on-vm" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="process-on-vm" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`;
+  `<cds-icon shape="process-on-vm" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `bar-code (Dev) bar-code (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="bar-code" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="bar-code" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="bar-code" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="bar-code" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="bar-code" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="bar-code" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `qr-code (Dev) qr-code (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="qr-code" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="qr-code" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="qr-code" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="qr-code" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="qr-code" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="qr-code" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `capacitor (Dev) capacitor (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="capacitor" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="capacitor" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="capacitor" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="capacitor" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="capacitor" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="capacitor" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `squid (Dev) squid (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="squid" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="squid" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="squid" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="squid" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="squid" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="squid" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `storage-adapter (Dev) storage-adapter (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="storage-adapter" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="storage-adapter" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="storage-adapter" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="storage-adapter" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="storage-adapter" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="storage-adapter" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `resistor (Dev) resistor (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="resistor" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="resistor" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="resistor" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="resistor" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="resistor" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="resistor" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `inductor (Dev) inductor (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="inductor" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="inductor" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="inductor" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="inductor" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="inductor" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="inductor" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `ci-cd (Dev) ci-cd (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="ci-cd" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="ci-cd" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="ci-cd" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="ci-cd" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="ci-cd" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="ci-cd" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<br/>` +
+  `add-on-license (Dev) add-on-license (Figma):` +
+  `<br/>` +
+  `<cds-icon shape="add-on-license" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="add-on-license" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="add-on-license" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="add-on-license" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="add-on-license" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="add-on-license" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`;
