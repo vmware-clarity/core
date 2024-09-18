@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '  <path fill-rule="evenodd" clip-rule="evenodd" d="M31 5H5C3.89543 5 3 5.89543 3 7V29C3 30.1046 3.89543 31 5 31H31C32.1046 31 33 30.1046 33 29V7C33 5.89543 32.1046 5 31 5ZM13 29H5V7H13V29ZM15 29H23V7H15V29Z" fill="black"/>\n',
+    '<path fill-rule="evenodd" clip-rule="evenodd" d="M31 5H5C3.89543 5 3 5.89543 3 7V29C3 30.1046 3.89543 31 5 31H31C32.1046 31 33 30.1046 33 29V7C33 5.89543 32.1046 5 31 5ZM13 29H5V7H13V29ZM15 29H23V7H15V29Z" fill="black"/>\n',
 };
 
 export const viewColumnsIconName = 'view-columns';
