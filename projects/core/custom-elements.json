@@ -35860,6 +35860,86 @@
     },
     {
       "kind": "javascript-module",
+      "path": "icon/utils/social.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "SOCIAL_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SOCIAL_ICONS",
+          "declaration": {
+            "name": "SOCIAL_ICONS",
+            "module": "icon/utils/social.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/technology-1.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "TECHNOLOGY_ICONS_PART_ONE"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TECHNOLOGY_ICONS_PART_ONE",
+          "declaration": {
+            "name": "TECHNOLOGY_ICONS_PART_ONE",
+            "module": "icon/utils/technology-1.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/technology-2.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "TECHNOLOGY_ICONS_PART_2"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TECHNOLOGY_ICONS_PART_2",
+          "declaration": {
+            "name": "TECHNOLOGY_ICONS_PART_2",
+            "module": "icon/utils/technology-2.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/technology.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "TECHNOLOGY_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TECHNOLOGY_ICONS",
+          "declaration": {
+            "name": "TECHNOLOGY_ICONS",
+            "module": "icon/utils/technology.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "icon/utils/test-icons.js",
       "declarations": [
         {
@@ -35894,6 +35974,46 @@
           "declaration": {
             "name": "testIcons",
             "module": "icon/utils/test-icons.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/text-editing.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "TEXT_EDITING_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TEXT_EDITING_ICONS",
+          "declaration": {
+            "name": "TEXT_EDITING_ICONS",
+            "module": "icon/utils/text-editing.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/utils/travel.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "TRAVEL_ICONS"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TRAVEL_ICONS",
+          "declaration": {
+            "name": "TRAVEL_ICONS",
+            "module": "icon/utils/travel.js"
           }
         }
       ]
