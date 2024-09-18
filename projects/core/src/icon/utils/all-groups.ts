@@ -8,12 +8,12 @@ import { html } from 'lit';
 import { CHART_ICONS } from './charts';
 import { COMMERCE_ICONS } from './commerce';
 import { MEDIA_ICONS } from './media';
-import { SOCIAL_ICONS } from '@cds/core/icon/utils/social';
-import { TEXT_EDITING_ICONS } from '@cds/core/icon/utils/text-editing';
-import { TRAVEL_ICONS } from '@cds/core/icon/utils/travel';
-import { TECHNOLOGY_ICONS } from '@cds/core/icon/utils/technology';
-import { TECHNOLOGY_ICONS_PART_2 } from '@cds/core/icon/utils/technology-2';
-import { TECHNOLOGY_ICONS_PART_ONE } from '@cds/core/icon/utils/technology-1';
+import { SOCIAL_ICONS } from './social';
+import { TEXT_EDITING_ICONS } from './text-editing';
+import { TRAVEL_ICONS } from './travel';
+import { TECHNOLOGY_ICONS } from './technology';
+import { TECHNOLOGY_ICONS_PART_ONE } from './technology-1';
+import { TECHNOLOGY_ICONS_PART_2 } from './technology-2';
 
 export function listAllIcons() {
   return (
