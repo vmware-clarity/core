@@ -9,19 +9,19 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path fill-rule="evenodd" clip-rule="evenodd" d="M24 22V6C24 4.89543 23.1046 4 22 4H6C4.89543 4 4 4.89543 4 6V22C4 23.1046 4.89543 24 6 24H22C23.1046 24 24 23.1046 24 22ZM6 6H22V22H6V6Z" fill="black"/>\n' +
-    '<path d="M12 26H14V30H18V32H14C12.8954 32 12 31.1046 12 30V26Z" fill="black"/>\n' +
-    '<path d="M20 30H26V32H20V30Z" fill="black"/>\n' +
-    '<path d="M28 30H30V26H32V30C32 31.1046 31.1046 32 30 32H28V30Z" fill="black"/>\n' +
-    '<path d="M30 18H32V24H30V18Z" fill="black"/>\n' +
-    '<path d="M26 12H30C31.1046 12 32 12.8954 32 14V16H30V14H26V12Z" fill="black"/>\n',
+    '<path fill-rule="evenodd" clip-rule="evenodd" d="M24 22V6C24 4.89543 23.1046 4 22 4H6C4.89543 4 4 4.89543 4 6V22C4 23.1046 4.89543 24 6 24H22C23.1046 24 24 23.1046 24 22ZM6 6H22V22H6V6Z" />\n' +
+    '<path d="M12 26H14V30H18V32H14C12.8954 32 12 31.1046 12 30V26Z" />\n' +
+    '<path d="M20 30H26V32H20V30Z" />\n' +
+    '<path d="M28 30H30V26H32V30C32 31.1046 31.1046 32 30 32H28V30Z" />\n' +
+    '<path d="M30 18H32V24H30V18Z" />\n' +
+    '<path d="M26 12H30C31.1046 12 32 12.8954 32 14V16H30V14H26V12Z" />\n',
   solid:
-    '<path d="M4 6C4 4.89543 4.89543 4 6 4H22C23.1046 4 24 4.89543 24 6V22C24 23.1046 23.1046 24 22 24H6C4.89543 24 4 23.1046 4 22V6Z" fill="black"/>\n' +
-    '<path d="M12 26H14V30H18V32H14C12.8954 32 12 31.1046 12 30V26Z" fill="black"/>\n' +
-    '<path d="M26 30H20V32H26V30Z" fill="black"/>\n' +
-    '<path d="M26 12H30C31.1046 12 32 12.8954 32 14V16H30V14H26V12Z" fill="black"/>\n' +
-    '<path d="M30 18H32V24H30V18Z" fill="black"/>\n' +
-    '<path d="M28 30H30V26H32V30C32 31.1046 31.1046 32 30 32H28V30Z" fill="black"/>\n',
+    '<path d="M4 6C4 4.89543 4.89543 4 6 4H22C23.1046 4 24 4.89543 24 6V22C24 23.1046 23.1046 24 22 24H6C4.89543 24 4 23.1046 4 22V6Z" />\n' +
+    '<path d="M12 26H14V30H18V32H14C12.8954 32 12 31.1046 12 30V26Z" />\n' +
+    '<path d="M26 30H20V32H26V30Z" />\n' +
+    '<path d="M26 12H30C31.1046 12 32 12.8954 32 14V16H30V14H26V12Z" />\n' +
+    '<path d="M30 18H32V24H30V18Z" />\n' +
+    '<path d="M28 30H30V26H32V30C32 31.1046 31.1046 32 30 32H28V30Z" />\n',
 };
 
 export const pasteIconName = 'paste';
