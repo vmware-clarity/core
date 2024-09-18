@@ -13,6 +13,7 @@ import { TEXT_EDITING_ICONS } from '@cds/core/icon/utils/text-editing';
 import { TRAVEL_ICONS } from '@cds/core/icon/utils/travel';
 import { TECHNOLOGY_ICONS } from '@cds/core/icon/utils/technology';
 import { TECHNOLOGY_ICONS_PART_2 } from '@cds/core/icon/utils/technology-2';
+import { TECHNOLOGY_ICONS_PART_ONE } from '@cds/core/icon/utils/technology-1';
 
 export function listAllIcons() {
   return (
@@ -23,6 +24,7 @@ export function listAllIcons() {
     SOCIAL_ICONS +
     TEXT_EDITING_ICONS +
     TECHNOLOGY_ICONS +
+    TECHNOLOGY_ICONS_PART_ONE +
     TECHNOLOGY_ICONS_PART_2 +
     TRAVEL_ICONS
   );
