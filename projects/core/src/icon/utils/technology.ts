@@ -306,236 +306,171 @@ export const TECHNOLOGY_ICONS =
   `<cds-icon shape="upload-cloud" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<cds-icon shape="upload-cloud" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `download-cloud (Dev) download-cloud (Figma):` +
+  `container (Dev) container (Figma):` +
   `<br/>` +
-  `<cds-icon shape="download-cloud" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="download-cloud" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="download-cloud" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="download-cloud" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="download-cloud" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="download-cloud" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `plugin (Dev) plugin (Figma):` +
   `<br/>` +
-  `<cds-icon shape="plugin" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="plugin" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="plugin" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="plugin" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="plugin" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="plugin" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `container-volume (Dev) container-volume (Figma):` +
   `<br/>` +
-  `floppy (Dev) floppy (Figma):` +
+  `<cds-icon shape="container-volume" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container-volume" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container-volume" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container-volume" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container-volume" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="container-volume" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="floppy" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="floppy" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="floppy" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="floppy" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="floppy" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="floppy" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `computer (Dev) computer (Figma):` +
+  `file-share (Dev) file-share (Figma):` +
   `<br/>` +
-  `<cds-icon shape="computer" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="computer" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="computer" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="computer" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="computer" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="computer" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `display (Dev) display (Figma):` +
   `<br/>` +
-  `<cds-icon shape="display" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="display" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="display" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="display" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="display" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="display" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `usb (Dev) usb (Figma):` +
   `<br/>` +
-  `terminal (Dev) terminal (Figma):` +
+  `<cds-icon shape="usb" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="usb" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="usb" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="usb" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="usb" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="usb" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="terminal" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="terminal" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="terminal" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="terminal" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="terminal" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="terminal" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `code (Dev) code (Figma):` +
+  `radar (Dev) radar (Figma):` +
   `<br/>` +
-  `<cds-icon shape="code" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="code" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="code" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="code" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="code" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="code" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="radar" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `application (Dev) application (Figma):` +
   `<br/>` +
-  `<cds-icon shape="application" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="application" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="application" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="application" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="application" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="application" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `control-lun (Dev) control-lun (Figma):` +
   `<br/>` +
-  `battery (Dev) battery (Figma):` +
+  `<cds-icon shape="control-lun" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="control-lun" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="control-lun" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="control-lun" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="control-lun" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="control-lun" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="battery" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="battery" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="battery" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="battery" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="battery" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="battery" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `mobile-phone (Dev) mobile-phone (Figma):` +
+  `media-changer (Dev) media-changer (Figma):` +
   `<br/>` +
-  `<cds-icon shape="mobile-phone" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="mobile-phone" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="mobile-phone" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="mobile-phone" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="mobile-phone" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="mobile-phone" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="media-changer" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `tablet (Dev) tablet (Figma):` +
   `<br/>` +
-  `<cds-icon shape="tablet" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="tablet" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="tablet" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="tablet" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="tablet" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="tablet" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `tape-drive (Dev) tape-drive (Figma):` +
   `<br/>` +
-  `network-globe (Dev) network-globe (Figma):` +
+  `<cds-icon shape="tape-drive" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="tape-drive" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="tape-drive" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="tape-drive" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="tape-drive" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="tape-drive" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="network-globe" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-globe" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-globe" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-globe" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-globe" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-globe" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `network-settings (Dev) network-settings (Figma):` +
+  `animation (Dev) animation (Figma):` +
   `<br/>` +
-  `<cds-icon shape="network-settings" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-settings" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-settings" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-settings" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-settings" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-settings" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="animation" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `network-switch (Dev) network-switch (Figma):` +
   `<br/>` +
-  `<cds-icon shape="network-switch" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-switch" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-switch" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-switch" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-switch" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="network-switch" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `file-share2 (Dev) file-share2 (Figma):` +
   `<br/>` +
-  `router (Dev) router (Figma):` +
+  `<cds-icon shape="file-share2" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share2" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share2" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share2" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share2" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="file-share2" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="router" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="router" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="router" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="router" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="router" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="router" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `vm (Dev) vm (Figma):` +
+  `link (Dev) link (Figma):` +
   `<br/>` +
-  `<cds-icon shape="vm" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="link" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `vm-app (Dev) vm-app (Figma):` +
   `<br/>` +
-  `<cds-icon shape="vm-app" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm-app" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm-app" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm-app" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm-app" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="vm-app" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `unlink (Dev) unlink (Figma):` +
   `<br/>` +
-  `certificate (Dev) certificate (Figma):` +
+  `<cds-icon shape="unlink" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="unlink" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="unlink" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="unlink" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="unlink" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="unlink" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="certificate" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="certificate" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="certificate" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="certificate" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="certificate" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="certificate" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `archive (Dev) archive (Figma):` +
+  `cloud-network (Dev) cloud-network (Figma):` +
   `<br/>` +
-  `<cds-icon shape="archive" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="archive" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="archive" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="archive" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="archive" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="archive" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-network" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `unarchive (Dev) unarchive (Figma):` +
   `<br/>` +
-  `<cds-icon shape="unarchive" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="unarchive" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="unarchive" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="unarchive" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="unarchive" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="unarchive" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `cloud-scale (Dev) cloud-scale (Figma):` +
   `<br/>` +
-  `connect (Dev) connect (Figma):` +
+  `<cds-icon shape="cloud-scale" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-scale" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-scale" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-scale" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-scale" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-scale" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="connect" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="connect" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="connect" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="connect" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="connect" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="connect" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `disconnect (Dev) disconnect (Figma):` +
+  `cloud-traffic (Dev) cloud-traffic (Figma):` +
   `<br/>` +
-  `<cds-icon shape="disconnect" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="disconnect" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="disconnect" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="disconnect" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="disconnect" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="disconnect" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="cloud-traffic" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `deploy (Dev) deploy (Figma):` +
   `<br/>` +
-  `<cds-icon shape="deploy" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="deploy" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="deploy" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="deploy" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="deploy" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="deploy" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `nvme-non-violate-memory-express (Dev) nvme-non-violate-memory-express (Figma):` +
   `<br/>` +
-  `helix (Dev) helix (Figma):` +
+  `<cds-icon shape="nvme-non-violate-memory-express" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="nvme-non-violate-memory-express" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="nvme-non-violate-memory-express" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="nvme-non-violate-memory-express" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="nvme-non-violate-memory-express" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="nvme-non-violate-memory-express" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `<cds-icon shape="helix" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="helix" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="helix" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="helix" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="helix" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="helix" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
   `<br/>` +
-  `administrator (Dev) administrator (Figma):` +
+  `process-on-vm (Dev) process-on-vm (Figma):` +
   `<br/>` +
-  `<cds-icon shape="administrator" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="administrator" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="administrator" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="administrator" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="administrator" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="administrator" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<br/>` +
-  `flask-beaker (Dev) flask-beaker (Figma):` +
-  `<br/>` +
-  `<cds-icon shape="flask-beaker" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="flask-beaker" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="flask-beaker" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="flask-beaker" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="flask-beaker" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
-  `<cds-icon shape="flask-beaker" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`;
+  `<cds-icon shape="process-on-vm" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="process-on-vm" badge="warning-triangle" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="process-on-vm" badge="danger" role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="process-on-vm" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="process-on-vm" badge="warning-triangle" solid role="img" aria-label="Icons v3.1.0"></cds-icon>` +
+  `<cds-icon shape="process-on-vm" badge="danger" solid role="img" aria-label="Icons v3.1.0"></cds-icon>`;
