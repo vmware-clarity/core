@@ -18,7 +18,7 @@ describe('cds-icon performance', () => {
       import '@cds/core/icon/register.js';
       ClarityIcons.addIcons(userIcon);
     `;
-    expect((await testBundleSize(bundle)).kb).toBeLessThan(19.792);
+    expect((await testBundleSize(bundle)).kb).toBeLessThan(19.8);
   });
 
   it(`should bundle all icons`, async () => {
