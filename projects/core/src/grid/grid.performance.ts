@@ -11,7 +11,7 @@ import '@cds/core/grid/register.js';
 describe('cds-grid bundle performance', () => {
   it(`should bundle and treeshake component in under 29kb`, async () => {
     const result = await testBundleSize(`import '@cds/core/grid/register.js'`);
-    expect(result.kb).toBeLessThan(37.6);
+    expect(result.kb).toBeLessThan(36.5);
   });
 });
 
