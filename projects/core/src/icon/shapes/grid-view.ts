@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M14,4H6A2,2,0,0,0,4,6v8a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V6A2,2,0,0,0,14,4ZM6,14V6h8v8Z"/><path d="M30,4H22a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V6A2,2,0,0,0,30,4ZM22,14V6h8v8Z"/><path d="M14,20H6a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V22A2,2,0,0,0,14,20ZM6,30V22h8v8Z"/><path d="M30,20H22a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V22A2,2,0,0,0,30,20ZM22,30V22h8v8Z"/>',
+    '<path d="M14 4H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2M6 14V6h8v8ZM30 4h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m-8 10V6h8v8Zm-8 6H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2M6 30v-8h8v8Zm24-10h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2m-8 10v-8h8v8Z"/>',
   solid:
-    '<rect x="4" y="4" width="12" height="12" rx="2" ry="2"/><rect x="20" y="4" width="12" height="12" rx="2" ry="2"/><rect x="4" y="20" width="12" height="12" rx="2" ry="2"/><rect x="20" y="20" width="12" height="12" rx="2" ry="2"/>',
+    '<rect width="12" height="12" x="4" y="4" rx="2" ry="2"/><rect width="12" height="12" x="20" y="4" rx="2" ry="2"/><rect width="12" height="12" x="4" y="20" rx="2" ry="2"/><rect width="12" height="12" x="20" y="20" rx="2" ry="2"/>',
 };
 
 export const gridViewIconName = 'grid-view';
