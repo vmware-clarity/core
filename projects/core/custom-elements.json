@@ -1564,11 +1564,11 @@
               },
               "attribute": "expanded",
               "description": "boolean",
+              "default": "false",
               "inheritedFrom": {
                 "name": "CdsBaseButton",
                 "module": "internal/base/button.base.js"
-              },
-              "default": "false"
+              }
             },
             {
               "kind": "field",
