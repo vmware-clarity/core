@@ -35631,8 +35631,7 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "CHART_ICONS",
-          "default": "``"
+          "name": "CHART_ICONS"
         }
       ],
       "exports": [
@@ -35652,8 +35651,7 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "COMMERCE_ICONS",
-          "default": "``"
+          "name": "COMMERCE_ICONS"
         }
       ],
       "exports": [
@@ -35846,8 +35844,7 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "MEDIA_ICONS",
-          "default": "``"
+          "name": "MEDIA_ICONS"
         }
       ],
       "exports": [
@@ -35867,8 +35864,7 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "SOCIAL_ICONS",
-          "default": "``"
+          "name": "SOCIAL_ICONS"
         }
       ],
       "exports": [
@@ -35991,8 +35987,7 @@
       "declarations": [
         {
           "kind": "variable",
-          "name": "TEXT_EDITING_ICONS",
-          "default": "``"
+          "name": "TEXT_EDITING_ICONS"
         }
       ],
       "exports": [
