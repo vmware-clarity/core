@@ -10,13 +10,13 @@ describe('performance', () => {
   it(`should meet maximum individual css bundle size limits`, async () => {
     expect((await testBundleSize('@cds/core/global.min.css')).kb).toBeLessThan(9.4);
     expect((await testBundleSize('@cds/core/styles/theme.dark.min.css')).kb).toBeLessThan(1.27);
-    expect((await testBundleSize('@cds/core/list/list.min.css')).kb).toBeLessThan(0.5);
+    expect((await testBundleSize('@cds/core/list/list.min.css')).kb).toBeLessThan(0.4);
 
     // contained in @cds/core/global.min.css
     expect((await testBundleSize('@cds/core/styles/module.layout.min.css')).kb).toBeLessThan(4.6);
-    expect((await testBundleSize('@cds/core/styles/module.reset.min.css')).kb).toBeLessThan(0.5);
-    expect((await testBundleSize('@cds/core/styles/module.tokens.min.css')).kb).toBeLessThan(3.664);
-    expect((await testBundleSize('@cds/core/styles/module.typography.min.css')).kb).toBeLessThan(1.616);
+    expect((await testBundleSize('@cds/core/styles/module.reset.min.css')).kb).toBeLessThan(0.3);
+    expect((await testBundleSize('@cds/core/styles/module.tokens.min.css')).kb).toBeLessThan(3.66);
+    expect((await testBundleSize('@cds/core/styles/module.typography.min.css')).kb).toBeLessThan(1.62);
   });
 
   it(`should bundle and treeshake all components`, async () => {
