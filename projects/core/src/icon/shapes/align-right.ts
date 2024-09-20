@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M31,1a1,1,0,0,0-1,1V34a1,1,0,0,0,2,0V2A1,1,0,0,0,31,1Z"/><path d="M4,21v8a1,1,0,0,0,1,1H28V20H5A1,1,0,0,0,4,21Zm2,1H26v6H6Z"/><path d="M12,7v8a1,1,0,0,0,1,1H28V6H13A1,1,0,0,0,12,7Zm2,1H26v6H14Z"/>',
+    '<path d="M31 1a1 1 0 0 0-1 1v32a1 1 0 0 0 2 0V2a1 1 0 0 0-1-1M4 21v8a1 1 0 0 0 1 1h23V20H5a1 1 0 0 0-1 1m2 1h20v6H6Zm6-15v8a1 1 0 0 0 1 1h15V6H13a1 1 0 0 0-1 1m2 1h12v6H14Z"/>',
 };
 
 export const alignRightIconName = 'align-right';

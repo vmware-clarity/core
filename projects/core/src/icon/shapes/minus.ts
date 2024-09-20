@@ -8,7 +8,7 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M26,17H10a1,1,0,0,0,0,2H26a1,1,0,0,0,0-2Z"/>',
+  outline: '<path d="M26 17H10a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2"/>',
 };
 
 export const minusIconName = 'minus';
