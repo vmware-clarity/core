@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M17 29h2v2h-2z"/><path d="M30 2H6a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m0 2v22.38H6V4ZM6 32v-4h24v4Z"/>',
+    '<rect x="17" y="29" width="2" height="2"/><path d="M30,2H6A2,2,0,0,0,4,4V32a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V4A2,2,0,0,0,30,2Zm0,2V26.38H6V4ZM6,32V28H30v4Z"/>',
   solid:
-    '<path d="M30 2H6a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2M19 32h-2v-2h2ZM6 28V4h24v24Z"/>',
+    '<path d="M30,2H6A2,2,0,0,0,4,4V32a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V4A2,2,0,0,0,30,2ZM19,32H17V30h2ZM6,28V4H30V28Z"/>',
 };
 
 export const tabletIconName = 'tablet';
