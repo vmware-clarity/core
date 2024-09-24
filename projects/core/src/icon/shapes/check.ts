@@ -8,7 +8,8 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M13.72 27.69 3.29 17.27a1 1 0 0 1 1.41-1.41l9 9L31.29 7.29A1 1 0 0 1 32.7 8.7Z"/>',
+  outline:
+    '<path d="M13.759 28.5 3.291 17.898a1.03 1.03 0 0 1 .053-1.38.994.994 0 0 1 1.362-.054l9.033 9.157L31.393 7.745a.994.994 0 0 1 1.363.053c.37.376.393.978.052 1.381z"/>',
 };
 
 export const checkIconName = 'check';

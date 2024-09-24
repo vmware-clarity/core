@@ -8,7 +8,8 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M27 27H9a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2"/>',
+  outline:
+    '<path d="M27 27H9a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2"/>',
 };
 
 export const windowMinIconName = 'window-min';

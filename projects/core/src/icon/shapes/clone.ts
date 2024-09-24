@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M6 6h16v4h2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2H6Z"/><path d="M30 12H14a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2m0 18H14V14h16Z"/><path d="M21 28h2v-5h5v-2h-5v-5h-2v5h-5v2h5z"/>',
+    '<path fill-rule="evenodd" d="M6 6h16v4h2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2H6zm24 6a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V14a2 2 0 0 1 2-2zm-7 11v5h-2v-5h-5v-2h5v-5h2v5h5v2zm-9 7h16V14H14z" clip-rule="evenodd"/>',
   solid:
-    '<path d="M24 10V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4V12a2 2 0 0 1 2-2Z"/><path d="M30 12H14a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V14a2 2 0 0 0-2-2m-2 11h-5v5h-2v-5h-5v-2h5v-5h2v5h5Z"/>',
+    '<path d="M24 6v4H12a2 2 0 0 0-2 2v12H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2"/><path fill-rule="evenodd" d="M32 14a2 2 0 0 0-2-2H14a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2zm-4 9h-5v5h-2v-5h-5v-2h5v-5h2v5h5z" clip-rule="evenodd"/>',
 };
 
 export const cloneIconName = 'clone';

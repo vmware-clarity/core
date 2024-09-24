@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<circle cx="5.21" cy="9.17" r="2"/><circle cx="5.21" cy="17.17" r="2"/><circle cx="5.21" cy="25.17" r="2"/><path d="M32.42 9a1 1 0 0 0-1-1H10v2h21.42a1 1 0 0 0 1-1m-1 7H10v2h21.42a1 1 0 0 0 0-2m0 8H10v2h21.42a1 1 0 0 0 0-2"/>',
+    '<path d="M6 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m25 1H10.02v2H31c.55 0 1-.45 1-1s-.45-1-1-1m0-8H10.02v2H31c.55 0 1-.45 1-1s-.45-1-1-1m.98-7c0-.55-.45-1-1-1H10v2h20.98c.55 0 1-.45 1-1"/>',
 };
 
 export const bulletListIconName = 'bullet-list';

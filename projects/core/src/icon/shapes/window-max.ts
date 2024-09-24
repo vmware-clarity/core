@@ -8,7 +8,8 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M27.89 9h-20a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2m-20 16V11h20v14Z"/>',
+  outline:
+    '<path fill-rule="evenodd" d="M7.89 9h20a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-20a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2m0 2v14h20V11z" clip-rule="evenodd"/>',
 };
 
 export const windowMaxIconName = 'window-max';

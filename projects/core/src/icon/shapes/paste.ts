@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M30 12h-4v2h4v2h2v-2a2 2 0 0 0-2-2m0 6h2v6h-2zm0 12h-2v2h2a2 2 0 0 0 2-2v-4h-2Zm-6-8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2M6 6h16v16H6Zm14 24h6v2h-6zm-6-4h-2v4a2 2 0 0 0 2 2h4v-2h-4Z"/>',
+    '<path fill-rule="evenodd" d="M24 22V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2M6 6h16v16H6z" clip-rule="evenodd"/><path d="M12 26h2v4h4v2h-4a2 2 0 0 1-2-2zm8 4h6v2h-6zm8 0h2v-4h2v4a2 2 0 0 1-2 2h-2zm2-12h2v6h-2zm-4-6h4a2 2 0 0 1 2 2v2h-2v-2h-4z"/>',
   solid:
-    '<path d="M30 12h-4v2h4v2h2v-2a2 2 0 0 0-2-2m0 6h2v6h-2zm0 12h-2v2h2a2 2 0 0 0 2-2v-4h-2Z"/><rect width="20" height="20" x="4" y="4" rx="2" ry="2"/><path d="M20 30h6v2h-6zm-6-4h-2v4a2 2 0 0 0 2 2h4v-2h-4Z"/>',
+    '<path d="M4 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm8 20h2v4h4v2h-4a2 2 0 0 1-2-2zm14 4h-6v2h6zm0-18h4a2 2 0 0 1 2 2v2h-2v-2h-4zm4 6h2v6h-2zm-2 12h2v-4h2v4a2 2 0 0 1-2 2h-2z"/>',
 };
 
 export const pasteIconName = 'paste';

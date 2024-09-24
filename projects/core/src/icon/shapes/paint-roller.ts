@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M31 10V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h23a2 2 0 0 0 2-2M6 4h23v6H6Z"/><path d="M33 6h-1v6.29l-13.3 4.25a1 1 0 0 0-.7 1V19h-2v14a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V19h-2v-.73L33.3 14a1 1 0 0 0 .7-1V7a1 1 0 0 0-1-1M20 33h-2V21h2Z"/>',
+    '<path fill-rule="evenodd" d="M29 10.75v-6c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h21c1.1 0 2-.9 2-2m-23-6h21v6H6zm25 2h-1v6.29l-13.3 4.25c-.43.14-.72.55-.7 1v1.46h-2v13c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-13h-2v-.73l13.3-4.27c.43-.14.72-.55.7-1v-6c0-.55-.45-1-1-1m-13 26h-2v-11h2z" clip-rule="evenodd"/>',
   solid:
-    '<rect width="27" height="10" x="4" y="2" rx="1" ry="1"/><path d="M33 6h-1v6.24l-13.29 4.21a1 1 0 0 0-.71 1V19h-2v15a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V19h-2v-.82L33.29 14a1 1 0 0 0 .71-1V7a1 1 0 0 0-1-1"/>',
+    '<path fill-rule="evenodd" d="M29 10.75v-6c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h21c1.1 0 2-.9 2-2m2-4h-1v6.29l-13.3 4.25c-.43.14-.72.55-.7 1v1.46h-2v13c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-13h-2v-.73l13.3-4.27c.43-.14.72-.55.7-1v-6c0-.55-.45-1-1-1" clip-rule="evenodd"/>',
 };
 
 export const paintRollerIconName = 'paint-roller';

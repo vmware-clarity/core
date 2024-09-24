@@ -8,8 +8,10 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M18 34a16 16 0 1 1 16-16 16 16 0 0 1-16 16m0-30a14 14 0 1 0 14 14A14 14 0 0 0 18 4"/>',
-  solid: '<path d="M18 34a16 16 0 1 1 16-16 16 16 0 0 1-16 16"/>',
+  outline:
+    '<path fill-rule="evenodd" d="M4 18c0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14S4 25.732 4 18m2 0c0 6.627 5.373 12 12 12a12 12 0 0 0 12-12c0-6.627-5.373-12-12-12S6 11.373 6 18" clip-rule="evenodd"/>',
+  solid:
+    '<path d="M18 4C10.268 4 4 10.268 4 18s6.268 14 14 14 14-6.268 14-14S25.732 4 18 4"/>',
 };
 
 export const circleIconName = 'circle';

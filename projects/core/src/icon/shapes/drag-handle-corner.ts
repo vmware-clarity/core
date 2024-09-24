@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<circle cx="12" cy="24" r="1.5"/><circle cx="18" cy="24" r="1.5"/><circle cx="18" cy="18" r="1.5"/><circle cx="24" cy="12" r="1.5"/><circle cx="24" cy="24" r="1.5"/><circle cx="24" cy="18" r="1.5"/>',
+    '<path d="M10 24c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m8 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m8-12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m0 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m0 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m-8-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2"/>',
 };
 
 export const dragHandleCornerIconName = 'drag-handle-corner';

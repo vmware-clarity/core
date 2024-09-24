@@ -8,9 +8,10 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<circle cx="31.1" cy="18" r="2.9"/><circle cx="18" cy="18" r="2.9"/><circle cx="4.9" cy="18" r="2.9"/>',
+  outline:
+    '<path d="M7.8 18.1c0 1.657-1.298 3-2.9 3S2 19.757 2 18.1s1.298-3 2.9-3 2.9 1.343 2.9 3m10.2 3c1.602 0 2.9-1.343 2.9-3s-1.298-3-2.9-3-2.9 1.343-2.9 3 1.298 3 2.9 3m13.1 0c1.602 0 2.9-1.343 2.9-3s-1.298-3-2.9-3-2.9 1.343-2.9 3 1.298 3 2.9 3"/>',
   outlineBadged:
-    '<circle cx="31.1" cy="18" r="2.9"/><circle cx="18" cy="18" r="2.9"/><circle cx="4.9" cy="18" r="2.9"/>',
+    '<path d="M4.9 21.1c1.602 0 2.9-1.343 2.9-3s-1.298-3-2.9-3-2.9 1.343-2.9 3 1.298 3 2.9 3m13.1 0c1.602 0 2.9-1.343 2.9-3s-1.298-3-2.9-3-2.9 1.343-2.9 3 1.298 3 2.9 3m16-3c0 1.657-1.298 3-2.9 3s-2.9-1.343-2.9-3 1.298-3 2.9-3 2.9 1.343 2.9 3M30 11a5 5 0 1 0 0-10 5 5 0 0 0 0 10"/>',
 };
 
 export const ellipsisHorizontalIconName = 'ellipsis-horizontal';
