@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path fill-rule="evenodd" clip-rule="evenodd" d="M7.89014 9H27.8901C28.9947 9 29.8901 9.89543 29.8901 11V25C29.8901 26.1046 28.9947 27 27.8901 27H7.89014C6.78557 27 5.89014 26.1046 5.89014 25V11C5.89014 9.89543 6.78557 9 7.89014 9ZM7.89014 11V25H27.8901V11H7.89014Z"/>',
+    '<path fill-rule="evenodd" d="M7.89 9h20a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-20a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2m0 2v14h20V11z" clip-rule="evenodd"/>',
 };
 
 export const windowMaxIconName = 'window-max';

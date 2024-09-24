@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M27 27H9C8.44772 27 8 26.5523 8 26C8 25.4477 8.44772 25 9 25H27C27.5523 25 28 25.4477 28 26C28 26.5523 27.5523 27 27 27Z"/>',
+    '<path d="M27 27H9a1 1 0 1 1 0-2h18a1 1 0 1 1 0 2"/>',
 };
 
 export const windowMinIconName = 'window-min';
