@@ -9,22 +9,22 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<rect x="6" y="9" width="2" height="2"/><rect x="10" y="9" width="14" height="2"/><rect x="6" y="17" width="2" height="2"/><rect x="10" y="17" width="14" height="2"/><path d="M32,5H4A2,2,0,0,0,2,7V29a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V7A2,2,0,0,0,32,5ZM4,7H32v6H4Zm0,8H32v6H4ZM4,29V23H32v6Z"/><rect x="6" y="25" width="2" height="2"/><rect x="10" y="25" width="14" height="2"/>',
+    '<path d="M6 9h2v2H6zm4 0h14v2H10zm-4 8h2v2H6zm4 0h14v2H10z"/><path d="M32 5H4a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M4 7h28v6H4Zm0 8h28v6H4Zm0 14v-6h28v6Z"/><path d="M6 25h2v2H6zm4 0h14v2H10z"/>',
 
   outlineAlerted:
-    '<rect x="10" y="17" width="14" height="2"/><rect x="6" y="25" width="2" height="2"/><rect x="10" y="25" width="14" height="2"/><path d="M18.64,11A3.65,3.65,0,0,1,19,9.89L19.56,9H10v2Z"/><path d="M33.68,15.4H32V21H4V15H20.58A3.67,3.67,0,0,1,19,13.56a3.63,3.63,0,0,1-.26-.56H4V7H20.71l1.15-2H4A2,2,0,0,0,2,7V29a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V15.38ZM4,29V23H32v6Z"/>',
+    '<path d="M10 17h14v2H10zm-4 8h2v2H6zm4 0h14v2H10zm8.64-14A3.7 3.7 0 0 1 19 9.89l.56-.89H10v2Z"/><path d="M33.68 15.4H32V21H4v-6h16.58A3.67 3.67 0 0 1 19 13.56a3.6 3.6 0 0 1-.26-.56H4V7h16.71l1.15-2H4a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V15.38ZM4 29v-6h28v6Z"/>',
 
   outlineBadged:
-    '<rect x="6" y="9" width="2" height="2"/><rect x="6" y="17" width="2" height="2"/><rect x="10" y="17" width="14" height="2"/><rect x="6" y="25" width="2" height="2"/><rect x="10" y="25" width="14" height="2"/><path d="M10,11H24v-.51A7.48,7.48,0,0,1,23.13,9H10Z"/><path d="M30,13.5a7.47,7.47,0,0,1-2.68-.5H4V7H22.57a7.52,7.52,0,0,1-.07-1,7.52,7.52,0,0,1,.07-1H4A2,2,0,0,0,2,7V29a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V12.34A7.46,7.46,0,0,1,30,13.5ZM4,15H32v6H4ZM4,29V23H32v6Z"/>',
+    '<path d="M6 9h2v2H6zm0 8h2v2H6zm4 0h14v2H10zm-4 8h2v2H6zm4 0h14v2H10zm0-14h14v-.51A7.5 7.5 0 0 1 23.13 9H10Z"/><path d="M30 13.5a7.5 7.5 0 0 1-2.68-.5H4V7h18.57a7.5 7.5 0 0 1-.07-1 7.5 7.5 0 0 1 .07-1H4a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V12.34a7.46 7.46 0 0 1-4 1.16M4 15h28v6H4Zm0 14v-6h28v6Z"/>',
 
   solid:
-    '<path d="M2,22H34V14H2Zm8-5H24v2H10ZM6,17H8v2H6Z"/><path d="M32,4H4A2,2,0,0,0,2,6v6H34V6A2,2,0,0,0,32,4ZM8,9H6V7H8ZM24,9H10V7H24Z"/><path d="M2,30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V24H2Zm8-3H24v2H10ZM6,27H8v2H6Z"/>',
+    '<path d="M2 22h32v-8H2Zm8-5h14v2H10Zm-4 0h2v2H6ZM32 4H4a2 2 0 0 0-2 2v6h32V6a2 2 0 0 0-2-2M8 9H6V7h2Zm16 0H10V7h14ZM2 30a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2v-6H2Zm8-3h14v2H10Zm-4 0h2v2H6Z"/>',
 
   solidAlerted:
-    '<path d="M2,30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V24H2Zm8-3H24v2H10ZM6,27H8v2H6Z"/><path d="M19,9.89,19.56,9H10V7H20.71l1.73-3H4A2,2,0,0,0,2,6v6H18.57A3.67,3.67,0,0,1,19,9.89ZM8,9H6V7H8Z"/><path d="M33.68,15.4H22.23A3.69,3.69,0,0,1,19.35,14H2v8H34V15.38ZM8,19H6V17H8Zm16,0H10V17H24Z"/>',
+    '<path d="M2 30a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2v-6H2Zm8-3h14v2H10Zm-4 0h2v2H6ZM19 9.89l.56-.89H10V7h10.71l1.73-3H4a2 2 0 0 0-2 2v6h16.57A3.67 3.67 0 0 1 19 9.89M8 9H6V7h2Zm25.68 6.4H22.23a3.69 3.69 0 0 1-2.88-1.4H2v8h32v-6.62ZM8 19H6v-2h2Zm16 0H10v-2h14Z"/>',
 
   solidBadged:
-    '<path d="M2,14v8H34V14Zm6,5H6V17H8Zm16,0H10V17H24Z"/><path d="M2,30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V24H2Zm8-3H24v2H10ZM6,27H8v2H6Z"/><path d="M23.13,9H10V7H22.57a7.52,7.52,0,0,1-.07-1,7.49,7.49,0,0,1,.28-2H4A2,2,0,0,0,2,6v6H25.51A7.52,7.52,0,0,1,23.13,9ZM8,9H6V7H8Z"/>',
+    '<path d="M2 14v8h32v-8Zm6 5H6v-2h2Zm16 0H10v-2h14ZM2 30a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2v-6H2Zm8-3h14v2H10Zm-4 0h2v2H6ZM23.13 9H10V7h12.57a7.5 7.5 0 0 1-.07-1 7.5 7.5 0 0 1 .28-2H4a2 2 0 0 0-2 2v6h23.51a7.5 7.5 0 0 1-2.38-3M8 9H6V7h2Z"/>',
 };
 
 export const rackServerIconName = 'rack-server';

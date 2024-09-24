@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M33,11H3a1,1,0,0,0,0,2H33a1,1,0,0,0,0-2Z"/><path d="M28,17H8a1,1,0,0,0,0,2H28a1,1,0,0,0,0-2Z"/><path d="M23,23H13a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/>',
+    '<path d="M33 11H3a1 1 0 0 0 0 2h30a1 1 0 0 0 0-2m-5 6H8a1 1 0 0 0 0 2h20a1 1 0 0 0 0-2m-5 6H13a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2"/>',
 };
 
 export const filter2IconName = 'filter-2';
