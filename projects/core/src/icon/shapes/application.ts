@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<rect x="5" y="7" width="2" height="2"/><rect x="9" y="7" width="2" height="2"/><rect x="13" y="7" width="2" height="2"/><path d="M32,4H4A2,2,0,0,0,2,6V30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V6A2,2,0,0,0,32,4ZM4,6H32v4.2H4ZM4,30V11.8H32V30Z"/>',
+    '<path d="M5 7h2v2H5zm4 0h2v2H9zm4 0h2v2h-2z"/><path d="M32 4H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2M4 6h28v4.2H4Zm0 24V11.8h28V30Z"/>',
   solid:
-    '<path d="M32,4H4A2,2,0,0,0,2,6V30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V6A2,2,0,0,0,32,4Zm0,6.2H4V6H32Z"/><rect x="5" y="7" width="2" height="2"/><rect x="9" y="7" width="2" height="2"/><rect x="13" y="7" width="2" height="2"/>',
+    '<path d="M32 4H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 6.2H4V6h28Z"/><path d="M5 7h2v2H5zm4 0h2v2H9zm4 0h2v2h-2z"/>',
 };
 
 export const applicationIconName = 'application';

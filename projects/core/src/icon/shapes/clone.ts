@@ -9,9 +9,9 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6H22V10H24V6C24 4.89543 23.1046 4 22 4H6C4.89543 4 4 4.89543 4 6V22C4 23.1046 4.89543 24 6 24H10V22H6V6ZM30 12C31.1046 12 32 12.8954 32 14V30C32 31.1046 31.1046 32 30 32H14C12.8954 32 12 31.1046 12 30V14C12 12.8954 12.8954 12 14 12H30ZM23 23V28H21V23H16V21H21V16H23V21H28V23H23ZM14 30H30V14H14V30Z"/>',
+    '<path fill-rule="evenodd" d="M6 6h16v4h2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2H6zm24 6a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V14a2 2 0 0 1 2-2zm-7 11v5h-2v-5h-5v-2h5v-5h2v5h5v2zm-9 7h16V14H14z" clip-rule="evenodd"/>',
   solid:
-    '<path d="M24 6V10H12C10.8954 10 10 10.8954 10 12V24H6C4.89543 24 4 23.1046 4 22V6C4 4.89543 4.89543 4 6 4H22C23.1046 4 24 4.89543 24 6Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M32 14C32 12.8954 31.1046 12 30 12H14C12.8954 12 12 12.8954 12 14V30C12 31.1046 12.8954 32 14 32H30C31.1046 32 32 31.1046 32 30V14ZM28 23H23V28H21V23H16V21H21V16H23V21H28V23Z"/>',
+    '<path d="M24 6v4H12a2 2 0 0 0-2 2v12H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2"/><path fill-rule="evenodd" d="M32 14a2 2 0 0 0-2-2H14a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2zm-4 9h-5v5h-2v-5h-5v-2h5v-5h2v5h5z" clip-rule="evenodd"/>',
 };
 
 export const cloneIconName = 'clone';
