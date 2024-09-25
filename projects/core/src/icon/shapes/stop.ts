@@ -8,8 +8,8 @@ import { renderIcon } from '../icon.renderer.js';
 import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
-  outline: '<path d="M30 32H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h24a2 2 0 0 1 2 2v24a2 2 0 0 1-2 2M6 6v24h24V6Z"/>',
-  solid: '<rect width="27.99" height="28" x="3.96" y="4" rx="2" ry="2"/>',
+  outline: '<path d="M30,32H6a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H30a2,2,0,0,1,2,2V30A2,2,0,0,1,30,32ZM6,6V30H30V6Z"/>',
+  solid: '<rect x="3.96" y="4" width="27.99" height="28" rx="2" ry="2"/>',
 };
 
 export const stopIconName = 'stop';

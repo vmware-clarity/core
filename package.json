@@ -14,15 +14,13 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "build:ci": "npm-run-all clean lint optimize-icons build test public-api:check",
+    "build:ci": "npm-run-all clean lint build test public-api:check",
     "clean": "npm run clean --workspaces --if-present",
     "commit": "cz --signoff",
     "lint": "npm-run-all _lint:code _lint:styles _lint:format",
     "lint:fix": "npm-run-all _lint:code:fix _lint:styles:fix _lint:format:fix",
     "lint:changed": "npm-run-all _lint:code:changed _lint:styles:changed _lint:format:changed",
     "lint:changed:fix": "npm-run-all _lint:code:changed:fix _lint:styles:changed:fix _lint:format:changed:fix",
-    "optimize-icons": "node ./scripts/optimize-icons.js",
-    "optimize-icons:fix": "node ./scripts/optimize-icons.js --fix",
     "prepare": "husky install",
     "preview": "semantic-release --plugins \"@semantic-release/commit-analyzer\" \"@semantic-release/release-notes-generator\" --dry-run --no-ci",
     "public-api:check": "npm run public-api:check --workspaces --if-present",
@@ -78,7 +76,6 @@
     "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-scss": "^5.0.0",
-    "stylelint-plugin-license-header": "1.0.3",
-    "svgo": "3.3.2"
+    "stylelint-plugin-license-header": "1.0.3"
   }
 }

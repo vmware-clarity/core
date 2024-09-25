@@ -9,7 +9,7 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M18 11a7 7 0 1 1-7 7 7 7 0 0 1 7-7"/><path d="M18 34a16 16 0 1 1 16-16 16 16 0 0 1-16 16m0-30a14 14 0 1 0 14 14A14 14 0 0 0 18 4"/>',
+    '<path d="M18,11a7,7,0,1,1-7,7,7,7,0,0,1,7-7"/><path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34ZM18,4A14,14,0,1,0,32,18,14,14,0,0,0,18,4Z"/>',
 };
 
 export const dotCircleIconName = 'dot-circle';
