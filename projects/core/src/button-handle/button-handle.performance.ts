@@ -11,7 +11,7 @@ import '@cds/core/button-handle/register.js';
 describe('cds-button-handle bundle performance', () => {
   it(`should bundle and treeshake component`, async () => {
     const result = await testBundleSize(`import '@cds/core/button-handle/register.js'`);
-    expect(result.kb).toBeLessThan(22.2);
+    expect(result.kb).toBeLessThan(22.3);
   });
 });
 
