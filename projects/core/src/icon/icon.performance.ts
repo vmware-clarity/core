@@ -36,6 +36,7 @@ describe('cds-icon performance', () => {
       loadTextEditIconSet();
       loadTravelIconSet();
     `;
+
     expect((await testBundleSize(bundle)).kb).toBeLessThan(246.9);
   });
 
