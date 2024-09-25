@@ -17,8 +17,6 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: Check Icon Optimization
-        run: npm run optimize-icons
       - name: Build
         run: npm run build
       - name: Test

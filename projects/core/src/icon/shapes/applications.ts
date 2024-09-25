@@ -9,22 +9,22 @@ import { IconShapeTuple } from '../interfaces/icon.interfaces.js';
 
 const icon = {
   outline:
-    '<path d="M8 8H4v2h6V4H8zm11 0h-4v2h6V4h-2zm11-4v4h-4v2h6V4zM8 19H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11 0h-4v2h6v-6h-2zM8 30H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11 0h-4v2h6v-6h-2z"/>',
+    '<polygon points="8 8 4 8 4 10 10 10 10 4 8 4 8 8"/><polygon points="19 8 15 8 15 10 21 10 21 4 19 4 19 8"/><polygon points="30 4 30 8 26 8 26 10 32 10 32 4 30 4"/><polygon points="8 19 4 19 4 21 10 21 10 15 8 15 8 19"/><polygon points="19 19 15 19 15 21 21 21 21 15 19 15 19 19"/><polygon points="30 19 26 19 26 21 32 21 32 15 30 15 30 19"/><polygon points="8 30 4 30 4 32 10 32 10 26 8 26 8 30"/><polygon points="19 30 15 30 15 32 21 32 21 26 19 26 19 30"/><polygon points="30 30 26 30 26 32 32 32 32 26 30 26 30 30"/>',
 
   outlineAlerted:
-    '<path d="M8 8H4v2h6V4H8zm0 11H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11-4v4h-4v2h6v-6zM8 30H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11 0h-4v2h6v-6h-2zM19 8h-4v2h4v-.11l2-3.39V4h-2Z"/>',
+    '<polygon points="8 8 4 8 4 10 10 10 10 4 8 4 8 8"/><polygon points="8 19 4 19 4 21 10 21 10 15 8 15 8 19"/><polygon points="19 19 15 19 15 21 21 21 21 15 19 15 19 19"/><polygon points="30 15 30 19 26 19 26 21 32 21 32 15 30 15"/><polygon points="8 30 4 30 4 32 10 32 10 26 8 26 8 30"/><polygon points="19 30 15 30 15 32 21 32 21 26 19 26 19 30"/><polygon points="30 30 26 30 26 32 32 32 32 26 30 26 30 30"/><path d="M19,8H15v2h4L19,9.89,21,6.5V4H19Z"/>',
 
   outlineBadged:
-    '<path d="M8 8H4v2h6V4H8zm11 0h-4v2h6V4h-2zM8 19H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11 0h-4v2h6v-6h-2zM8 30H4v2h6v-6H8zm11 0h-4v2h6v-6h-2zm11 0h-4v2h6v-6h-2z"/>',
+    '<polygon points="8 8 4 8 4 10 10 10 10 4 8 4 8 8"/><polygon points="19 8 15 8 15 10 21 10 21 4 19 4 19 8"/><polygon points="8 19 4 19 4 21 10 21 10 15 8 15 8 19"/><polygon points="19 19 15 19 15 21 21 21 21 15 19 15 19 19"/><polygon points="30 19 26 19 26 21 32 21 32 15 30 15 30 19"/><polygon points="8 30 4 30 4 32 10 32 10 26 8 26 8 30"/><polygon points="19 30 15 30 15 32 21 32 21 26 19 26 19 30"/><polygon points="30 30 26 30 26 32 32 32 32 26 30 26 30 30"/>',
 
   solid:
-    '<path d="M4 4h6v6H4zm0 11h6v6H4zm0 11h6v6H4zM15 4h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zM26 4h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6z"/>',
+    '<rect x="4" y="4" width="6" height="6"/><rect x="4" y="15" width="6" height="6"/><rect x="4" y="26" width="6" height="6"/><rect x="15" y="4" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><rect x="15" y="26" width="6" height="6"/><rect x="26" y="4" width="6" height="6"/><rect x="26" y="15" width="6" height="6"/><rect x="26" y="26" width="6" height="6"/>',
 
   solidAlerted:
-    '<path d="M4 4h6v6H4zm0 11h6v6H4zm0 11h6v6H4zm11-11h6v6h-6zm0 11h6v6h-6zm11-11h6v6h-6zm0 11h6v6h-6zM15 10h4v-.11l2-3.39V4h-6Z"/>',
+    '<rect x="4" y="4" width="6" height="6"/><rect x="4" y="15" width="6" height="6"/><rect x="4" y="26" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><rect x="15" y="26" width="6" height="6"/><rect x="26" y="15" width="6" height="6"/><rect x="26" y="26" width="6" height="6"/><path d="M15,10h4L19,9.89,21,6.5V4H15Z"/>',
 
   solidBadged:
-    '<path d="M4 4h6v6H4zm0 11h6v6H4zm0 11h6v6H4zM15 4h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zm11-11h6v6h-6zm0 11h6v6h-6z"/>',
+    '<rect x="4" y="4" width="6" height="6"/><rect x="4" y="15" width="6" height="6"/><rect x="4" y="26" width="6" height="6"/><rect x="15" y="4" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><rect x="15" y="26" width="6" height="6"/><rect x="26" y="15" width="6" height="6"/><rect x="26" y="26" width="6" height="6"/>',
 };
 
 export const applicationsIconName = 'applications';
