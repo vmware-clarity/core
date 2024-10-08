@@ -941,7 +941,7 @@ const aliases = {
       },
     },
   },
-  typography: generateTypographyTokens(), // Typography will move from -global to -alias in the future.
+  typography: generateTypographyTokens(),
 };
 
 export const baseTheme: CdsTheme = {
