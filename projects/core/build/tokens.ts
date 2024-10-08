@@ -81,6 +81,7 @@ const color = {
     1000: token([93, 80, 12]),
   },
   blue: {
+    25: token([198, 100, 96]),
     50: token([198, 100, 95]),
     75: token([198, 100, 94]),
     100: token([198, 100, 87]),
@@ -353,8 +354,8 @@ const generateTypographyTokens = () => {
       200: token(color.construction[600]), // placeholders
       300: token(color.construction[800]), // labels
       400: token(color.construction[900]), // headings
-      500: token(color.black), // content
       450: token(color.construction[1000]),
+      500: token(color.black), // content
     },
     fontWeight: {
       // Clarity City is limited to a minimum weight of 300 and max weight of 600, tokens provide hooks for customization
@@ -680,7 +681,7 @@ const aliases = {
   },
   utility: {
     gray: {
-      value: token(color.construction[500]),
+      value: token(color.construction[600]),
       tint: token(color.construction[50]),
       shade: token(color.construction[700]),
     },
