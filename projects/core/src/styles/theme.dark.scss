@@ -7,40 +7,33 @@
 @import '../../dist/lib/tokens/tokens';
 
 [cds-theme~='dark'] {
-  --cds-global-typography-color-500: #{$cds-global-color-white};
-  --cds-global-typography-color-400: #{$cds-global-color-construction-100};
-  --cds-global-typography-color-300: #{$cds-global-color-construction-200};
-  --cds-global-typography-color-200: #{$cds-global-color-construction-300};
-  --cds-global-typography-color-100: #{$cds-global-color-black};
-  --cds-global-typography-link-color: #{$cds-global-color-blue-400};
-  --cds-global-typography-link-color-hover: #{$cds-global-color-blue-200};
-  --cds-global-typography-link-color-visited: #{$cds-global-color-lavender-300};
-  --cds-global-typography-link-color-visited-hover: #{$cds-global-color-lavender-200};
-  --cds-global-typography-color-450: #{$cds-global-color-construction-50};
-  --cds-global-typography-disabled-button: #{$cds-global-color-construction-900};
-  --cds-global-typography-disabled: #{$cds-global-color-construction-500};
-  --cds-global-typography-info-hover: #{$cds-global-color-blue-200};
-  --cds-global-typography-success-hover: #{$cds-global-color-green-400};
-  --cds-global-typography-warning-hover: #{$cds-global-color-yellow-600};
-  --cds-global-typography-danger-hover: #{$cds-global-color-red-400};
-  --cds-global-typography-neutral-hover: #{$cds-global-color-construction-200};
-  --cds-global-typography-link-on-colorbg: #{$cds-global-color-construction-1000};
-
-  --cds-alias-typography-color-500: #{$cds-global-color-white};
-  --cds-alias-typography-color-400: #{$cds-global-color-construction-100};
-  --cds-alias-typography-color-300: #{$cds-global-color-construction-200};
-  --cds-alias-typography-color-200: #{$cds-global-color-construction-300};
+  // typography
   --cds-alias-typography-color-100: #{$cds-global-color-black};
+  --cds-alias-typography-color-200: #{$cds-global-color-construction-300};
+  --cds-alias-typography-color-300: #{$cds-global-color-construction-200};
+  --cds-alias-typography-color-400: #{$cds-global-color-construction-100};
+  --cds-alias-typography-color-450: #{$cds-global-color-construction-50};
+  --cds-alias-typography-color-500: #{$cds-global-color-white};
+  --cds-alias-typography-disabled-button: #{$cds-global-color-construction-900};
+  --cds-alias-typography-disabled: #{$cds-global-color-construction-500};
+  --cds-alias-typography-info-hover: #{$cds-global-color-blue-200};
+  --cds-alias-typography-success-hover: #{$cds-global-color-green-400};
+  --cds-alias-typography-warning-hover: #{$cds-global-color-yellow-600};
+  --cds-alias-typography-danger-hover: #{$cds-global-color-red-400};
+  --cds-alias-typography-neutral-hover: #{$cds-global-color-construction-200};
+  --cds-alias-typography-link-on-colorbg: #{$cds-global-color-construction-1000};
   --cds-alias-typography-link-color: #{$cds-global-color-blue-400};
   --cds-alias-typography-link-color-hover: #{$cds-global-color-blue-200};
   --cds-alias-typography-link-color-visited: #{$cds-global-color-lavender-300};
   --cds-alias-typography-link-color-visited-hover: #{$cds-global-color-lavender-200};
 
+  // object
   --cds-alias-object-app-background: #{$cds-global-color-construction-1000};
   --cds-alias-object-container-backdrop-background: #{$cds-alias-object-opacity-300};
   --cds-alias-object-container-background: #{$cds-global-color-construction-900};
   --cds-alias-object-container-background-tint: #{$cds-global-color-construction-1000};
   --cds-alias-object-container-background-shade: #{$cds-global-color-construction-800};
+  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-700};
   --cds-alias-object-container-background-inverse: #{$cds-global-color-construction-200};
   --cds-alias-object-container-background-inverse-tint: #{$cds-global-color-construction-100};
   --cds-alias-object-container-background-inverse-shade: #{$cds-global-color-construction-300};
@@ -63,12 +56,6 @@
   --cds-alias-object-interaction-background-selected: #{$cds-global-color-blue-900};
   --cds-alias-object-interaction-background-selected-active: #{$cds-global-color-construction-600};
   --cds-alias-object-interaction-background-selected-hover: #{$cds-global-color-construction-700};
-  --cds-alias-object-interaction-vertical-navigation-background-color: #{$cds-global-color-construction-1100};
-  --cds-alias-object-interaction-vertical-navigation-background-hover: #{$cds-global-color-construction-600};
-  --cds-alias-object-interaction-vertical-navigation-background-active: #{$cds-global-color-construction-800};
-  --cds-alias-object-interaction-vertical-navigation-background-selected: #{$cds-global-color-construction-700};
-  --cds-alias-object-interaction-vertical-navigation-background-selected-hover: #{$cds-global-color-construction-800};
-  --cds-alias-object-interaction-vertical-navigation-background-selected-active: #{$cds-global-color-construction-600};
   --cds-alias-object-interaction-background-disabled: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-background-highlight: #{$cds-global-color-blue-400};
   --cds-alias-object-interaction-border-color: #{$cds-global-color-construction-300};
@@ -89,8 +76,8 @@
   --cds-alias-object-interaction-neutral-secondary-hover: #{$cds-global-color-construction-800};
   --cds-alias-object-interaction-inverse-hover: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-inverse-click: #{$cds-global-color-construction-800};
-  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-700};
 
+  // status
   --cds-alias-status-tint: transparent;
   --cds-alias-status-info: #{$cds-global-color-blue-400};
   --cds-alias-status-info-tint: #{$cds-global-color-blue-800};
@@ -106,6 +93,9 @@
   --cds-alias-status-danger-tint: #{$cds-global-color-red-800};
   --cds-alias-status-danger-shade: #{$cds-global-color-red-600};
   --cds-alias-status-danger-dark: #{$cds-global-color-red-900};
+  --cds-alias-status-alt: #{$cds-global-color-violet-700};
+  --cds-alias-status-alt-tint: #{$cds-global-color-violet-600};
+  --cds-alias-status-alt-shade: #{$cds-global-color-violet-900};
   --cds-alias-status-neutral: #{$cds-global-color-construction-300};
   --cds-alias-status-neutral-tint: #{$cds-global-color-construction-700};
   --cds-alias-status-neutral-shade: #{$cds-global-color-construction-400};
@@ -113,16 +103,7 @@
   --cds-alias-status-disabled-tint: #{$cds-global-color-construction-700};
   --cds-alias-status-disabled-shade: #{$cds-global-color-construction-500};
 
-  --cds-alias-typography-color-450: #{$cds-global-color-construction-50};
-  --cds-alias-typography-disabled-button: #{$cds-global-color-construction-900};
-  --cds-alias-typography-disabled: #{$cds-global-color-construction-500};
-  --cds-alias-typography-info-hover: #{$cds-global-color-blue-200};
-  --cds-alias-typography-success-hover: #{$cds-global-color-green-400};
-  --cds-alias-typography-warning-hover: #{$cds-global-color-yellow-600};
-  --cds-alias-typography-danger-hover: #{$cds-global-color-red-400};
-  --cds-alias-typography-neutral-hover: #{$cds-global-color-construction-200};
-  --cds-alias-typography-link-on-colorbg: #{$cds-global-color-construction-1000};
-
+  //utility
   --cds-alias-utility-gray: #{$cds-global-color-construction-300};
   --cds-alias-utility-gray-tint: #{$cds-global-color-construction-1000};
   --cds-alias-utility-gray-shade: #{$cds-global-color-construction-200};
@@ -151,6 +132,7 @@
   --cds-alias-utility-violet-tint: #{$cds-global-color-violet-1000};
   --cds-alias-utility-violet-shade: #{$cds-global-color-violet-200};
 
+  // viz
   --cds-alias-viz-border: #{$cds-global-color-cool-gray-50};
   --cds-alias-viz-general-1-blue: #{$cds-global-color-blue-400};
   --cds-alias-viz-general-2-violet: #{$cds-global-color-violet-400};
