@@ -11,6 +11,7 @@ export interface CdsTheme {
     layout: Tokens;
     space: Tokens;
     color: Tokens;
+    typography: Tokens;
     animation: Tokens;
     base: Token;
   };
