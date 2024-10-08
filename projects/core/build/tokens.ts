@@ -595,6 +595,20 @@ const aliases = {
         hover: token(color.construction[600]),
         click: token(color.construction[800]),
       },
+      vertical: {
+        navigation: {
+          background: {
+            color: token(color.coolGray[50]),
+            hover: token(color.construction[100]),
+            active: token(color.blue[75]),
+            selected: {
+              value: token(color.white),
+              hover: token(color.construction[100]),
+              active: token(color.construction[200]),
+            },
+          },
+        },
+      },
     },
     app: {
       background: token(color.construction[25]),
