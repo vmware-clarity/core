@@ -485,6 +485,8 @@ const generateTypographyTokens = () => {
   };
 };
 
+const typography = generateTypographyTokens();
+
 const animation = {
   duration: {
     instant: token('0s'),
@@ -941,11 +943,11 @@ const aliases = {
       },
     },
   },
-  typography: generateTypographyTokens(),
+  typography: generateTypographyTokens(), // Typography will move from -global to -alias in the future.
 };
 
 export const baseTheme: CdsTheme = {
-  global: { base, scale, layout, space, color, animation },
+  global: { base, scale, layout, space, color, typography, animation },
   aliases,
   internal,
 };
