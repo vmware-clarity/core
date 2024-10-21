@@ -781,7 +781,10 @@ const aliases = {
     severity: {
       neutral: token(color.construction[600]),
       success: token(color.green[700]),
-      warning: token(color.yellow[700]),
+      warning: {
+        value: token(color.yellow[700]),
+        light: token(color.yellow[400]),
+      },
       immediate: token(color.tangerine[700]),
       critical: token(color.red[700]),
     },
