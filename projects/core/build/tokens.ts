@@ -727,7 +727,7 @@ const aliases = {
     },
   },
   viz: {
-    border: token(color.coolGray[50]),
+    border: token(color.construction[1100]),
     general: {
       1: {
         blue: token(color.blue[600]),
