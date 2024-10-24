@@ -527,7 +527,6 @@ const aliases = {
         shade: token(color.construction[300]),
       },
     },
-    "hero-header-background": token(color.blue[25]),
     shadow: {
       100: token(
         '0 calc((1 / var(--cds-global-base, 20)) * 1rem) calc((3 / var(--cds-global-base, 20)) * 1rem) 0 hsla(198, 30%, 15%, 0.5)'
