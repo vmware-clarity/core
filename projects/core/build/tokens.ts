@@ -727,7 +727,7 @@ const aliases = {
     },
   },
   viz: {
-    border: token(color.coolGray[50]),
+    border: token(color.construction[1100]),
     general: {
       1: {
         blue: token(color.blue[600]),
@@ -785,7 +785,7 @@ const aliases = {
         value: token(color.yellow[700]),
         light: token(color.yellow[400]),
       },
-      immediate: token(color.tangerine[700]),
+      immediate: token(color.tangerine[400]),
       critical: token(color.red[700]),
     },
     sequential: {
