@@ -561,6 +561,16 @@ const aliases = {
         },
         disabled: token(color.white),
         highlight: token(color.blue[700]),
+        shade: {
+          value: token(color.coolGray[50]),
+          hover: token(color.construction[100]),
+          active: token(color.blue[75]),
+          selected: {
+            value: token(color.white),
+            hover: token(color.construction[100]),
+            active: token(color.construction[200]),
+          },
+        },
       },
       color: {
         value: token(color.construction[700]),
@@ -598,20 +608,6 @@ const aliases = {
         hover: token(color.construction[600]),
         click: token(color.construction[800]),
       },
-      vertical: {
-        navigation: {
-          background: {
-            color: token(color.coolGray[50]),
-            hover: token(color.construction[100]),
-            active: token(color.blue[75]),
-            selected: {
-              value: token(color.white),
-              hover: token(color.construction[100]),
-              active: token(color.construction[200]),
-            },
-          },
-        },
-      },
     },
     app: {
       background: token(color.construction[25]),
@@ -625,7 +621,7 @@ const aliases = {
         value: token(color.white),
         tint: token(color.construction[50]),
         shade: token(color.construction[100]),
-        dark: token(color.construction[200]),
+        dark: token(color.coolGray[50]),
         inverse: {
           value: token(color.construction[600]),
           tint: token(color.construction[800]),
