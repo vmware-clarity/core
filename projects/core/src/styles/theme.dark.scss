@@ -53,7 +53,7 @@
   --cds-alias-object-container-background: #{$cds-global-color-construction-900};
   --cds-alias-object-container-background-tint: #{$cds-global-color-construction-1000};
   --cds-alias-object-container-background-shade: #{$cds-global-color-construction-800};
-  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-700};
+  --cds-alias-object-container-background-dark: #{$cds-global-color-construction-1100};
   --cds-alias-object-container-background-inverse: #{$cds-global-color-construction-200};
   --cds-alias-object-container-background-inverse-tint: #{$cds-global-color-construction-100};
   --cds-alias-object-container-background-inverse-shade: #{$cds-global-color-construction-300};
@@ -78,12 +78,12 @@
   --cds-alias-object-interaction-background-selected-hover: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-background-disabled: #{$cds-global-color-construction-700};
   --cds-alias-object-interaction-background-highlight: #{$cds-global-color-blue-400};
-  --cds-alias-object-interaction-vertical-navigation-background-color: #{$cds-global-color-construction-1100};
-  --cds-alias-object-interaction-vertical-navigation-background-hover: #{$cds-global-color-construction-600};
-  --cds-alias-object-interaction-vertical-navigation-background-active: #{$cds-global-color-construction-800};
-  --cds-alias-object-interaction-vertical-navigation-background-selected: #{$cds-global-color-construction-700};
-  --cds-alias-object-interaction-vertical-navigation-background-selected-hover: #{$cds-global-color-construction-800};
-  --cds-alias-object-interaction-vertical-navigation-background-selected-active: #{$cds-global-color-construction-600};
+  --cds-alias-object-interaction-background-shade: #{$cds-global-color-construction-1100};
+  --cds-alias-object-interaction-background-shade-hover: #{$cds-global-color-construction-600};
+  --cds-alias-object-interaction-background-shade-active: #{$cds-global-color-construction-800};
+  --cds-alias-object-interaction-background-shade-selected: #{$cds-global-color-construction-700};
+  --cds-alias-object-interaction-background-shade-selected-hover: #{$cds-global-color-construction-800};
+  --cds-alias-object-interaction-background-shade-selected-active: #{$cds-global-color-construction-600};
   --cds-alias-object-interaction-border-color: #{$cds-global-color-construction-300};
   --cds-alias-object-interaction-info-hover: #{$cds-global-color-blue-300};
   --cds-alias-object-interaction-info-click: #{$cds-global-color-blue-500};

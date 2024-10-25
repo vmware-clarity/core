@@ -561,6 +561,16 @@ const aliases = {
         },
         disabled: token(color.white),
         highlight: token(color.blue[700]),
+        shade: {
+          value: token(color.coolGray[50]),
+          hover: token(color.construction[100]),
+          active: token(color.blue[75]),
+          selected: {
+            value: token(color.white),
+            hover: token(color.construction[100]),
+            active: token(color.construction[200]),
+          },
+        },
       },
       color: {
         value: token(color.construction[700]),
@@ -598,20 +608,6 @@ const aliases = {
         hover: token(color.construction[600]),
         click: token(color.construction[800]),
       },
-      vertical: {
-        navigation: {
-          background: {
-            color: token(color.coolGray[50]),
-            hover: token(color.construction[100]),
-            active: token(color.blue[75]),
-            selected: {
-              value: token(color.white),
-              hover: token(color.construction[100]),
-              active: token(color.construction[200]),
-            },
-          },
-        },
-      },
     },
     app: {
       background: token(color.construction[25]),
@@ -625,7 +621,7 @@ const aliases = {
         value: token(color.white),
         tint: token(color.construction[50]),
         shade: token(color.construction[100]),
-        dark: token(color.construction[200]),
+        dark: token(color.coolGray[50]),
         inverse: {
           value: token(color.construction[600]),
           tint: token(color.construction[800]),
@@ -727,7 +723,7 @@ const aliases = {
     },
   },
   viz: {
-    border: token(color.coolGray[50]),
+    border: token(color.construction[1100]),
     general: {
       1: {
         blue: token(color.blue[600]),
@@ -785,7 +781,7 @@ const aliases = {
         value: token(color.yellow[700]),
         light: token(color.yellow[400]),
       },
-      immediate: token(color.tangerine[700]),
+      immediate: token(color.tangerine[400]),
       critical: token(color.red[700]),
     },
     sequential: {
