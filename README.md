@@ -2,6 +2,8 @@
 
 # Clarity Core
 
+Notice: Clarity Core is no longer supported. We recommend exploring our updated tools and resources for continued support and new features.
+
 ![Build](https://github.com/vmware-clarity/core/workflows/Build/badge.svg)
 [![npm version core](https://img.shields.io/npm/v/@cds/core/next?label=%40cds%2Fcore&style=flat-square)](https://www.npmjs.com/package/@cds/core)
 [![npm version cds react](https://img.shields.io/npm/v/@cds/angular/next?label=%40cds%2Freact&style=flat-square)](https://www.npmjs.com/package/@cds/react)
