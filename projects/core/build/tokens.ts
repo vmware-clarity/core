@@ -786,7 +786,7 @@ const aliases = {
       freeSpace: {
         fill: token(color.construction[400]),
         border: token(color.construction[400]),
-      }
+      },
     },
     sequential: {
       blue: {
