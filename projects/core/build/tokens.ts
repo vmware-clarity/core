@@ -581,32 +581,39 @@ const aliases = {
       },
       info: {
         hover: token(color.blue[800]),
-        click: token(color.blue[900]),
+        click: token(color.blue[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.blue[900]),
+        selected: token(color.blue[900]),
         secondaryHover: token(color.blue[50]),
       },
       success: {
         hover: token(color.green[800]),
-        click: token(color.green[900]),
+        click: token(color.green[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.green[900]),
         secondaryHover: token(color.green[50]),
       },
       warning: {
         hover: token(color.ochre[600]),
-        click: token(color.ochre[700]),
+        click: token(color.green[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.green[900]),
         secondaryHover: token(color.ochre[50]),
       },
       danger: {
         hover: token(color.red[800]),
-        click: token(color.red[900]),
+        click: token(color.red[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.red[900]),
         secondaryHover: token(color.red[50]),
       },
       neutral: {
         hover: token(color.construction[700]),
-        click: token(color.construction[800]),
+        click: token(color.construction[800]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.construction[800]),
         secondaryHover: token(color.construction[50]),
       },
       inverse: {
         hover: token(color.construction[600]),
-        click: token(color.construction[800]),
+        click: token(color.construction[800]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.construction[800]),
       },
     },
     app: {
