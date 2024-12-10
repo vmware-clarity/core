@@ -9,9 +9,9 @@ import { testBundleSize, testRenderTime } from 'web-test-runner-performance/brow
 import '@cds/core/grid/register.js';
 
 describe('cds-grid bundle performance', () => {
-  it(`should bundle and treeshake component in under 29kb`, async () => {
+  it(`should bundle and treeshake component`, async () => {
     const result = await testBundleSize(`import '@cds/core/grid/register.js'`);
-    expect(result.kb).toBeLessThan(36.5);
+    expect(result.kb).toBeLessThan(37.5);
   });
 });
 

@@ -9,6 +9,7 @@ import '@cds/core/button/register.js';
 import { ClarityIcons } from '@cds/core/icon/icon.service.js';
 import { imageIcon } from '@cds/core/icon/shapes/image.js';
 import { userIcon } from '@cds/core/icon/shapes/user.js';
+
 import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';

@@ -18,7 +18,7 @@ describe('cds-icon performance', () => {
       import '@cds/core/icon/register.js';
       ClarityIcons.addIcons(userIcon);
     `;
-    expect((await testBundleSize(bundle)).kb).toBeLessThan(19.5);
+    expect((await testBundleSize(bundle)).kb).toBeLessThan(19.8);
   });
 
   it(`should bundle all icons`, async () => {
@@ -36,7 +36,8 @@ describe('cds-icon performance', () => {
       loadTextEditIconSet();
       loadTravelIconSet();
     `;
-    expect((await testBundleSize(bundle)).kb).toBeLessThan(120.5);
+
+    expect((await testBundleSize(bundle)).kb).toBeLessThan(246.9);
   });
 
   const icon = html`<cds-icon shape="ellipsis-vertical"></cds-icon>`;

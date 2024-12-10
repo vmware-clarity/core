@@ -298,6 +298,8 @@ export const objectContainerBackground = () => getTokenTable('aliasObjectContain
 
 export const statusColor = (_args: any, { globals }: any) => getTokenTable('aliasStatus', globals);
 
+export const vizColor = (_args: any, { globals }: any) => getTokenTable('aliasViz', globals);
+
 export const aliases = () => getTokenTable('alias');
 
 export const layout = () => getTokenTable('globalLayout');

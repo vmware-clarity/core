@@ -81,6 +81,7 @@ const color = {
     1000: token([93, 80, 12]),
   },
   blue: {
+    25: token([198, 100, 96]),
     50: token([198, 100, 95]),
     75: token([198, 100, 94]),
     100: token([198, 100, 87]),
@@ -353,8 +354,8 @@ const generateTypographyTokens = () => {
       200: token(color.construction[600]), // placeholders
       300: token(color.construction[800]), // labels
       400: token(color.construction[900]), // headings
-      500: token(color.black), // content
       450: token(color.construction[1000]),
+      500: token(color.black), // content
     },
     fontWeight: {
       // Clarity City is limited to a minimum weight of 300 and max weight of 600, tokens provide hooks for customization
@@ -560,6 +561,16 @@ const aliases = {
         },
         disabled: token(color.white),
         highlight: token(color.blue[700]),
+        shade: {
+          value: token(color.coolGray[50]),
+          hover: token(color.construction[100]),
+          active: token(color.blue[75]),
+          selected: {
+            value: token(color.white),
+            hover: token(color.construction[100]),
+            active: token(color.construction[200]),
+          },
+        },
       },
       color: {
         value: token(color.construction[700]),
@@ -610,11 +621,11 @@ const aliases = {
         value: token(color.white),
         tint: token(color.construction[50]),
         shade: token(color.construction[100]),
-        dark: token(color.construction[200]),
+        dark: token(color.coolGray[50]),
         inverse: {
-          value: token(color.construction[200]),
-          tint: token(color.construction[100]),
-          shade: token(color.construction[300]),
+          value: token(color.construction[600]),
+          tint: token(color.construction[800]),
+          shade: token(color.construction[500]),
         },
       },
       backdrop: {
@@ -666,7 +677,7 @@ const aliases = {
   },
   utility: {
     gray: {
-      value: token(color.construction[500]),
+      value: token(color.construction[600]),
       tint: token(color.construction[50]),
       shade: token(color.construction[700]),
     },
@@ -712,7 +723,7 @@ const aliases = {
     },
   },
   viz: {
-    border: token(color.coolGray[50]),
+    border: token(color.construction[1100]),
     general: {
       1: {
         blue: token(color.blue[600]),
@@ -766,8 +777,11 @@ const aliases = {
     severity: {
       neutral: token(color.construction[600]),
       success: token(color.green[700]),
-      warning: token(color.yellow[700]),
-      immediate: token(color.tangerine[700]),
+      warning: {
+        value: token(color.yellow[700]),
+        light: token(color.yellow[400]),
+      },
+      immediate: token(color.tangerine[400]),
       critical: token(color.red[700]),
     },
     sequential: {
