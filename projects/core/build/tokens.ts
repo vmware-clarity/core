@@ -790,6 +790,10 @@ const aliases = {
       },
       immediate: token(color.tangerine[400]),
       critical: token(color.red[700]),
+      freeSpace: {
+        fill: token(color.construction[100]),
+        border: token(color.construction[400]),
+      },
     },
     sequential: {
       blue: {
