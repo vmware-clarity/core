@@ -865,7 +865,7 @@ const aliases = {
       },
     },
     diverging: {
-      'violet-aqua': {
+      violetAqua: {
         v: {
           700: token(color.violet[700]),
           600: token(color.violet[600]),
@@ -884,7 +884,7 @@ const aliases = {
           900: token(color.aqua[900]),
         },
       },
-      'blue-jade': {
+      blueJade: {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -903,7 +903,7 @@ const aliases = {
           800: token(color.jade[800]),
         },
       },
-      'blue-green': {
+      blueGreen: {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -922,7 +922,7 @@ const aliases = {
           800: token(color.green[800]),
         },
       },
-      'green-yellow-red': {
+      greenYellowRed: {
         g: {
           700: token(color.green[700]),
           600: token(color.green[600]),
