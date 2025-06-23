@@ -11,6 +11,7 @@ import {
   getI18nUpdateStrategy,
   I18nService,
   I18nElement,
+  GlobalStateService,
 } from '@cds/core/internal';
 import { html, LitElement } from 'lit';
 import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
@@ -187,5 +188,15 @@ describe('helpers', () => {
       const expected = { update: false };
       expect(testMe).toEqual(expected);
     });
+  });
+});
+
+describe('unsubscribe', () => {
+  it('should unsubscribe from its subscription when the element is removed', async () => {
+    const testElement = await createTestElement(
+      html` <test-alert-18n-element></test-alert-18n-element><test-alert-18n-element></test-alert-18n-element> `
+    );
+    removeTestElement(testElement);
+    expect((GlobalStateService.stateUpdates as any).subscriptions.length).toBe(0);
   });
 });
