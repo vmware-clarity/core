@@ -43,6 +43,19 @@ class TestAlertI18nElement extends LitElement {
   }
 }
 
+/** @element test-extends-18n-element */
+@customElement('test-extends-18n-element')
+class TestExtendsI18nElement extends TestI18nElement {
+  @i18n() i18n = {
+    open: 'Open',
+    close: 'Close',
+  };
+
+  render() {
+    return html`<slot></slot>`;
+  }
+}
+
 describe('i18n decorator', () => {
   let testElement: HTMLElement;
   let component: TestI18nElement;
@@ -191,11 +204,19 @@ describe('helpers', () => {
   });
 });
 
-describe('unsubscribe', () => {
-  it('should unsubscribe from its subscription when the element is removed', async () => {
+describe('subscription', () => {
+  it('should be unsubscribed when the element is removed', async () => {
     const testElement = await createTestElement(
-      html` <test-alert-18n-element></test-alert-18n-element><test-alert-18n-element></test-alert-18n-element> `
+      html` <test-18n-element></test-18n-element><test-18n-element></test-18n-element> `
     );
+    removeTestElement(testElement);
+    expect((GlobalStateService.stateUpdates as any).subscriptions.length).toBe(0);
+  });
+
+  it('should be unsubscribed when the element extends an @i8n element and is removed', async () => {
+    const testElement = await createTestElement(html` <test-extends-18n-element></test-extends-18n-element> `);
+    const component = testElement.querySelector<TestExtendsI18nElement>('test-extends-18n-element');
+    expect(component.i18n).toEqual({ open: 'Open', close: 'Close' });
     removeTestElement(testElement);
     expect((GlobalStateService.stateUpdates as any).subscriptions.length).toBe(0);
   });

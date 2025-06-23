@@ -58,11 +58,13 @@ export function i18n() {
     const targetDisconnectedCallback: () => void = protoOrDescriptor.disconnectedCallback;
 
     function connectedCallback(this: any): void {
-      this.__i18nSub = GlobalStateService.stateUpdates.subscribe(update => {
-        if (update.key === 'i18nRegistry') {
-          this.requestUpdate(name);
-        }
-      });
+      if (!this.__i18nSub) {
+        this.__i18nSub = GlobalStateService.stateUpdates.subscribe(update => {
+          if (update.key === 'i18nRegistry') {
+            this.requestUpdate(name);
+          }
+        });
+      }
 
       if (targetConnectedCallback) {
         targetConnectedCallback.apply(this);
