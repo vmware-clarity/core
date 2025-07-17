@@ -24,7 +24,7 @@ jobs:
       - name: Public Api Check
         run: npm run public-api:check
       - name: Upload Storybook Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: storybook
           path: projects/core/dist/storybook/
