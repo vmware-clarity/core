@@ -733,51 +733,67 @@ const aliases = {
     border: token(color.construction[1100]),
     general: {
       1: {
+        value: token(color.blue[600]),
         blue: token(color.blue[600]),
       },
       2: {
+        value: token(color.violet[700]),
         violet: token(color.violet[600]),
       },
       3: {
+        value: token(color.aqua[800]),
         aqua: token(color.aqua[800]),
       },
       4: {
+        value: token(color.lavender[400]),
         lime: token(color.lime[700]),
       },
       5: {
+        value: token(color.pink[500]),
         blue: token(color.blue[800]),
       },
       6: {
+        value: token(color.lime[700]),
         aqua: token(color.aqua[1000]),
       },
       7: {
+        value: token(color.lavender[700]),
         violet: token(color.violet[800]),
       },
       8: {
+        value: token(color.aqua[600]),
         lime: token(color.lime[900]),
       },
       9: {
+        value: token(color.lime[800]),
         blue: token(color.blue[700]),
       },
       10: {
+        value: token(color.violet[600]),
         lime: token(color.lime[1000]),
       },
       11: {
+        value: token(color.jade[600]),
         aqua: token(color.aqua[600]),
       },
       12: {
+        value: token(color.azure[800]),
         violet: token(color.violet[1000]),
       },
       13: {
+        value: token(color.violet[400]),
         violet: token(color.violet[700]),
       },
       14: {
+        value: token(color.green[700]),
         blue: token(color.blue[1000]),
       },
       15: {
+        value: token(color.pink[700]),
         aqua: token(color.aqua[700]),
       },
       16: {
+        value: token(color.azure[600]),
         lime: token(color.lime[800]),
       },
     },
