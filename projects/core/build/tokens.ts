@@ -581,32 +581,39 @@ const aliases = {
       },
       info: {
         hover: token(color.blue[800]),
-        click: token(color.blue[900]),
+        click: token(color.blue[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.blue[900]),
+        selected: token(color.blue[900]),
         secondaryHover: token(color.blue[50]),
       },
       success: {
         hover: token(color.green[800]),
-        click: token(color.green[900]),
+        click: token(color.green[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.green[900]),
         secondaryHover: token(color.green[50]),
       },
       warning: {
         hover: token(color.ochre[600]),
-        click: token(color.ochre[700]),
+        click: token(color.green[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.green[900]),
         secondaryHover: token(color.ochre[50]),
       },
       danger: {
         hover: token(color.red[800]),
-        click: token(color.red[900]),
+        click: token(color.red[900]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.red[900]),
         secondaryHover: token(color.red[50]),
       },
       neutral: {
         hover: token(color.construction[700]),
-        click: token(color.construction[800]),
+        click: token(color.construction[800]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.construction[800]),
         secondaryHover: token(color.construction[50]),
       },
       inverse: {
         hover: token(color.construction[600]),
-        click: token(color.construction[800]),
+        click: token(color.construction[800]), // deprecated in favor of active. To be removed in next major release.
+        active: token(color.construction[800]),
       },
     },
     app: {
@@ -726,51 +733,67 @@ const aliases = {
     border: token(color.construction[1100]),
     general: {
       1: {
+        value: token(color.blue[600]),
         blue: token(color.blue[600]),
       },
       2: {
+        value: token(color.violet[700]),
         violet: token(color.violet[600]),
       },
       3: {
+        value: token(color.aqua[800]),
         aqua: token(color.aqua[800]),
       },
       4: {
+        value: token(color.lavender[400]),
         lime: token(color.lime[700]),
       },
       5: {
+        value: token(color.pink[500]),
         blue: token(color.blue[800]),
       },
       6: {
+        value: token(color.lime[700]),
         aqua: token(color.aqua[1000]),
       },
       7: {
+        value: token(color.lavender[700]),
         violet: token(color.violet[800]),
       },
       8: {
+        value: token(color.aqua[600]),
         lime: token(color.lime[900]),
       },
       9: {
+        value: token(color.lime[800]),
         blue: token(color.blue[700]),
       },
       10: {
+        value: token(color.violet[600]),
         lime: token(color.lime[1000]),
       },
       11: {
+        value: token(color.jade[600]),
         aqua: token(color.aqua[600]),
       },
       12: {
+        value: token(color.azure[800]),
         violet: token(color.violet[1000]),
       },
       13: {
+        value: token(color.violet[400]),
         violet: token(color.violet[700]),
       },
       14: {
+        value: token(color.green[700]),
         blue: token(color.blue[1000]),
       },
       15: {
+        value: token(color.pink[700]),
         aqua: token(color.aqua[700]),
       },
       16: {
+        value: token(color.azure[600]),
         lime: token(color.lime[800]),
       },
     },
@@ -783,6 +806,10 @@ const aliases = {
       },
       immediate: token(color.tangerine[400]),
       critical: token(color.red[700]),
+      freeSpace: {
+        fill: token(color.construction[100]),
+        border: token(color.construction[400]),
+      },
     },
     sequential: {
       blue: {
@@ -865,7 +892,7 @@ const aliases = {
       },
     },
     diverging: {
-      'violet-aqua': {
+      violetAqua: {
         v: {
           700: token(color.violet[700]),
           600: token(color.violet[600]),
@@ -884,7 +911,7 @@ const aliases = {
           900: token(color.aqua[900]),
         },
       },
-      'blue-jade': {
+      blueJade: {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -903,7 +930,7 @@ const aliases = {
           800: token(color.jade[800]),
         },
       },
-      'blue-green': {
+      blueGreen: {
         b: {
           800: token(color.blue[800]),
           700: token(color.blue[700]),
@@ -922,7 +949,7 @@ const aliases = {
           800: token(color.green[800]),
         },
       },
-      'green-yellow-red': {
+      greenYellowRed: {
         g: {
           700: token(color.green[700]),
           600: token(color.green[600]),
