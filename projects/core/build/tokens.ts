@@ -388,9 +388,10 @@ const generateTypographyTokens = () => {
       color: {
         value: token(color.blue[700]),
         hover: token(color.blue[800]),
+        active: token(color.red[700]),
         visited: {
-          value: token(color.lavender[600]),
-          hover: token(color.lavender[700]),
+          value: token(color.violet[700]),
+          hover: token(color.violet[1000]),
         },
       },
       onColorbg: {
