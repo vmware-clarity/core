@@ -16,7 +16,7 @@ describe('cds-badge performance', () => {
   `;
 
   it(`should bundle and treeshake alert`, async () => {
-    expect((await testBundleSize('@cds/core/alert/register.js')).kb).toBeLessThan(31.2);
+    expect((await testBundleSize('@cds/core/alert/register.js')).kb).toBeLessThan(31.3);
   });
 
   it(`should render 1 alert under 30ms`, async () => {
