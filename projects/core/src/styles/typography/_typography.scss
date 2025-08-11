@@ -45,7 +45,8 @@
 [cds-text*='message'],
 [cds-text*='secondary'],
 [cds-text*='caption'],
-[cds-text*='smallcaption'] {
+[cds-text*='smallcaption'],
+[cds-text*='button'] {
   color: $cds-global-typography-color-500;
 }
 
@@ -188,6 +189,20 @@ body[cds-text*='body'] {
   font-weight: $cds-global-typography-smallcaption-font-weight;
   line-height: $cds-global-typography-smallcaption-line-height;
   letter-spacing: $cds-global-typography-smallcaption-letter-spacing;
+}
+
+[cds-text*='button'] {
+  $lh-gap: getLineHeightGap(
+    $cds-global-typography-button-line-height-static,
+    $cds-global-typography-button-line-height
+  );
+  @include LHE($lh-gap);
+
+  font-size: $cds-global-typography-button-font-size;
+  font-weight: $cds-global-typography-button-font-weight;
+  line-height: $cds-global-typography-button-line-height;
+  letter-spacing: $cds-global-typography-button-letter-spacing;
+  text-decoration: underline;
 }
 
 [cds-text~='link'] {
