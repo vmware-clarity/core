@@ -30,6 +30,16 @@ cds-internal-control-label {
   outline: 0 !important;
 }
 
+//cds-control-action /deep div {
+//  outline: 5px solid black !important;
+//}
+
+.private-host:hover,
+.private-host:focus,
+.private-host:active {
+  outline: 0.3rem solid black !important;
+}
+
 [focusable] {
   content: '';
   position: absolute;
