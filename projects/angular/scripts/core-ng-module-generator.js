@@ -20,6 +20,7 @@ const directiveTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/directive.
 const moduleTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/module.ts.mustache', 'utf8');
 const indexTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/index.ts.mustache', 'utf8');
 const packageTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/package.json.mustache', 'utf8');
+const ngPackageTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/ng-package.json.mustache', 'utf8');
 const publicAPITemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/public-api.ts.mustache', 'utf8');
 const rootIndexTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/root-index.ts.mustache', 'utf8');
 const rootModuleTemplate = fs.readFileSync(MUSTACHE_TEMPLTATE_PATH + '/root-module.ts.mustache', 'utf8');
@@ -41,6 +42,7 @@ function createEntryPoints(modules) {
     const indexFilePath = path.resolve(TARGET_PATH, path.join(moduleDirectory, 'index.ts'));
     const publicAPIFilePath = path.resolve(TARGET_PATH, path.join(moduleDirectory, 'public-api.ts'));
     const packageFilePath = path.resolve(TARGET_PATH, path.join(moduleDirectory, 'package.json'));
+    const ngPackageFilePath = path.resolve(TARGET_PATH, path.join(moduleDirectory, 'ng-package.json'));
     const moduleClassName = createModuleClassName(module);
     const directives = elements.map(element => createDirective(element, module));
 
@@ -50,6 +52,7 @@ function createEntryPoints(modules) {
       moduleFilePath,
       moduleClassName,
       packageFilePath,
+      ngPackageFilePath,
       indexFilePath,
       publicAPIFilePath,
       directives,
@@ -76,6 +79,7 @@ function writeComponentSubModules(modules) {
     writeToDisk(module.moduleFilePath, `${licenseHeader}${Mustache.render(moduleTemplate, module)}`);
     writeToDisk(module.indexFilePath, `${licenseHeader}${Mustache.render(indexTemplate, module)}`);
     writeToDisk(module.packageFilePath, Mustache.render(packageTemplate, module));
+    writeToDisk(module.ngPackageFilePath, Mustache.render(ngPackageTemplate, module));
     writeToDisk(module.publicAPIFilePath, `${licenseHeader}${Mustache.render(publicAPITemplate)}`);
     module.directives.forEach(directive =>
       writeToDisk(directive.directiveFilePath, `${licenseHeader}${Mustache.render(directiveTemplate, directive)}`)
