@@ -291,6 +291,7 @@ export { codeIcon, codeIconName } from './shapes/code.js';
 export { computerIcon, computerIconName } from './shapes/computer.js';
 export { connectIcon, connectIconName } from './shapes/connect.js';
 export { containerIcon, containerIconName } from './shapes/container.js';
+export { containerGroupIcon, containerGroupIconName } from './shapes/container-group.js';
 export { containerVolumeIcon, containerVolumeIconName } from './shapes/container-volume.js';
 export { controlLunIcon, controlLunIconName } from './shapes/control-lun.js';
 export { cpuIcon, cpuIconName } from './shapes/cpu.js';
