@@ -11323,7 +11323,7 @@
           "type": {
             "text": "IconShapeTuple[]"
           },
-          "default": "[\n  administratorIcon,\n  animationIcon,\n  applicationIcon,\n  applicationsIcon,\n  archiveIcon,\n  assignUserIcon,\n  atomIcon,\n  backupIcon,\n  backupRestoreIcon,\n  barCodeIcon,\n  batteryIcon,\n  blockIcon,\n  blocksGroupIcon,\n  bluetoothIcon,\n  bluetoothOffIcon,\n  buildingIcon,\n  bundleIcon,\n  capacitorIcon,\n  cdDvdIcon,\n  certificateIcon,\n  ciCdIcon,\n  cloudNetworkIcon,\n  cloudScaleIcon,\n  cloudTrafficIcon,\n  clusterIcon,\n  codeIcon,\n  computerIcon,\n  connectIcon,\n  containerIcon,\n  containerVolumeIcon,\n  controlLunIcon,\n  cpuIcon,\n  dashboardIcon,\n  dataClusterIcon,\n  deployIcon,\n  devicesIcon,\n  digitalSignatureIcon,\n  disconnectIcon,\n  displayIcon,\n  downloadCloudIcon,\n  exportIcon,\n  fileShareIcon,\n  fileShare2Icon,\n  flaskIcon,\n  floppyIcon,\n  forkingIcon,\n  hardDriveIcon,\n  hardDriveDisksIcon,\n  hardDiskIcon,\n  helixIcon,\n  hostIcon,\n  hostGroupIcon,\n  importIcon,\n  inductorIcon,\n  installIcon,\n  internetOfThingsIcon,\n  keyboardIcon,\n  layersIcon,\n  linkIcon,\n  mediaChangerIcon,\n  memoryIcon,\n  mobileIcon,\n  mouseIcon,\n  namespaceIcon,\n  networkGlobeIcon,\n  networkSettingsIcon,\n  networkSwitchIcon,\n  nodeGroupIcon,\n  nodeIcon,\n  nodesIcon,\n  noWifiIcon,\n  nvmeIcon,\n  pdfFileIcon,\n  phoneHandsetIcon,\n  pluginIcon,\n  podIcon,\n  processOnVmIcon,\n  qrCodeIcon,\n  rackServerIcon,\n  radarIcon,\n  resistorIcon,\n  resourcePoolIcon,\n  routerIcon,\n  rulerPencilIcon,\n  scriptExecuteIcon,\n  scriptScheduleIcon,\n  shieldIcon,\n  shieldCheckIcon,\n  shieldXIcon,\n  squidIcon,\n  ssdIcon,\n  storageIcon,\n  storageAdapterIcon,\n  tabletIcon,\n  tapeDriveIcon,\n  terminalIcon,\n  thinClientIcon,\n  unarchiveIcon,\n  uninstallIcon,\n  unlinkIcon,\n  updateIcon,\n  uploadCloudIcon,\n  usbIcon,\n  vmIcon,\n  vmwAppIcon,\n  wifiIcon,\n  xlsFileIcon,\n]"
+          "default": "[\n  administratorIcon,\n  animationIcon,\n  applicationIcon,\n  applicationsIcon,\n  archiveIcon,\n  assignUserIcon,\n  atomIcon,\n  backupIcon,\n  backupRestoreIcon,\n  barCodeIcon,\n  batteryIcon,\n  blockIcon,\n  blocksGroupIcon,\n  bluetoothIcon,\n  bluetoothOffIcon,\n  buildingIcon,\n  bundleIcon,\n  capacitorIcon,\n  cdDvdIcon,\n  certificateIcon,\n  ciCdIcon,\n  cloudNetworkIcon,\n  cloudScaleIcon,\n  cloudTrafficIcon,\n  clusterIcon,\n  codeIcon,\n  computerIcon,\n  connectIcon,\n  containerIcon,\n  containerGroupIcon,\n  containerVolumeIcon,\n  controlLunIcon,\n  cpuIcon,\n  dashboardIcon,\n  dataClusterIcon,\n  deployIcon,\n  devicesIcon,\n  digitalSignatureIcon,\n  disconnectIcon,\n  displayIcon,\n  downloadCloudIcon,\n  exportIcon,\n  fileShareIcon,\n  fileShare2Icon,\n  flaskIcon,\n  floppyIcon,\n  forkingIcon,\n  hardDriveIcon,\n  hardDriveDisksIcon,\n  hardDiskIcon,\n  helixIcon,\n  hostIcon,\n  hostGroupIcon,\n  importIcon,\n  inductorIcon,\n  installIcon,\n  internetOfThingsIcon,\n  keyboardIcon,\n  layersIcon,\n  linkIcon,\n  mediaChangerIcon,\n  memoryIcon,\n  mobileIcon,\n  mouseIcon,\n  namespaceIcon,\n  networkGlobeIcon,\n  networkSettingsIcon,\n  networkSwitchIcon,\n  nodeGroupIcon,\n  nodeIcon,\n  nodesIcon,\n  noWifiIcon,\n  nvmeIcon,\n  pdfFileIcon,\n  phoneHandsetIcon,\n  pluginIcon,\n  podIcon,\n  processOnVmIcon,\n  qrCodeIcon,\n  rackServerIcon,\n  radarIcon,\n  resistorIcon,\n  resourcePoolIcon,\n  routerIcon,\n  rulerPencilIcon,\n  scriptExecuteIcon,\n  scriptScheduleIcon,\n  shieldIcon,\n  shieldCheckIcon,\n  shieldXIcon,\n  squidIcon,\n  ssdIcon,\n  storageIcon,\n  storageAdapterIcon,\n  tabletIcon,\n  tapeDriveIcon,\n  terminalIcon,\n  thinClientIcon,\n  unarchiveIcon,\n  uninstallIcon,\n  unlinkIcon,\n  updateIcon,\n  uploadCloudIcon,\n  usbIcon,\n  vmIcon,\n  vmwAppIcon,\n  wifiIcon,\n  xlsFileIcon,\n]"
         },
         {
           "kind": "variable",
@@ -16125,6 +16125,22 @@
           "declaration": {
             "name": "containerIconName",
             "module": "./shapes/container.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "containerGroupIcon",
+          "declaration": {
+            "name": "containerGroupIcon",
+            "module": "./shapes/container-group.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "containerGroupIconName",
+          "declaration": {
+            "name": "containerGroupIconName",
+            "module": "./shapes/container-group.js"
           }
         },
         {
@@ -22737,6 +22753,46 @@
           "declaration": {
             "name": "connectIcon",
             "module": "icon/shapes/connect.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "icon/shapes/container-group.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "containerGroupIconName",
+          "type": {
+            "text": "string"
+          },
+          "default": "'container-group'"
+        },
+        {
+          "kind": "variable",
+          "name": "containerGroupIcon",
+          "type": {
+            "text": "IconShapeTuple"
+          },
+          "default": "[containerGroupIconName, renderIcon(icon)]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "containerGroupIconName",
+          "declaration": {
+            "name": "containerGroupIconName",
+            "module": "icon/shapes/container-group.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "containerGroupIcon",
+          "declaration": {
+            "name": "containerGroupIcon",
+            "module": "icon/shapes/container-group.js"
           }
         }
       ]
