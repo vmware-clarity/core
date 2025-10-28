@@ -115,8 +115,9 @@ function buildSassTokens(path) {
 }
 
 function buildCSSTokens(path) {
+  const selector = ':where(:root, :host)';
   const cssTokens = `
-:root {
+${selector} {
 ${tokens.map(token => `  ${getTokenCSSName(token)}: ${convertCSSValue(token, false)};`).join('\n')}
 }`;
 
