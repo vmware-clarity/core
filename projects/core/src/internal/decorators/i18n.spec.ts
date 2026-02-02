@@ -11,6 +11,7 @@ import {
   getI18nUpdateStrategy,
   I18nService,
   I18nElement,
+  GlobalStateService,
 } from '@cds/core/internal';
 import { html, LitElement } from 'lit';
 import { componentIsStable, createTestElement, removeTestElement } from '@cds/core/test';
@@ -39,6 +40,19 @@ class TestAlertI18nElement extends LitElement {
 
   render() {
     return html`<p>ohai</p>`;
+  }
+}
+
+/** @element test-extends-18n-element */
+@customElement('test-extends-18n-element')
+class TestExtendsI18nElement extends TestI18nElement {
+  @i18n() i18n = {
+    open: 'Open',
+    close: 'Close',
+  };
+
+  render() {
+    return html`<slot></slot>`;
   }
 }
 
@@ -187,5 +201,23 @@ describe('helpers', () => {
       const expected = { update: false };
       expect(testMe).toEqual(expected);
     });
+  });
+});
+
+describe('subscription', () => {
+  it('should be unsubscribed when the element is removed', async () => {
+    const testElement = await createTestElement(
+      html` <test-18n-element></test-18n-element><test-18n-element></test-18n-element> `
+    );
+    removeTestElement(testElement);
+    expect((GlobalStateService.stateUpdates as any).subscriptions.length).toBe(0);
+  });
+
+  it('should be unsubscribed when the element extends an @i8n element and is removed', async () => {
+    const testElement = await createTestElement(html` <test-extends-18n-element></test-extends-18n-element> `);
+    const component = testElement.querySelector<TestExtendsI18nElement>('test-extends-18n-element');
+    expect(component.i18n).toEqual({ open: 'Open', close: 'Close' });
+    removeTestElement(testElement);
+    expect((GlobalStateService.stateUpdates as any).subscriptions.length).toBe(0);
   });
 });
