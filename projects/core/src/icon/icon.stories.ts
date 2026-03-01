@@ -15,8 +15,204 @@ import { customElement, state } from 'lit/decorators.js';
 import { homeIcon } from '@cds/core/icon/shapes/home.js';
 import { baseStyles, spreadProps, getElementStorybookArgs, property } from '@cds/core/internal';
 
+import { axisChartIcon } from '@cds/core/icon/shapes/axis-chart.js';
+import { barChartIcon } from '@cds/core/icon/shapes/bar-chart.js';
+import { boxPlotIcon } from '@cds/core/icon/shapes/box-plot.js';
+import { bubbleChartIcon } from '@cds/core/icon/shapes/bubble-chart.js';
+import { cloudChartIcon } from '@cds/core/icon/shapes/cloud-chart.js';
+import { curveChartIcon } from '@cds/core/icon/shapes/curve-chart.js';
+import { gridChartIcon } from '@cds/core/icon/shapes/grid-chart.js';
+import { heatMapIcon } from '@cds/core/icon/shapes/heat-map.js';
+import { lineChartIcon } from '@cds/core/icon/shapes/line-chart.js';
+import { pieChartIcon } from '@cds/core/icon/shapes/pie-chart.js';
+import { scatterPlotIcon } from '@cds/core/icon/shapes/scatter-plot.js';
+import { tickChartIcon } from '@cds/core/icon/shapes/tick-chart.js';
+import { bellCurveIcon } from '@cds/core/icon/shapes/bell-curve.js';
+
+import { calculatorIcon } from '@cds/core/icon/shapes/calculator.js';
+import { piggyBankIcon } from '@cds/core/icon/shapes/piggy-bank.js';
+import { shoppingBagIcon } from '@cds/core/icon/shapes/shopping-bag.js';
+import { shoppingCartIcon } from '@cds/core/icon/shapes/shopping-cart.js';
+import { walletIcon } from '@cds/core/icon/shapes/wallet.js';
+import { storeIcon } from '@cds/core/icon/shapes/store.js';
+import { euroIcon } from '@cds/core/icon/shapes/euro.js';
+import { dollarIcon } from '@cds/core/icon/shapes/dollar.js';
+import { creditCardIcon } from '@cds/core/icon/shapes/credit-card.js';
+import { bankIcon } from '@cds/core/icon/shapes/bank.js';
+import { dollarBillIcon } from '@cds/core/icon/shapes/dollar-bill.js';
+import { eCheckIcon } from '@cds/core/icon/shapes/e-check.js';
+import { poundIcon } from '@cds/core/icon/shapes/pound.js';
+import { rupeeIcon } from '@cds/core/icon/shapes/rupee.js';
+import { wonIcon } from '@cds/core/icon/shapes/won.js';
+import { yenIcon } from '@cds/core/icon/shapes/yen.js';
+import { bitcoinIcon } from '@cds/core/icon/shapes/bitcoin.js';
+import { pesoIcon } from '@cds/core/icon/shapes/peso.js';
+import { coinBagIcon } from '@cds/core/icon/shapes/coin-bag.js';
+import { rubleIcon } from '@cds/core/icon/shapes/ruble.js';
+import { employeeIcon } from '@cds/core/icon/shapes/employee.js';
+import { employeeGroupIcon } from '@cds/core/icon/shapes/employee-group.js';
+import { factoryIcon } from '@cds/core/icon/shapes/factory.js';
+import { playIcon } from '@cds/core/icon/shapes/play.js';
+import { pauseIcon } from '@cds/core/icon/shapes/pause.js';
+import { stepForwardIcon } from '@cds/core/icon/shapes/step-forward.js';
+import { stopIcon } from '@cds/core/icon/shapes/stop.js';
+import { powerIcon } from '@cds/core/icon/shapes/power.js';
+import { rewindIcon } from '@cds/core/icon/shapes/rewind.js';
+import { fastForwardIcon } from '@cds/core/icon/shapes/fast-forward.js';
+import { cameraIcon } from '@cds/core/icon/shapes/camera.js';
+import { videoCameraIcon } from '@cds/core/icon/shapes/video-camera.js';
+import { volumeUpIcon } from '@cds/core/icon/shapes/volume-up.js';
+import { volumeDownIcon } from '@cds/core/icon/shapes/volume-down.js';
+import { volumeMuteIcon } from '@cds/core/icon/shapes/volume-mute.js';
+import { headphonesIcon } from '@cds/core/icon/shapes/headphones.js';
+import { filmStripIcon } from '@cds/core/icon/shapes/film-strip.js';
+import { musicNoteIcon } from '@cds/core/icon/shapes/music-note.js';
+import { imageGalleryIcon } from '@cds/core/icon/shapes/image-gallery.js';
+import { videoGalleryIcon } from '@cds/core/icon/shapes/video-gallery.js';
+import { shuffleIcon } from '@cds/core/icon/shapes/shuffle.js';
+import { wandIcon } from '@cds/core/icon/shapes/wand.js';
+import { replayAllIcon } from '@cds/core/icon/shapes/replay-all.js';
+import { replayOneIcon } from '@cds/core/icon/shapes/replay-one.js';
+
+import { shareIcon } from '@cds/core/icon/shapes/share.js';
+import { starIcon } from '@cds/core/icon/shapes/star.js';
+import { halfStarIcon } from '@cds/core/icon/shapes/half-star.js';
+import { bookmarkIcon } from '@cds/core/icon/shapes/bookmark.js';
+import { envelopeIcon } from '@cds/core/icon/shapes/envelope.js';
+import { calendarIcon } from '@cds/core/icon/shapes/calendar.js';
+import { eventIcon } from '@cds/core/icon/shapes/event.js';
+import { tasksIcon } from '@cds/core/icon/shapes/tasks.js';
+import { flagIcon } from '@cds/core/icon/shapes/flag.js';
+import { inboxIcon } from '@cds/core/icon/shapes/inbox.js';
+import { heartIcon } from '@cds/core/icon/shapes/heart.js';
+import { heartBrokenIcon } from '@cds/core/icon/shapes/heart-broken.js';
+import { talkBubblesIcon } from '@cds/core/icon/shapes/talk-bubbles.js';
+import { chatBubbleIcon } from '@cds/core/icon/shapes/chat-bubble.js';
+import { happyFaceIcon } from '@cds/core/icon/shapes/happy-face.js';
+import { neutralFaceIcon } from '@cds/core/icon/shapes/neutral-face.js';
+import { sadFaceIcon } from '@cds/core/icon/shapes/sad-face.js';
+import { thumbsUpIcon } from '@cds/core/icon/shapes/thumbs-up.js';
+import { thumbsDownIcon } from '@cds/core/icon/shapes/thumbs-down.js';
+import { crownIcon } from '@cds/core/icon/shapes/crown.js';
+import { hashtagIcon } from '@cds/core/icon/shapes/hashtag.js';
+
+import { paintRollerIcon } from '@cds/core/icon/shapes/paint-roller.js';
+import { boldIcon } from '@cds/core/icon/shapes/bold.js';
+import { italicIcon } from '@cds/core/icon/shapes/italic.js';
+import { underlineIcon } from '@cds/core/icon/shapes/underline.js';
+import { fontSizeIcon } from '@cds/core/icon/shapes/font-size.js';
+
+import { bulletListIcon } from '@cds/core/icon/shapes/bullet-list.js';
+import { numberListIcon } from '@cds/core/icon/shapes/number-list.js';
+import { checkboxListIcon } from '@cds/core/icon/shapes/checkbox-list.js';
+import { justifyTextIcon } from '@cds/core/icon/shapes/justify-text.js';
+
+import { textIcon } from '@cds/core/icon/shapes/text.js';
+import { listAllIcons } from './utils/all-groups';
+
 // here for testing
-ClarityIcons.addIcons(userIcon, imageIcon, homeIcon);
+
+ClarityIcons.addIcons(
+  userIcon,
+  imageIcon,
+  homeIcon,
+  // Charts
+  axisChartIcon,
+  barChartIcon,
+  boxPlotIcon,
+  bubbleChartIcon,
+  cloudChartIcon,
+  curveChartIcon,
+  gridChartIcon,
+  heatMapIcon,
+  lineChartIcon,
+  pieChartIcon,
+  scatterPlotIcon,
+  tickChartIcon,
+  bellCurveIcon,
+  // Commerce
+  calculatorIcon,
+  piggyBankIcon,
+  shoppingBagIcon,
+  shoppingCartIcon,
+  walletIcon,
+  storeIcon,
+  euroIcon,
+  dollarIcon,
+  creditCardIcon,
+  bankIcon,
+  dollarBillIcon,
+  eCheckIcon,
+  poundIcon,
+  rupeeIcon,
+  wonIcon,
+  yenIcon,
+  bitcoinIcon,
+  pesoIcon,
+  coinBagIcon,
+  rubleIcon,
+  employeeIcon,
+  employeeGroupIcon,
+  factoryIcon,
+
+  // Media
+  playIcon,
+  pauseIcon,
+  stepForwardIcon,
+  stopIcon,
+  powerIcon,
+  rewindIcon,
+  fastForwardIcon,
+  cameraIcon,
+  videoCameraIcon,
+  volumeUpIcon,
+  volumeDownIcon,
+  volumeMuteIcon,
+  headphonesIcon,
+  filmStripIcon,
+  musicNoteIcon,
+  imageGalleryIcon,
+  videoGalleryIcon,
+  shuffleIcon,
+  wandIcon,
+  replayAllIcon,
+  replayOneIcon,
+
+  // Social
+  shareIcon,
+  starIcon,
+  halfStarIcon,
+  bookmarkIcon,
+  envelopeIcon,
+  calendarIcon,
+  eventIcon,
+  tasksIcon,
+  flagIcon,
+  inboxIcon,
+  heartIcon,
+  heartBrokenIcon,
+  talkBubblesIcon,
+  chatBubbleIcon,
+  happyFaceIcon,
+  neutralFaceIcon,
+  sadFaceIcon,
+  thumbsUpIcon,
+  thumbsDownIcon,
+  crownIcon,
+  hashtagIcon,
+
+  // Text edit
+  paintRollerIcon,
+  boldIcon,
+  italicIcon,
+  underlineIcon,
+  fontSizeIcon,
+  textIcon,
+  bulletListIcon,
+  numberListIcon,
+  checkboxListIcon,
+  justifyTextIcon
+);
 
 export default {
   title: 'Stories/Icon',
@@ -148,6 +344,10 @@ export function API(args: any) {
       ></cds-icon>
     </cds-demo>
   `;
+}
+
+export function iconsV3_1_0() {
+  return listAllIcons();
 }
 
 /** @website */
