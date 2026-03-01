@@ -4,8 +4,8 @@
  * The full license information can be found in LICENSE in the root directory of this project.
  */
 
-import { PropertyValues } from 'lit';
-import { assignSlotNames, property } from '@cds/core/internal';
+import { css, PropertyValues } from 'lit';
+import { assignSlotNames, baseStyles, property } from '@cds/core/internal';
 import { CdsButtonAction } from '@cds/core/button-action';
 
 /**
@@ -26,6 +26,17 @@ import { CdsButtonAction } from '@cds/core/button-action';
  */
 export class CdsControlAction extends CdsButtonAction {
   @property({ type: String, reflect: true }) action: 'label' | 'prefix' | 'suffix';
+
+  static styles = [
+    baseStyles,
+    /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      ? css`
+          :host(:focus) {
+            outline: 0 !important;
+          }
+        `
+      : css``,
+  ];
 
   updated(props: PropertyValues<this>) {
     super.updated(props);
